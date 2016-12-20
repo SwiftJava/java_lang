@@ -1,0 +1,937 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB3406B51E08AE1E00DA5E5E /* AbstractMethodError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34061C1E08AE1E00DA5E5E /* AbstractMethodError.swift */; };
+		BB3406B61E08AE1E00DA5E5E /* AccessibleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34061D1E08AE1E00DA5E5E /* AccessibleObject.swift */; };
+		BB3406B71E08AE1E00DA5E5E /* AnnotatedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34061E1E08AE1E00DA5E5E /* AnnotatedElement.swift */; };
+		BB3406B81E08AE1E00DA5E5E /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34061F1E08AE1E00DA5E5E /* Annotation.swift */; };
+		BB3406B91E08AE1E00DA5E5E /* AnnotationFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406201E08AE1E00DA5E5E /* AnnotationFormatError.swift */; };
+		BB3406BA1E08AE1E00DA5E5E /* AnnotationTypeMismatchException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406211E08AE1E00DA5E5E /* AnnotationTypeMismatchException.swift */; };
+		BB3406BB1E08AE1E00DA5E5E /* Appendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406221E08AE1E00DA5E5E /* Appendable.swift */; };
+		BB3406BC1E08AE1E00DA5E5E /* ArithmeticException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406231E08AE1E00DA5E5E /* ArithmeticException.swift */; };
+		BB3406BD1E08AE1E00DA5E5E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406241E08AE1E00DA5E5E /* Array.swift */; };
+		BB3406BE1E08AE1E00DA5E5E /* ArrayIndexOutOfBoundsException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406251E08AE1E00DA5E5E /* ArrayIndexOutOfBoundsException.swift */; };
+		BB3406BF1E08AE1E00DA5E5E /* ArrayStoreException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406261E08AE1E00DA5E5E /* ArrayStoreException.swift */; };
+		BB3406C01E08AE1E00DA5E5E /* AssertionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406271E08AE1E00DA5E5E /* AssertionError.swift */; };
+		BB3406C11E08AE1E00DA5E5E /* Boolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406281E08AE1E00DA5E5E /* Boolean.swift */; };
+		BB3406C21E08AE1E00DA5E5E /* Byte.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406291E08AE1E00DA5E5E /* Byte.swift */; };
+		BB3406C31E08AE1E00DA5E5E /* Character_Subset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34062A1E08AE1E00DA5E5E /* Character_Subset.swift */; };
+		BB3406C41E08AE1E00DA5E5E /* Character_UnicodeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34062B1E08AE1E00DA5E5E /* Character_UnicodeBlock.swift */; };
+		BB3406C51E08AE1E00DA5E5E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34062C1E08AE1E00DA5E5E /* Character.swift */; };
+		BB3406C61E08AE1E00DA5E5E /* CharSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34062D1E08AE1E00DA5E5E /* CharSequence.swift */; };
+		BB3406C71E08AE1E00DA5E5E /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34062E1E08AE1E00DA5E5E /* Class.swift */; };
+		BB3406C81E08AE1E00DA5E5E /* ClassCastException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34062F1E08AE1E00DA5E5E /* ClassCastException.swift */; };
+		BB3406C91E08AE1E00DA5E5E /* ClassCircularityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406301E08AE1E00DA5E5E /* ClassCircularityError.swift */; };
+		BB3406CA1E08AE1E00DA5E5E /* ClassDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406311E08AE1E00DA5E5E /* ClassDefinition.swift */; };
+		BB3406CB1E08AE1E00DA5E5E /* ClassFileTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406321E08AE1E00DA5E5E /* ClassFileTransformer.swift */; };
+		BB3406CC1E08AE1E00DA5E5E /* ClassFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406331E08AE1E00DA5E5E /* ClassFormatError.swift */; };
+		BB3406CD1E08AE1E00DA5E5E /* ClassLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406341E08AE1E00DA5E5E /* ClassLoader.swift */; };
+		BB3406CE1E08AE1E00DA5E5E /* ClassLoadingMXBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406351E08AE1E00DA5E5E /* ClassLoadingMXBean.swift */; };
+		BB3406CF1E08AE1E00DA5E5E /* ClassNotFoundException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406361E08AE1E00DA5E5E /* ClassNotFoundException.swift */; };
+		BB3406D01E08AE1E00DA5E5E /* Cloneable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406371E08AE1E00DA5E5E /* Cloneable.swift */; };
+		BB3406D11E08AE1E00DA5E5E /* CloneNotSupportedException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406381E08AE1E00DA5E5E /* CloneNotSupportedException.swift */; };
+		BB3406D21E08AE1E00DA5E5E /* CompilationMXBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406391E08AE1E00DA5E5E /* CompilationMXBean.swift */; };
+		BB3406D31E08AE1E00DA5E5E /* Compiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34063A1E08AE1E00DA5E5E /* Compiler.swift */; };
+		BB3406D41E08AE1E00DA5E5E /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34063B1E08AE1E00DA5E5E /* Constructor.swift */; };
+		BB3406D51E08AE1E00DA5E5E /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34063C1E08AE1E00DA5E5E /* Deprecated.swift */; };
+		BB3406D61E08AE1E00DA5E5E /* Documented.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34063D1E08AE1E00DA5E5E /* Documented.swift */; };
+		BB3406D71E08AE1E00DA5E5E /* ElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34063E1E08AE1E00DA5E5E /* ElementType.swift */; };
+		BB3406D81E08AE1E00DA5E5E /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34063F1E08AE1E00DA5E5E /* Enum.swift */; };
+		BB3406D91E08AE1E00DA5E5E /* EnumConstantNotPresentException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406401E08AE1E00DA5E5E /* EnumConstantNotPresentException.swift */; };
+		BB3406DA1E08AE1E00DA5E5E /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406411E08AE1E00DA5E5E /* Exception.swift */; };
+		BB3406DB1E08AE1E00DA5E5E /* ExceptionInInitializerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406421E08AE1E00DA5E5E /* ExceptionInInitializerError.swift */; };
+		BB3406DC1E08AE1E00DA5E5E /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406431E08AE1E00DA5E5E /* Field.swift */; };
+		BB3406DD1E08AE1E00DA5E5E /* GarbageCollectorMXBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406441E08AE1E00DA5E5E /* GarbageCollectorMXBean.swift */; };
+		BB3406DE1E08AE1E00DA5E5E /* GenericArrayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406451E08AE1E00DA5E5E /* GenericArrayType.swift */; };
+		BB3406DF1E08AE1E00DA5E5E /* GenericDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406461E08AE1E00DA5E5E /* GenericDeclaration.swift */; };
+		BB3406E01E08AE1E00DA5E5E /* GenericSignatureFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406471E08AE1E00DA5E5E /* GenericSignatureFormatError.swift */; };
+		BB3406E11E08AE1E00DA5E5E /* IllegalAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406481E08AE1E00DA5E5E /* IllegalAccessError.swift */; };
+		BB3406E21E08AE1E00DA5E5E /* IllegalAccessException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406491E08AE1E00DA5E5E /* IllegalAccessException.swift */; };
+		BB3406E31E08AE1E00DA5E5E /* IllegalArgumentException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34064A1E08AE1E00DA5E5E /* IllegalArgumentException.swift */; };
+		BB3406E41E08AE1E00DA5E5E /* IllegalClassFormatException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34064B1E08AE1E00DA5E5E /* IllegalClassFormatException.swift */; };
+		BB3406E51E08AE1E00DA5E5E /* IllegalMonitorStateException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34064C1E08AE1E00DA5E5E /* IllegalMonitorStateException.swift */; };
+		BB3406E61E08AE1E00DA5E5E /* IllegalStateException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34064D1E08AE1E00DA5E5E /* IllegalStateException.swift */; };
+		BB3406E71E08AE1E00DA5E5E /* IllegalThreadStateException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34064E1E08AE1E00DA5E5E /* IllegalThreadStateException.swift */; };
+		BB3406E81E08AE1E00DA5E5E /* IncompatibleClassChangeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34064F1E08AE1E00DA5E5E /* IncompatibleClassChangeError.swift */; };
+		BB3406E91E08AE1E00DA5E5E /* IncompleteAnnotationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406501E08AE1E00DA5E5E /* IncompleteAnnotationException.swift */; };
+		BB3406EA1E08AE1E00DA5E5E /* IndexOutOfBoundsException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406511E08AE1E00DA5E5E /* IndexOutOfBoundsException.swift */; };
+		BB3406EB1E08AE1E00DA5E5E /* InheritableThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406521E08AE1E00DA5E5E /* InheritableThreadLocal.swift */; };
+		BB3406EC1E08AE1E00DA5E5E /* Inherited.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406531E08AE1E00DA5E5E /* Inherited.swift */; };
+		BB3406ED1E08AE1E00DA5E5E /* InstantiationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406541E08AE1E00DA5E5E /* InstantiationError.swift */; };
+		BB3406EE1E08AE1E00DA5E5E /* InstantiationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406551E08AE1E00DA5E5E /* InstantiationException.swift */; };
+		BB3406EF1E08AE1E00DA5E5E /* Instrumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406561E08AE1E00DA5E5E /* Instrumentation.swift */; };
+		BB3406F01E08AE1E00DA5E5E /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406571E08AE1E00DA5E5E /* Integer.swift */; };
+		BB3406F11E08AE1E00DA5E5E /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406581E08AE1E00DA5E5E /* InternalError.swift */; };
+		BB3406F21E08AE1E00DA5E5E /* InterruptedException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406591E08AE1E00DA5E5E /* InterruptedException.swift */; };
+		BB3406F31E08AE1E00DA5E5E /* InvocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34065A1E08AE1E00DA5E5E /* InvocationHandler.swift */; };
+		BB3406F41E08AE1E00DA5E5E /* InvocationTargetException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34065B1E08AE1E00DA5E5E /* InvocationTargetException.swift */; };
+		BB3406F51E08AE1E00DA5E5E /* Iterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34065C1E08AE1E00DA5E5E /* Iterable.swift */; };
+		BB3406F61E08AE1E00DA5E5E /* JavaComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34065D1E08AE1E00DA5E5E /* JavaComparable.swift */; };
+		BB3406F71E08AE1E00DA5E5E /* JavaDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34065E1E08AE1E00DA5E5E /* JavaDouble.swift */; };
+		BB3406F81E08AE1E00DA5E5E /* JavaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34065F1E08AE1E00DA5E5E /* JavaError.swift */; };
+		BB3406F91E08AE1E00DA5E5E /* JavaFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406601E08AE1E00DA5E5E /* JavaFloat.swift */; };
+		BB3406FA1E08AE1E00DA5E5E /* JavaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406611E08AE1E00DA5E5E /* JavaObject.swift */; };
+		BB3406FB1E08AE1E00DA5E5E /* JavaSecurityException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406621E08AE1E00DA5E5E /* JavaSecurityException.swift */; };
+		BB3406FC1E08AE1E00DA5E5E /* JavaString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406631E08AE1E00DA5E5E /* JavaString.swift */; };
+		BB3406FD1E08AE1E00DA5E5E /* LinkageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406641E08AE1E00DA5E5E /* LinkageError.swift */; };
+		BB3406FE1E08AE1E00DA5E5E /* LockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406651E08AE1E00DA5E5E /* LockInfo.swift */; };
+		BB3406FF1E08AE1E00DA5E5E /* Long.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406661E08AE1E00DA5E5E /* Long.swift */; };
+		BB3407001E08AE1E00DA5E5E /* MalformedParameterizedTypeException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406671E08AE1E00DA5E5E /* MalformedParameterizedTypeException.swift */; };
+		BB3407011E08AE1E00DA5E5E /* ManagementFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406681E08AE1E00DA5E5E /* ManagementFactory.swift */; };
+		BB3407021E08AE1E00DA5E5E /* ManagementPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406691E08AE1E00DA5E5E /* ManagementPermission.swift */; };
+		BB3407031E08AE1E00DA5E5E /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34066A1E08AE1E00DA5E5E /* Math.swift */; };
+		BB3407041E08AE1E00DA5E5E /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34066B1E08AE1E00DA5E5E /* Member.swift */; };
+		BB3407051E08AE1E00DA5E5E /* MemoryManagerMXBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34066C1E08AE1E00DA5E5E /* MemoryManagerMXBean.swift */; };
+		BB3407061E08AE1E00DA5E5E /* MemoryMXBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34066D1E08AE1E00DA5E5E /* MemoryMXBean.swift */; };
+		BB3407071E08AE1E00DA5E5E /* MemoryNotificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34066E1E08AE1E00DA5E5E /* MemoryNotificationInfo.swift */; };
+		BB3407081E08AE1E00DA5E5E /* MemoryPoolMXBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34066F1E08AE1E00DA5E5E /* MemoryPoolMXBean.swift */; };
+		BB3407091E08AE1E00DA5E5E /* MemoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406701E08AE1E00DA5E5E /* MemoryType.swift */; };
+		BB34070A1E08AE1E00DA5E5E /* MemoryUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406711E08AE1E00DA5E5E /* MemoryUsage.swift */; };
+		BB34070B1E08AE1E00DA5E5E /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406721E08AE1E00DA5E5E /* Method.swift */; };
+		BB34070C1E08AE1E00DA5E5E /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406731E08AE1E00DA5E5E /* Modifier.swift */; };
+		BB34070D1E08AE1E00DA5E5E /* MonitorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406741E08AE1E00DA5E5E /* MonitorInfo.swift */; };
+		BB34070E1E08AE1E00DA5E5E /* NegativeArraySizeException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406751E08AE1E00DA5E5E /* NegativeArraySizeException.swift */; };
+		BB34070F1E08AE1E00DA5E5E /* NoClassDefFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406761E08AE1E00DA5E5E /* NoClassDefFoundError.swift */; };
+		BB3407101E08AE1E00DA5E5E /* NoSuchFieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406771E08AE1E00DA5E5E /* NoSuchFieldError.swift */; };
+		BB3407111E08AE1E00DA5E5E /* NoSuchFieldException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406781E08AE1E00DA5E5E /* NoSuchFieldException.swift */; };
+		BB3407121E08AE1E00DA5E5E /* NoSuchMethodError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406791E08AE1E00DA5E5E /* NoSuchMethodError.swift */; };
+		BB3407131E08AE1E00DA5E5E /* NoSuchMethodException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34067A1E08AE1E00DA5E5E /* NoSuchMethodException.swift */; };
+		BB3407141E08AE1E00DA5E5E /* NullPointerException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34067B1E08AE1E00DA5E5E /* NullPointerException.swift */; };
+		BB3407151E08AE1E00DA5E5E /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34067C1E08AE1E00DA5E5E /* Number.swift */; };
+		BB3407161E08AE1E00DA5E5E /* NumberFormatException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34067D1E08AE1E00DA5E5E /* NumberFormatException.swift */; };
+		BB3407171E08AE1E00DA5E5E /* OperatingSystemMXBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34067E1E08AE1E00DA5E5E /* OperatingSystemMXBean.swift */; };
+		BB3407181E08AE1E00DA5E5E /* OutOfMemoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34067F1E08AE1E00DA5E5E /* OutOfMemoryError.swift */; };
+		BB3407191E08AE1E00DA5E5E /* Override.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406801E08AE1E00DA5E5E /* Override.swift */; };
+		BB34071A1E08AE1E00DA5E5E /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406811E08AE1E00DA5E5E /* Package.swift */; };
+		BB34071B1E08AE1E00DA5E5E /* ParameterizedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406821E08AE1E00DA5E5E /* ParameterizedType.swift */; };
+		BB34071C1E08AE1E00DA5E5E /* PhantomReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406831E08AE1E00DA5E5E /* PhantomReference.swift */; };
+		BB34071D1E08AE1E00DA5E5E /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406841E08AE1E00DA5E5E /* Process.swift */; };
+		BB34071E1E08AE1E00DA5E5E /* ProcessBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406851E08AE1E00DA5E5E /* ProcessBuilder.swift */; };
+		BB34071F1E08AE1E00DA5E5E /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406861E08AE1E00DA5E5E /* Proxy.swift */; };
+		BB3407201E08AE1E00DA5E5E /* Readable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406871E08AE1E00DA5E5E /* Readable.swift */; };
+		BB3407211E08AE1E00DA5E5E /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406881E08AE1E00DA5E5E /* Reference.swift */; };
+		BB3407221E08AE1E00DA5E5E /* ReferenceQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406891E08AE1E00DA5E5E /* ReferenceQueue.swift */; };
+		BB3407231E08AE1E00DA5E5E /* ReflectPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34068A1E08AE1E00DA5E5E /* ReflectPermission.swift */; };
+		BB3407241E08AE1E00DA5E5E /* Retention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34068B1E08AE1E00DA5E5E /* Retention.swift */; };
+		BB3407251E08AE1E00DA5E5E /* RetentionPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34068C1E08AE1E00DA5E5E /* RetentionPolicy.swift */; };
+		BB3407261E08AE1E00DA5E5E /* Runnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34068D1E08AE1E00DA5E5E /* Runnable.swift */; };
+		BB3407271E08AE1E00DA5E5E /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34068E1E08AE1E00DA5E5E /* Runtime.swift */; };
+		BB3407281E08AE1E00DA5E5E /* RuntimeException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34068F1E08AE1E00DA5E5E /* RuntimeException.swift */; };
+		BB3407291E08AE1E00DA5E5E /* RuntimeMXBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406901E08AE1E00DA5E5E /* RuntimeMXBean.swift */; };
+		BB34072A1E08AE1E00DA5E5E /* RuntimePermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406911E08AE1E00DA5E5E /* RuntimePermission.swift */; };
+		BB34072B1E08AE1E00DA5E5E /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406921E08AE1E00DA5E5E /* SecurityManager.swift */; };
+		BB34072C1E08AE1E00DA5E5E /* Short.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406931E08AE1E00DA5E5E /* Short.swift */; };
+		BB34072D1E08AE1E00DA5E5E /* SoftReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406941E08AE1E00DA5E5E /* SoftReference.swift */; };
+		BB34072E1E08AE1E00DA5E5E /* StackOverflowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406951E08AE1E00DA5E5E /* StackOverflowError.swift */; };
+		BB34072F1E08AE1E00DA5E5E /* StackTraceElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406961E08AE1E00DA5E5E /* StackTraceElement.swift */; };
+		BB3407301E08AE1E00DA5E5E /* StrictMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406971E08AE1E00DA5E5E /* StrictMath.swift */; };
+		BB3407311E08AE1E00DA5E5E /* StringBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406981E08AE1E00DA5E5E /* StringBuffer.swift */; };
+		BB3407321E08AE1E00DA5E5E /* StringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406991E08AE1E00DA5E5E /* StringBuilder.swift */; };
+		BB3407331E08AE1E00DA5E5E /* StringIndexOutOfBoundsException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34069A1E08AE1E00DA5E5E /* StringIndexOutOfBoundsException.swift */; };
+		BB3407341E08AE1E00DA5E5E /* SuppressWarnings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34069B1E08AE1E00DA5E5E /* SuppressWarnings.swift */; };
+		BB3407351E08AE1E00DA5E5E /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34069C1E08AE1E00DA5E5E /* System.swift */; };
+		BB3407361E08AE1E00DA5E5E /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34069D1E08AE1E00DA5E5E /* Target.swift */; };
+		BB3407371E08AE1E00DA5E5E /* Thread_State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34069E1E08AE1E00DA5E5E /* Thread_State.swift */; };
+		BB3407381E08AE1E00DA5E5E /* Thread_UncaughtExceptionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34069F1E08AE1E00DA5E5E /* Thread_UncaughtExceptionHandler.swift */; };
+		BB3407391E08AE1E00DA5E5E /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A01E08AE1E00DA5E5E /* Thread.swift */; };
+		BB34073A1E08AE1E00DA5E5E /* ThreadDeath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A11E08AE1E00DA5E5E /* ThreadDeath.swift */; };
+		BB34073B1E08AE1E00DA5E5E /* ThreadGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A21E08AE1E00DA5E5E /* ThreadGroup.swift */; };
+		BB34073C1E08AE1E00DA5E5E /* ThreadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A31E08AE1E00DA5E5E /* ThreadInfo.swift */; };
+		BB34073D1E08AE1E00DA5E5E /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A41E08AE1E00DA5E5E /* ThreadLocal.swift */; };
+		BB34073E1E08AE1E00DA5E5E /* ThreadMXBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A51E08AE1E00DA5E5E /* ThreadMXBean.swift */; };
+		BB34073F1E08AE1E00DA5E5E /* Throwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A61E08AE1E00DA5E5E /* Throwable.swift */; };
+		BB3407401E08AE1E00DA5E5E /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A71E08AE1E00DA5E5E /* Type.swift */; };
+		BB3407411E08AE1E00DA5E5E /* TypeNotPresentException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A81E08AE1E00DA5E5E /* TypeNotPresentException.swift */; };
+		BB3407421E08AE1E00DA5E5E /* TypeVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406A91E08AE1E00DA5E5E /* TypeVariable.swift */; };
+		BB3407431E08AE1E00DA5E5E /* UndeclaredThrowableException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406AA1E08AE1E00DA5E5E /* UndeclaredThrowableException.swift */; };
+		BB3407441E08AE1E00DA5E5E /* UnknownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406AB1E08AE1E00DA5E5E /* UnknownError.swift */; };
+		BB3407451E08AE1E00DA5E5E /* UnmodifiableClassException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406AC1E08AE1E00DA5E5E /* UnmodifiableClassException.swift */; };
+		BB3407461E08AE1E00DA5E5E /* UnsatisfiedLinkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406AD1E08AE1E00DA5E5E /* UnsatisfiedLinkError.swift */; };
+		BB3407471E08AE1E00DA5E5E /* UnsupportedClassVersionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406AE1E08AE1E00DA5E5E /* UnsupportedClassVersionError.swift */; };
+		BB3407481E08AE1E00DA5E5E /* UnsupportedOperationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406AF1E08AE1E00DA5E5E /* UnsupportedOperationException.swift */; };
+		BB3407491E08AE1E00DA5E5E /* VerifyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406B01E08AE1E00DA5E5E /* VerifyError.swift */; };
+		BB34074A1E08AE1E00DA5E5E /* VirtualMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406B11E08AE1E00DA5E5E /* VirtualMachineError.swift */; };
+		BB34074B1E08AE1E00DA5E5E /* Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406B21E08AE1E00DA5E5E /* Void.swift */; };
+		BB34074C1E08AE1E00DA5E5E /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406B31E08AE1E00DA5E5E /* WeakReference.swift */; };
+		BB34074D1E08AE1E00DA5E5E /* WildcardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3406B41E08AE1E00DA5E5E /* WildcardType.swift */; };
+		BBBF2E451D499E1D004142AE /* java_lang.h in Headers */ = {isa = PBXBuildFile; fileRef = BBBF2E431D499E1D004142AE /* java_lang.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBC13EC01D4998290035A039 /* java_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC13EBF1D4998290035A039 /* java_swift.framework */; };
+		BBC13FD01D4998460035A039 /* java_lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC13F111D4998450035A039 /* java_lang.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB19B4311D6632CF002F5586 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BB34061C1E08AE1E00DA5E5E /* AbstractMethodError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AbstractMethodError.swift; path = Sources/AbstractMethodError.swift; sourceTree = "<group>"; };
+		BB34061D1E08AE1E00DA5E5E /* AccessibleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessibleObject.swift; path = Sources/AccessibleObject.swift; sourceTree = "<group>"; };
+		BB34061E1E08AE1E00DA5E5E /* AnnotatedElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnotatedElement.swift; path = Sources/AnnotatedElement.swift; sourceTree = "<group>"; };
+		BB34061F1E08AE1E00DA5E5E /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Annotation.swift; path = Sources/Annotation.swift; sourceTree = "<group>"; };
+		BB3406201E08AE1E00DA5E5E /* AnnotationFormatError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnotationFormatError.swift; path = Sources/AnnotationFormatError.swift; sourceTree = "<group>"; };
+		BB3406211E08AE1E00DA5E5E /* AnnotationTypeMismatchException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnotationTypeMismatchException.swift; path = Sources/AnnotationTypeMismatchException.swift; sourceTree = "<group>"; };
+		BB3406221E08AE1E00DA5E5E /* Appendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Appendable.swift; path = Sources/Appendable.swift; sourceTree = "<group>"; };
+		BB3406231E08AE1E00DA5E5E /* ArithmeticException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArithmeticException.swift; path = Sources/ArithmeticException.swift; sourceTree = "<group>"; };
+		BB3406241E08AE1E00DA5E5E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Sources/Array.swift; sourceTree = "<group>"; };
+		BB3406251E08AE1E00DA5E5E /* ArrayIndexOutOfBoundsException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayIndexOutOfBoundsException.swift; path = Sources/ArrayIndexOutOfBoundsException.swift; sourceTree = "<group>"; };
+		BB3406261E08AE1E00DA5E5E /* ArrayStoreException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayStoreException.swift; path = Sources/ArrayStoreException.swift; sourceTree = "<group>"; };
+		BB3406271E08AE1E00DA5E5E /* AssertionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssertionError.swift; path = Sources/AssertionError.swift; sourceTree = "<group>"; };
+		BB3406281E08AE1E00DA5E5E /* Boolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Boolean.swift; path = Sources/Boolean.swift; sourceTree = "<group>"; };
+		BB3406291E08AE1E00DA5E5E /* Byte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Byte.swift; path = Sources/Byte.swift; sourceTree = "<group>"; };
+		BB34062A1E08AE1E00DA5E5E /* Character_Subset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character_Subset.swift; path = Sources/Character_Subset.swift; sourceTree = "<group>"; };
+		BB34062B1E08AE1E00DA5E5E /* Character_UnicodeBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character_UnicodeBlock.swift; path = Sources/Character_UnicodeBlock.swift; sourceTree = "<group>"; };
+		BB34062C1E08AE1E00DA5E5E /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Sources/Character.swift; sourceTree = "<group>"; };
+		BB34062D1E08AE1E00DA5E5E /* CharSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharSequence.swift; path = Sources/CharSequence.swift; sourceTree = "<group>"; };
+		BB34062E1E08AE1E00DA5E5E /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Class.swift; path = Sources/Class.swift; sourceTree = "<group>"; };
+		BB34062F1E08AE1E00DA5E5E /* ClassCastException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassCastException.swift; path = Sources/ClassCastException.swift; sourceTree = "<group>"; };
+		BB3406301E08AE1E00DA5E5E /* ClassCircularityError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassCircularityError.swift; path = Sources/ClassCircularityError.swift; sourceTree = "<group>"; };
+		BB3406311E08AE1E00DA5E5E /* ClassDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassDefinition.swift; path = Sources/ClassDefinition.swift; sourceTree = "<group>"; };
+		BB3406321E08AE1E00DA5E5E /* ClassFileTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassFileTransformer.swift; path = Sources/ClassFileTransformer.swift; sourceTree = "<group>"; };
+		BB3406331E08AE1E00DA5E5E /* ClassFormatError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassFormatError.swift; path = Sources/ClassFormatError.swift; sourceTree = "<group>"; };
+		BB3406341E08AE1E00DA5E5E /* ClassLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassLoader.swift; path = Sources/ClassLoader.swift; sourceTree = "<group>"; };
+		BB3406351E08AE1E00DA5E5E /* ClassLoadingMXBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassLoadingMXBean.swift; path = Sources/ClassLoadingMXBean.swift; sourceTree = "<group>"; };
+		BB3406361E08AE1E00DA5E5E /* ClassNotFoundException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassNotFoundException.swift; path = Sources/ClassNotFoundException.swift; sourceTree = "<group>"; };
+		BB3406371E08AE1E00DA5E5E /* Cloneable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cloneable.swift; path = Sources/Cloneable.swift; sourceTree = "<group>"; };
+		BB3406381E08AE1E00DA5E5E /* CloneNotSupportedException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloneNotSupportedException.swift; path = Sources/CloneNotSupportedException.swift; sourceTree = "<group>"; };
+		BB3406391E08AE1E00DA5E5E /* CompilationMXBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompilationMXBean.swift; path = Sources/CompilationMXBean.swift; sourceTree = "<group>"; };
+		BB34063A1E08AE1E00DA5E5E /* Compiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Compiler.swift; path = Sources/Compiler.swift; sourceTree = "<group>"; };
+		BB34063B1E08AE1E00DA5E5E /* Constructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constructor.swift; path = Sources/Constructor.swift; sourceTree = "<group>"; };
+		BB34063C1E08AE1E00DA5E5E /* Deprecated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/Deprecated.swift; sourceTree = "<group>"; };
+		BB34063D1E08AE1E00DA5E5E /* Documented.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Documented.swift; path = Sources/Documented.swift; sourceTree = "<group>"; };
+		BB34063E1E08AE1E00DA5E5E /* ElementType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementType.swift; path = Sources/ElementType.swift; sourceTree = "<group>"; };
+		BB34063F1E08AE1E00DA5E5E /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = Sources/Enum.swift; sourceTree = "<group>"; };
+		BB3406401E08AE1E00DA5E5E /* EnumConstantNotPresentException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnumConstantNotPresentException.swift; path = Sources/EnumConstantNotPresentException.swift; sourceTree = "<group>"; };
+		BB3406411E08AE1E00DA5E5E /* Exception.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exception.swift; path = Sources/Exception.swift; sourceTree = "<group>"; };
+		BB3406421E08AE1E00DA5E5E /* ExceptionInInitializerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionInInitializerError.swift; path = Sources/ExceptionInInitializerError.swift; sourceTree = "<group>"; };
+		BB3406431E08AE1E00DA5E5E /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Field.swift; path = Sources/Field.swift; sourceTree = "<group>"; };
+		BB3406441E08AE1E00DA5E5E /* GarbageCollectorMXBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GarbageCollectorMXBean.swift; path = Sources/GarbageCollectorMXBean.swift; sourceTree = "<group>"; };
+		BB3406451E08AE1E00DA5E5E /* GenericArrayType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericArrayType.swift; path = Sources/GenericArrayType.swift; sourceTree = "<group>"; };
+		BB3406461E08AE1E00DA5E5E /* GenericDeclaration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericDeclaration.swift; path = Sources/GenericDeclaration.swift; sourceTree = "<group>"; };
+		BB3406471E08AE1E00DA5E5E /* GenericSignatureFormatError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericSignatureFormatError.swift; path = Sources/GenericSignatureFormatError.swift; sourceTree = "<group>"; };
+		BB3406481E08AE1E00DA5E5E /* IllegalAccessError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IllegalAccessError.swift; path = Sources/IllegalAccessError.swift; sourceTree = "<group>"; };
+		BB3406491E08AE1E00DA5E5E /* IllegalAccessException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IllegalAccessException.swift; path = Sources/IllegalAccessException.swift; sourceTree = "<group>"; };
+		BB34064A1E08AE1E00DA5E5E /* IllegalArgumentException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IllegalArgumentException.swift; path = Sources/IllegalArgumentException.swift; sourceTree = "<group>"; };
+		BB34064B1E08AE1E00DA5E5E /* IllegalClassFormatException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IllegalClassFormatException.swift; path = Sources/IllegalClassFormatException.swift; sourceTree = "<group>"; };
+		BB34064C1E08AE1E00DA5E5E /* IllegalMonitorStateException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IllegalMonitorStateException.swift; path = Sources/IllegalMonitorStateException.swift; sourceTree = "<group>"; };
+		BB34064D1E08AE1E00DA5E5E /* IllegalStateException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IllegalStateException.swift; path = Sources/IllegalStateException.swift; sourceTree = "<group>"; };
+		BB34064E1E08AE1E00DA5E5E /* IllegalThreadStateException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IllegalThreadStateException.swift; path = Sources/IllegalThreadStateException.swift; sourceTree = "<group>"; };
+		BB34064F1E08AE1E00DA5E5E /* IncompatibleClassChangeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncompatibleClassChangeError.swift; path = Sources/IncompatibleClassChangeError.swift; sourceTree = "<group>"; };
+		BB3406501E08AE1E00DA5E5E /* IncompleteAnnotationException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncompleteAnnotationException.swift; path = Sources/IncompleteAnnotationException.swift; sourceTree = "<group>"; };
+		BB3406511E08AE1E00DA5E5E /* IndexOutOfBoundsException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexOutOfBoundsException.swift; path = Sources/IndexOutOfBoundsException.swift; sourceTree = "<group>"; };
+		BB3406521E08AE1E00DA5E5E /* InheritableThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InheritableThreadLocal.swift; path = Sources/InheritableThreadLocal.swift; sourceTree = "<group>"; };
+		BB3406531E08AE1E00DA5E5E /* Inherited.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Inherited.swift; path = Sources/Inherited.swift; sourceTree = "<group>"; };
+		BB3406541E08AE1E00DA5E5E /* InstantiationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstantiationError.swift; path = Sources/InstantiationError.swift; sourceTree = "<group>"; };
+		BB3406551E08AE1E00DA5E5E /* InstantiationException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstantiationException.swift; path = Sources/InstantiationException.swift; sourceTree = "<group>"; };
+		BB3406561E08AE1E00DA5E5E /* Instrumentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Instrumentation.swift; path = Sources/Instrumentation.swift; sourceTree = "<group>"; };
+		BB3406571E08AE1E00DA5E5E /* Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Integer.swift; path = Sources/Integer.swift; sourceTree = "<group>"; };
+		BB3406581E08AE1E00DA5E5E /* InternalError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InternalError.swift; path = Sources/InternalError.swift; sourceTree = "<group>"; };
+		BB3406591E08AE1E00DA5E5E /* InterruptedException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InterruptedException.swift; path = Sources/InterruptedException.swift; sourceTree = "<group>"; };
+		BB34065A1E08AE1E00DA5E5E /* InvocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InvocationHandler.swift; path = Sources/InvocationHandler.swift; sourceTree = "<group>"; };
+		BB34065B1E08AE1E00DA5E5E /* InvocationTargetException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InvocationTargetException.swift; path = Sources/InvocationTargetException.swift; sourceTree = "<group>"; };
+		BB34065C1E08AE1E00DA5E5E /* Iterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Iterable.swift; path = Sources/Iterable.swift; sourceTree = "<group>"; };
+		BB34065D1E08AE1E00DA5E5E /* JavaComparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JavaComparable.swift; path = Sources/JavaComparable.swift; sourceTree = "<group>"; };
+		BB34065E1E08AE1E00DA5E5E /* JavaDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JavaDouble.swift; path = Sources/JavaDouble.swift; sourceTree = "<group>"; };
+		BB34065F1E08AE1E00DA5E5E /* JavaError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JavaError.swift; path = Sources/JavaError.swift; sourceTree = "<group>"; };
+		BB3406601E08AE1E00DA5E5E /* JavaFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JavaFloat.swift; path = Sources/JavaFloat.swift; sourceTree = "<group>"; };
+		BB3406611E08AE1E00DA5E5E /* JavaObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JavaObject.swift; path = Sources/JavaObject.swift; sourceTree = "<group>"; };
+		BB3406621E08AE1E00DA5E5E /* JavaSecurityException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JavaSecurityException.swift; path = Sources/JavaSecurityException.swift; sourceTree = "<group>"; };
+		BB3406631E08AE1E00DA5E5E /* JavaString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JavaString.swift; path = Sources/JavaString.swift; sourceTree = "<group>"; };
+		BB3406641E08AE1E00DA5E5E /* LinkageError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkageError.swift; path = Sources/LinkageError.swift; sourceTree = "<group>"; };
+		BB3406651E08AE1E00DA5E5E /* LockInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LockInfo.swift; path = Sources/LockInfo.swift; sourceTree = "<group>"; };
+		BB3406661E08AE1E00DA5E5E /* Long.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Long.swift; path = Sources/Long.swift; sourceTree = "<group>"; };
+		BB3406671E08AE1E00DA5E5E /* MalformedParameterizedTypeException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MalformedParameterizedTypeException.swift; path = Sources/MalformedParameterizedTypeException.swift; sourceTree = "<group>"; };
+		BB3406681E08AE1E00DA5E5E /* ManagementFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagementFactory.swift; path = Sources/ManagementFactory.swift; sourceTree = "<group>"; };
+		BB3406691E08AE1E00DA5E5E /* ManagementPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagementPermission.swift; path = Sources/ManagementPermission.swift; sourceTree = "<group>"; };
+		BB34066A1E08AE1E00DA5E5E /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Math.swift; path = Sources/Math.swift; sourceTree = "<group>"; };
+		BB34066B1E08AE1E00DA5E5E /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Member.swift; path = Sources/Member.swift; sourceTree = "<group>"; };
+		BB34066C1E08AE1E00DA5E5E /* MemoryManagerMXBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryManagerMXBean.swift; path = Sources/MemoryManagerMXBean.swift; sourceTree = "<group>"; };
+		BB34066D1E08AE1E00DA5E5E /* MemoryMXBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryMXBean.swift; path = Sources/MemoryMXBean.swift; sourceTree = "<group>"; };
+		BB34066E1E08AE1E00DA5E5E /* MemoryNotificationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryNotificationInfo.swift; path = Sources/MemoryNotificationInfo.swift; sourceTree = "<group>"; };
+		BB34066F1E08AE1E00DA5E5E /* MemoryPoolMXBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryPoolMXBean.swift; path = Sources/MemoryPoolMXBean.swift; sourceTree = "<group>"; };
+		BB3406701E08AE1E00DA5E5E /* MemoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryType.swift; path = Sources/MemoryType.swift; sourceTree = "<group>"; };
+		BB3406711E08AE1E00DA5E5E /* MemoryUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryUsage.swift; path = Sources/MemoryUsage.swift; sourceTree = "<group>"; };
+		BB3406721E08AE1E00DA5E5E /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Method.swift; path = Sources/Method.swift; sourceTree = "<group>"; };
+		BB3406731E08AE1E00DA5E5E /* Modifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Modifier.swift; path = Sources/Modifier.swift; sourceTree = "<group>"; };
+		BB3406741E08AE1E00DA5E5E /* MonitorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonitorInfo.swift; path = Sources/MonitorInfo.swift; sourceTree = "<group>"; };
+		BB3406751E08AE1E00DA5E5E /* NegativeArraySizeException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NegativeArraySizeException.swift; path = Sources/NegativeArraySizeException.swift; sourceTree = "<group>"; };
+		BB3406761E08AE1E00DA5E5E /* NoClassDefFoundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoClassDefFoundError.swift; path = Sources/NoClassDefFoundError.swift; sourceTree = "<group>"; };
+		BB3406771E08AE1E00DA5E5E /* NoSuchFieldError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoSuchFieldError.swift; path = Sources/NoSuchFieldError.swift; sourceTree = "<group>"; };
+		BB3406781E08AE1E00DA5E5E /* NoSuchFieldException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoSuchFieldException.swift; path = Sources/NoSuchFieldException.swift; sourceTree = "<group>"; };
+		BB3406791E08AE1E00DA5E5E /* NoSuchMethodError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoSuchMethodError.swift; path = Sources/NoSuchMethodError.swift; sourceTree = "<group>"; };
+		BB34067A1E08AE1E00DA5E5E /* NoSuchMethodException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoSuchMethodException.swift; path = Sources/NoSuchMethodException.swift; sourceTree = "<group>"; };
+		BB34067B1E08AE1E00DA5E5E /* NullPointerException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NullPointerException.swift; path = Sources/NullPointerException.swift; sourceTree = "<group>"; };
+		BB34067C1E08AE1E00DA5E5E /* Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Number.swift; path = Sources/Number.swift; sourceTree = "<group>"; };
+		BB34067D1E08AE1E00DA5E5E /* NumberFormatException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberFormatException.swift; path = Sources/NumberFormatException.swift; sourceTree = "<group>"; };
+		BB34067E1E08AE1E00DA5E5E /* OperatingSystemMXBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperatingSystemMXBean.swift; path = Sources/OperatingSystemMXBean.swift; sourceTree = "<group>"; };
+		BB34067F1E08AE1E00DA5E5E /* OutOfMemoryError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutOfMemoryError.swift; path = Sources/OutOfMemoryError.swift; sourceTree = "<group>"; };
+		BB3406801E08AE1E00DA5E5E /* Override.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Override.swift; path = Sources/Override.swift; sourceTree = "<group>"; };
+		BB3406811E08AE1E00DA5E5E /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = Sources/Package.swift; sourceTree = "<group>"; };
+		BB3406821E08AE1E00DA5E5E /* ParameterizedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParameterizedType.swift; path = Sources/ParameterizedType.swift; sourceTree = "<group>"; };
+		BB3406831E08AE1E00DA5E5E /* PhantomReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhantomReference.swift; path = Sources/PhantomReference.swift; sourceTree = "<group>"; };
+		BB3406841E08AE1E00DA5E5E /* Process.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Process.swift; path = Sources/Process.swift; sourceTree = "<group>"; };
+		BB3406851E08AE1E00DA5E5E /* ProcessBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProcessBuilder.swift; path = Sources/ProcessBuilder.swift; sourceTree = "<group>"; };
+		BB3406861E08AE1E00DA5E5E /* Proxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Proxy.swift; path = Sources/Proxy.swift; sourceTree = "<group>"; };
+		BB3406871E08AE1E00DA5E5E /* Readable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Readable.swift; path = Sources/Readable.swift; sourceTree = "<group>"; };
+		BB3406881E08AE1E00DA5E5E /* Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reference.swift; path = Sources/Reference.swift; sourceTree = "<group>"; };
+		BB3406891E08AE1E00DA5E5E /* ReferenceQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReferenceQueue.swift; path = Sources/ReferenceQueue.swift; sourceTree = "<group>"; };
+		BB34068A1E08AE1E00DA5E5E /* ReflectPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReflectPermission.swift; path = Sources/ReflectPermission.swift; sourceTree = "<group>"; };
+		BB34068B1E08AE1E00DA5E5E /* Retention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Retention.swift; path = Sources/Retention.swift; sourceTree = "<group>"; };
+		BB34068C1E08AE1E00DA5E5E /* RetentionPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetentionPolicy.swift; path = Sources/RetentionPolicy.swift; sourceTree = "<group>"; };
+		BB34068D1E08AE1E00DA5E5E /* Runnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Runnable.swift; path = Sources/Runnable.swift; sourceTree = "<group>"; };
+		BB34068E1E08AE1E00DA5E5E /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Runtime.swift; path = Sources/Runtime.swift; sourceTree = "<group>"; };
+		BB34068F1E08AE1E00DA5E5E /* RuntimeException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuntimeException.swift; path = Sources/RuntimeException.swift; sourceTree = "<group>"; };
+		BB3406901E08AE1E00DA5E5E /* RuntimeMXBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuntimeMXBean.swift; path = Sources/RuntimeMXBean.swift; sourceTree = "<group>"; };
+		BB3406911E08AE1E00DA5E5E /* RuntimePermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuntimePermission.swift; path = Sources/RuntimePermission.swift; sourceTree = "<group>"; };
+		BB3406921E08AE1E00DA5E5E /* SecurityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecurityManager.swift; path = Sources/SecurityManager.swift; sourceTree = "<group>"; };
+		BB3406931E08AE1E00DA5E5E /* Short.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Short.swift; path = Sources/Short.swift; sourceTree = "<group>"; };
+		BB3406941E08AE1E00DA5E5E /* SoftReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoftReference.swift; path = Sources/SoftReference.swift; sourceTree = "<group>"; };
+		BB3406951E08AE1E00DA5E5E /* StackOverflowError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackOverflowError.swift; path = Sources/StackOverflowError.swift; sourceTree = "<group>"; };
+		BB3406961E08AE1E00DA5E5E /* StackTraceElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackTraceElement.swift; path = Sources/StackTraceElement.swift; sourceTree = "<group>"; };
+		BB3406971E08AE1E00DA5E5E /* StrictMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StrictMath.swift; path = Sources/StrictMath.swift; sourceTree = "<group>"; };
+		BB3406981E08AE1E00DA5E5E /* StringBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringBuffer.swift; path = Sources/StringBuffer.swift; sourceTree = "<group>"; };
+		BB3406991E08AE1E00DA5E5E /* StringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringBuilder.swift; path = Sources/StringBuilder.swift; sourceTree = "<group>"; };
+		BB34069A1E08AE1E00DA5E5E /* StringIndexOutOfBoundsException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringIndexOutOfBoundsException.swift; path = Sources/StringIndexOutOfBoundsException.swift; sourceTree = "<group>"; };
+		BB34069B1E08AE1E00DA5E5E /* SuppressWarnings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuppressWarnings.swift; path = Sources/SuppressWarnings.swift; sourceTree = "<group>"; };
+		BB34069C1E08AE1E00DA5E5E /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = System.swift; path = Sources/System.swift; sourceTree = "<group>"; };
+		BB34069D1E08AE1E00DA5E5E /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Target.swift; path = Sources/Target.swift; sourceTree = "<group>"; };
+		BB34069E1E08AE1E00DA5E5E /* Thread_State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Thread_State.swift; path = Sources/Thread_State.swift; sourceTree = "<group>"; };
+		BB34069F1E08AE1E00DA5E5E /* Thread_UncaughtExceptionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Thread_UncaughtExceptionHandler.swift; path = Sources/Thread_UncaughtExceptionHandler.swift; sourceTree = "<group>"; };
+		BB3406A01E08AE1E00DA5E5E /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Thread.swift; path = Sources/Thread.swift; sourceTree = "<group>"; };
+		BB3406A11E08AE1E00DA5E5E /* ThreadDeath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadDeath.swift; path = Sources/ThreadDeath.swift; sourceTree = "<group>"; };
+		BB3406A21E08AE1E00DA5E5E /* ThreadGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadGroup.swift; path = Sources/ThreadGroup.swift; sourceTree = "<group>"; };
+		BB3406A31E08AE1E00DA5E5E /* ThreadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadInfo.swift; path = Sources/ThreadInfo.swift; sourceTree = "<group>"; };
+		BB3406A41E08AE1E00DA5E5E /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocal.swift; path = Sources/ThreadLocal.swift; sourceTree = "<group>"; };
+		BB3406A51E08AE1E00DA5E5E /* ThreadMXBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadMXBean.swift; path = Sources/ThreadMXBean.swift; sourceTree = "<group>"; };
+		BB3406A61E08AE1E00DA5E5E /* Throwable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Throwable.swift; path = Sources/Throwable.swift; sourceTree = "<group>"; };
+		BB3406A71E08AE1E00DA5E5E /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Type.swift; path = Sources/Type.swift; sourceTree = "<group>"; };
+		BB3406A81E08AE1E00DA5E5E /* TypeNotPresentException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeNotPresentException.swift; path = Sources/TypeNotPresentException.swift; sourceTree = "<group>"; };
+		BB3406A91E08AE1E00DA5E5E /* TypeVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeVariable.swift; path = Sources/TypeVariable.swift; sourceTree = "<group>"; };
+		BB3406AA1E08AE1E00DA5E5E /* UndeclaredThrowableException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UndeclaredThrowableException.swift; path = Sources/UndeclaredThrowableException.swift; sourceTree = "<group>"; };
+		BB3406AB1E08AE1E00DA5E5E /* UnknownError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnknownError.swift; path = Sources/UnknownError.swift; sourceTree = "<group>"; };
+		BB3406AC1E08AE1E00DA5E5E /* UnmodifiableClassException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnmodifiableClassException.swift; path = Sources/UnmodifiableClassException.swift; sourceTree = "<group>"; };
+		BB3406AD1E08AE1E00DA5E5E /* UnsatisfiedLinkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnsatisfiedLinkError.swift; path = Sources/UnsatisfiedLinkError.swift; sourceTree = "<group>"; };
+		BB3406AE1E08AE1E00DA5E5E /* UnsupportedClassVersionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnsupportedClassVersionError.swift; path = Sources/UnsupportedClassVersionError.swift; sourceTree = "<group>"; };
+		BB3406AF1E08AE1E00DA5E5E /* UnsupportedOperationException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnsupportedOperationException.swift; path = Sources/UnsupportedOperationException.swift; sourceTree = "<group>"; };
+		BB3406B01E08AE1E00DA5E5E /* VerifyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerifyError.swift; path = Sources/VerifyError.swift; sourceTree = "<group>"; };
+		BB3406B11E08AE1E00DA5E5E /* VirtualMachineError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VirtualMachineError.swift; path = Sources/VirtualMachineError.swift; sourceTree = "<group>"; };
+		BB3406B21E08AE1E00DA5E5E /* Void.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Void.swift; path = Sources/Void.swift; sourceTree = "<group>"; };
+		BB3406B31E08AE1E00DA5E5E /* WeakReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakReference.swift; path = Sources/WeakReference.swift; sourceTree = "<group>"; };
+		BB3406B41E08AE1E00DA5E5E /* WildcardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WildcardType.swift; path = Sources/WildcardType.swift; sourceTree = "<group>"; };
+		BBBF2E421D499E1D004142AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBBF2E431D499E1D004142AE /* java_lang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_lang.h; sourceTree = "<group>"; };
+		BBC13EA61D4997D20035A039 /* java_lang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = java_lang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBC13EBF1D4998290035A039 /* java_swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = java_swift.framework; path = "../../../Library/Developer/Xcode/DerivedData/SwiftJava-bhwyspxgviouaubrunixdmmpgggl/Build/Products/Debug/java_swift.framework"; sourceTree = "<group>"; };
+		BBC13F111D4998450035A039 /* java_lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = java_lang.swift; path = Sources/java_lang.swift; sourceTree = "<group>"; };
+		BBC140461D4998DB0035A039 /* build.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.log; sourceTree = "<group>"; };
+		BBC140471D4998DB0035A039 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBC13EA21D4997D20035A039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBC13EC01D4998290035A039 /* java_swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBC13E9C1D4997D20035A039 = {
+			isa = PBXGroup;
+			children = (
+				BB19B4311D6632CF002F5586 /* LICENSE */,
+				BBC140461D4998DB0035A039 /* build.log */,
+				BBBF2E421D499E1D004142AE /* Info.plist */,
+				BBBF2E431D499E1D004142AE /* java_lang.h */,
+				BBC13F111D4998450035A039 /* java_lang.swift */,
+				BBC140471D4998DB0035A039 /* Package.swift */,
+				BBC13EBD1D4998000035A039 /* Sources */,
+				BBC13EA71D4997D20035A039 /* Products */,
+				BBC13EBE1D4998290035A039 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BBC13EA71D4997D20035A039 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBC13EA61D4997D20035A039 /* java_lang.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBC13EBD1D4998000035A039 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BB34061C1E08AE1E00DA5E5E /* AbstractMethodError.swift */,
+				BB34061D1E08AE1E00DA5E5E /* AccessibleObject.swift */,
+				BB34061E1E08AE1E00DA5E5E /* AnnotatedElement.swift */,
+				BB34061F1E08AE1E00DA5E5E /* Annotation.swift */,
+				BB3406201E08AE1E00DA5E5E /* AnnotationFormatError.swift */,
+				BB3406211E08AE1E00DA5E5E /* AnnotationTypeMismatchException.swift */,
+				BB3406221E08AE1E00DA5E5E /* Appendable.swift */,
+				BB3406231E08AE1E00DA5E5E /* ArithmeticException.swift */,
+				BB3406241E08AE1E00DA5E5E /* Array.swift */,
+				BB3406251E08AE1E00DA5E5E /* ArrayIndexOutOfBoundsException.swift */,
+				BB3406261E08AE1E00DA5E5E /* ArrayStoreException.swift */,
+				BB3406271E08AE1E00DA5E5E /* AssertionError.swift */,
+				BB3406281E08AE1E00DA5E5E /* Boolean.swift */,
+				BB3406291E08AE1E00DA5E5E /* Byte.swift */,
+				BB34062A1E08AE1E00DA5E5E /* Character_Subset.swift */,
+				BB34062B1E08AE1E00DA5E5E /* Character_UnicodeBlock.swift */,
+				BB34062C1E08AE1E00DA5E5E /* Character.swift */,
+				BB34062D1E08AE1E00DA5E5E /* CharSequence.swift */,
+				BB34062E1E08AE1E00DA5E5E /* Class.swift */,
+				BB34062F1E08AE1E00DA5E5E /* ClassCastException.swift */,
+				BB3406301E08AE1E00DA5E5E /* ClassCircularityError.swift */,
+				BB3406311E08AE1E00DA5E5E /* ClassDefinition.swift */,
+				BB3406321E08AE1E00DA5E5E /* ClassFileTransformer.swift */,
+				BB3406331E08AE1E00DA5E5E /* ClassFormatError.swift */,
+				BB3406341E08AE1E00DA5E5E /* ClassLoader.swift */,
+				BB3406351E08AE1E00DA5E5E /* ClassLoadingMXBean.swift */,
+				BB3406361E08AE1E00DA5E5E /* ClassNotFoundException.swift */,
+				BB3406371E08AE1E00DA5E5E /* Cloneable.swift */,
+				BB3406381E08AE1E00DA5E5E /* CloneNotSupportedException.swift */,
+				BB3406391E08AE1E00DA5E5E /* CompilationMXBean.swift */,
+				BB34063A1E08AE1E00DA5E5E /* Compiler.swift */,
+				BB34063B1E08AE1E00DA5E5E /* Constructor.swift */,
+				BB34063C1E08AE1E00DA5E5E /* Deprecated.swift */,
+				BB34063D1E08AE1E00DA5E5E /* Documented.swift */,
+				BB34063E1E08AE1E00DA5E5E /* ElementType.swift */,
+				BB34063F1E08AE1E00DA5E5E /* Enum.swift */,
+				BB3406401E08AE1E00DA5E5E /* EnumConstantNotPresentException.swift */,
+				BB3406411E08AE1E00DA5E5E /* Exception.swift */,
+				BB3406421E08AE1E00DA5E5E /* ExceptionInInitializerError.swift */,
+				BB3406431E08AE1E00DA5E5E /* Field.swift */,
+				BB3406441E08AE1E00DA5E5E /* GarbageCollectorMXBean.swift */,
+				BB3406451E08AE1E00DA5E5E /* GenericArrayType.swift */,
+				BB3406461E08AE1E00DA5E5E /* GenericDeclaration.swift */,
+				BB3406471E08AE1E00DA5E5E /* GenericSignatureFormatError.swift */,
+				BB3406481E08AE1E00DA5E5E /* IllegalAccessError.swift */,
+				BB3406491E08AE1E00DA5E5E /* IllegalAccessException.swift */,
+				BB34064A1E08AE1E00DA5E5E /* IllegalArgumentException.swift */,
+				BB34064B1E08AE1E00DA5E5E /* IllegalClassFormatException.swift */,
+				BB34064C1E08AE1E00DA5E5E /* IllegalMonitorStateException.swift */,
+				BB34064D1E08AE1E00DA5E5E /* IllegalStateException.swift */,
+				BB34064E1E08AE1E00DA5E5E /* IllegalThreadStateException.swift */,
+				BB34064F1E08AE1E00DA5E5E /* IncompatibleClassChangeError.swift */,
+				BB3406501E08AE1E00DA5E5E /* IncompleteAnnotationException.swift */,
+				BB3406511E08AE1E00DA5E5E /* IndexOutOfBoundsException.swift */,
+				BB3406521E08AE1E00DA5E5E /* InheritableThreadLocal.swift */,
+				BB3406531E08AE1E00DA5E5E /* Inherited.swift */,
+				BB3406541E08AE1E00DA5E5E /* InstantiationError.swift */,
+				BB3406551E08AE1E00DA5E5E /* InstantiationException.swift */,
+				BB3406561E08AE1E00DA5E5E /* Instrumentation.swift */,
+				BB3406571E08AE1E00DA5E5E /* Integer.swift */,
+				BB3406581E08AE1E00DA5E5E /* InternalError.swift */,
+				BB3406591E08AE1E00DA5E5E /* InterruptedException.swift */,
+				BB34065A1E08AE1E00DA5E5E /* InvocationHandler.swift */,
+				BB34065B1E08AE1E00DA5E5E /* InvocationTargetException.swift */,
+				BB34065C1E08AE1E00DA5E5E /* Iterable.swift */,
+				BB34065D1E08AE1E00DA5E5E /* JavaComparable.swift */,
+				BB34065E1E08AE1E00DA5E5E /* JavaDouble.swift */,
+				BB34065F1E08AE1E00DA5E5E /* JavaError.swift */,
+				BB3406601E08AE1E00DA5E5E /* JavaFloat.swift */,
+				BB3406611E08AE1E00DA5E5E /* JavaObject.swift */,
+				BB3406621E08AE1E00DA5E5E /* JavaSecurityException.swift */,
+				BB3406631E08AE1E00DA5E5E /* JavaString.swift */,
+				BB3406641E08AE1E00DA5E5E /* LinkageError.swift */,
+				BB3406651E08AE1E00DA5E5E /* LockInfo.swift */,
+				BB3406661E08AE1E00DA5E5E /* Long.swift */,
+				BB3406671E08AE1E00DA5E5E /* MalformedParameterizedTypeException.swift */,
+				BB3406681E08AE1E00DA5E5E /* ManagementFactory.swift */,
+				BB3406691E08AE1E00DA5E5E /* ManagementPermission.swift */,
+				BB34066A1E08AE1E00DA5E5E /* Math.swift */,
+				BB34066B1E08AE1E00DA5E5E /* Member.swift */,
+				BB34066C1E08AE1E00DA5E5E /* MemoryManagerMXBean.swift */,
+				BB34066D1E08AE1E00DA5E5E /* MemoryMXBean.swift */,
+				BB34066E1E08AE1E00DA5E5E /* MemoryNotificationInfo.swift */,
+				BB34066F1E08AE1E00DA5E5E /* MemoryPoolMXBean.swift */,
+				BB3406701E08AE1E00DA5E5E /* MemoryType.swift */,
+				BB3406711E08AE1E00DA5E5E /* MemoryUsage.swift */,
+				BB3406721E08AE1E00DA5E5E /* Method.swift */,
+				BB3406731E08AE1E00DA5E5E /* Modifier.swift */,
+				BB3406741E08AE1E00DA5E5E /* MonitorInfo.swift */,
+				BB3406751E08AE1E00DA5E5E /* NegativeArraySizeException.swift */,
+				BB3406761E08AE1E00DA5E5E /* NoClassDefFoundError.swift */,
+				BB3406771E08AE1E00DA5E5E /* NoSuchFieldError.swift */,
+				BB3406781E08AE1E00DA5E5E /* NoSuchFieldException.swift */,
+				BB3406791E08AE1E00DA5E5E /* NoSuchMethodError.swift */,
+				BB34067A1E08AE1E00DA5E5E /* NoSuchMethodException.swift */,
+				BB34067B1E08AE1E00DA5E5E /* NullPointerException.swift */,
+				BB34067C1E08AE1E00DA5E5E /* Number.swift */,
+				BB34067D1E08AE1E00DA5E5E /* NumberFormatException.swift */,
+				BB34067E1E08AE1E00DA5E5E /* OperatingSystemMXBean.swift */,
+				BB34067F1E08AE1E00DA5E5E /* OutOfMemoryError.swift */,
+				BB3406801E08AE1E00DA5E5E /* Override.swift */,
+				BB3406811E08AE1E00DA5E5E /* Package.swift */,
+				BB3406821E08AE1E00DA5E5E /* ParameterizedType.swift */,
+				BB3406831E08AE1E00DA5E5E /* PhantomReference.swift */,
+				BB3406841E08AE1E00DA5E5E /* Process.swift */,
+				BB3406851E08AE1E00DA5E5E /* ProcessBuilder.swift */,
+				BB3406861E08AE1E00DA5E5E /* Proxy.swift */,
+				BB3406871E08AE1E00DA5E5E /* Readable.swift */,
+				BB3406881E08AE1E00DA5E5E /* Reference.swift */,
+				BB3406891E08AE1E00DA5E5E /* ReferenceQueue.swift */,
+				BB34068A1E08AE1E00DA5E5E /* ReflectPermission.swift */,
+				BB34068B1E08AE1E00DA5E5E /* Retention.swift */,
+				BB34068C1E08AE1E00DA5E5E /* RetentionPolicy.swift */,
+				BB34068D1E08AE1E00DA5E5E /* Runnable.swift */,
+				BB34068E1E08AE1E00DA5E5E /* Runtime.swift */,
+				BB34068F1E08AE1E00DA5E5E /* RuntimeException.swift */,
+				BB3406901E08AE1E00DA5E5E /* RuntimeMXBean.swift */,
+				BB3406911E08AE1E00DA5E5E /* RuntimePermission.swift */,
+				BB3406921E08AE1E00DA5E5E /* SecurityManager.swift */,
+				BB3406931E08AE1E00DA5E5E /* Short.swift */,
+				BB3406941E08AE1E00DA5E5E /* SoftReference.swift */,
+				BB3406951E08AE1E00DA5E5E /* StackOverflowError.swift */,
+				BB3406961E08AE1E00DA5E5E /* StackTraceElement.swift */,
+				BB3406971E08AE1E00DA5E5E /* StrictMath.swift */,
+				BB3406981E08AE1E00DA5E5E /* StringBuffer.swift */,
+				BB3406991E08AE1E00DA5E5E /* StringBuilder.swift */,
+				BB34069A1E08AE1E00DA5E5E /* StringIndexOutOfBoundsException.swift */,
+				BB34069B1E08AE1E00DA5E5E /* SuppressWarnings.swift */,
+				BB34069C1E08AE1E00DA5E5E /* System.swift */,
+				BB34069D1E08AE1E00DA5E5E /* Target.swift */,
+				BB34069E1E08AE1E00DA5E5E /* Thread_State.swift */,
+				BB34069F1E08AE1E00DA5E5E /* Thread_UncaughtExceptionHandler.swift */,
+				BB3406A01E08AE1E00DA5E5E /* Thread.swift */,
+				BB3406A11E08AE1E00DA5E5E /* ThreadDeath.swift */,
+				BB3406A21E08AE1E00DA5E5E /* ThreadGroup.swift */,
+				BB3406A31E08AE1E00DA5E5E /* ThreadInfo.swift */,
+				BB3406A41E08AE1E00DA5E5E /* ThreadLocal.swift */,
+				BB3406A51E08AE1E00DA5E5E /* ThreadMXBean.swift */,
+				BB3406A61E08AE1E00DA5E5E /* Throwable.swift */,
+				BB3406A71E08AE1E00DA5E5E /* Type.swift */,
+				BB3406A81E08AE1E00DA5E5E /* TypeNotPresentException.swift */,
+				BB3406A91E08AE1E00DA5E5E /* TypeVariable.swift */,
+				BB3406AA1E08AE1E00DA5E5E /* UndeclaredThrowableException.swift */,
+				BB3406AB1E08AE1E00DA5E5E /* UnknownError.swift */,
+				BB3406AC1E08AE1E00DA5E5E /* UnmodifiableClassException.swift */,
+				BB3406AD1E08AE1E00DA5E5E /* UnsatisfiedLinkError.swift */,
+				BB3406AE1E08AE1E00DA5E5E /* UnsupportedClassVersionError.swift */,
+				BB3406AF1E08AE1E00DA5E5E /* UnsupportedOperationException.swift */,
+				BB3406B01E08AE1E00DA5E5E /* VerifyError.swift */,
+				BB3406B11E08AE1E00DA5E5E /* VirtualMachineError.swift */,
+				BB3406B21E08AE1E00DA5E5E /* Void.swift */,
+				BB3406B31E08AE1E00DA5E5E /* WeakReference.swift */,
+				BB3406B41E08AE1E00DA5E5E /* WildcardType.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		BBC13EBE1D4998290035A039 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBC13EBF1D4998290035A039 /* java_swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BBC13EA31D4997D20035A039 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBBF2E451D499E1D004142AE /* java_lang.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BBC13EA51D4997D20035A039 /* java_lang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBC13EAE1D4997D20035A039 /* Build configuration list for PBXNativeTarget "java_lang" */;
+			buildPhases = (
+				BBC13EA11D4997D20035A039 /* Sources */,
+				BBC13EA21D4997D20035A039 /* Frameworks */,
+				BBC13EA31D4997D20035A039 /* Headers */,
+				BBC13EA41D4997D20035A039 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = java_lang;
+			productName = java_lang;
+			productReference = BBC13EA61D4997D20035A039 /* java_lang.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBC13E9D1D4997D20035A039 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "John Holdsworth";
+				TargetAttributes = {
+					BBC13EA51D4997D20035A039 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeamName = "John Holdsworth";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = BBC13EA01D4997D20035A039 /* Build configuration list for PBXProject "java_lang" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BBC13E9C1D4997D20035A039;
+			productRefGroup = BBC13EA71D4997D20035A039 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBC13EA51D4997D20035A039 /* java_lang */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBC13EA41D4997D20035A039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBC13EA11D4997D20035A039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB3407261E08AE1E00DA5E5E /* Runnable.swift in Sources */,
+				BB3407201E08AE1E00DA5E5E /* Readable.swift in Sources */,
+				BB3407361E08AE1E00DA5E5E /* Target.swift in Sources */,
+				BB3406FE1E08AE1E00DA5E5E /* LockInfo.swift in Sources */,
+				BB3406EF1E08AE1E00DA5E5E /* Instrumentation.swift in Sources */,
+				BB3406F41E08AE1E00DA5E5E /* InvocationTargetException.swift in Sources */,
+				BB34072F1E08AE1E00DA5E5E /* StackTraceElement.swift in Sources */,
+				BB34074C1E08AE1E00DA5E5E /* WeakReference.swift in Sources */,
+				BB3407491E08AE1E00DA5E5E /* VerifyError.swift in Sources */,
+				BB3406BE1E08AE1E00DA5E5E /* ArrayIndexOutOfBoundsException.swift in Sources */,
+				BB3407041E08AE1E00DA5E5E /* Member.swift in Sources */,
+				BB3407191E08AE1E00DA5E5E /* Override.swift in Sources */,
+				BB34072E1E08AE1E00DA5E5E /* StackOverflowError.swift in Sources */,
+				BBC13FD01D4998460035A039 /* java_lang.swift in Sources */,
+				BB3407101E08AE1E00DA5E5E /* NoSuchFieldError.swift in Sources */,
+				BB3406DF1E08AE1E00DA5E5E /* GenericDeclaration.swift in Sources */,
+				BB3406FA1E08AE1E00DA5E5E /* JavaObject.swift in Sources */,
+				BB34071E1E08AE1E00DA5E5E /* ProcessBuilder.swift in Sources */,
+				BB3406C01E08AE1E00DA5E5E /* AssertionError.swift in Sources */,
+				BB3407401E08AE1E00DA5E5E /* Type.swift in Sources */,
+				BB34073B1E08AE1E00DA5E5E /* ThreadGroup.swift in Sources */,
+				BB3407081E08AE1E00DA5E5E /* MemoryPoolMXBean.swift in Sources */,
+				BB3406E91E08AE1E00DA5E5E /* IncompleteAnnotationException.swift in Sources */,
+				BB3406C31E08AE1E00DA5E5E /* Character_Subset.swift in Sources */,
+				BB3407421E08AE1E00DA5E5E /* TypeVariable.swift in Sources */,
+				BB34070C1E08AE1E00DA5E5E /* Modifier.swift in Sources */,
+				BB3407311E08AE1E00DA5E5E /* StringBuffer.swift in Sources */,
+				BB3406E11E08AE1E00DA5E5E /* IllegalAccessError.swift in Sources */,
+				BB3406D31E08AE1E00DA5E5E /* Compiler.swift in Sources */,
+				BB3407051E08AE1E00DA5E5E /* MemoryManagerMXBean.swift in Sources */,
+				BB34073E1E08AE1E00DA5E5E /* ThreadMXBean.swift in Sources */,
+				BB3407121E08AE1E00DA5E5E /* NoSuchMethodError.swift in Sources */,
+				BB34071C1E08AE1E00DA5E5E /* PhantomReference.swift in Sources */,
+				BB3406D01E08AE1E00DA5E5E /* Cloneable.swift in Sources */,
+				BB3407321E08AE1E00DA5E5E /* StringBuilder.swift in Sources */,
+				BB3406F31E08AE1E00DA5E5E /* InvocationHandler.swift in Sources */,
+				BB3406F61E08AE1E00DA5E5E /* JavaComparable.swift in Sources */,
+				BB3406C41E08AE1E00DA5E5E /* Character_UnicodeBlock.swift in Sources */,
+				BB34070D1E08AE1E00DA5E5E /* MonitorInfo.swift in Sources */,
+				BB3406BD1E08AE1E00DA5E5E /* Array.swift in Sources */,
+				BB34073C1E08AE1E00DA5E5E /* ThreadInfo.swift in Sources */,
+				BB3406FD1E08AE1E00DA5E5E /* LinkageError.swift in Sources */,
+				BB34071F1E08AE1E00DA5E5E /* Proxy.swift in Sources */,
+				BB3406DB1E08AE1E00DA5E5E /* ExceptionInInitializerError.swift in Sources */,
+				BB3406ED1E08AE1E00DA5E5E /* InstantiationError.swift in Sources */,
+				BB34071A1E08AE1E00DA5E5E /* Package.swift in Sources */,
+				BB3407451E08AE1E00DA5E5E /* UnmodifiableClassException.swift in Sources */,
+				BB3406D71E08AE1E00DA5E5E /* ElementType.swift in Sources */,
+				BB3406FF1E08AE1E00DA5E5E /* Long.swift in Sources */,
+				BB3406F11E08AE1E00DA5E5E /* InternalError.swift in Sources */,
+				BB3407141E08AE1E00DA5E5E /* NullPointerException.swift in Sources */,
+				BB3406EE1E08AE1E00DA5E5E /* InstantiationException.swift in Sources */,
+				BB34073A1E08AE1E00DA5E5E /* ThreadDeath.swift in Sources */,
+				BB3407381E08AE1E00DA5E5E /* Thread_UncaughtExceptionHandler.swift in Sources */,
+				BB3406B81E08AE1E00DA5E5E /* Annotation.swift in Sources */,
+				BB3406CD1E08AE1E00DA5E5E /* ClassLoader.swift in Sources */,
+				BB3406BC1E08AE1E00DA5E5E /* ArithmeticException.swift in Sources */,
+				BB3406E61E08AE1E00DA5E5E /* IllegalStateException.swift in Sources */,
+				BB3407431E08AE1E00DA5E5E /* UndeclaredThrowableException.swift in Sources */,
+				BB3407151E08AE1E00DA5E5E /* Number.swift in Sources */,
+				BB3406EB1E08AE1E00DA5E5E /* InheritableThreadLocal.swift in Sources */,
+				BB34070B1E08AE1E00DA5E5E /* Method.swift in Sources */,
+				BB3407461E08AE1E00DA5E5E /* UnsatisfiedLinkError.swift in Sources */,
+				BB34070E1E08AE1E00DA5E5E /* NegativeArraySizeException.swift in Sources */,
+				BB3406C71E08AE1E00DA5E5E /* Class.swift in Sources */,
+				BB3406C91E08AE1E00DA5E5E /* ClassCircularityError.swift in Sources */,
+				BB3406E41E08AE1E00DA5E5E /* IllegalClassFormatException.swift in Sources */,
+				BB3407331E08AE1E00DA5E5E /* StringIndexOutOfBoundsException.swift in Sources */,
+				BB3407061E08AE1E00DA5E5E /* MemoryMXBean.swift in Sources */,
+				BB34074D1E08AE1E00DA5E5E /* WildcardType.swift in Sources */,
+				BB3406F81E08AE1E00DA5E5E /* JavaError.swift in Sources */,
+				BB3407111E08AE1E00DA5E5E /* NoSuchFieldException.swift in Sources */,
+				BB34073D1E08AE1E00DA5E5E /* ThreadLocal.swift in Sources */,
+				BB34074B1E08AE1E00DA5E5E /* Void.swift in Sources */,
+				BB34070F1E08AE1E00DA5E5E /* NoClassDefFoundError.swift in Sources */,
+				BB3407301E08AE1E00DA5E5E /* StrictMath.swift in Sources */,
+				BB34071B1E08AE1E00DA5E5E /* ParameterizedType.swift in Sources */,
+				BB3407181E08AE1E00DA5E5E /* OutOfMemoryError.swift in Sources */,
+				BB3406DC1E08AE1E00DA5E5E /* Field.swift in Sources */,
+				BB3406B91E08AE1E00DA5E5E /* AnnotationFormatError.swift in Sources */,
+				BB3407471E08AE1E00DA5E5E /* UnsupportedClassVersionError.swift in Sources */,
+				BB3406C51E08AE1E00DA5E5E /* Character.swift in Sources */,
+				BB34072B1E08AE1E00DA5E5E /* SecurityManager.swift in Sources */,
+				BB3406CF1E08AE1E00DA5E5E /* ClassNotFoundException.swift in Sources */,
+				BB34072D1E08AE1E00DA5E5E /* SoftReference.swift in Sources */,
+				BB3406D51E08AE1E00DA5E5E /* Deprecated.swift in Sources */,
+				BB3406FC1E08AE1E00DA5E5E /* JavaString.swift in Sources */,
+				BB3407161E08AE1E00DA5E5E /* NumberFormatException.swift in Sources */,
+				BB3406DE1E08AE1E00DA5E5E /* GenericArrayType.swift in Sources */,
+				BB3406B71E08AE1E00DA5E5E /* AnnotatedElement.swift in Sources */,
+				BB3406CC1E08AE1E00DA5E5E /* ClassFormatError.swift in Sources */,
+				BB3407131E08AE1E00DA5E5E /* NoSuchMethodException.swift in Sources */,
+				BB3406C11E08AE1E00DA5E5E /* Boolean.swift in Sources */,
+				BB3406DA1E08AE1E00DA5E5E /* Exception.swift in Sources */,
+				BB3407091E08AE1E00DA5E5E /* MemoryType.swift in Sources */,
+				BB3406D61E08AE1E00DA5E5E /* Documented.swift in Sources */,
+				BB3406F91E08AE1E00DA5E5E /* JavaFloat.swift in Sources */,
+				BB3407351E08AE1E00DA5E5E /* System.swift in Sources */,
+				BB3407171E08AE1E00DA5E5E /* OperatingSystemMXBean.swift in Sources */,
+				BB3407241E08AE1E00DA5E5E /* Retention.swift in Sources */,
+				BB3406E81E08AE1E00DA5E5E /* IncompatibleClassChangeError.swift in Sources */,
+				BB3406E21E08AE1E00DA5E5E /* IllegalAccessException.swift in Sources */,
+				BB3406EA1E08AE1E00DA5E5E /* IndexOutOfBoundsException.swift in Sources */,
+				BB3407281E08AE1E00DA5E5E /* RuntimeException.swift in Sources */,
+				BB3406C21E08AE1E00DA5E5E /* Byte.swift in Sources */,
+				BB3406E51E08AE1E00DA5E5E /* IllegalMonitorStateException.swift in Sources */,
+				BB3407391E08AE1E00DA5E5E /* Thread.swift in Sources */,
+				BB34072C1E08AE1E00DA5E5E /* Short.swift in Sources */,
+				BB34070A1E08AE1E00DA5E5E /* MemoryUsage.swift in Sources */,
+				BB34071D1E08AE1E00DA5E5E /* Process.swift in Sources */,
+				BB3407011E08AE1E00DA5E5E /* ManagementFactory.swift in Sources */,
+				BB3406D21E08AE1E00DA5E5E /* CompilationMXBean.swift in Sources */,
+				BB3406EC1E08AE1E00DA5E5E /* Inherited.swift in Sources */,
+				BB3406BA1E08AE1E00DA5E5E /* AnnotationTypeMismatchException.swift in Sources */,
+				BB3406F01E08AE1E00DA5E5E /* Integer.swift in Sources */,
+				BB3406F21E08AE1E00DA5E5E /* InterruptedException.swift in Sources */,
+				BB3407221E08AE1E00DA5E5E /* ReferenceQueue.swift in Sources */,
+				BB3406C81E08AE1E00DA5E5E /* ClassCastException.swift in Sources */,
+				BB3406C61E08AE1E00DA5E5E /* CharSequence.swift in Sources */,
+				BB3406B61E08AE1E00DA5E5E /* AccessibleObject.swift in Sources */,
+				BB3407481E08AE1E00DA5E5E /* UnsupportedOperationException.swift in Sources */,
+				BB3407001E08AE1E00DA5E5E /* MalformedParameterizedTypeException.swift in Sources */,
+				BB3406FB1E08AE1E00DA5E5E /* JavaSecurityException.swift in Sources */,
+				BB34074A1E08AE1E00DA5E5E /* VirtualMachineError.swift in Sources */,
+				BB3406B51E08AE1E00DA5E5E /* AbstractMethodError.swift in Sources */,
+				BB3406D41E08AE1E00DA5E5E /* Constructor.swift in Sources */,
+				BB3407251E08AE1E00DA5E5E /* RetentionPolicy.swift in Sources */,
+				BB3407291E08AE1E00DA5E5E /* RuntimeMXBean.swift in Sources */,
+				BB3406E31E08AE1E00DA5E5E /* IllegalArgumentException.swift in Sources */,
+				BB3406D91E08AE1E00DA5E5E /* EnumConstantNotPresentException.swift in Sources */,
+				BB3406F71E08AE1E00DA5E5E /* JavaDouble.swift in Sources */,
+				BB3407231E08AE1E00DA5E5E /* ReflectPermission.swift in Sources */,
+				BB3406BB1E08AE1E00DA5E5E /* Appendable.swift in Sources */,
+				BB3406D81E08AE1E00DA5E5E /* Enum.swift in Sources */,
+				BB3406DD1E08AE1E00DA5E5E /* GarbageCollectorMXBean.swift in Sources */,
+				BB3406BF1E08AE1E00DA5E5E /* ArrayStoreException.swift in Sources */,
+				BB3407411E08AE1E00DA5E5E /* TypeNotPresentException.swift in Sources */,
+				BB34072A1E08AE1E00DA5E5E /* RuntimePermission.swift in Sources */,
+				BB3406E71E08AE1E00DA5E5E /* IllegalThreadStateException.swift in Sources */,
+				BB3407441E08AE1E00DA5E5E /* UnknownError.swift in Sources */,
+				BB3407021E08AE1E00DA5E5E /* ManagementPermission.swift in Sources */,
+				BB3406E01E08AE1E00DA5E5E /* GenericSignatureFormatError.swift in Sources */,
+				BB3407371E08AE1E00DA5E5E /* Thread_State.swift in Sources */,
+				BB3406F51E08AE1E00DA5E5E /* Iterable.swift in Sources */,
+				BB3407271E08AE1E00DA5E5E /* Runtime.swift in Sources */,
+				BB3406CB1E08AE1E00DA5E5E /* ClassFileTransformer.swift in Sources */,
+				BB3407341E08AE1E00DA5E5E /* SuppressWarnings.swift in Sources */,
+				BB3407071E08AE1E00DA5E5E /* MemoryNotificationInfo.swift in Sources */,
+				BB34073F1E08AE1E00DA5E5E /* Throwable.swift in Sources */,
+				BB3407211E08AE1E00DA5E5E /* Reference.swift in Sources */,
+				BB3406CA1E08AE1E00DA5E5E /* ClassDefinition.swift in Sources */,
+				BB3406D11E08AE1E00DA5E5E /* CloneNotSupportedException.swift in Sources */,
+				BB3406CE1E08AE1E00DA5E5E /* ClassLoadingMXBean.swift in Sources */,
+				BB3407031E08AE1E00DA5E5E /* Math.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BBC13EAC1D4997D20035A039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BBC13EAD1D4997D20035A039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BBC13EAF1D4997D20035A039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.genie.java-lang";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BBC13EB01D4997D20035A039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.genie.java-lang";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBC13EA01D4997D20035A039 /* Build configuration list for PBXProject "java_lang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC13EAC1D4997D20035A039 /* Debug */,
+				BBC13EAD1D4997D20035A039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBC13EAE1D4997D20035A039 /* Build configuration list for PBXNativeTarget "java_lang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC13EAF1D4997D20035A039 /* Debug */,
+				BBC13EB01D4997D20035A039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBC13E9D1D4997D20035A039 /* Project object */;
+}

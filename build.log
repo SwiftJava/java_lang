@@ -1,0 +1,209 @@
+Build settings from command line:
+    SYMROOT = /tmp
+java_lang/Sources/Thread.swift:279:15: error: overriding declaration requires an 'override' keyword
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:154:15: note: overridden declaration is here
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+java_lang/Sources/Target.swift:34:15: error: overriding declaration requires an 'override' keyword
+    open func equals( arg0: JavaObject? ) -> Bool {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:35:15: note: overridden declaration is here
+    open func equals( arg0: JavaObject? ) -> Bool {
+              ^
+java_lang/Sources/Target.swift:42:15: error: overriding declaration requires an 'override' keyword
+    open func equals( _ _arg0: JavaObject? ) -> Bool {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:43:15: note: overridden declaration is here
+    open func equals( _ _arg0: JavaObject? ) -> Bool {
+              ^
+java_lang/Sources/Target.swift:50:15: error: overriding declaration requires an 'override' keyword
+    open func toString() -> String! {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:51:15: note: overridden declaration is here
+    open func toString() -> String! {
+              ^
+java_lang/Sources/Target.swift:62:15: error: overriding declaration requires an 'override' keyword
+    open func hashCode() -> Int {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:63:15: note: overridden declaration is here
+    open func hashCode() -> Int {
+              ^
+java_lang/Sources/Target.swift:74:15: error: overriding declaration requires an 'override' keyword
+    open func annotationType() -> Class! {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:75:15: note: overridden declaration is here
+    open func annotationType() -> Class! {
+              ^
+java_lang/Sources/Thread.swift:279:15: error: overriding declaration requires an 'override' keyword
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:154:15: note: overridden declaration is here
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+java_lang/Sources/Thread.swift:279:15: error: overriding declaration requires an 'override' keyword
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:154:15: note: overridden declaration is here
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+Build settings from command line:
+    SYMROOT = /tmp
+java_lang/Sources/Enum.swift:58:15: error: overriding declaration requires an 'override' keyword
+    open func finalize() {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:36:15: note: overridden declaration is here
+    open func finalize() throws /* java.lang.Throwable */ {
+              ^
+java_lang/Sources/Enum.swift:75:15: error: overriding declaration requires an 'override' keyword
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:154:15: note: overridden declaration is here
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+java_lang/Sources/Enum.swift:58:15: error: overriding declaration requires an 'override' keyword
+    open func finalize() {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:36:15: note: overridden declaration is here
+    open func finalize() throws /* java.lang.Throwable */ {
+              ^
+java_lang/Sources/Enum.swift:75:15: error: overriding declaration requires an 'override' keyword
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:154:15: note: overridden declaration is here
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+java_lang/Sources/Enum.swift:58:15: error: overriding declaration requires an 'override' keyword
+    open func finalize() {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:36:15: note: overridden declaration is here
+    open func finalize() throws /* java.lang.Throwable */ {
+              ^
+java_lang/Sources/Enum.swift:75:15: error: overriding declaration requires an 'override' keyword
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:154:15: note: overridden declaration is here
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+java_lang/Sources/Enum.swift:58:15: error: overriding declaration requires an 'override' keyword
+    open func finalize() {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:36:15: note: overridden declaration is here
+    open func finalize() throws /* java.lang.Throwable */ {
+              ^
+java_lang/Sources/Enum.swift:75:15: error: overriding declaration requires an 'override' keyword
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+         override 
+java_lang/Sources/JavaObject.swift:154:15: note: overridden declaration is here
+    open func clone() throws /* java.lang.CloneNotSupportedException */ -> JavaObject! {
+              ^
+Build settings from command line:
+    SYMROOT = /tmp
+java_lang/Sources/Retention.swift:35:15: error: overriding declaration requires an 'override' keyword
+    open func equals( arg0: JavaObject? ) -> Bool {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:35:15: note: overridden declaration is here
+    open func equals( arg0: JavaObject? ) -> Bool {
+              ^
+java_lang/Sources/Retention.swift:43:15: error: overriding declaration requires an 'override' keyword
+    open func equals( _ _arg0: JavaObject? ) -> Bool {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:43:15: note: overridden declaration is here
+    open func equals( _ _arg0: JavaObject? ) -> Bool {
+              ^
+java_lang/Sources/Retention.swift:51:15: error: overriding declaration requires an 'override' keyword
+    open func toString() -> String! {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:51:15: note: overridden declaration is here
+    open func toString() -> String! {
+              ^
+java_lang/Sources/Retention.swift:63:15: error: overriding declaration requires an 'override' keyword
+    open func hashCode() -> Int {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:63:15: note: overridden declaration is here
+    open func hashCode() -> Int {
+              ^
+java_lang/Sources/Retention.swift:75:15: error: overriding declaration requires an 'override' keyword
+    open func annotationType() -> Class! {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:75:15: note: overridden declaration is here
+    open func annotationType() -> Class! {
+              ^
+java_lang/Sources/GarbageCollectorMXBean.swift:50:15: error: overriding declaration requires an 'override' keyword
+    open func getName() -> String! {
+              ^
+         override 
+java_lang/Sources/MemoryManagerMXBean.swift:30:15: note: overridden declaration is here
+    open func getName() -> String! {
+              ^
+java_lang/Sources/GarbageCollectorMXBean.swift:62:15: error: overriding declaration requires an 'override' keyword
+    open func isValid() -> Bool {
+              ^
+         override 
+java_lang/Sources/MemoryManagerMXBean.swift:42:15: note: overridden declaration is here
+    open func isValid() -> Bool {
+              ^
+java_lang/Sources/GarbageCollectorMXBean.swift:74:15: error: overriding declaration requires an 'override' keyword
+    open func getMemoryPoolNames() -> [String]! {
+              ^
+         override 
+java_lang/Sources/MemoryManagerMXBean.swift:54:15: note: overridden declaration is here
+    open func getMemoryPoolNames() -> [String]! {
+              ^
+java_lang/Sources/SuppressWarnings.swift:34:15: error: overriding declaration requires an 'override' keyword
+    open func equals( arg0: JavaObject? ) -> Bool {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:35:15: note: overridden declaration is here
+    open func equals( arg0: JavaObject? ) -> Bool {
+              ^
+java_lang/Sources/SuppressWarnings.swift:42:15: error: overriding declaration requires an 'override' keyword
+    open func equals( _ _arg0: JavaObject? ) -> Bool {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:43:15: note: overridden declaration is here
+    open func equals( _ _arg0: JavaObject? ) -> Bool {
+              ^
+java_lang/Sources/SuppressWarnings.swift:50:15: error: overriding declaration requires an 'override' keyword
+    open func toString() -> String! {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:51:15: note: overridden declaration is here
+    open func toString() -> String! {
+              ^
+java_lang/Sources/SuppressWarnings.swift:62:15: error: overriding declaration requires an 'override' keyword
+    open func hashCode() -> Int {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:63:15: note: overridden declaration is here
+    open func hashCode() -> Int {
+              ^
+java_lang/Sources/SuppressWarnings.swift:74:15: error: overriding declaration requires an 'override' keyword
+    open func annotationType() -> Class! {
+              ^
+         override 
+java_lang/Sources/Annotation.swift:75:15: note: overridden declaration is here
+    open func annotationType() -> Class! {
+              ^
