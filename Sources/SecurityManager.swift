@@ -95,7 +95,7 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkMemberAccess( arg0: java_swift.JavaClass?, arg1: Int ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkMemberAccess", methodSig: "(Ljava/lang/Class;I)V", methodCache: &SecurityManager.checkMemberAccess_MethodID_4, args: &__args, locals: &__locals )
     }
@@ -111,7 +111,7 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkPermission( arg0: /* java.security.Permission */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkPermission", methodSig: "(Ljava/security/Permission;)V", methodCache: &SecurityManager.checkPermission_MethodID_5, args: &__args, locals: &__locals )
     }
 
@@ -126,8 +126,8 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkPermission( arg0: /* java.security.Permission */ UnclassedObject?, arg1: java_swift.JavaObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkPermission", methodSig: "(Ljava/security/Permission;Ljava/lang/Object;)V", methodCache: &SecurityManager.checkPermission_MethodID_6, args: &__args, locals: &__locals )
     }
 
@@ -309,7 +309,7 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkAccess( arg0: Thread? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkAccess", methodSig: "(Ljava/lang/Thread;)V", methodCache: &SecurityManager.checkAccess_MethodID_19, args: &__args, locals: &__locals )
     }
 
@@ -324,7 +324,7 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkAccess( arg0: ThreadGroup? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkAccess", methodSig: "(Ljava/lang/ThreadGroup;)V", methodCache: &SecurityManager.checkAccess_MethodID_20, args: &__args, locals: &__locals )
     }
 
@@ -385,7 +385,7 @@ open class SecurityManager: java_swift.JavaObject {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkRead", methodSig: "(Ljava/lang/String;Ljava/lang/Object;)V", methodCache: &SecurityManager.checkRead_MethodID_24, args: &__args, locals: &__locals )
     }
 
@@ -400,7 +400,7 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkRead( arg0: /* java.io.FileDescriptor */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkRead", methodSig: "(Ljava/io/FileDescriptor;)V", methodCache: &SecurityManager.checkRead_MethodID_25, args: &__args, locals: &__locals )
     }
 
@@ -445,7 +445,7 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkWrite( arg0: /* java.io.FileDescriptor */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkWrite", methodSig: "(Ljava/io/FileDescriptor;)V", methodCache: &SecurityManager.checkWrite_MethodID_28, args: &__args, locals: &__locals )
     }
 
@@ -477,7 +477,7 @@ open class SecurityManager: java_swift.JavaObject {
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkConnect", methodSig: "(Ljava/lang/String;ILjava/lang/Object;)V", methodCache: &SecurityManager.checkConnect_MethodID_30, args: &__args, locals: &__locals )
     }
 
@@ -539,7 +539,7 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkMulticast( arg0: /* java.net.InetAddress */ UnclassedObject?, arg1: Int8 ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkMulticast", methodSig: "(Ljava/net/InetAddress;B)V", methodCache: &SecurityManager.checkMulticast_MethodID_34, args: &__args, locals: &__locals )
     }
@@ -555,7 +555,7 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkMulticast( arg0: /* java.net.InetAddress */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkMulticast", methodSig: "(Ljava/net/InetAddress;)V", methodCache: &SecurityManager.checkMulticast_MethodID_35, args: &__args, locals: &__locals )
     }
 
@@ -570,7 +570,7 @@ open class SecurityManager: java_swift.JavaObject {
     open func checkTopLevelWindow( arg0: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "checkTopLevelWindow", methodSig: "(Ljava/lang/Object;)Z", methodCache: &SecurityManager.checkTopLevelWindow_MethodID_36, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }

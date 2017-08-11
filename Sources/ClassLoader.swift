@@ -63,7 +63,7 @@ open class ClassLoader: java_swift.JavaObject {
     public convenience init( arg0: ClassLoader? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/ClassLoader", classCache: &ClassLoader.ClassLoaderJNIClass, methodSig: "(Ljava/lang/ClassLoader;)V", methodCache: &ClassLoader.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -177,7 +177,7 @@ open class ClassLoader: java_swift.JavaObject {
     open func setSigners( arg0: java_swift.JavaClass?, arg1: [JavaObject]? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setSigners", methodSig: "(Ljava/lang/Class;[Ljava/lang/Object;)V", methodCache: &ClassLoader.setSigners_MethodID_7, args: &__args, locals: &__locals )
     }
@@ -332,7 +332,7 @@ open class ClassLoader: java_swift.JavaObject {
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         __args[3] = JNIType.toJava( value: arg3, locals: &__locals )
-        __args[4] = JNIType.toJava( value: arg4 != nil ? arg4! as JNIObject : nil, locals: &__locals )
+        __args[4] = JNIType.toJava( value: arg4, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "defineClass", methodSig: "(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;", methodCache: &ClassLoader.defineClass_MethodID_15, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -376,8 +376,8 @@ open class ClassLoader: java_swift.JavaObject {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "defineClass", methodSig: "(Ljava/lang/String;Ljava/nio/ByteBuffer;Ljava/security/ProtectionDomain;)Ljava/lang/Class;", methodCache: &ClassLoader.defineClass_MethodID_17, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -415,7 +415,7 @@ open class ClassLoader: java_swift.JavaObject {
     open func resolveClass( arg0: java_swift.JavaClass? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "resolveClass", methodSig: "(Ljava/lang/Class;)V", methodCache: &ClassLoader.resolveClass_MethodID_18, args: &__args, locals: &__locals )
     }
 
@@ -596,7 +596,7 @@ open class ClassLoader: java_swift.JavaObject {
         __args[4] = JNIType.toJava( value: arg4, locals: &__locals )
         __args[5] = JNIType.toJava( value: arg5, locals: &__locals )
         __args[6] = JNIType.toJava( value: arg6, locals: &__locals )
-        __args[7] = JNIType.toJava( value: arg7 != nil ? arg7! as JNIObject : nil, locals: &__locals )
+        __args[7] = JNIType.toJava( value: arg7, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "definePackage", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/net/URL;)Ljava/lang/Package;", methodCache: &ClassLoader.definePackage_MethodID_27, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {

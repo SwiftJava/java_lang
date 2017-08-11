@@ -157,7 +157,7 @@ open class System: java_swift.JavaObject {
     open class func identityHashCode( arg0: java_swift.JavaObject? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/System", classCache: &SystemJNIClass, methodName: "identityHashCode", methodSig: "(Ljava/lang/Object;)I", methodCache: &identityHashCode_MethodID_7, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
@@ -197,9 +197,9 @@ open class System: java_swift.JavaObject {
     open class func arraycopy( arg0: java_swift.JavaObject?, arg1: Int, arg2: java_swift.JavaObject?, arg3: Int, arg4: Int ) {
         var __args = [jvalue]( repeating: jvalue(), count: 5 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         __args[3] = JNIType.toJava( value: arg3, locals: &__locals )
         __args[4] = JNIType.toJava( value: arg4, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/System", classCache: &SystemJNIClass, methodName: "arraycopy", methodSig: "(Ljava/lang/Object;ILjava/lang/Object;II)V", methodCache: &arraycopy_MethodID_10, args: &__args, locals: &__locals )
@@ -289,7 +289,7 @@ open class System: java_swift.JavaObject {
     open class func setIn( arg0: /* java.io.InputStream */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/System", classCache: &SystemJNIClass, methodName: "setIn", methodSig: "(Ljava/io/InputStream;)V", methodCache: &setIn_MethodID_16, args: &__args, locals: &__locals )
     }
 
@@ -304,7 +304,7 @@ open class System: java_swift.JavaObject {
     open class func setOut( arg0: /* java.io.PrintStream */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/System", classCache: &SystemJNIClass, methodName: "setOut", methodSig: "(Ljava/io/PrintStream;)V", methodCache: &setOut_MethodID_17, args: &__args, locals: &__locals )
     }
 
@@ -319,7 +319,7 @@ open class System: java_swift.JavaObject {
     open class func setErr( arg0: /* java.io.PrintStream */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/System", classCache: &SystemJNIClass, methodName: "setErr", methodSig: "(Ljava/io/PrintStream;)V", methodCache: &setErr_MethodID_18, args: &__args, locals: &__locals )
     }
 
@@ -371,7 +371,7 @@ open class System: java_swift.JavaObject {
     open class func setSecurityManager( arg0: SecurityManager? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/System", classCache: &SystemJNIClass, methodName: "setSecurityManager", methodSig: "(Ljava/lang/SecurityManager;)V", methodCache: &setSecurityManager_MethodID_21, args: &__args, locals: &__locals )
     }
 

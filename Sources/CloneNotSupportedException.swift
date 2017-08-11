@@ -5,7 +5,7 @@ import java_swift
 
 /// class java.lang.CloneNotSupportedException ///
 
-open class CloneNotSupportedException: Exception {
+open class CloneNotSupportedException: java_swift.Exception {
 
     public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
         self.init( javaObject: nil )

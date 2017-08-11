@@ -59,7 +59,7 @@ open class EnumConstantNotPresentException: RuntimeException {
     public convenience init( enumType: java_swift.JavaClass?, constantName: String? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: enumType != nil ? enumType! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: enumType, locals: &__locals )
         __args[1] = JNIType.toJava( value: constantName, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/EnumConstantNotPresentException", classCache: &EnumConstantNotPresentException.EnumConstantNotPresentExceptionJNIClass, methodSig: "(Ljava/lang/Class;Ljava/lang/String;)V", methodCache: &EnumConstantNotPresentException.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )

@@ -11,10 +11,6 @@ public protocol BufferPoolMXBean: PlatformManagedObject {
 
     func getName() -> String!
 
-    /// public abstract long java.lang.management.BufferPoolMXBean.getCount()
-
-    func getCount() -> Int64
-
     /// public abstract long java.lang.management.BufferPoolMXBean.getTotalCapacity()
 
     func getTotalCapacity() -> Int64
@@ -22,6 +18,10 @@ public protocol BufferPoolMXBean: PlatformManagedObject {
     /// public abstract long java.lang.management.BufferPoolMXBean.getMemoryUsed()
 
     func getMemoryUsed() -> Int64
+
+    /// public abstract long java.lang.management.BufferPoolMXBean.getCount()
+
+    func getCount() -> Int64
 
 }
 
@@ -42,38 +42,38 @@ open class BufferPoolMXBeanForward: PlatformManagedObjectForward, BufferPoolMXBe
     }
 
 
-    /// public abstract long java.lang.management.BufferPoolMXBean.getCount()
-
-    private static var getCount_MethodID_6: jmethodID?
-
-    open func getCount() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getCount", methodSig: "()J", methodCache: &BufferPoolMXBeanForward.getCount_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
-    }
-
-
     /// public abstract long java.lang.management.BufferPoolMXBean.getTotalCapacity()
 
-    private static var getTotalCapacity_MethodID_7: jmethodID?
+    private static var getTotalCapacity_MethodID_6: jmethodID?
 
     open func getTotalCapacity() -> Int64 {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getTotalCapacity", methodSig: "()J", methodCache: &BufferPoolMXBeanForward.getTotalCapacity_MethodID_7, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getTotalCapacity", methodSig: "()J", methodCache: &BufferPoolMXBeanForward.getTotalCapacity_MethodID_6, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int64(), from: __return )
     }
 
 
     /// public abstract long java.lang.management.BufferPoolMXBean.getMemoryUsed()
 
-    private static var getMemoryUsed_MethodID_8: jmethodID?
+    private static var getMemoryUsed_MethodID_7: jmethodID?
 
     open func getMemoryUsed() -> Int64 {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getMemoryUsed", methodSig: "()J", methodCache: &BufferPoolMXBeanForward.getMemoryUsed_MethodID_8, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getMemoryUsed", methodSig: "()J", methodCache: &BufferPoolMXBeanForward.getMemoryUsed_MethodID_7, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: Int64(), from: __return )
+    }
+
+
+    /// public abstract long java.lang.management.BufferPoolMXBean.getCount()
+
+    private static var getCount_MethodID_8: jmethodID?
+
+    open func getCount() -> Int64 {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getCount", methodSig: "()J", methodCache: &BufferPoolMXBeanForward.getCount_MethodID_8, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int64(), from: __return )
     }
 

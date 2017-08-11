@@ -58,7 +58,6 @@
 		CED753E41F2E7A6F007C97C7 /* ElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753261F2E7A6F007C97C7 /* ElementType.swift */; };
 		CED753E51F2E7A6F007C97C7 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753271F2E7A6F007C97C7 /* Enum.swift */; };
 		CED753E61F2E7A6F007C97C7 /* EnumConstantNotPresentException.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753281F2E7A6F007C97C7 /* EnumConstantNotPresentException.swift */; };
-		CED753E71F2E7A6F007C97C7 /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753291F2E7A6F007C97C7 /* Exception.swift */; };
 		CED753E81F2E7A6F007C97C7 /* ExceptionInInitializerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7532A1F2E7A6F007C97C7 /* ExceptionInInitializerError.swift */; };
 		CED753E91F2E7A6F007C97C7 /* Executable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7532B1F2E7A6F007C97C7 /* Executable.swift */; };
 		CED753EA1F2E7A6F007C97C7 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7532C1F2E7A6F007C97C7 /* Field.swift */; };
@@ -255,7 +254,6 @@
 		CED753261F2E7A6F007C97C7 /* ElementType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementType.swift; path = Sources/ElementType.swift; sourceTree = "<group>"; };
 		CED753271F2E7A6F007C97C7 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = Sources/Enum.swift; sourceTree = "<group>"; };
 		CED753281F2E7A6F007C97C7 /* EnumConstantNotPresentException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnumConstantNotPresentException.swift; path = Sources/EnumConstantNotPresentException.swift; sourceTree = "<group>"; };
-		CED753291F2E7A6F007C97C7 /* Exception.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exception.swift; path = Sources/Exception.swift; sourceTree = "<group>"; };
 		CED7532A1F2E7A6F007C97C7 /* ExceptionInInitializerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionInInitializerError.swift; path = Sources/ExceptionInInitializerError.swift; sourceTree = "<group>"; };
 		CED7532B1F2E7A6F007C97C7 /* Executable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Executable.swift; path = Sources/Executable.swift; sourceTree = "<group>"; };
 		CED7532C1F2E7A6F007C97C7 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Field.swift; path = Sources/Field.swift; sourceTree = "<group>"; };
@@ -481,7 +479,6 @@
 				CED753261F2E7A6F007C97C7 /* ElementType.swift */,
 				CED753271F2E7A6F007C97C7 /* Enum.swift */,
 				CED753281F2E7A6F007C97C7 /* EnumConstantNotPresentException.swift */,
-				CED753291F2E7A6F007C97C7 /* Exception.swift */,
 				CED7532A1F2E7A6F007C97C7 /* ExceptionInInitializerError.swift */,
 				CED7532B1F2E7A6F007C97C7 /* Executable.swift */,
 				CED7532C1F2E7A6F007C97C7 /* Field.swift */,
@@ -838,7 +835,6 @@
 				CED754491F2E7A6F007C97C7 /* RuntimeException.swift in Sources */,
 				CED753EE1F2E7A6F007C97C7 /* GenericDeclaration.swift in Sources */,
 				CED7545E1F2E7A70007C97C7 /* ThreadDeath.swift in Sources */,
-				CED753E71F2E7A6F007C97C7 /* Exception.swift in Sources */,
 				CED7545B1F2E7A70007C97C7 /* Thread_State.swift in Sources */,
 				CED754441F2E7A6F007C97C7 /* Repeatable.swift in Sources */,
 				CED754391F2E7A6F007C97C7 /* PlatformManagedObject.swift in Sources */,
@@ -1027,7 +1023,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.genie.java-lang";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.swiftjava.java-lang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1048,7 +1044,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.genie.java-lang";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.swiftjava.java-lang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

@@ -59534,51 +59534,182 @@ Build settings from command line:
     SYMROOT = /tmp
 Build settings from command line:
     SYMROOT = /tmp
-
-=== BUILD TARGET CJavaVM OF PROJECT CJavaVM WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-=== BUILD TARGET java_swift OF PROJECT java_swift WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-CompileSwiftSources normal x86_64 com.apple.xcode.tools.swift.compiler
-    cd /Users/user/SwiftJava/java_swift
-    export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
-    export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -incremental -module-name java_swift -Onone -DDEBUG -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -target x86_64-apple-macosx10.10 -g -Xfrontend -serialize-debugging-options -enable-testing -I /tmp/Debug -F /tmp/Debug -c -j8 /Users/user/SwiftJava/java_swift/Sources/JNIProxy.swift /Users/user/SwiftJava/java_swift/Sources/JavaMap.swift /Users/user/SwiftJava/java_swift/Sources/JNICore.swift /Users/user/SwiftJava/java_swift/Sources/JNIObject.swift /Users/user/SwiftJava/java_swift/Sources/JavaClass.swift /Users/user/SwiftJava/java_swift/Sources/JavaObject.swift /Users/user/SwiftJava/java_swift/Sources/JNIField.swift /Users/user/SwiftJava/java_swift/Sources/JNIMethod.swift /Users/user/SwiftJava/java_swift/Sources/JNIType.swift /Users/user/SwiftJava/java_swift/Sources/JavaSet.swift /Users/user/SwiftJava/java_swift/Sources/Runnable.swift /Users/user/SwiftJava/java_swift/Sources/Throwable.swift /Users/user/SwiftJava/java_swift/Sources/HashMap.swift -output-file-map /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/java_swift-OutputFileMap.json -parseable-output -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/java_swift.swiftmodule -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/swift-overrides.hmap -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-generated-files.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-own-target-headers.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-project-headers.hmap -Xcc -I/tmp/Debug/include -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources/x86_64 -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources -Xcc -DDEBUG=1 -emit-objc-header -emit-objc-header-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/java_swift-Swift.h -import-underlying-module -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/Debug/java_swift.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/user/SwiftJava/java_swift
-
-CompileSwift normal x86_64 /Users/user/SwiftJava/java_swift/Sources/JNIProxy.swift
-    cd /Users/user/SwiftJava/java_swift
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c -primary-file /Users/user/SwiftJava/java_swift/Sources/JNIProxy.swift /Users/user/SwiftJava/java_swift/Sources/JavaMap.swift /Users/user/SwiftJava/java_swift/Sources/JNICore.swift /Users/user/SwiftJava/java_swift/Sources/JNIObject.swift /Users/user/SwiftJava/java_swift/Sources/JavaClass.swift /Users/user/SwiftJava/java_swift/Sources/JavaObject.swift /Users/user/SwiftJava/java_swift/Sources/JNIField.swift /Users/user/SwiftJava/java_swift/Sources/JNIMethod.swift /Users/user/SwiftJava/java_swift/Sources/JNIType.swift /Users/user/SwiftJava/java_swift/Sources/JavaSet.swift /Users/user/SwiftJava/java_swift/Sources/Runnable.swift /Users/user/SwiftJava/java_swift/Sources/Throwable.swift /Users/user/SwiftJava/java_swift/Sources/HashMap.swift -target x86_64-apple-macosx10.10 -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -I /tmp/Debug -F /tmp/Debug -enable-testing -g -import-underlying-module -D DEBUG -serialize-debugging-options -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/swift-overrides.hmap -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-generated-files.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-own-target-headers.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-project-headers.hmap -Xcc -I/tmp/Debug/include -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources/x86_64 -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/Debug/java_swift.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/user/SwiftJava/java_swift -emit-module-doc-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIProxy~partial.swiftdoc -serialize-diagnostics-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIProxy.dia -Onone -module-name java_swift -emit-module-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIProxy~partial.swiftmodule -emit-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIProxy.d -emit-reference-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIProxy.swiftdeps -o /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIProxy.o
-
-CompileSwift normal x86_64 /Users/user/SwiftJava/java_swift/Sources/JNICore.swift
-    cd /Users/user/SwiftJava/java_swift
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c /Users/user/SwiftJava/java_swift/Sources/JNIProxy.swift /Users/user/SwiftJava/java_swift/Sources/JavaMap.swift -primary-file /Users/user/SwiftJava/java_swift/Sources/JNICore.swift /Users/user/SwiftJava/java_swift/Sources/JNIObject.swift /Users/user/SwiftJava/java_swift/Sources/JavaClass.swift /Users/user/SwiftJava/java_swift/Sources/JavaObject.swift /Users/user/SwiftJava/java_swift/Sources/JNIField.swift /Users/user/SwiftJava/java_swift/Sources/JNIMethod.swift /Users/user/SwiftJava/java_swift/Sources/JNIType.swift /Users/user/SwiftJava/java_swift/Sources/JavaSet.swift /Users/user/SwiftJava/java_swift/Sources/Runnable.swift /Users/user/SwiftJava/java_swift/Sources/Throwable.swift /Users/user/SwiftJava/java_swift/Sources/HashMap.swift -target x86_64-apple-macosx10.10 -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -I /tmp/Debug -F /tmp/Debug -enable-testing -g -import-underlying-module -D DEBUG -serialize-debugging-options -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/swift-overrides.hmap -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-generated-files.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-own-target-headers.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-project-headers.hmap -Xcc -I/tmp/Debug/include -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources/x86_64 -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/Debug/java_swift.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/user/SwiftJava/java_swift -emit-module-doc-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNICore~partial.swiftdoc -serialize-diagnostics-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNICore.dia -Onone -module-name java_swift -emit-module-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNICore~partial.swiftmodule -emit-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNICore.d -emit-reference-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNICore.swiftdeps -o /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNICore.o
-/Users/user/SwiftJava/java_swift/Sources/JNICore.swift:115:17: warning: 'JNI_CreateJavaVM' is deprecated
+java_swift/Sources/JNICore.swift:115:17: warning: 'JNI_CreateJavaVM' is deprecated
                 JNI_CreateJavaVM( &self.jvm, $0, &vmArgs )
                 ^
-/Users/user/SwiftJava/java_swift/Sources/JNICore.swift:115:17: warning: 'JNI_CreateJavaVM' is deprecated
+java_swift/Sources/JNICore.swift:115:17: warning: 'JNI_CreateJavaVM' is deprecated
                 JNI_CreateJavaVM( &self.jvm, $0, &vmArgs )
                 ^
+Build settings from command line:
+    SYMROOT = /tmp
+Write auxiliary files
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/module.modulemap
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-all-non-framework-target-headers.hmap
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-project-headers.hmap
+write-file /tmp/CJavaVM.build/all-product-headers.yaml
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM.hmap
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-own-target-headers.hmap
+/bin/mkdir -p /tmp/CJavaVM.build/Debug/CJavaVM.build/DerivedSources
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/DerivedSources/CJavaVM_vers.c
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-generated-files.hmap
+/bin/mkdir -p /tmp/CJavaVM.build/Debug/CJavaVM.build/Objects-normal/x86_64
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/Objects-normal/x86_64/CJavaVM.LinkFileList
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-all-target-headers.hmap
+Create product structure
+/bin/mkdir -p /tmp/Debug/CJavaVM.framework/Versions/A
+/bin/mkdir -p /tmp/Debug/CJavaVM.framework/Versions/A/Headers
+/bin/mkdir -p /tmp/Debug/CJavaVM.framework/Versions/A/Resources
+/bin/ln -sfh A /tmp/Debug/CJavaVM.framework/Versions/Current
+/bin/ln -sfh Versions/Current/Resources /tmp/Debug/CJavaVM.framework/Resources
+/bin/ln -sfh Versions/Current/Headers /tmp/Debug/CJavaVM.framework/Headers
+/bin/ln -sfh Versions/Current/Modules /tmp/Debug/CJavaVM.framework/Modules
+/bin/ln -sfh Versions/Current/CJavaVM /tmp/Debug/CJavaVM.framework/CJavaVM
+ProcessInfoPlistFile /tmp/Debug/CJavaVM.framework/Versions/A/Resources/Info.plist Info.plist
+    builtin-infoPlistUtility CJavaVM/Info.plist -expandbuildsettings -platform macosx -o /tmp/Debug/CJavaVM.framework/Versions/A/Resources/Info.plist
+CompileC /tmp/CJavaVM.build/Debug/CJavaVM.build/Objects-normal/x86_64/CJavaVM_vers.o /tmp/CJavaVM.build/Debug/CJavaVM.build/DerivedSources/CJavaVM_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+Ld /tmp/Debug/CJavaVM.framework/Versions/A/CJavaVM normal x86_64
+CpHeader CJavaVM.h /tmp/Debug/CJavaVM.framework/Versions/A/Headers/CJavaVM.h
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks CJavaVM/CJavaVM.h /tmp/Debug/CJavaVM.framework/Versions/A/Headers
+Ditto /tmp/CJavaVM.build/Debug/CJavaVM.build/module.modulemap /tmp/Debug/CJavaVM.framework/Versions/A/Modules/module.modulemap
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /tmp/CJavaVM.build/Debug/CJavaVM.build/module.modulemap /tmp/Debug/CJavaVM.framework/Versions/A/Modules
+Touch /tmp/Debug/CJavaVM.framework
+    /usr/bin/touch -c /tmp/Debug/CJavaVM.framework
+“Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.
+Build settings from command line:
+    SYMROOT = /tmp
+“Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.
+Build settings from command line:
+    SYMROOT = /tmp
+“Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.
+Build settings from command line:
+    SYMROOT = /tmp
+Build settings from command line:
+    SYMROOT = /tmp
+“Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.
+Build settings from command line:
+    SYMROOT = /tmp
+“Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.
+Build settings from command line:
+    SYMROOT = /tmp
+“Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.
+Build settings from command line:
+    SYMROOT = /tmp
+Write auxiliary files
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/module.modulemap
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-all-non-framework-target-headers.hmap
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-project-headers.hmap
+write-file /tmp/CJavaVM.build/all-product-headers.yaml
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM.hmap
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-own-target-headers.hmap
+/bin/mkdir -p /tmp/CJavaVM.build/Debug/CJavaVM.build/DerivedSources
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/DerivedSources/CJavaVM_vers.c
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-generated-files.hmap
+/bin/mkdir -p /tmp/CJavaVM.build/Debug/CJavaVM.build/Objects-normal/x86_64
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/Objects-normal/x86_64/CJavaVM.LinkFileList
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-all-target-headers.hmap
+Create product structure
+/bin/mkdir -p /tmp/Debug/CJavaVM.framework/Versions/A
+/bin/mkdir -p /tmp/Debug/CJavaVM.framework/Versions/A/Headers
+/bin/mkdir -p /tmp/Debug/CJavaVM.framework/Versions/A/Resources
+/bin/ln -sfh A /tmp/Debug/CJavaVM.framework/Versions/Current
+/bin/ln -sfh Versions/Current/Resources /tmp/Debug/CJavaVM.framework/Resources
+/bin/ln -sfh Versions/Current/Headers /tmp/Debug/CJavaVM.framework/Headers
+/bin/ln -sfh Versions/Current/Modules /tmp/Debug/CJavaVM.framework/Modules
+/bin/ln -sfh Versions/Current/CJavaVM /tmp/Debug/CJavaVM.framework/CJavaVM
+ProcessInfoPlistFile /tmp/Debug/CJavaVM.framework/Versions/A/Resources/Info.plist Info.plist
+    builtin-infoPlistUtility CJavaVM/Info.plist -expandbuildsettings -platform macosx -o /tmp/Debug/CJavaVM.framework/Versions/A/Resources/Info.plist
+CompileC /tmp/CJavaVM.build/Debug/CJavaVM.build/Objects-normal/x86_64/CJavaVM_vers.o /tmp/CJavaVM.build/Debug/CJavaVM.build/DerivedSources/CJavaVM_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+Ld /tmp/Debug/CJavaVM.framework/Versions/A/CJavaVM normal x86_64
+CpHeader CJavaVM.h /tmp/Debug/CJavaVM.framework/Versions/A/Headers/CJavaVM.h
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks CJavaVM/CJavaVM.h /tmp/Debug/CJavaVM.framework/Versions/A/Headers
+Ditto /tmp/CJavaVM.build/Debug/CJavaVM.build/module.modulemap /tmp/Debug/CJavaVM.framework/Versions/A/Modules/module.modulemap
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /tmp/CJavaVM.build/Debug/CJavaVM.build/module.modulemap /tmp/Debug/CJavaVM.framework/Versions/A/Modules
+Touch /tmp/Debug/CJavaVM.framework
+    /usr/bin/touch -c /tmp/Debug/CJavaVM.framework
+“Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.
+Build settings from command line:
+    SYMROOT = /tmp
+“Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.
+Build settings from command line:
+    SYMROOT = /tmp
+Build settings from command line:
+    SYMROOT = /tmp
+Write auxiliary files
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/module.modulemap
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-all-non-framework-target-headers.hmap
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-project-headers.hmap
+write-file /tmp/CJavaVM.build/all-product-headers.yaml
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM.hmap
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-own-target-headers.hmap
+/bin/mkdir -p /tmp/CJavaVM.build/Debug/CJavaVM.build/DerivedSources
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/DerivedSources/CJavaVM_vers.c
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-generated-files.hmap
+/bin/mkdir -p /tmp/CJavaVM.build/Debug/CJavaVM.build/Objects-normal/x86_64
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/Objects-normal/x86_64/CJavaVM.LinkFileList
+write-file /tmp/CJavaVM.build/Debug/CJavaVM.build/CJavaVM-all-target-headers.hmap
+Create product structure
+/bin/mkdir -p /tmp/Debug/CJavaVM.framework/Versions/A
+/bin/mkdir -p /tmp/Debug/CJavaVM.framework/Versions/A/Headers
+/bin/mkdir -p /tmp/Debug/CJavaVM.framework/Versions/A/Resources
+/bin/ln -sfh A /tmp/Debug/CJavaVM.framework/Versions/Current
+/bin/ln -sfh Versions/Current/Resources /tmp/Debug/CJavaVM.framework/Resources
+/bin/ln -sfh Versions/Current/Headers /tmp/Debug/CJavaVM.framework/Headers
+/bin/ln -sfh Versions/Current/Modules /tmp/Debug/CJavaVM.framework/Modules
+/bin/ln -sfh Versions/Current/CJavaVM /tmp/Debug/CJavaVM.framework/CJavaVM
+ProcessInfoPlistFile /tmp/Debug/CJavaVM.framework/Versions/A/Resources/Info.plist Info.plist
+    builtin-infoPlistUtility CJavaVM/Info.plist -expandbuildsettings -platform macosx -o /tmp/Debug/CJavaVM.framework/Versions/A/Resources/Info.plist
+CompileC /tmp/CJavaVM.build/Debug/CJavaVM.build/Objects-normal/x86_64/CJavaVM_vers.o /tmp/CJavaVM.build/Debug/CJavaVM.build/DerivedSources/CJavaVM_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+Ld /tmp/Debug/CJavaVM.framework/Versions/A/CJavaVM normal x86_64
+CpHeader CJavaVM.h /tmp/Debug/CJavaVM.framework/Versions/A/Headers/CJavaVM.h
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks CJavaVM/CJavaVM.h /tmp/Debug/CJavaVM.framework/Versions/A/Headers
+Ditto /tmp/CJavaVM.build/Debug/CJavaVM.build/module.modulemap /tmp/Debug/CJavaVM.framework/Versions/A/Modules/module.modulemap
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /tmp/CJavaVM.build/Debug/CJavaVM.build/module.modulemap /tmp/Debug/CJavaVM.framework/Versions/A/Modules
+Touch /tmp/Debug/CJavaVM.framework
+    /usr/bin/touch -c /tmp/Debug/CJavaVM.framework
+Write auxiliary files
+write-file /tmp/java_swift.build/Debug/java_swift.build/module.modulemap
+write-file /tmp/java_swift.build/Debug/java_swift.build/unextended-module.modulemap
+/bin/mkdir -p /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64
+write-file /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/java_swift-OutputFileMap.json
+write-file /tmp/java_swift.build/Debug/java_swift.build/java_swift-all-non-framework-target-headers.hmap
+write-file /tmp/java_swift.build/Debug/java_swift.build/java_swift-own-target-headers.hmap
+write-file /tmp/java_swift.build/Debug/java_swift.build/java_swift-project-headers.hmap
+write-file /tmp/java_swift.build/Debug/java_swift.build/unextended-module-overlay.yaml
+write-file /tmp/java_swift.build/Debug/java_swift.build/swift-overrides.hmap
+write-file /tmp/java_swift.build/all-product-headers.yaml
+write-file /tmp/java_swift.build/Debug/java_swift.build/java_swift-generated-files.hmap
+write-file /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/java_swift.LinkFileList
+write-file /tmp/java_swift.build/Debug/java_swift.build/java_swift-all-target-headers.hmap
+write-file /tmp/java_swift.build/Debug/java_swift.build/java_swift.hmap
+/bin/mkdir -p /tmp/java_swift.build/Debug/java_swift.build/DerivedSources
+write-file /tmp/java_swift.build/Debug/java_swift.build/DerivedSources/java_swift_vers.c
+Create product structure
+/bin/mkdir -p /tmp/Debug/java_swift.framework/Versions/A/Modules
+/bin/ln -sfh Versions/Current/Modules /tmp/Debug/java_swift.framework/Modules
+/bin/mkdir -p /tmp/Debug/java_swift.framework/Versions/A/Headers
+/bin/mkdir -p /tmp/Debug/java_swift.framework/Versions/A/Resources
+/bin/ln -sfh A /tmp/Debug/java_swift.framework/Versions/Current
+/bin/ln -sfh Versions/Current/Resources /tmp/Debug/java_swift.framework/Resources
+/bin/ln -sfh Versions/Current/Headers /tmp/Debug/java_swift.framework/Headers
+/bin/ln -sfh Versions/Current/java_swift /tmp/Debug/java_swift.framework/java_swift
+ProcessInfoPlistFile /tmp/Debug/java_swift.framework/Versions/A/Resources/Info.plist Info.plist
+    builtin-infoPlistUtility java_swift/Info.plist -expandbuildsettings -platform macosx -o /tmp/Debug/java_swift.framework/Versions/A/Resources/Info.plist
+Build settings from command line:
+    SYMROOT = /tmp
+Build settings from command line:
+    SYMROOT = /tmp
+ProcessInfoPlistFile /tmp/Debug/java_swift.framework/Versions/A/Resources/Info.plist Info.plist
+    builtin-infoPlistUtility java_swift/Info.plist -expandbuildsettings -platform macosx -o /tmp/Debug/java_swift.framework/Versions/A/Resources/Info.plist
+<unknown>:0: error: no such file or directory: 'java_swift/Sources/JavaMap.swift'
+<unknown>:0: error: no such file or directory: 'java_swift/Sources/JavaSet.swift'
+<unknown>:0: error: no such file or directory: 'java_swift/Sources/HashMap.swift'
+Command /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1
+Build settings from command line:
+    SYMROOT = /tmp
+<unknown>:0: error: no such file or directory: 'java_swift/Sources/JavaMap.swift'
+<unknown>:0: error: no such file or directory: 'java_swift/Sources/JavaSet.swift'
+<unknown>:0: error: no such file or directory: 'java_swift/Sources/HashMap.swift'
+Command /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1
+Build settings from command line:
+    SYMROOT = /tmp
 
-CompileSwift normal x86_64 /Users/user/SwiftJava/java_swift/Sources/JNIObject.swift
-    cd /Users/user/SwiftJava/java_swift
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c /Users/user/SwiftJava/java_swift/Sources/JNIProxy.swift /Users/user/SwiftJava/java_swift/Sources/JavaMap.swift /Users/user/SwiftJava/java_swift/Sources/JNICore.swift -primary-file /Users/user/SwiftJava/java_swift/Sources/JNIObject.swift /Users/user/SwiftJava/java_swift/Sources/JavaClass.swift /Users/user/SwiftJava/java_swift/Sources/JavaObject.swift /Users/user/SwiftJava/java_swift/Sources/JNIField.swift /Users/user/SwiftJava/java_swift/Sources/JNIMethod.swift /Users/user/SwiftJava/java_swift/Sources/JNIType.swift /Users/user/SwiftJava/java_swift/Sources/JavaSet.swift /Users/user/SwiftJava/java_swift/Sources/Runnable.swift /Users/user/SwiftJava/java_swift/Sources/Throwable.swift /Users/user/SwiftJava/java_swift/Sources/HashMap.swift -target x86_64-apple-macosx10.10 -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -I /tmp/Debug -F /tmp/Debug -enable-testing -g -import-underlying-module -D DEBUG -serialize-debugging-options -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/swift-overrides.hmap -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-generated-files.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-own-target-headers.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-project-headers.hmap -Xcc -I/tmp/Debug/include -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources/x86_64 -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/Debug/java_swift.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/user/SwiftJava/java_swift -emit-module-doc-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIObject~partial.swiftdoc -serialize-diagnostics-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIObject.dia -Onone -module-name java_swift -emit-module-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIObject~partial.swiftmodule -emit-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIObject.d -emit-reference-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIObject.swiftdeps -o /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIObject.o
-
-CompileSwift normal x86_64 /Users/user/SwiftJava/java_swift/Sources/JavaClass.swift
-    cd /Users/user/SwiftJava/java_swift
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c /Users/user/SwiftJava/java_swift/Sources/JNIProxy.swift /Users/user/SwiftJava/java_swift/Sources/JavaMap.swift /Users/user/SwiftJava/java_swift/Sources/JNICore.swift /Users/user/SwiftJava/java_swift/Sources/JNIObject.swift -primary-file /Users/user/SwiftJava/java_swift/Sources/JavaClass.swift /Users/user/SwiftJava/java_swift/Sources/JavaObject.swift /Users/user/SwiftJava/java_swift/Sources/JNIField.swift /Users/user/SwiftJava/java_swift/Sources/JNIMethod.swift /Users/user/SwiftJava/java_swift/Sources/JNIType.swift /Users/user/SwiftJava/java_swift/Sources/JavaSet.swift /Users/user/SwiftJava/java_swift/Sources/Runnable.swift /Users/user/SwiftJava/java_swift/Sources/Throwable.swift /Users/user/SwiftJava/java_swift/Sources/HashMap.swift -target x86_64-apple-macosx10.10 -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -I /tmp/Debug -F /tmp/Debug -enable-testing -g -import-underlying-module -D DEBUG -serialize-debugging-options -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/swift-overrides.hmap -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-generated-files.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-own-target-headers.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-project-headers.hmap -Xcc -I/tmp/Debug/include -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources/x86_64 -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/Debug/java_swift.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/user/SwiftJava/java_swift -emit-module-doc-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaClass~partial.swiftdoc -serialize-diagnostics-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaClass.dia -Onone -module-name java_swift -emit-module-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaClass~partial.swiftmodule -emit-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaClass.d -emit-reference-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaClass.swiftdeps -o /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaClass.o
-
-CompileSwift normal x86_64 /Users/user/SwiftJava/java_swift/Sources/JavaObject.swift
-    cd /Users/user/SwiftJava/java_swift
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c /Users/user/SwiftJava/java_swift/Sources/JNIProxy.swift /Users/user/SwiftJava/java_swift/Sources/JavaMap.swift /Users/user/SwiftJava/java_swift/Sources/JNICore.swift /Users/user/SwiftJava/java_swift/Sources/JNIObject.swift /Users/user/SwiftJava/java_swift/Sources/JavaClass.swift -primary-file /Users/user/SwiftJava/java_swift/Sources/JavaObject.swift /Users/user/SwiftJava/java_swift/Sources/JNIField.swift /Users/user/SwiftJava/java_swift/Sources/JNIMethod.swift /Users/user/SwiftJava/java_swift/Sources/JNIType.swift /Users/user/SwiftJava/java_swift/Sources/JavaSet.swift /Users/user/SwiftJava/java_swift/Sources/Runnable.swift /Users/user/SwiftJava/java_swift/Sources/Throwable.swift /Users/user/SwiftJava/java_swift/Sources/HashMap.swift -target x86_64-apple-macosx10.10 -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -I /tmp/Debug -F /tmp/Debug -enable-testing -g -import-underlying-module -D DEBUG -serialize-debugging-options -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/swift-overrides.hmap -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-generated-files.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-own-target-headers.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-project-headers.hmap -Xcc -I/tmp/Debug/include -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources/x86_64 -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/Debug/java_swift.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/user/SwiftJava/java_swift -emit-module-doc-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaObject~partial.swiftdoc -serialize-diagnostics-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaObject.dia -Onone -module-name java_swift -emit-module-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaObject~partial.swiftmodule -emit-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaObject.d -emit-reference-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaObject.swiftdeps -o /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JavaObject.o
-
-CompileSwift normal x86_64 /Users/user/SwiftJava/java_swift/Sources/JNIMethod.swift
-    cd /Users/user/SwiftJava/java_swift
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c /Users/user/SwiftJava/java_swift/Sources/JNIProxy.swift /Users/user/SwiftJava/java_swift/Sources/JavaMap.swift /Users/user/SwiftJava/java_swift/Sources/JNICore.swift /Users/user/SwiftJava/java_swift/Sources/JNIObject.swift /Users/user/SwiftJava/java_swift/Sources/JavaClass.swift /Users/user/SwiftJava/java_swift/Sources/JavaObject.swift /Users/user/SwiftJava/java_swift/Sources/JNIField.swift -primary-file /Users/user/SwiftJava/java_swift/Sources/JNIMethod.swift /Users/user/SwiftJava/java_swift/Sources/JNIType.swift /Users/user/SwiftJava/java_swift/Sources/JavaSet.swift /Users/user/SwiftJava/java_swift/Sources/Runnable.swift /Users/user/SwiftJava/java_swift/Sources/Throwable.swift /Users/user/SwiftJava/java_swift/Sources/HashMap.swift -target x86_64-apple-macosx10.10 -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -I /tmp/Debug -F /tmp/Debug -enable-testing -g -import-underlying-module -D DEBUG -serialize-debugging-options -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/swift-overrides.hmap -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-generated-files.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-own-target-headers.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-project-headers.hmap -Xcc -I/tmp/Debug/include -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources/x86_64 -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/Debug/java_swift.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/user/SwiftJava/java_swift -emit-module-doc-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIMethod~partial.swiftdoc -serialize-diagnostics-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIMethod.dia -Onone -module-name java_swift -emit-module-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIMethod~partial.swiftmodule -emit-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIMethod.d -emit-reference-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIMethod.swiftdeps -o /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIMethod.o
-
-CompileSwift normal x86_64 /Users/user/SwiftJava/java_swift/Sources/JNIType.swift
-    cd /Users/user/SwiftJava/java_swift
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c /Users/user/SwiftJava/java_swift/Sources/JNIProxy.swift /Users/user/SwiftJava/java_swift/Sources/JavaMap.swift /Users/user/SwiftJava/java_swift/Sources/JNICore.swift /Users/user/SwiftJava/java_swift/Sources/JNIObject.swift /Users/user/SwiftJava/java_swift/Sources/JavaClass.swift /Users/user/SwiftJava/java_swift/Sources/JavaObject.swift /Users/user/SwiftJava/java_swift/Sources/JNIField.swift /Users/user/SwiftJava/java_swift/Sources/JNIMethod.swift -primary-file /Users/user/SwiftJava/java_swift/Sources/JNIType.swift /Users/user/SwiftJava/java_swift/Sources/JavaSet.swift /Users/user/SwiftJava/java_swift/Sources/Runnable.swift /Users/user/SwiftJava/java_swift/Sources/Throwable.swift /Users/user/SwiftJava/java_swift/Sources/HashMap.swift -target x86_64-apple-macosx10.10 -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -I /tmp/Debug -F /tmp/Debug -enable-testing -g -import-underlying-module -D DEBUG -serialize-debugging-options -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/swift-overrides.hmap -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-generated-files.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-own-target-headers.hmap -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/java_swift-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/java_swift.build/Debug/java_swift.build/java_swift-project-headers.hmap -Xcc -I/tmp/Debug/include -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources/x86_64 -Xcc -I/tmp/java_swift.build/Debug/java_swift.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -ivfsoverlay -Xcc /tmp/java_swift.build/Debug/java_swift.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/user/SwiftJava/java_swift -emit-module-doc-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIType~partial.swiftdoc -serialize-diagnostics-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIType.dia -Onone -module-name java_swift -emit-module-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIType~partial.swiftmodule -emit-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIType.d -emit-reference-dependencies-path /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIType.swiftdeps -o /tmp/java_swift.build/Debug/java_swift.build/Objects-normal/x86_64/JNIType.o

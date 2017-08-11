@@ -90,7 +90,7 @@ open class Package: java_swift.JavaObject, AnnotatedElement {
     open func getAnnotation( arg0: java_swift.JavaClass? ) -> Annotation! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotation", methodSig: "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", methodCache: &Package.getAnnotation_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? AnnotationForward( javaObject: __return ) : nil
@@ -107,7 +107,7 @@ open class Package: java_swift.JavaObject, AnnotatedElement {
     open func isAnnotationPresent( arg0: java_swift.JavaClass? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isAnnotationPresent", methodSig: "(Ljava/lang/Class;)Z", methodCache: &Package.isAnnotationPresent_MethodID_4, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -123,7 +123,7 @@ open class Package: java_swift.JavaObject, AnnotatedElement {
     open func getAnnotationsByType( arg0: java_swift.JavaClass? ) -> [Annotation]! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotationsByType", methodSig: "(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;", methodCache: &Package.getAnnotationsByType_MethodID_5, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: [AnnotationForward](), from: __return )
     }
@@ -151,7 +151,7 @@ open class Package: java_swift.JavaObject, AnnotatedElement {
     open func getDeclaredAnnotation( arg0: java_swift.JavaClass? ) -> Annotation! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDeclaredAnnotation", methodSig: "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", methodCache: &Package.getDeclaredAnnotation_MethodID_7, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? AnnotationForward( javaObject: __return ) : nil
@@ -168,7 +168,7 @@ open class Package: java_swift.JavaObject, AnnotatedElement {
     open func getDeclaredAnnotationsByType( arg0: java_swift.JavaClass? ) -> [Annotation]! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDeclaredAnnotationsByType", methodSig: "(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;", methodCache: &Package.getDeclaredAnnotationsByType_MethodID_8, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: [AnnotationForward](), from: __return )
     }
@@ -232,7 +232,7 @@ open class Package: java_swift.JavaObject, AnnotatedElement {
     open func isSealed( url: /* java.net.URL */ UnclassedObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: url != nil ? url! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: url, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isSealed", methodSig: "(Ljava/net/URL;)Z", methodCache: &Package.isSealed_MethodID_12, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -241,93 +241,15 @@ open class Package: java_swift.JavaObject, AnnotatedElement {
         return isSealed( url: _url )
     }
 
-    /// public java.lang.String java.lang.Package.getSpecificationTitle()
-
-    private static var getSpecificationTitle_MethodID_13: jmethodID?
-
-    open func getSpecificationTitle() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSpecificationTitle", methodSig: "()Ljava/lang/String;", methodCache: &Package.getSpecificationTitle_MethodID_13, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public java.lang.String java.lang.Package.getSpecificationVersion()
-
-    private static var getSpecificationVersion_MethodID_14: jmethodID?
-
-    open func getSpecificationVersion() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSpecificationVersion", methodSig: "()Ljava/lang/String;", methodCache: &Package.getSpecificationVersion_MethodID_14, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public java.lang.String java.lang.Package.getSpecificationVendor()
-
-    private static var getSpecificationVendor_MethodID_15: jmethodID?
-
-    open func getSpecificationVendor() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSpecificationVendor", methodSig: "()Ljava/lang/String;", methodCache: &Package.getSpecificationVendor_MethodID_15, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public java.lang.String java.lang.Package.getImplementationTitle()
-
-    private static var getImplementationTitle_MethodID_16: jmethodID?
-
-    open func getImplementationTitle() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getImplementationTitle", methodSig: "()Ljava/lang/String;", methodCache: &Package.getImplementationTitle_MethodID_16, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public java.lang.String java.lang.Package.getImplementationVersion()
-
-    private static var getImplementationVersion_MethodID_17: jmethodID?
-
-    open func getImplementationVersion() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getImplementationVersion", methodSig: "()Ljava/lang/String;", methodCache: &Package.getImplementationVersion_MethodID_17, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public java.lang.String java.lang.Package.getImplementationVendor()
-
-    private static var getImplementationVendor_MethodID_18: jmethodID?
-
-    open func getImplementationVendor() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getImplementationVendor", methodSig: "()Ljava/lang/String;", methodCache: &Package.getImplementationVendor_MethodID_18, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// private static java.util.jar.Manifest java.lang.Package.loadManifest(java.lang.String)
-
-    /// private static native java.lang.String java.lang.Package.getSystemPackage0(java.lang.String)
-
-    /// private static native java.lang.String[] java.lang.Package.getSystemPackages0()
-
     /// public boolean java.lang.Package.isCompatibleWith(java.lang.String) throws java.lang.NumberFormatException
 
-    private static var isCompatibleWith_MethodID_19: jmethodID?
+    private static var isCompatibleWith_MethodID_13: jmethodID?
 
     open func isCompatibleWith( desired: String? ) throws /* java.lang.NumberFormatException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: desired, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCompatibleWith", methodSig: "(Ljava/lang/String;)Z", methodCache: &Package.isCompatibleWith_MethodID_19, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCompatibleWith", methodSig: "(Ljava/lang/String;)Z", methodCache: &Package.isCompatibleWith_MethodID_13, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw NumberFormatException( javaObject: throwable )
         }
@@ -341,6 +263,84 @@ open class Package: java_swift.JavaObject, AnnotatedElement {
     /// private static java.lang.Package java.lang.Package.defineSystemPackage(java.lang.String,java.lang.String)
 
     /// private java.lang.Class java.lang.Package.getPackageInfo()
+
+    /// public java.lang.String java.lang.Package.getSpecificationTitle()
+
+    private static var getSpecificationTitle_MethodID_14: jmethodID?
+
+    open func getSpecificationTitle() -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSpecificationTitle", methodSig: "()Ljava/lang/String;", methodCache: &Package.getSpecificationTitle_MethodID_14, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+
+    /// public java.lang.String java.lang.Package.getSpecificationVersion()
+
+    private static var getSpecificationVersion_MethodID_15: jmethodID?
+
+    open func getSpecificationVersion() -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSpecificationVersion", methodSig: "()Ljava/lang/String;", methodCache: &Package.getSpecificationVersion_MethodID_15, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+
+    /// public java.lang.String java.lang.Package.getSpecificationVendor()
+
+    private static var getSpecificationVendor_MethodID_16: jmethodID?
+
+    open func getSpecificationVendor() -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSpecificationVendor", methodSig: "()Ljava/lang/String;", methodCache: &Package.getSpecificationVendor_MethodID_16, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+
+    /// public java.lang.String java.lang.Package.getImplementationTitle()
+
+    private static var getImplementationTitle_MethodID_17: jmethodID?
+
+    open func getImplementationTitle() -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getImplementationTitle", methodSig: "()Ljava/lang/String;", methodCache: &Package.getImplementationTitle_MethodID_17, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+
+    /// public java.lang.String java.lang.Package.getImplementationVersion()
+
+    private static var getImplementationVersion_MethodID_18: jmethodID?
+
+    open func getImplementationVersion() -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getImplementationVersion", methodSig: "()Ljava/lang/String;", methodCache: &Package.getImplementationVersion_MethodID_18, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+
+    /// public java.lang.String java.lang.Package.getImplementationVendor()
+
+    private static var getImplementationVendor_MethodID_19: jmethodID?
+
+    open func getImplementationVendor() -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getImplementationVendor", methodSig: "()Ljava/lang/String;", methodCache: &Package.getImplementationVendor_MethodID_19, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+
+    /// private static java.util.jar.Manifest java.lang.Package.loadManifest(java.lang.String)
+
+    /// private static native java.lang.String java.lang.Package.getSystemPackage0(java.lang.String)
+
+    /// private static native java.lang.String[] java.lang.Package.getSystemPackages0()
 
 }
 

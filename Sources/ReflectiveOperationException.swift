@@ -5,7 +5,7 @@ import java_swift
 
 /// class java.lang.ReflectiveOperationException ///
 
-open class ReflectiveOperationException: Exception {
+open class ReflectiveOperationException: java_swift.Exception {
 
     public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
         self.init( javaObject: nil )
@@ -53,7 +53,7 @@ open class ReflectiveOperationException: Exception {
     public convenience init( arg0: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/ReflectiveOperationException", classCache: &ReflectiveOperationException.ReflectiveOperationExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &ReflectiveOperationException.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -71,7 +71,7 @@ open class ReflectiveOperationException: Exception {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/ReflectiveOperationException", classCache: &ReflectiveOperationException.ReflectiveOperationExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &ReflectiveOperationException.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

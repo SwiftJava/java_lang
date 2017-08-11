@@ -121,7 +121,7 @@ open class Short: Number, JavaComparable {
     open func equals( obj: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj != nil ? obj! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Short.equals_MethodID_3, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -189,7 +189,7 @@ open class Short: Number, JavaComparable {
     open func compareTo( anotherShort: Short? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: anotherShort != nil ? anotherShort! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: anotherShort, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Short;)I", methodCache: &Short.compareTo_MethodID_7, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
@@ -205,7 +205,7 @@ open class Short: Number, JavaComparable {
     open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &Short.compareTo_MethodID_8, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }

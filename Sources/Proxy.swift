@@ -71,7 +71,7 @@ open class Proxy: java_swift.JavaObject, /* java.io.Serializable */ UnclassedPro
     open class func isProxyClass( arg0: java_swift.JavaClass? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/reflect/Proxy", classCache: &ProxyJNIClass, methodName: "isProxyClass", methodSig: "(Ljava/lang/Class;)Z", methodCache: &isProxyClass_MethodID_2, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -89,7 +89,7 @@ open class Proxy: java_swift.JavaObject, /* java.io.Serializable */ UnclassedPro
     open class func getProxyClass( arg0: ClassLoader?, arg1: [JavaClass]? ) throws /* java.lang.IllegalArgumentException */ -> java_swift.JavaClass! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/reflect/Proxy", classCache: &ProxyJNIClass, methodName: "getProxyClass", methodSig: "(Ljava/lang/ClassLoader;[Ljava/lang/Class;)Ljava/lang/Class;", methodCache: &getProxyClass_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -116,7 +116,7 @@ open class Proxy: java_swift.JavaObject, /* java.io.Serializable */ UnclassedPro
     open class func getInvocationHandler( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException */ -> InvocationHandler! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/reflect/Proxy", classCache: &ProxyJNIClass, methodName: "getInvocationHandler", methodSig: "(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;", methodCache: &getInvocationHandler_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -136,7 +136,7 @@ open class Proxy: java_swift.JavaObject, /* java.io.Serializable */ UnclassedPro
     open class func newProxyInstance( arg0: ClassLoader?, arg1: [JavaClass]?, arg2: InvocationHandler? ) throws /* java.lang.IllegalArgumentException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/reflect/Proxy", classCache: &ProxyJNIClass, methodName: "newProxyInstance", methodSig: "(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;", methodCache: &newProxyInstance_MethodID_5, args: &__args, locals: &__locals )

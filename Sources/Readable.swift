@@ -25,7 +25,7 @@ open class ReadableForward: JNIObjectForward, Readable {
     open func read( cb: /* java.nio.CharBuffer */ UnclassedObject? ) throws /* java.io.IOException */ -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: cb != nil ? cb! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: cb, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "read", methodSig: "(Ljava/nio/CharBuffer;)I", methodCache: &ReadableForward.read_MethodID_2, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw /* java.io.IOException */ UnclassedObject( javaObject: throwable )

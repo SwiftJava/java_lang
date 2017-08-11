@@ -35,8 +35,8 @@ open class MethodHandles: java_swift.JavaObject {
     open class func throwException( arg0: java_swift.JavaClass?, arg1: java_swift.JavaClass? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "throwException", methodSig: "(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &throwException_MethodID_1, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
@@ -53,7 +53,7 @@ open class MethodHandles: java_swift.JavaObject {
     open class func identity( arg0: java_swift.JavaClass? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "identity", methodSig: "(Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &identity_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
@@ -72,7 +72,7 @@ open class MethodHandles: java_swift.JavaObject {
     open class func spreadInvoker( arg0: MethodType?, arg1: Int ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "spreadInvoker", methodSig: "(Ljava/lang/invoke/MethodType;I)Ljava/lang/invoke/MethodHandle;", methodCache: &spreadInvoker_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -103,8 +103,8 @@ open class MethodHandles: java_swift.JavaObject {
     open class func permuteArguments( arg0: MethodHandle?, arg1: MethodType?, arg2: [Int32]? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "permuteArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;[I)Ljava/lang/invoke/MethodHandle;", methodCache: &permuteArguments_MethodID_5, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -124,7 +124,7 @@ open class MethodHandles: java_swift.JavaObject {
     open class func exactInvoker( arg0: MethodType? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "exactInvoker", methodSig: "(Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &exactInvoker_MethodID_6, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
@@ -141,8 +141,8 @@ open class MethodHandles: java_swift.JavaObject {
     open class func foldArguments( arg0: MethodHandle?, arg1: MethodHandle? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "foldArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &foldArguments_MethodID_7, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
@@ -161,8 +161,8 @@ open class MethodHandles: java_swift.JavaObject {
     open class func constant( arg0: java_swift.JavaClass?, arg1: java_swift.JavaObject? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "constant", methodSig: "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/invoke/MethodHandle;", methodCache: &constant_MethodID_8, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
@@ -172,14 +172,110 @@ open class MethodHandles: java_swift.JavaObject {
         return constant( arg0: _arg0, arg1: _arg1 )
     }
 
+    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.arrayElementGetter(java.lang.Class) throws java.lang.IllegalArgumentException
+
+    private static var arrayElementGetter_MethodID_9: jmethodID?
+
+    open class func arrayElementGetter( arg0: java_swift.JavaClass? ) throws /* java.lang.IllegalArgumentException */ -> MethodHandle! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "arrayElementGetter", methodSig: "(Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &arrayElementGetter_MethodID_9, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw IllegalArgumentException( javaObject: throwable )
+        }
+        return __return != nil ? MethodHandle( javaObject: __return ) : nil
+    }
+
+    open class func arrayElementGetter( _ _arg0: java_swift.JavaClass? ) throws /* java.lang.IllegalArgumentException */ -> MethodHandle! {
+        return try arrayElementGetter( arg0: _arg0 )
+    }
+
+    /// static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.basicInvoker(java.lang.invoke.MethodType)
+
+    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.dropArguments(java.lang.invoke.MethodHandle,int,java.lang.Class[])
+
+    private static var dropArguments_MethodID_10: jmethodID?
+
+    open class func dropArguments( arg0: MethodHandle?, arg1: Int, arg2: [JavaClass]? ) -> MethodHandle! {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "dropArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;I[Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &dropArguments_MethodID_10, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? MethodHandle( javaObject: __return ) : nil
+    }
+
+    open class func dropArguments( _ _arg0: MethodHandle?, _ _arg1: Int, _ _arg2: [JavaClass]? ) -> MethodHandle! {
+        return dropArguments( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
+    }
+
+    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.dropArguments(java.lang.invoke.MethodHandle,int,java.util.List)
+
+    private static var dropArguments_MethodID_11: jmethodID?
+
+    open class func dropArguments( arg0: MethodHandle?, arg1: Int, arg2: /* java.util.List */ UnclassedProtocol? ) -> MethodHandle! {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "dropArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;ILjava/util/List;)Ljava/lang/invoke/MethodHandle;", methodCache: &dropArguments_MethodID_11, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? MethodHandle( javaObject: __return ) : nil
+    }
+
+    open class func dropArguments( _ _arg0: MethodHandle?, _ _arg1: Int, _ _arg2: /* java.util.List */ UnclassedProtocol? ) -> MethodHandle! {
+        return dropArguments( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
+    }
+
+    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.collectArguments(java.lang.invoke.MethodHandle,int,java.lang.invoke.MethodHandle)
+
+    private static var collectArguments_MethodID_12: jmethodID?
+
+    open class func collectArguments( arg0: MethodHandle?, arg1: Int, arg2: MethodHandle? ) -> MethodHandle! {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "collectArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;ILjava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &collectArguments_MethodID_12, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? MethodHandle( javaObject: __return ) : nil
+    }
+
+    open class func collectArguments( _ _arg0: MethodHandle?, _ _arg1: Int, _ _arg2: MethodHandle? ) -> MethodHandle! {
+        return collectArguments( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
+    }
+
+    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.invoker(java.lang.invoke.MethodType)
+
+    private static var invoker_MethodID_13: jmethodID?
+
+    open class func invoker( arg0: MethodType? ) -> MethodHandle! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "invoker", methodSig: "(Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &invoker_MethodID_13, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? MethodHandle( javaObject: __return ) : nil
+    }
+
+    open class func invoker( _ _arg0: MethodType? ) -> MethodHandle! {
+        return invoker( arg0: _arg0 )
+    }
+
     /// public static java.lang.invoke.MethodHandles$Lookup java.lang.invoke.MethodHandles.publicLookup()
 
-    private static var publicLookup_MethodID_9: jmethodID?
+    private static var publicLookup_MethodID_14: jmethodID?
 
     open class func publicLookup() -> MethodHandles_Lookup! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "publicLookup", methodSig: "()Ljava/lang/invoke/MethodHandles$Lookup;", methodCache: &publicLookup_MethodID_9, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "publicLookup", methodSig: "()Ljava/lang/invoke/MethodHandles$Lookup;", methodCache: &publicLookup_MethodID_14, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandles_Lookup( javaObject: __return ) : nil
     }
@@ -187,14 +283,14 @@ open class MethodHandles: java_swift.JavaObject {
 
     /// public static java.lang.reflect.Member java.lang.invoke.MethodHandles.reflectAs(java.lang.Class,java.lang.invoke.MethodHandle)
 
-    private static var reflectAs_MethodID_10: jmethodID?
+    private static var reflectAs_MethodID_15: jmethodID?
 
     open class func reflectAs( arg0: java_swift.JavaClass?, arg1: MethodHandle? ) -> Member! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "reflectAs", methodSig: "(Ljava/lang/Class;Ljava/lang/invoke/MethodHandle;)Ljava/lang/reflect/Member;", methodCache: &reflectAs_MethodID_10, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "reflectAs", methodSig: "(Ljava/lang/Class;Ljava/lang/invoke/MethodHandle;)Ljava/lang/reflect/Member;", methodCache: &reflectAs_MethodID_15, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MemberForward( javaObject: __return ) : nil
     }
@@ -205,13 +301,13 @@ open class MethodHandles: java_swift.JavaObject {
 
     /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.arrayElementSetter(java.lang.Class) throws java.lang.IllegalArgumentException
 
-    private static var arrayElementSetter_MethodID_11: jmethodID?
+    private static var arrayElementSetter_MethodID_16: jmethodID?
 
     open class func arrayElementSetter( arg0: java_swift.JavaClass? ) throws /* java.lang.IllegalArgumentException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "arrayElementSetter", methodSig: "(Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &arrayElementSetter_MethodID_11, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "arrayElementSetter", methodSig: "(Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &arrayElementSetter_MethodID_16, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -225,14 +321,14 @@ open class MethodHandles: java_swift.JavaObject {
 
     /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.explicitCastArguments(java.lang.invoke.MethodHandle,java.lang.invoke.MethodType)
 
-    private static var explicitCastArguments_MethodID_12: jmethodID?
+    private static var explicitCastArguments_MethodID_17: jmethodID?
 
     open class func explicitCastArguments( arg0: MethodHandle?, arg1: MethodType? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "explicitCastArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &explicitCastArguments_MethodID_12, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "explicitCastArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &explicitCastArguments_MethodID_17, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
     }
@@ -253,15 +349,15 @@ open class MethodHandles: java_swift.JavaObject {
 
     /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.insertArguments(java.lang.invoke.MethodHandle,int,java.lang.Object[])
 
-    private static var insertArguments_MethodID_13: jmethodID?
+    private static var insertArguments_MethodID_18: jmethodID?
 
     open class func insertArguments( arg0: MethodHandle?, arg1: Int, arg2: [JavaObject]? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "insertArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;I[Ljava/lang/Object;)Ljava/lang/invoke/MethodHandle;", methodCache: &insertArguments_MethodID_13, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "insertArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;I[Ljava/lang/Object;)Ljava/lang/invoke/MethodHandle;", methodCache: &insertArguments_MethodID_18, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
     }
@@ -280,15 +376,15 @@ open class MethodHandles: java_swift.JavaObject {
 
     /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.filterArguments(java.lang.invoke.MethodHandle,int,java.lang.invoke.MethodHandle[])
 
-    private static var filterArguments_MethodID_14: jmethodID?
+    private static var filterArguments_MethodID_19: jmethodID?
 
     open class func filterArguments( arg0: MethodHandle?, arg1: Int, arg2: [MethodHandle]? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "filterArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;I[Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &filterArguments_MethodID_14, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "filterArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;I[Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &filterArguments_MethodID_19, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
     }
@@ -307,14 +403,14 @@ open class MethodHandles: java_swift.JavaObject {
 
     /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.filterReturnValue(java.lang.invoke.MethodHandle,java.lang.invoke.MethodHandle)
 
-    private static var filterReturnValue_MethodID_15: jmethodID?
+    private static var filterReturnValue_MethodID_20: jmethodID?
 
     open class func filterReturnValue( arg0: MethodHandle?, arg1: MethodHandle? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "filterReturnValue", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &filterReturnValue_MethodID_15, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "filterReturnValue", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &filterReturnValue_MethodID_20, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
     }
@@ -329,15 +425,15 @@ open class MethodHandles: java_swift.JavaObject {
 
     /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.guardWithTest(java.lang.invoke.MethodHandle,java.lang.invoke.MethodHandle,java.lang.invoke.MethodHandle)
 
-    private static var guardWithTest_MethodID_16: jmethodID?
+    private static var guardWithTest_MethodID_21: jmethodID?
 
     open class func guardWithTest( arg0: MethodHandle?, arg1: MethodHandle?, arg2: MethodHandle? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "guardWithTest", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &guardWithTest_MethodID_16, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "guardWithTest", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &guardWithTest_MethodID_21, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
     }
@@ -350,117 +446,21 @@ open class MethodHandles: java_swift.JavaObject {
 
     /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.catchException(java.lang.invoke.MethodHandle,java.lang.Class,java.lang.invoke.MethodHandle)
 
-    private static var catchException_MethodID_17: jmethodID?
+    private static var catchException_MethodID_22: jmethodID?
 
     open class func catchException( arg0: MethodHandle?, arg1: java_swift.JavaClass?, arg2: MethodHandle? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "catchException", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/Class;Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &catchException_MethodID_17, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "catchException", methodSig: "(Ljava/lang/invoke/MethodHandle;Ljava/lang/Class;Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &catchException_MethodID_22, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
     }
 
     open class func catchException( _ _arg0: MethodHandle?, _ _arg1: java_swift.JavaClass?, _ _arg2: MethodHandle? ) -> MethodHandle! {
         return catchException( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
-    }
-
-    /// static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.basicInvoker(java.lang.invoke.MethodType)
-
-    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.dropArguments(java.lang.invoke.MethodHandle,int,java.util.List)
-
-    private static var dropArguments_MethodID_18: jmethodID?
-
-    open class func dropArguments( arg0: MethodHandle?, arg1: Int, arg2: /* java.util.List */ UnclassedProtocol? ) -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "dropArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;ILjava/util/List;)Ljava/lang/invoke/MethodHandle;", methodCache: &dropArguments_MethodID_18, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? MethodHandle( javaObject: __return ) : nil
-    }
-
-    open class func dropArguments( _ _arg0: MethodHandle?, _ _arg1: Int, _ _arg2: /* java.util.List */ UnclassedProtocol? ) -> MethodHandle! {
-        return dropArguments( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
-    }
-
-    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.dropArguments(java.lang.invoke.MethodHandle,int,java.lang.Class[])
-
-    private static var dropArguments_MethodID_19: jmethodID?
-
-    open class func dropArguments( arg0: MethodHandle?, arg1: Int, arg2: [JavaClass]? ) -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "dropArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;I[Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &dropArguments_MethodID_19, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? MethodHandle( javaObject: __return ) : nil
-    }
-
-    open class func dropArguments( _ _arg0: MethodHandle?, _ _arg1: Int, _ _arg2: [JavaClass]? ) -> MethodHandle! {
-        return dropArguments( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
-    }
-
-    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.collectArguments(java.lang.invoke.MethodHandle,int,java.lang.invoke.MethodHandle)
-
-    private static var collectArguments_MethodID_20: jmethodID?
-
-    open class func collectArguments( arg0: MethodHandle?, arg1: Int, arg2: MethodHandle? ) -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "collectArguments", methodSig: "(Ljava/lang/invoke/MethodHandle;ILjava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandle;", methodCache: &collectArguments_MethodID_20, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? MethodHandle( javaObject: __return ) : nil
-    }
-
-    open class func collectArguments( _ _arg0: MethodHandle?, _ _arg1: Int, _ _arg2: MethodHandle? ) -> MethodHandle! {
-        return collectArguments( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
-    }
-
-    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.arrayElementGetter(java.lang.Class) throws java.lang.IllegalArgumentException
-
-    private static var arrayElementGetter_MethodID_21: jmethodID?
-
-    open class func arrayElementGetter( arg0: java_swift.JavaClass? ) throws /* java.lang.IllegalArgumentException */ -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "arrayElementGetter", methodSig: "(Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &arrayElementGetter_MethodID_21, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw IllegalArgumentException( javaObject: throwable )
-        }
-        return __return != nil ? MethodHandle( javaObject: __return ) : nil
-    }
-
-    open class func arrayElementGetter( _ _arg0: java_swift.JavaClass? ) throws /* java.lang.IllegalArgumentException */ -> MethodHandle! {
-        return try arrayElementGetter( arg0: _arg0 )
-    }
-
-    /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles.invoker(java.lang.invoke.MethodType)
-
-    private static var invoker_MethodID_22: jmethodID?
-
-    open class func invoker( arg0: MethodType? ) -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandles", classCache: &MethodHandlesJNIClass, methodName: "invoker", methodSig: "(Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &invoker_MethodID_22, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? MethodHandle( javaObject: __return ) : nil
-    }
-
-    open class func invoker( _ _arg0: MethodType? ) -> MethodHandle! {
-        return invoker( arg0: _arg0 )
     }
 
 }

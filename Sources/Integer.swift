@@ -177,7 +177,7 @@ open class Integer: Number, JavaComparable {
     open func equals( obj: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj != nil ? obj! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Integer.equals_MethodID_6, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -296,7 +296,7 @@ open class Integer: Number, JavaComparable {
     open func compareTo( anotherInteger: Integer? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: anotherInteger != nil ? anotherInteger! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: anotherInteger, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Integer;)I", methodCache: &Integer.compareTo_MethodID_13, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
@@ -312,7 +312,7 @@ open class Integer: Number, JavaComparable {
     open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &Integer.compareTo_MethodID_14, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
@@ -687,7 +687,7 @@ open class Integer: Number, JavaComparable {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: nm, locals: &__locals )
-        __args[1] = JNIType.toJava( value: val != nil ? val! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: val, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Integer", classCache: &IntegerJNIClass, methodName: "getInteger", methodSig: "(Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;", methodCache: &getInteger_MethodID_34, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? Integer( javaObject: __return ) : nil

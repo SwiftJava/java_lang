@@ -25,8 +25,8 @@ open class Thread_UncaughtExceptionHandlerForward: JNIObjectForward, Thread_Unca
     open func uncaughtException( arg0: Thread?, arg1: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "uncaughtException", methodSig: "(Ljava/lang/Thread;Ljava/lang/Throwable;)V", methodCache: &Thread_UncaughtExceptionHandlerForward.uncaughtException_MethodID_2, args: &__args, locals: &__locals )
     }
 

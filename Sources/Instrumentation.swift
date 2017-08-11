@@ -188,7 +188,7 @@ open class InstrumentationForward: JNIObjectForward, Instrumentation {
     open func isModifiableClass( theClass: java_swift.JavaClass? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: theClass != nil ? theClass! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: theClass, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isModifiableClass", methodSig: "(Ljava/lang/Class;)Z", methodCache: &InstrumentationForward.isModifiableClass_MethodID_23, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -216,7 +216,7 @@ open class InstrumentationForward: JNIObjectForward, Instrumentation {
     open func getInitiatedClasses( loader: ClassLoader? ) -> [JavaClass]! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: loader != nil ? loader! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: loader, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getInitiatedClasses", methodSig: "(Ljava/lang/ClassLoader;)[Ljava/lang/Class;", methodCache: &InstrumentationForward.getInitiatedClasses_MethodID_25, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: [JavaClass](), from: __return )
     }
@@ -232,7 +232,7 @@ open class InstrumentationForward: JNIObjectForward, Instrumentation {
     open func getObjectSize( objectToSize: java_swift.JavaObject? ) -> Int64 {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: objectToSize != nil ? objectToSize! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: objectToSize, locals: &__locals )
         let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getObjectSize", methodSig: "(Ljava/lang/Object;)J", methodCache: &InstrumentationForward.getObjectSize_MethodID_26, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int64(), from: __return )
     }
@@ -248,7 +248,7 @@ open class InstrumentationForward: JNIObjectForward, Instrumentation {
     open func appendToBootstrapClassLoaderSearch( jarfile: /* java.util.jar.JarFile */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: jarfile != nil ? jarfile! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: jarfile, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "appendToBootstrapClassLoaderSearch", methodSig: "(Ljava/util/jar/JarFile;)V", methodCache: &InstrumentationForward.appendToBootstrapClassLoaderSearch_MethodID_27, args: &__args, locals: &__locals )
     }
 
@@ -263,7 +263,7 @@ open class InstrumentationForward: JNIObjectForward, Instrumentation {
     open func appendToSystemClassLoaderSearch( jarfile: /* java.util.jar.JarFile */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: jarfile != nil ? jarfile! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: jarfile, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "appendToSystemClassLoaderSearch", methodSig: "(Ljava/util/jar/JarFile;)V", methodCache: &InstrumentationForward.appendToSystemClassLoaderSearch_MethodID_28, args: &__args, locals: &__locals )
     }
 

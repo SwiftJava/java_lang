@@ -150,7 +150,7 @@ open class Runtime: java_swift.JavaObject {
     open func addShutdownHook( hook: Thread? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: hook != nil ? hook! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: hook, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "addShutdownHook", methodSig: "(Ljava/lang/Thread;)V", methodCache: &Runtime.addShutdownHook_MethodID_10, args: &__args, locals: &__locals )
     }
 
@@ -165,7 +165,7 @@ open class Runtime: java_swift.JavaObject {
     open func removeShutdownHook( hook: Thread? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: hook != nil ? hook! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: hook, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "removeShutdownHook", methodSig: "(Ljava/lang/Thread;)Z", methodCache: &Runtime.removeShutdownHook_MethodID_11, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -238,7 +238,7 @@ open class Runtime: java_swift.JavaObject {
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: cmdarray, locals: &__locals )
         __args[1] = JNIType.toJava( value: envp, locals: &__locals )
-        __args[2] = JNIType.toJava( value: dir != nil ? dir! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: dir, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "exec", methodSig: "([Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;", methodCache: &Runtime.exec_MethodID_15, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -281,7 +281,7 @@ open class Runtime: java_swift.JavaObject {
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: command, locals: &__locals )
         __args[1] = JNIType.toJava( value: envp, locals: &__locals )
-        __args[2] = JNIType.toJava( value: dir != nil ? dir! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: dir, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "exec", methodSig: "(Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;", methodCache: &Runtime.exec_MethodID_17, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -378,7 +378,7 @@ open class Runtime: java_swift.JavaObject {
     open func getLocalizedInputStream( _in: /* java.io.InputStream */ UnclassedObject? ) -> /* java.io.InputStream */ UnclassedObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: _in != nil ? _in! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: _in, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getLocalizedInputStream", methodSig: "(Ljava/io/InputStream;)Ljava/io/InputStream;", methodCache: &Runtime.getLocalizedInputStream_MethodID_23, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? /* java.io.InputStream */ UnclassedObject( javaObject: __return ) : nil
@@ -395,7 +395,7 @@ open class Runtime: java_swift.JavaObject {
     open func getLocalizedOutputStream( out: /* java.io.OutputStream */ UnclassedObject? ) -> /* java.io.OutputStream */ UnclassedObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: out != nil ? out! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: out, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getLocalizedOutputStream", methodSig: "(Ljava/io/OutputStream;)Ljava/io/OutputStream;", methodCache: &Runtime.getLocalizedOutputStream_MethodID_24, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? /* java.io.OutputStream */ UnclassedObject( javaObject: __return ) : nil

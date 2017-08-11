@@ -71,7 +71,7 @@ open class AnnotationFormatError: JavaError {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: message, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/annotation/AnnotationFormatError", classCache: &AnnotationFormatError.AnnotationFormatErrorJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &AnnotationFormatError.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -88,7 +88,7 @@ open class AnnotationFormatError: JavaError {
     public convenience init( cause: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/annotation/AnnotationFormatError", classCache: &AnnotationFormatError.AnnotationFormatErrorJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &AnnotationFormatError.new_MethodID_3, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

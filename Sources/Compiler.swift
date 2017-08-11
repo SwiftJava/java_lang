@@ -31,7 +31,7 @@ open class Compiler: java_swift.JavaObject {
     open class func command( any: java_swift.JavaObject? ) -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: any != nil ? any! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: any, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Compiler", classCache: &CompilerJNIClass, methodName: "command", methodSig: "(Ljava/lang/Object;)Ljava/lang/Object;", methodCache: &command_MethodID_1, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
@@ -59,7 +59,7 @@ open class Compiler: java_swift.JavaObject {
     open class func compileClass( clazz: java_swift.JavaClass? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: clazz != nil ? clazz! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: clazz, locals: &__locals )
         let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Compiler", classCache: &CompilerJNIClass, methodName: "compileClass", methodSig: "(Ljava/lang/Class;)Z", methodCache: &compileClass_MethodID_3, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }

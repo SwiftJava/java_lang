@@ -93,7 +93,7 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
     open func _in( arg0: java_swift.JavaClass? ) -> MethodHandles_Lookup! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "in", methodSig: "(Ljava/lang/Class;)Ljava/lang/invoke/MethodHandles$Lookup;", methodCache: &MethodHandles_Lookup.in_MethodID_1, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandles_Lookup( javaObject: __return ) : nil
@@ -118,9 +118,9 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
     open func findVirtual( arg0: java_swift.JavaClass?, arg1: String?, arg2: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findVirtual", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findVirtual_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -140,9 +140,9 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
     open func findStatic( arg0: java_swift.JavaClass?, arg1: String?, arg2: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findStatic", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findStatic_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -155,17 +155,155 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
         return try findStatic( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
     }
 
+    /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.bind(java.lang.Object,java.lang.String,java.lang.invoke.MethodType) throws java.lang.NoSuchMethodException,java.lang.IllegalAccessException
+
+    private static var bind_MethodID_4: jmethodID?
+
+    open func bind( arg0: java_swift.JavaObject?, arg1: String?, arg2: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "bind", methodSig: "(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.bind_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw NoSuchMethodException( javaObject: throwable )
+        }
+        return __return != nil ? MethodHandle( javaObject: __return ) : nil
+    }
+
+    open func bind( _ _arg0: java_swift.JavaObject?, _ _arg1: String?, _ _arg2: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
+        return try bind( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
+    }
+
+    /// public int java.lang.invoke.MethodHandles$Lookup.lookupModes()
+
+    private static var lookupModes_MethodID_5: jmethodID?
+
+    open func lookupModes() -> Int {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "lookupModes", methodSig: "()I", methodCache: &MethodHandles_Lookup.lookupModes_MethodID_5, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: Int(), from: __return )
+    }
+
+
+    /// public java.lang.Class java.lang.invoke.MethodHandles$Lookup.lookupClass()
+
+    private static var lookupClass_MethodID_6: jmethodID?
+
+    open func lookupClass() -> java_swift.JavaClass! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "lookupClass", methodSig: "()Ljava/lang/Class;", methodCache: &MethodHandles_Lookup.lookupClass_MethodID_6, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
+    }
+
+
+    /// public java.lang.invoke.MethodHandleInfo java.lang.invoke.MethodHandles$Lookup.revealDirect(java.lang.invoke.MethodHandle)
+
+    private static var revealDirect_MethodID_7: jmethodID?
+
+    open func revealDirect( arg0: MethodHandle? ) -> MethodHandleInfo! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "revealDirect", methodSig: "(Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandleInfo;", methodCache: &MethodHandles_Lookup.revealDirect_MethodID_7, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? MethodHandleInfoForward( javaObject: __return ) : nil
+    }
+
+    open func revealDirect( _ _arg0: MethodHandle? ) -> MethodHandleInfo! {
+        return revealDirect( arg0: _arg0 )
+    }
+
+    /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findGetter(java.lang.Class,java.lang.String,java.lang.Class) throws java.lang.NoSuchFieldException,java.lang.IllegalAccessException
+
+    private static var findGetter_MethodID_8: jmethodID?
+
+    open func findGetter( arg0: java_swift.JavaClass?, arg1: String?, arg2: java_swift.JavaClass? ) throws /* java.lang.NoSuchFieldException, java.lang.IllegalAccessException */ -> MethodHandle! {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findGetter", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findGetter_MethodID_8, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw NoSuchFieldException( javaObject: throwable )
+        }
+        return __return != nil ? MethodHandle( javaObject: __return ) : nil
+    }
+
+    open func findGetter( _ _arg0: java_swift.JavaClass?, _ _arg1: String?, _ _arg2: java_swift.JavaClass? ) throws /* java.lang.NoSuchFieldException, java.lang.IllegalAccessException */ -> MethodHandle! {
+        return try findGetter( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
+    }
+
+    /// private static int java.lang.invoke.MethodHandles$Lookup.fixmods(int)
+
+    /// private java.lang.Class java.lang.invoke.MethodHandles$Lookup.lookupClassOrNull()
+
+    /// private static void java.lang.invoke.MethodHandles$Lookup.checkUnprivilegedlookupClass(java.lang.Class,int)
+
+    /// private java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findVirtualForMH(java.lang.String,java.lang.invoke.MethodType)
+
+    /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findConstructor(java.lang.Class,java.lang.invoke.MethodType) throws java.lang.NoSuchMethodException,java.lang.IllegalAccessException
+
+    private static var findConstructor_MethodID_9: jmethodID?
+
+    open func findConstructor( arg0: java_swift.JavaClass?, arg1: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findConstructor", methodSig: "(Ljava/lang/Class;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findConstructor_MethodID_9, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw NoSuchMethodException( javaObject: throwable )
+        }
+        return __return != nil ? MethodHandle( javaObject: __return ) : nil
+    }
+
+    open func findConstructor( _ _arg0: java_swift.JavaClass?, _ _arg1: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
+        return try findConstructor( arg0: _arg0, arg1: _arg1 )
+    }
+
+    /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findSpecial(java.lang.Class,java.lang.String,java.lang.invoke.MethodType,java.lang.Class) throws java.lang.NoSuchMethodException,java.lang.IllegalAccessException
+
+    private static var findSpecial_MethodID_10: jmethodID?
+
+    open func findSpecial( arg0: java_swift.JavaClass?, arg1: String?, arg2: MethodType?, arg3: java_swift.JavaClass? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        __args[3] = JNIType.toJava( value: arg3, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findSpecial", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findSpecial_MethodID_10, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw NoSuchMethodException( javaObject: throwable )
+        }
+        return __return != nil ? MethodHandle( javaObject: __return ) : nil
+    }
+
+    open func findSpecial( _ _arg0: java_swift.JavaClass?, _ _arg1: String?, _ _arg2: MethodType?, _ _arg3: java_swift.JavaClass? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
+        return try findSpecial( arg0: _arg0, arg1: _arg1, arg2: _arg2, arg3: _arg3 )
+    }
+
     /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findSetter(java.lang.Class,java.lang.String,java.lang.Class) throws java.lang.NoSuchFieldException,java.lang.IllegalAccessException
 
-    private static var findSetter_MethodID_4: jmethodID?
+    private static var findSetter_MethodID_11: jmethodID?
 
     open func findSetter( arg0: java_swift.JavaClass?, arg1: String?, arg2: java_swift.JavaClass? ) throws /* java.lang.NoSuchFieldException, java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findSetter", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findSetter_MethodID_4, args: &__args, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findSetter", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findSetter_MethodID_11, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw NoSuchFieldException( javaObject: throwable )
@@ -179,15 +317,15 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findStaticGetter(java.lang.Class,java.lang.String,java.lang.Class) throws java.lang.NoSuchFieldException,java.lang.IllegalAccessException
 
-    private static var findStaticGetter_MethodID_5: jmethodID?
+    private static var findStaticGetter_MethodID_12: jmethodID?
 
     open func findStaticGetter( arg0: java_swift.JavaClass?, arg1: String?, arg2: java_swift.JavaClass? ) throws /* java.lang.NoSuchFieldException, java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findStaticGetter", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findStaticGetter_MethodID_5, args: &__args, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findStaticGetter", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findStaticGetter_MethodID_12, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw NoSuchFieldException( javaObject: throwable )
@@ -201,15 +339,15 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findStaticSetter(java.lang.Class,java.lang.String,java.lang.Class) throws java.lang.NoSuchFieldException,java.lang.IllegalAccessException
 
-    private static var findStaticSetter_MethodID_6: jmethodID?
+    private static var findStaticSetter_MethodID_13: jmethodID?
 
     open func findStaticSetter( arg0: java_swift.JavaClass?, arg1: String?, arg2: java_swift.JavaClass? ) throws /* java.lang.NoSuchFieldException, java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findStaticSetter", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findStaticSetter_MethodID_6, args: &__args, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findStaticSetter", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findStaticSetter_MethodID_13, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw NoSuchFieldException( javaObject: throwable )
@@ -223,13 +361,13 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.unreflect(java.lang.reflect.Method) throws java.lang.IllegalAccessException
 
-    private static var unreflect_MethodID_7: jmethodID?
+    private static var unreflect_MethodID_14: jmethodID?
 
     open func unreflect( arg0: Method? ) throws /* java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflect", methodSig: "(Ljava/lang/reflect/Method;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflect_MethodID_7, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflect", methodSig: "(Ljava/lang/reflect/Method;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflect_MethodID_14, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalAccessException( javaObject: throwable )
@@ -245,14 +383,14 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.unreflectSpecial(java.lang.reflect.Method,java.lang.Class) throws java.lang.IllegalAccessException
 
-    private static var unreflectSpecial_MethodID_8: jmethodID?
+    private static var unreflectSpecial_MethodID_15: jmethodID?
 
     open func unreflectSpecial( arg0: Method?, arg1: java_swift.JavaClass? ) throws /* java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflectSpecial", methodSig: "(Ljava/lang/reflect/Method;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflectSpecial_MethodID_8, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflectSpecial", methodSig: "(Ljava/lang/reflect/Method;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflectSpecial_MethodID_15, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalAccessException( javaObject: throwable )
@@ -266,13 +404,13 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.unreflectConstructor(java.lang.reflect.Constructor) throws java.lang.IllegalAccessException
 
-    private static var unreflectConstructor_MethodID_9: jmethodID?
+    private static var unreflectConstructor_MethodID_16: jmethodID?
 
     open func unreflectConstructor( arg0: Constructor? ) throws /* java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflectConstructor", methodSig: "(Ljava/lang/reflect/Constructor;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflectConstructor_MethodID_9, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflectConstructor", methodSig: "(Ljava/lang/reflect/Constructor;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflectConstructor_MethodID_16, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalAccessException( javaObject: throwable )
@@ -286,13 +424,13 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.unreflectGetter(java.lang.reflect.Field) throws java.lang.IllegalAccessException
 
-    private static var unreflectGetter_MethodID_10: jmethodID?
+    private static var unreflectGetter_MethodID_17: jmethodID?
 
     open func unreflectGetter( arg0: Field? ) throws /* java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflectGetter", methodSig: "(Ljava/lang/reflect/Field;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflectGetter_MethodID_10, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflectGetter", methodSig: "(Ljava/lang/reflect/Field;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflectGetter_MethodID_17, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalAccessException( javaObject: throwable )
@@ -308,13 +446,13 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.unreflectSetter(java.lang.reflect.Field) throws java.lang.IllegalAccessException
 
-    private static var unreflectSetter_MethodID_11: jmethodID?
+    private static var unreflectSetter_MethodID_18: jmethodID?
 
     open func unreflectSetter( arg0: Field? ) throws /* java.lang.IllegalAccessException */ -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflectSetter", methodSig: "(Ljava/lang/reflect/Field;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflectSetter_MethodID_11, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unreflectSetter", methodSig: "(Ljava/lang/reflect/Field;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.unreflectSetter_MethodID_18, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalAccessException( javaObject: throwable )
@@ -373,144 +511,6 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
     /// private boolean java.lang.invoke.MethodHandles$Lookup.canBeCached(byte,java.lang.Class,java.lang.invoke.MemberName)
 
     /// private java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.getDirectMethodForConstant(byte,java.lang.Class,java.lang.invoke.MemberName) throws java.lang.ReflectiveOperationException
-
-    /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.bind(java.lang.Object,java.lang.String,java.lang.invoke.MethodType) throws java.lang.NoSuchMethodException,java.lang.IllegalAccessException
-
-    private static var bind_MethodID_12: jmethodID?
-
-    open func bind( arg0: java_swift.JavaObject?, arg1: String?, arg2: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "bind", methodSig: "(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.bind_MethodID_12, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw NoSuchMethodException( javaObject: throwable )
-        }
-        return __return != nil ? MethodHandle( javaObject: __return ) : nil
-    }
-
-    open func bind( _ _arg0: java_swift.JavaObject?, _ _arg1: String?, _ _arg2: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
-        return try bind( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
-    }
-
-    /// public int java.lang.invoke.MethodHandles$Lookup.lookupModes()
-
-    private static var lookupModes_MethodID_13: jmethodID?
-
-    open func lookupModes() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "lookupModes", methodSig: "()I", methodCache: &MethodHandles_Lookup.lookupModes_MethodID_13, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public java.lang.Class java.lang.invoke.MethodHandles$Lookup.lookupClass()
-
-    private static var lookupClass_MethodID_14: jmethodID?
-
-    open func lookupClass() -> java_swift.JavaClass! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "lookupClass", methodSig: "()Ljava/lang/Class;", methodCache: &MethodHandles_Lookup.lookupClass_MethodID_14, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
-    }
-
-
-    /// public java.lang.invoke.MethodHandleInfo java.lang.invoke.MethodHandles$Lookup.revealDirect(java.lang.invoke.MethodHandle)
-
-    private static var revealDirect_MethodID_15: jmethodID?
-
-    open func revealDirect( arg0: MethodHandle? ) -> MethodHandleInfo! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "revealDirect", methodSig: "(Ljava/lang/invoke/MethodHandle;)Ljava/lang/invoke/MethodHandleInfo;", methodCache: &MethodHandles_Lookup.revealDirect_MethodID_15, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? MethodHandleInfoForward( javaObject: __return ) : nil
-    }
-
-    open func revealDirect( _ _arg0: MethodHandle? ) -> MethodHandleInfo! {
-        return revealDirect( arg0: _arg0 )
-    }
-
-    /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findGetter(java.lang.Class,java.lang.String,java.lang.Class) throws java.lang.NoSuchFieldException,java.lang.IllegalAccessException
-
-    private static var findGetter_MethodID_16: jmethodID?
-
-    open func findGetter( arg0: java_swift.JavaClass?, arg1: String?, arg2: java_swift.JavaClass? ) throws /* java.lang.NoSuchFieldException, java.lang.IllegalAccessException */ -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findGetter", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findGetter_MethodID_16, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw NoSuchFieldException( javaObject: throwable )
-        }
-        return __return != nil ? MethodHandle( javaObject: __return ) : nil
-    }
-
-    open func findGetter( _ _arg0: java_swift.JavaClass?, _ _arg1: String?, _ _arg2: java_swift.JavaClass? ) throws /* java.lang.NoSuchFieldException, java.lang.IllegalAccessException */ -> MethodHandle! {
-        return try findGetter( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
-    }
-
-    /// private static int java.lang.invoke.MethodHandles$Lookup.fixmods(int)
-
-    /// private java.lang.Class java.lang.invoke.MethodHandles$Lookup.lookupClassOrNull()
-
-    /// private static void java.lang.invoke.MethodHandles$Lookup.checkUnprivilegedlookupClass(java.lang.Class,int)
-
-    /// private java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findVirtualForMH(java.lang.String,java.lang.invoke.MethodType)
-
-    /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findConstructor(java.lang.Class,java.lang.invoke.MethodType) throws java.lang.NoSuchMethodException,java.lang.IllegalAccessException
-
-    private static var findConstructor_MethodID_17: jmethodID?
-
-    open func findConstructor( arg0: java_swift.JavaClass?, arg1: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findConstructor", methodSig: "(Ljava/lang/Class;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findConstructor_MethodID_17, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw NoSuchMethodException( javaObject: throwable )
-        }
-        return __return != nil ? MethodHandle( javaObject: __return ) : nil
-    }
-
-    open func findConstructor( _ _arg0: java_swift.JavaClass?, _ _arg1: MethodType? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
-        return try findConstructor( arg0: _arg0, arg1: _arg1 )
-    }
-
-    /// public java.lang.invoke.MethodHandle java.lang.invoke.MethodHandles$Lookup.findSpecial(java.lang.Class,java.lang.String,java.lang.invoke.MethodType,java.lang.Class) throws java.lang.NoSuchMethodException,java.lang.IllegalAccessException
-
-    private static var findSpecial_MethodID_18: jmethodID?
-
-    open func findSpecial( arg0: java_swift.JavaClass?, arg1: String?, arg2: MethodType?, arg3: java_swift.JavaClass? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2 != nil ? arg2! as JNIObject : nil, locals: &__locals )
-        __args[3] = JNIType.toJava( value: arg3 != nil ? arg3! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "findSpecial", methodSig: "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandles_Lookup.findSpecial_MethodID_18, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw NoSuchMethodException( javaObject: throwable )
-        }
-        return __return != nil ? MethodHandle( javaObject: __return ) : nil
-    }
-
-    open func findSpecial( _ _arg0: java_swift.JavaClass?, _ _arg1: String?, _ _arg2: MethodType?, _ _arg3: java_swift.JavaClass? ) throws /* java.lang.NoSuchMethodException, java.lang.IllegalAccessException */ -> MethodHandle! {
-        return try findSpecial( arg0: _arg0, arg1: _arg1, arg2: _arg2, arg3: _arg3 )
-    }
 
 }
 

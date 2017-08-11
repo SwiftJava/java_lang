@@ -47,7 +47,7 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
     public convenience init( arg0: ThreadGroup?, arg1: String? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/ThreadGroup", classCache: &ThreadGroup.ThreadGroupJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/String;)V", methodCache: &ThreadGroup.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
@@ -92,8 +92,8 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
     open func uncaughtException( arg0: Thread?, arg1: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "uncaughtException", methodSig: "(Ljava/lang/Thread;Ljava/lang/Throwable;)V", methodCache: &ThreadGroup.uncaughtException_MethodID_3, args: &__args, locals: &__locals )
     }
 
@@ -370,7 +370,7 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
     open func parentOf( arg0: ThreadGroup? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "parentOf", methodSig: "(Ljava/lang/ThreadGroup;)Z", methodCache: &ThreadGroup.parentOf_MethodID_23, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }

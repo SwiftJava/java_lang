@@ -81,7 +81,7 @@ open class Parameter: java_swift.JavaObject, AnnotatedElement {
     open func getAnnotation( arg0: java_swift.JavaClass? ) -> Annotation! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotation", methodSig: "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", methodCache: &Parameter.getAnnotation_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? AnnotationForward( javaObject: __return ) : nil
@@ -98,7 +98,7 @@ open class Parameter: java_swift.JavaObject, AnnotatedElement {
     open func getAnnotationsByType( arg0: java_swift.JavaClass? ) -> [Annotation]! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotationsByType", methodSig: "(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;", methodCache: &Parameter.getAnnotationsByType_MethodID_5, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: [AnnotationForward](), from: __return )
     }
@@ -126,7 +126,7 @@ open class Parameter: java_swift.JavaObject, AnnotatedElement {
     open func getDeclaredAnnotation( arg0: java_swift.JavaClass? ) -> Annotation! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDeclaredAnnotation", methodSig: "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", methodCache: &Parameter.getDeclaredAnnotation_MethodID_7, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? AnnotationForward( javaObject: __return ) : nil
@@ -143,7 +143,7 @@ open class Parameter: java_swift.JavaObject, AnnotatedElement {
     open func getDeclaredAnnotationsByType( arg0: java_swift.JavaClass? ) -> [Annotation]! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDeclaredAnnotationsByType", methodSig: "(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;", methodCache: &Parameter.getDeclaredAnnotationsByType_MethodID_8, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: [AnnotationForward](), from: __return )
     }
@@ -265,7 +265,7 @@ open class Parameter: java_swift.JavaObject, AnnotatedElement {
     open func isAnnotationPresent( arg0: java_swift.JavaClass? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isAnnotationPresent", methodSig: "(Ljava/lang/Class;)Z", methodCache: &Parameter.isAnnotationPresent_MethodID_17, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }

@@ -72,12 +72,12 @@ open class LambdaMetafactory: java_swift.JavaObject {
     open class func metafactory( caller: MethodHandles_Lookup?, invokedName: String?, invokedType: MethodType?, samMethodType: MethodType?, implMethod: MethodHandle?, instantiatedMethodType: MethodType? ) throws /* java.lang.invoke.LambdaConversionException */ -> CallSite! {
         var __args = [jvalue]( repeating: jvalue(), count: 6 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: caller != nil ? caller! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: caller, locals: &__locals )
         __args[1] = JNIType.toJava( value: invokedName, locals: &__locals )
-        __args[2] = JNIType.toJava( value: invokedType != nil ? invokedType! as JNIObject : nil, locals: &__locals )
-        __args[3] = JNIType.toJava( value: samMethodType != nil ? samMethodType! as JNIObject : nil, locals: &__locals )
-        __args[4] = JNIType.toJava( value: implMethod != nil ? implMethod! as JNIObject : nil, locals: &__locals )
-        __args[5] = JNIType.toJava( value: instantiatedMethodType != nil ? instantiatedMethodType! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: invokedType, locals: &__locals )
+        __args[3] = JNIType.toJava( value: samMethodType, locals: &__locals )
+        __args[4] = JNIType.toJava( value: implMethod, locals: &__locals )
+        __args[5] = JNIType.toJava( value: instantiatedMethodType, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/LambdaMetafactory", classCache: &LambdaMetafactoryJNIClass, methodName: "metafactory", methodSig: "(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;", methodCache: &metafactory_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -97,9 +97,9 @@ open class LambdaMetafactory: java_swift.JavaObject {
     open class func altMetafactory( caller: MethodHandles_Lookup?, invokedName: String?, invokedType: MethodType?, args: [JavaObject]? ) throws /* java.lang.invoke.LambdaConversionException */ -> CallSite! {
         var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: caller != nil ? caller! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: caller, locals: &__locals )
         __args[1] = JNIType.toJava( value: invokedName, locals: &__locals )
-        __args[2] = JNIType.toJava( value: invokedType != nil ? invokedType! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: invokedType, locals: &__locals )
         __args[3] = JNIType.toJava( value: args, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/LambdaMetafactory", classCache: &LambdaMetafactoryJNIClass, methodName: "altMetafactory", methodSig: "(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;", methodCache: &altMetafactory_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }

@@ -128,7 +128,7 @@ open class ManagementFactory: java_swift.JavaObject {
     open class func getPlatformMXBean( mxbeanInterface: java_swift.JavaClass? ) -> PlatformManagedObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: mxbeanInterface != nil ? mxbeanInterface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBean", methodSig: "(Ljava/lang/Class;)Ljava/lang/management/PlatformManagedObject;", methodCache: &getPlatformMXBean_MethodID_1, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? PlatformManagedObjectForward( javaObject: __return ) : nil
@@ -146,7 +146,7 @@ open class ManagementFactory: java_swift.JavaObject {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: connection, locals: &__locals )
-        __args[1] = JNIType.toJava( value: mxbeanInterface != nil ? mxbeanInterface! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBean", methodSig: "(Ljavax/management/MBeanServerConnection;Ljava/lang/Class;)Ljava/lang/management/PlatformManagedObject;", methodCache: &getPlatformMXBean_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -166,7 +166,7 @@ open class ManagementFactory: java_swift.JavaObject {
     open class func getPlatformMXBeans( mxbeanInterface: java_swift.JavaClass? ) -> /* java.util.List */ UnclassedProtocol! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: mxbeanInterface != nil ? mxbeanInterface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBeans", methodSig: "(Ljava/lang/Class;)Ljava/util/List;", methodCache: &getPlatformMXBeans_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? /* java.util.List */ UnclassedProtocolForward( javaObject: __return ) : nil
@@ -184,7 +184,7 @@ open class ManagementFactory: java_swift.JavaObject {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: connection, locals: &__locals )
-        __args[1] = JNIType.toJava( value: mxbeanInterface != nil ? mxbeanInterface! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBeans", methodSig: "(Ljavax/management/MBeanServerConnection;Ljava/lang/Class;)Ljava/util/List;", methodCache: &getPlatformMXBeans_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -219,7 +219,7 @@ open class ManagementFactory: java_swift.JavaObject {
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: connection, locals: &__locals )
         __args[1] = JNIType.toJava( value: mxbeanName, locals: &__locals )
-        __args[2] = JNIType.toJava( value: mxbeanInterface != nil ? mxbeanInterface! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "newPlatformMXBeanProxy", methodSig: "(Ljavax/management/MBeanServerConnection;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &newPlatformMXBeanProxy_MethodID_6, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {

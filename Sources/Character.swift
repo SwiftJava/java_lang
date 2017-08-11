@@ -838,7 +838,7 @@ open class Character: java_swift.JavaObject, /* java.io.Serializable */ Unclasse
     open func equals( obj: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj != nil ? obj! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Character.equals_MethodID_6, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -906,7 +906,7 @@ open class Character: java_swift.JavaObject, /* java.io.Serializable */ Unclasse
     open func compareTo( anotherCharacter: Character? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: anotherCharacter != nil ? anotherCharacter! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: anotherCharacter, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Character;)I", methodCache: &Character.compareTo_MethodID_10, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
@@ -922,7 +922,7 @@ open class Character: java_swift.JavaObject, /* java.io.Serializable */ Unclasse
     open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &Character.compareTo_MethodID_11, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }

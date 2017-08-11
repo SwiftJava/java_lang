@@ -35,8 +35,8 @@ open class PhantomReference: Reference {
     public convenience init( arg0: java_swift.JavaObject?, arg1: ReferenceQueue? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/ref/PhantomReference", classCache: &PhantomReference.PhantomReferenceJNIClass, methodSig: "(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V", methodCache: &PhantomReference.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

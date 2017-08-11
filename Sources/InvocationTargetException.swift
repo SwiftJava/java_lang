@@ -57,7 +57,7 @@ open class InvocationTargetException: ReflectiveOperationException {
     public convenience init( target: java_swift.Throwable?, s: String? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: target != nil ? target! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: target, locals: &__locals )
         __args[1] = JNIType.toJava( value: s, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/reflect/InvocationTargetException", classCache: &InvocationTargetException.InvocationTargetExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;Ljava/lang/String;)V", methodCache: &InvocationTargetException.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
@@ -75,7 +75,7 @@ open class InvocationTargetException: ReflectiveOperationException {
     public convenience init( target: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: target != nil ? target! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: target, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/reflect/InvocationTargetException", classCache: &InvocationTargetException.InvocationTargetExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &InvocationTargetException.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

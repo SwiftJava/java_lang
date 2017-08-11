@@ -5,7 +5,7 @@ import java_swift
 
 /// class java.lang.instrument.IllegalClassFormatException ///
 
-open class IllegalClassFormatException: Exception {
+open class IllegalClassFormatException: java_swift.Exception {
 
     public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
         self.init( javaObject: nil )

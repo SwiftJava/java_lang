@@ -33,7 +33,7 @@ open class ConstantCallSite: CallSite {
     public convenience init( target: MethodHandle? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: target != nil ? target! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: target, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/invoke/ConstantCallSite", classCache: &ConstantCallSite.ConstantCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &ConstantCallSite.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -50,8 +50,8 @@ open class ConstantCallSite: CallSite {
     public convenience init( targetType: MethodType?, createTargetHook: MethodHandle? ) throws {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: targetType != nil ? targetType! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: createTargetHook != nil ? createTargetHook! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: targetType, locals: &__locals )
+        __args[1] = JNIType.toJava( value: createTargetHook, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/invoke/ConstantCallSite", classCache: &ConstantCallSite.ConstantCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;)V", methodCache: &ConstantCallSite.new_MethodID_2, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw java_swift.Throwable( javaObject: throwable )
@@ -75,7 +75,7 @@ open class ConstantCallSite: CallSite {
     open func setTarget( ignore: MethodHandle? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: ignore != nil ? ignore! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: ignore, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTarget", methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &ConstantCallSite.setTarget_MethodID_3, args: &__args, locals: &__locals )
     }
 

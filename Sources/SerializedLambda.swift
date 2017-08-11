@@ -45,7 +45,7 @@ open class SerializedLambda: java_swift.JavaObject, /* java.io.Serializable */ U
     public convenience init( capturingClass: java_swift.JavaClass?, functionalInterfaceClass: String?, functionalInterfaceMethodName: String?, functionalInterfaceMethodSignature: String?, implMethodKind: Int, implClass: String?, implMethodName: String?, implMethodSignature: String?, instantiatedMethodType: String?, capturedArgs: [JavaObject]? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 10 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: capturingClass != nil ? capturingClass! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: capturingClass, locals: &__locals )
         __args[1] = JNIType.toJava( value: functionalInterfaceClass, locals: &__locals )
         __args[2] = JNIType.toJava( value: functionalInterfaceMethodName, locals: &__locals )
         __args[3] = JNIType.toJava( value: functionalInterfaceMethodSignature, locals: &__locals )

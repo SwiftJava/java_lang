@@ -59,7 +59,7 @@ open class AnnotationTypeMismatchException: RuntimeException {
     public convenience init( element: Method?, foundType: String? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: element != nil ? element! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: element, locals: &__locals )
         __args[1] = JNIType.toJava( value: foundType, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/annotation/AnnotationTypeMismatchException", classCache: &AnnotationTypeMismatchException.AnnotationTypeMismatchExceptionJNIClass, methodSig: "(Ljava/lang/reflect/Method;Ljava/lang/String;)V", methodCache: &AnnotationTypeMismatchException.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )

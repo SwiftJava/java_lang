@@ -145,7 +145,7 @@ open class MethodType: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open func changeReturnType( arg0: java_swift.JavaClass? ) -> MethodType! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "changeReturnType", methodSig: "(Ljava/lang/Class;)Ljava/lang/invoke/MethodType;", methodCache: &MethodType.changeReturnType_MethodID_5, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodType( javaObject: __return ) : nil
@@ -162,7 +162,7 @@ open class MethodType: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open class func methodType( arg0: java_swift.JavaClass? ) -> MethodType! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodType", classCache: &MethodTypeJNIClass, methodName: "methodType", methodSig: "(Ljava/lang/Class;)Ljava/lang/invoke/MethodType;", methodCache: &methodType_MethodID_6, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodType( javaObject: __return ) : nil
@@ -179,8 +179,8 @@ open class MethodType: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open class func methodType( arg0: java_swift.JavaClass?, arg1: java_swift.JavaClass?, arg2: [JavaClass]? ) -> MethodType! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodType", classCache: &MethodTypeJNIClass, methodName: "methodType", methodSig: "(Ljava/lang/Class;Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/invoke/MethodType;", methodCache: &methodType_MethodID_7, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -198,7 +198,7 @@ open class MethodType: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open class func methodType( arg0: java_swift.JavaClass?, arg1: /* java.util.List */ UnclassedProtocol? ) -> MethodType! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodType", classCache: &MethodTypeJNIClass, methodName: "methodType", methodSig: "(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/invoke/MethodType;", methodCache: &methodType_MethodID_8, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -216,7 +216,7 @@ open class MethodType: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open class func methodType( arg0: java_swift.JavaClass?, arg1: [JavaClass]? ) -> MethodType! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodType", classCache: &MethodTypeJNIClass, methodName: "methodType", methodSig: "(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/invoke/MethodType;", methodCache: &methodType_MethodID_9, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -234,8 +234,8 @@ open class MethodType: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open class func methodType( arg0: java_swift.JavaClass?, arg1: MethodType? ) -> MethodType! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodType", classCache: &MethodTypeJNIClass, methodName: "methodType", methodSig: "(Ljava/lang/Class;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodType;", methodCache: &methodType_MethodID_10, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodType( javaObject: __return ) : nil
@@ -252,8 +252,8 @@ open class MethodType: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open class func methodType( arg0: java_swift.JavaClass?, arg1: java_swift.JavaClass? ) -> MethodType! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodType", classCache: &MethodTypeJNIClass, methodName: "methodType", methodSig: "(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/invoke/MethodType;", methodCache: &methodType_MethodID_11, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodType( javaObject: __return ) : nil
@@ -407,7 +407,7 @@ open class MethodType: java_swift.JavaObject, /* java.io.Serializable */ Unclass
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodType", classCache: &MethodTypeJNIClass, methodName: "fromMethodDescriptorString", methodSig: "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/invoke/MethodType;", methodCache: &fromMethodDescriptorString_MethodID_19, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -482,7 +482,7 @@ open class MethodType: java_swift.JavaObject, /* java.io.Serializable */ Unclass
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "changeParameterType", methodSig: "(ILjava/lang/Class;)Ljava/lang/invoke/MethodType;", methodCache: &MethodType.changeParameterType_MethodID_23, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodType( javaObject: __return ) : nil

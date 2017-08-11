@@ -33,8 +33,8 @@ open class MethodHandleProxies: java_swift.JavaObject {
     open class func asInterfaceInstance( arg0: java_swift.JavaClass?, arg1: MethodHandle? ) -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandleProxies", classCache: &MethodHandleProxiesJNIClass, methodName: "asInterfaceInstance", methodSig: "(Ljava/lang/Class;Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;", methodCache: &asInterfaceInstance_MethodID_1, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
@@ -51,7 +51,7 @@ open class MethodHandleProxies: java_swift.JavaObject {
     open class func isWrapperInstance( arg0: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/invoke/MethodHandleProxies", classCache: &MethodHandleProxiesJNIClass, methodName: "isWrapperInstance", methodSig: "(Ljava/lang/Object;)Z", methodCache: &isWrapperInstance_MethodID_2, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -69,7 +69,7 @@ open class MethodHandleProxies: java_swift.JavaObject {
     open class func wrapperInstanceTarget( arg0: java_swift.JavaObject? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandleProxies", classCache: &MethodHandleProxiesJNIClass, methodName: "wrapperInstanceTarget", methodSig: "(Ljava/lang/Object;)Ljava/lang/invoke/MethodHandle;", methodCache: &wrapperInstanceTarget_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
@@ -86,7 +86,7 @@ open class MethodHandleProxies: java_swift.JavaObject {
     open class func wrapperInstanceType( arg0: java_swift.JavaObject? ) -> java_swift.JavaClass! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandleProxies", classCache: &MethodHandleProxiesJNIClass, methodName: "wrapperInstanceType", methodSig: "(Ljava/lang/Object;)Ljava/lang/Class;", methodCache: &wrapperInstanceType_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil

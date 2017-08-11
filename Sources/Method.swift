@@ -71,7 +71,7 @@ open class Method: Executable {
     open func invoke( obj: java_swift.JavaObject?, args: [JavaObject]? ) throws /* java.lang.IllegalAccessException, java.lang.IllegalArgumentException, java.lang.reflect.InvocationTargetException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj != nil ? obj! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
         __args[1] = JNIType.toJava( value: args, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "invoke", methodSig: "(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;", methodCache: &Method.invoke_MethodID_1, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -92,7 +92,7 @@ open class Method: Executable {
     open func equals( obj: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj != nil ? obj! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Method.equals_MethodID_2, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }

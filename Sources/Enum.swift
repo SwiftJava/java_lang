@@ -68,7 +68,7 @@ open class Enum: java_swift.JavaObject, JavaComparable, /* java.io.Serializable 
     open func equals( other: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: other != nil ? other! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: other, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Enum.equals_MethodID_4, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -104,7 +104,7 @@ open class Enum: java_swift.JavaObject, JavaComparable, /* java.io.Serializable 
     open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &Enum.compareTo_MethodID_6, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
@@ -120,7 +120,7 @@ open class Enum: java_swift.JavaObject, JavaComparable, /* java.io.Serializable 
     open func compareTo( o: Enum? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: o != nil ? o! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: o, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Enum;)I", methodCache: &Enum.compareTo_MethodID_7, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
@@ -136,7 +136,7 @@ open class Enum: java_swift.JavaObject, JavaComparable, /* java.io.Serializable 
     open class func valueOf( enumType: java_swift.JavaClass?, name: String? ) -> Enum! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: enumType != nil ? enumType! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: enumType, locals: &__locals )
         __args[1] = JNIType.toJava( value: name, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Enum", classCache: &EnumJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;", methodCache: &valueOf_MethodID_8, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }

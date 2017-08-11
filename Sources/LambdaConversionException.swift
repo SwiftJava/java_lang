@@ -5,7 +5,7 @@ import java_swift
 
 /// class java.lang.invoke.LambdaConversionException ///
 
-open class LambdaConversionException: Exception {
+open class LambdaConversionException: java_swift.Exception {
 
     public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
         self.init( javaObject: nil )
@@ -54,7 +54,7 @@ open class LambdaConversionException: Exception {
         var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: message, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
         __args[2] = JNIType.toJava( value: enableSuppression, locals: &__locals )
         __args[3] = JNIType.toJava( value: writableStackTrace, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/invoke/LambdaConversionException", classCache: &LambdaConversionException.LambdaConversionExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V", methodCache: &LambdaConversionException.new_MethodID_1, args: &__args, locals: &__locals )
@@ -73,7 +73,7 @@ open class LambdaConversionException: Exception {
     public convenience init( cause: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/invoke/LambdaConversionException", classCache: &LambdaConversionException.LambdaConversionExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &LambdaConversionException.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -91,7 +91,7 @@ open class LambdaConversionException: Exception {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: message, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/invoke/LambdaConversionException", classCache: &LambdaConversionException.LambdaConversionExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &LambdaConversionException.new_MethodID_3, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

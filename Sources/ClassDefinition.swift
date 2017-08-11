@@ -27,7 +27,7 @@ open class ClassDefinition: java_swift.JavaObject {
     public convenience init( theClass: java_swift.JavaClass?, theClassFile: [Int8]? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: theClass != nil ? theClass! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: theClass, locals: &__locals )
         __args[1] = JNIType.toJava( value: theClassFile, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/instrument/ClassDefinition", classCache: &ClassDefinition.ClassDefinitionJNIClass, methodSig: "(Ljava/lang/Class;[B)V", methodCache: &ClassDefinition.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )

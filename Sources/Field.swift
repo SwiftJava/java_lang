@@ -79,7 +79,7 @@ open class Field: AccessibleObject, Member {
     open func get( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "get", methodSig: "(Ljava/lang/Object;)Ljava/lang/Object;", methodCache: &Field.get_MethodID_1, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -117,7 +117,7 @@ open class Field: AccessibleObject, Member {
     open func getBoolean( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "getBoolean", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Field.getBoolean_MethodID_3, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -136,7 +136,7 @@ open class Field: AccessibleObject, Member {
     open func getByte( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ -> Int8 {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallByteMethod( object: javaObject, methodName: "getByte", methodSig: "(Ljava/lang/Object;)B", methodCache: &Field.getByte_MethodID_4, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -155,7 +155,7 @@ open class Field: AccessibleObject, Member {
     open func getShort( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ -> Int16 {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallShortMethod( object: javaObject, methodName: "getShort", methodSig: "(Ljava/lang/Object;)S", methodCache: &Field.getShort_MethodID_5, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -174,7 +174,7 @@ open class Field: AccessibleObject, Member {
     open func getChar( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ -> UInt16 {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallCharMethod( object: javaObject, methodName: "getChar", methodSig: "(Ljava/lang/Object;)C", methodCache: &Field.getChar_MethodID_6, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -193,7 +193,7 @@ open class Field: AccessibleObject, Member {
     open func getInt( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getInt", methodSig: "(Ljava/lang/Object;)I", methodCache: &Field.getInt_MethodID_7, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -212,7 +212,7 @@ open class Field: AccessibleObject, Member {
     open func getLong( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ -> Int64 {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getLong", methodSig: "(Ljava/lang/Object;)J", methodCache: &Field.getLong_MethodID_8, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -231,7 +231,7 @@ open class Field: AccessibleObject, Member {
     open func getFloat( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ -> Float {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallFloatMethod( object: javaObject, methodName: "getFloat", methodSig: "(Ljava/lang/Object;)F", methodCache: &Field.getFloat_MethodID_9, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -250,7 +250,7 @@ open class Field: AccessibleObject, Member {
     open func getDouble( arg0: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ -> Double {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallDoubleMethod( object: javaObject, methodName: "getDouble", methodSig: "(Ljava/lang/Object;)D", methodCache: &Field.getDouble_MethodID_10, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -372,8 +372,8 @@ open class Field: AccessibleObject, Member {
     open func set( arg0: java_swift.JavaObject?, arg1: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "set", methodSig: "(Ljava/lang/Object;Ljava/lang/Object;)V", methodCache: &Field.set_MethodID_18, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -391,7 +391,7 @@ open class Field: AccessibleObject, Member {
     open func setBoolean( arg0: java_swift.JavaObject?, arg1: Bool ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setBoolean", methodSig: "(Ljava/lang/Object;Z)V", methodCache: &Field.setBoolean_MethodID_19, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -410,7 +410,7 @@ open class Field: AccessibleObject, Member {
     open func setByte( arg0: java_swift.JavaObject?, arg1: Int8 ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setByte", methodSig: "(Ljava/lang/Object;B)V", methodCache: &Field.setByte_MethodID_20, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -429,7 +429,7 @@ open class Field: AccessibleObject, Member {
     open func setChar( arg0: java_swift.JavaObject?, arg1: UInt16 ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setChar", methodSig: "(Ljava/lang/Object;C)V", methodCache: &Field.setChar_MethodID_21, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -448,7 +448,7 @@ open class Field: AccessibleObject, Member {
     open func setShort( arg0: java_swift.JavaObject?, arg1: Int16 ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setShort", methodSig: "(Ljava/lang/Object;S)V", methodCache: &Field.setShort_MethodID_22, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -467,7 +467,7 @@ open class Field: AccessibleObject, Member {
     open func setInt( arg0: java_swift.JavaObject?, arg1: Int ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setInt", methodSig: "(Ljava/lang/Object;I)V", methodCache: &Field.setInt_MethodID_23, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -486,7 +486,7 @@ open class Field: AccessibleObject, Member {
     open func setLong( arg0: java_swift.JavaObject?, arg1: Int64 ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setLong", methodSig: "(Ljava/lang/Object;J)V", methodCache: &Field.setLong_MethodID_24, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -505,7 +505,7 @@ open class Field: AccessibleObject, Member {
     open func setFloat( arg0: java_swift.JavaObject?, arg1: Float ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setFloat", methodSig: "(Ljava/lang/Object;F)V", methodCache: &Field.setFloat_MethodID_25, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -524,7 +524,7 @@ open class Field: AccessibleObject, Member {
     open func setDouble( arg0: java_swift.JavaObject?, arg1: Double ) throws /* java.lang.IllegalArgumentException, java.lang.IllegalAccessException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setDouble", methodSig: "(Ljava/lang/Object;D)V", methodCache: &Field.setDouble_MethodID_26, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {

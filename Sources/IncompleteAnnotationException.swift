@@ -59,7 +59,7 @@ open class IncompleteAnnotationException: RuntimeException {
     public convenience init( annotationType: java_swift.JavaClass?, elementName: String? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: annotationType != nil ? annotationType! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: annotationType, locals: &__locals )
         __args[1] = JNIType.toJava( value: elementName, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/annotation/IncompleteAnnotationException", classCache: &IncompleteAnnotationException.IncompleteAnnotationExceptionJNIClass, methodSig: "(Ljava/lang/Class;Ljava/lang/String;)V", methodCache: &IncompleteAnnotationException.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )

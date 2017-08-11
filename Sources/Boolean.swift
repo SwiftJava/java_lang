@@ -94,7 +94,7 @@ open class Boolean: java_swift.JavaObject, /* java.io.Serializable */ UnclassedP
     open func equals( obj: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj != nil ? obj! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Boolean.equals_MethodID_3, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -146,7 +146,7 @@ open class Boolean: java_swift.JavaObject, /* java.io.Serializable */ UnclassedP
     open func compareTo( b: Boolean? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: b != nil ? b! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: b, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Boolean;)I", methodCache: &Boolean.compareTo_MethodID_6, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
@@ -162,7 +162,7 @@ open class Boolean: java_swift.JavaObject, /* java.io.Serializable */ UnclassedP
     open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &Boolean.compareTo_MethodID_7, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }

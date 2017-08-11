@@ -27,7 +27,7 @@ open class AutoCloseableForward: JNIObjectForward, AutoCloseable {
         var __locals = [jobject]()
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "close", methodSig: "()V", methodCache: &AutoCloseableForward.close_MethodID_2, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
-            throw Exception( javaObject: throwable )
+            throw java_swift.Exception( javaObject: throwable )
         }
     }
 

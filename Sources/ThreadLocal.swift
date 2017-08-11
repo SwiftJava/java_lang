@@ -69,7 +69,7 @@ open class ThreadLocal: java_swift.JavaObject {
     open func set( value: java_swift.JavaObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value != nil ? value! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: value, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "set", methodSig: "(Ljava/lang/Object;)V", methodCache: &ThreadLocal.set_MethodID_4, args: &__args, locals: &__locals )
     }
 

@@ -98,7 +98,7 @@ open class ProcessBuilder: java_swift.JavaObject {
     open func directory( directory: /* java.io.File */ UnclassedObject? ) -> ProcessBuilder! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: directory != nil ? directory! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: directory, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "directory", methodSig: "(Ljava/io/File;)Ljava/lang/ProcessBuilder;", methodCache: &ProcessBuilder.directory_MethodID_5, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? ProcessBuilder( javaObject: __return ) : nil
@@ -221,7 +221,7 @@ open class ProcessBuilder: java_swift.JavaObject {
     open func redirectInput( file: /* java.io.File */ UnclassedObject? ) -> ProcessBuilder! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: file != nil ? file! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: file, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "redirectInput", methodSig: "(Ljava/io/File;)Ljava/lang/ProcessBuilder;", methodCache: &ProcessBuilder.redirectInput_MethodID_13, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? ProcessBuilder( javaObject: __return ) : nil
@@ -238,7 +238,7 @@ open class ProcessBuilder: java_swift.JavaObject {
     open func redirectInput( source: ProcessBuilder_Redirect? ) -> ProcessBuilder! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: source != nil ? source! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: source, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "redirectInput", methodSig: "(Ljava/lang/ProcessBuilder$Redirect;)Ljava/lang/ProcessBuilder;", methodCache: &ProcessBuilder.redirectInput_MethodID_14, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? ProcessBuilder( javaObject: __return ) : nil
@@ -268,7 +268,7 @@ open class ProcessBuilder: java_swift.JavaObject {
     open func redirectOutput( destination: ProcessBuilder_Redirect? ) -> ProcessBuilder! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: destination != nil ? destination! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: destination, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "redirectOutput", methodSig: "(Ljava/lang/ProcessBuilder$Redirect;)Ljava/lang/ProcessBuilder;", methodCache: &ProcessBuilder.redirectOutput_MethodID_16, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? ProcessBuilder( javaObject: __return ) : nil
@@ -285,7 +285,7 @@ open class ProcessBuilder: java_swift.JavaObject {
     open func redirectOutput( file: /* java.io.File */ UnclassedObject? ) -> ProcessBuilder! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: file != nil ? file! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: file, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "redirectOutput", methodSig: "(Ljava/io/File;)Ljava/lang/ProcessBuilder;", methodCache: &ProcessBuilder.redirectOutput_MethodID_17, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? ProcessBuilder( javaObject: __return ) : nil
@@ -302,7 +302,7 @@ open class ProcessBuilder: java_swift.JavaObject {
     open func redirectError( file: /* java.io.File */ UnclassedObject? ) -> ProcessBuilder! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: file != nil ? file! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: file, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "redirectError", methodSig: "(Ljava/io/File;)Ljava/lang/ProcessBuilder;", methodCache: &ProcessBuilder.redirectError_MethodID_18, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? ProcessBuilder( javaObject: __return ) : nil
@@ -332,7 +332,7 @@ open class ProcessBuilder: java_swift.JavaObject {
     open func redirectError( destination: ProcessBuilder_Redirect? ) -> ProcessBuilder! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: destination != nil ? destination! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: destination, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "redirectError", methodSig: "(Ljava/lang/ProcessBuilder$Redirect;)Ljava/lang/ProcessBuilder;", methodCache: &ProcessBuilder.redirectError_MethodID_20, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? ProcessBuilder( javaObject: __return ) : nil

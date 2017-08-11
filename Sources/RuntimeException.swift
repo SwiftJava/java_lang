@@ -5,7 +5,7 @@ import java_swift
 
 /// class java.lang.RuntimeException ///
 
-open class RuntimeException: Exception {
+open class RuntimeException: java_swift.Exception {
 
     public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
         self.init( javaObject: nil )
@@ -54,7 +54,7 @@ open class RuntimeException: Exception {
         var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         __args[3] = JNIType.toJava( value: arg3, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/RuntimeException", classCache: &RuntimeException.RuntimeExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V", methodCache: &RuntimeException.new_MethodID_1, args: &__args, locals: &__locals )
@@ -73,7 +73,7 @@ open class RuntimeException: Exception {
     public convenience init( arg0: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/RuntimeException", classCache: &RuntimeException.RuntimeExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &RuntimeException.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -91,7 +91,7 @@ open class RuntimeException: Exception {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/RuntimeException", classCache: &RuntimeException.RuntimeExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &RuntimeException.new_MethodID_3, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

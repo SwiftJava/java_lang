@@ -62,7 +62,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1 != nil ? arg1! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/String", classCache: &JavaString.JavaStringJNIClass, methodSig: "([BLjava/nio/charset/Charset;)V", methodCache: &JavaString.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -103,7 +103,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
-        __args[3] = JNIType.toJava( value: arg3 != nil ? arg3! as JNIObject : nil, locals: &__locals )
+        __args[3] = JNIType.toJava( value: arg3, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/String", classCache: &JavaString.JavaStringJNIClass, methodSig: "([BIILjava/nio/charset/Charset;)V", methodCache: &JavaString.new_MethodID_4, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -145,7 +145,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     public convenience init( arg0: StringBuilder? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/String", classCache: &JavaString.JavaStringJNIClass, methodSig: "(Ljava/lang/StringBuilder;)V", methodCache: &JavaString.new_MethodID_6, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -162,7 +162,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     public convenience init( arg0: StringBuffer? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/String", classCache: &JavaString.JavaStringJNIClass, methodSig: "(Ljava/lang/StringBuffer;)V", methodCache: &JavaString.new_MethodID_7, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -324,7 +324,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &JavaString.compareTo_MethodID_16, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
@@ -442,7 +442,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open class func valueOf( arg0: java_swift.JavaObject? ) -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/String", classCache: &JavaStringJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/Object;)Ljava/lang/String;", methodCache: &valueOf_MethodID_23, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: String(), from: __return )
     }
@@ -749,7 +749,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open func getBytes( arg0: /* java.nio.charset.Charset */ UnclassedObject? ) -> [Int8]! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBytes", methodSig: "(Ljava/nio/charset/Charset;)[B", methodCache: &JavaString.getBytes_MethodID_42, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: [Int8](), from: __return )
     }
@@ -765,7 +765,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open func contentEquals( arg0: StringBuffer? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "contentEquals", methodSig: "(Ljava/lang/StringBuffer;)Z", methodCache: &JavaString.contentEquals_MethodID_43, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -1227,7 +1227,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open func toLowerCase( arg0: /* java.util.Locale */ UnclassedObject? ) -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toLowerCase", methodSig: "(Ljava/util/Locale;)Ljava/lang/String;", methodCache: &JavaString.toLowerCase_MethodID_70, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: String(), from: __return )
     }
@@ -1267,7 +1267,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open func toUpperCase( arg0: /* java.util.Locale */ UnclassedObject? ) -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toUpperCase", methodSig: "(Ljava/util/Locale;)Ljava/lang/String;", methodCache: &JavaString.toUpperCase_MethodID_73, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: String(), from: __return )
     }
@@ -1307,7 +1307,7 @@ open class JavaString: java_swift.JavaObject, /* java.io.Serializable */ Unclass
     open class func format( arg0: /* java.util.Locale */ UnclassedObject?, arg1: String?, arg2: [JavaObject]? ) -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/String", classCache: &JavaStringJNIClass, methodName: "format", methodSig: "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", methodCache: &format_MethodID_76, args: &__args, locals: &__locals )

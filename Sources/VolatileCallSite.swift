@@ -31,7 +31,7 @@ open class VolatileCallSite: CallSite {
     public convenience init( type: MethodType? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type != nil ? type! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: type, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/invoke/VolatileCallSite", classCache: &VolatileCallSite.VolatileCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodType;)V", methodCache: &VolatileCallSite.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -48,7 +48,7 @@ open class VolatileCallSite: CallSite {
     public convenience init( target: MethodHandle? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: target != nil ? target! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: target, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/invoke/VolatileCallSite", classCache: &VolatileCallSite.VolatileCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &VolatileCallSite.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -69,7 +69,7 @@ open class VolatileCallSite: CallSite {
     open func setTarget( newTarget: MethodHandle? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: newTarget != nil ? newTarget! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: newTarget, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTarget", methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &VolatileCallSite.setTarget_MethodID_3, args: &__args, locals: &__locals )
     }
 

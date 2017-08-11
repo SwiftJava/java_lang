@@ -98,7 +98,7 @@ open class Process: java_swift.JavaObject {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: timeout, locals: &__locals )
-        __args[1] = JNIType.toJava( value: unit != nil ? unit! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: unit, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "waitFor", methodSig: "(JLjava/util/concurrent/TimeUnit;)Z", methodCache: &Process.waitFor_MethodID_7, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw InterruptedException( javaObject: throwable )

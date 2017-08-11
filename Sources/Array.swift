@@ -25,7 +25,7 @@ open class Array: java_swift.JavaObject {
     open class func get( array: java_swift.JavaObject?, index: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "get", methodSig: "(Ljava/lang/Object;I)Ljava/lang/Object;", methodCache: &get_MethodID_1, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -46,7 +46,7 @@ open class Array: java_swift.JavaObject {
     open class func getLength( array: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException */ -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "getLength", methodSig: "(Ljava/lang/Object;)I", methodCache: &getLength_MethodID_2, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -67,7 +67,7 @@ open class Array: java_swift.JavaObject {
     open class func getBoolean( array: java_swift.JavaObject?, index: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "getBoolean", methodSig: "(Ljava/lang/Object;I)Z", methodCache: &getBoolean_MethodID_3, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -87,7 +87,7 @@ open class Array: java_swift.JavaObject {
     open class func getByte( array: java_swift.JavaObject?, index: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ -> Int8 {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         let __return = JNIMethod.CallStaticByteMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "getByte", methodSig: "(Ljava/lang/Object;I)B", methodCache: &getByte_MethodID_4, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -107,7 +107,7 @@ open class Array: java_swift.JavaObject {
     open class func getShort( array: java_swift.JavaObject?, index: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ -> Int16 {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         let __return = JNIMethod.CallStaticShortMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "getShort", methodSig: "(Ljava/lang/Object;I)S", methodCache: &getShort_MethodID_5, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -127,7 +127,7 @@ open class Array: java_swift.JavaObject {
     open class func getChar( array: java_swift.JavaObject?, index: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ -> UInt16 {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         let __return = JNIMethod.CallStaticCharMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "getChar", methodSig: "(Ljava/lang/Object;I)C", methodCache: &getChar_MethodID_6, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -147,7 +147,7 @@ open class Array: java_swift.JavaObject {
     open class func getInt( array: java_swift.JavaObject?, index: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "getInt", methodSig: "(Ljava/lang/Object;I)I", methodCache: &getInt_MethodID_7, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -167,7 +167,7 @@ open class Array: java_swift.JavaObject {
     open class func getLong( array: java_swift.JavaObject?, index: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ -> Int64 {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         let __return = JNIMethod.CallStaticLongMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "getLong", methodSig: "(Ljava/lang/Object;I)J", methodCache: &getLong_MethodID_8, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -187,7 +187,7 @@ open class Array: java_swift.JavaObject {
     open class func getFloat( array: java_swift.JavaObject?, index: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ -> Float {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "getFloat", methodSig: "(Ljava/lang/Object;I)F", methodCache: &getFloat_MethodID_9, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -207,7 +207,7 @@ open class Array: java_swift.JavaObject {
     open class func getDouble( array: java_swift.JavaObject?, index: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ -> Double {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "getDouble", methodSig: "(Ljava/lang/Object;I)D", methodCache: &getDouble_MethodID_10, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -227,7 +227,7 @@ open class Array: java_swift.JavaObject {
     open class func newInstance( componentType: java_swift.JavaClass?, length: Int ) throws /* java.lang.NegativeArraySizeException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: componentType != nil ? componentType! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: componentType, locals: &__locals )
         __args[1] = JNIType.toJava( value: length, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "newInstance", methodSig: "(Ljava/lang/Class;I)Ljava/lang/Object;", methodCache: &newInstance_MethodID_11, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -248,7 +248,7 @@ open class Array: java_swift.JavaObject {
     open class func newInstance( componentType: java_swift.JavaClass?, dimensions: [Int32]? ) throws /* java.lang.IllegalArgumentException, java.lang.NegativeArraySizeException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: componentType != nil ? componentType! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: componentType, locals: &__locals )
         __args[1] = JNIType.toJava( value: dimensions, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "newInstance", methodSig: "(Ljava/lang/Class;[I)Ljava/lang/Object;", methodCache: &newInstance_MethodID_12, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -269,9 +269,9 @@ open class Array: java_swift.JavaObject {
     open class func set( array: java_swift.JavaObject?, index: Int, value: java_swift.JavaObject? ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
-        __args[2] = JNIType.toJava( value: value != nil ? value! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: value, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "set", methodSig: "(Ljava/lang/Object;ILjava/lang/Object;)V", methodCache: &set_MethodID_13, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw IllegalArgumentException( javaObject: throwable )
@@ -289,7 +289,7 @@ open class Array: java_swift.JavaObject {
     open class func setBoolean( array: java_swift.JavaObject?, index: Int, z: Bool ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         __args[2] = JNIType.toJava( value: z, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "setBoolean", methodSig: "(Ljava/lang/Object;IZ)V", methodCache: &setBoolean_MethodID_14, args: &__args, locals: &__locals )
@@ -309,7 +309,7 @@ open class Array: java_swift.JavaObject {
     open class func setByte( array: java_swift.JavaObject?, index: Int, b: Int8 ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         __args[2] = JNIType.toJava( value: b, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "setByte", methodSig: "(Ljava/lang/Object;IB)V", methodCache: &setByte_MethodID_15, args: &__args, locals: &__locals )
@@ -329,7 +329,7 @@ open class Array: java_swift.JavaObject {
     open class func setChar( array: java_swift.JavaObject?, index: Int, c: UInt16 ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         __args[2] = JNIType.toJava( value: c, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "setChar", methodSig: "(Ljava/lang/Object;IC)V", methodCache: &setChar_MethodID_16, args: &__args, locals: &__locals )
@@ -349,7 +349,7 @@ open class Array: java_swift.JavaObject {
     open class func setShort( array: java_swift.JavaObject?, index: Int, s: Int16 ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         __args[2] = JNIType.toJava( value: s, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "setShort", methodSig: "(Ljava/lang/Object;IS)V", methodCache: &setShort_MethodID_17, args: &__args, locals: &__locals )
@@ -369,7 +369,7 @@ open class Array: java_swift.JavaObject {
     open class func setInt( array: java_swift.JavaObject?, index: Int, i: Int ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         __args[2] = JNIType.toJava( value: i, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "setInt", methodSig: "(Ljava/lang/Object;II)V", methodCache: &setInt_MethodID_18, args: &__args, locals: &__locals )
@@ -389,7 +389,7 @@ open class Array: java_swift.JavaObject {
     open class func setLong( array: java_swift.JavaObject?, index: Int, l: Int64 ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         __args[2] = JNIType.toJava( value: l, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "setLong", methodSig: "(Ljava/lang/Object;IJ)V", methodCache: &setLong_MethodID_19, args: &__args, locals: &__locals )
@@ -409,7 +409,7 @@ open class Array: java_swift.JavaObject {
     open class func setFloat( array: java_swift.JavaObject?, index: Int, f: Float ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         __args[2] = JNIType.toJava( value: f, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "setFloat", methodSig: "(Ljava/lang/Object;IF)V", methodCache: &setFloat_MethodID_20, args: &__args, locals: &__locals )
@@ -429,7 +429,7 @@ open class Array: java_swift.JavaObject {
     open class func setDouble( array: java_swift.JavaObject?, index: Int, d: Double ) throws /* java.lang.IllegalArgumentException, java.lang.ArrayIndexOutOfBoundsException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: array != nil ? array! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: array, locals: &__locals )
         __args[1] = JNIType.toJava( value: index, locals: &__locals )
         __args[2] = JNIType.toJava( value: d, locals: &__locals )
         JNIMethod.CallStaticVoidMethod( className: "java/lang/reflect/Array", classCache: &ArrayJNIClass, methodName: "setDouble", methodSig: "(Ljava/lang/Object;ID)V", methodCache: &setDouble_MethodID_21, args: &__args, locals: &__locals )

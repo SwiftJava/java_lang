@@ -145,7 +145,7 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
     public convenience init( arg0: ThreadGroup?, arg1: java_swift.Runnable?, arg2: String? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_3, args: &__args, locals: &__locals )
@@ -182,7 +182,7 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
     public convenience init( arg0: ThreadGroup?, arg1: String? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_5, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
@@ -217,7 +217,7 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
     public convenience init( arg0: ThreadGroup?, arg1: java_swift.Runnable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;)V", methodCache: &Thread.new_MethodID_7, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
@@ -235,7 +235,7 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
     public convenience init( arg0: ThreadGroup?, arg1: java_swift.Runnable?, arg2: String?, arg3: Int64 ) {
         var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
         __args[3] = JNIType.toJava( value: arg3, locals: &__locals )
@@ -420,7 +420,7 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
     open class func holdsLock( arg0: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "holdsLock", methodSig: "(Ljava/lang/Object;)Z", methodCache: &holdsLock_MethodID_20, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }
@@ -544,7 +544,7 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
     open func stop( arg0: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "stop", methodSig: "(Ljava/lang/Throwable;)V", methodCache: &Thread.stop_MethodID_28, args: &__args, locals: &__locals )
     }
 
@@ -730,7 +730,7 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
     open func setContextClassLoader( arg0: ClassLoader? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setContextClassLoader", methodSig: "(Ljava/lang/ClassLoader;)V", methodCache: &Thread.setContextClassLoader_MethodID_43, args: &__args, locals: &__locals )
     }
 

@@ -122,7 +122,7 @@ open class AssertionError: JavaError {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: message, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/AssertionError", classCache: &AssertionError.AssertionErrorJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &AssertionError.new_MethodID_5, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -153,7 +153,7 @@ open class AssertionError: JavaError {
     public convenience init( detailMessage: java_swift.JavaObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: detailMessage != nil ? detailMessage! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: detailMessage, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/AssertionError", classCache: &AssertionError.AssertionErrorJNIClass, methodSig: "(Ljava/lang/Object;)V", methodCache: &AssertionError.new_MethodID_7, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

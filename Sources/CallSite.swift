@@ -82,7 +82,7 @@ open class CallSite: java_swift.JavaObject {
     open func setTarget( arg0: MethodHandle? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0 != nil ? arg0! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTarget", methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &CallSite.setTarget_MethodID_4, args: &__args, locals: &__locals )
     }
 

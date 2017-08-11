@@ -51,7 +51,7 @@ open class ClassValue: java_swift.JavaObject {
     open func remove( type: java_swift.JavaClass? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type != nil ? type! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: type, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "remove", methodSig: "(Ljava/lang/Class;)V", methodCache: &ClassValue.remove_MethodID_2, args: &__args, locals: &__locals )
     }
 
@@ -66,7 +66,7 @@ open class ClassValue: java_swift.JavaObject {
     open func get( type: java_swift.JavaClass? ) -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type != nil ? type! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: type, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "get", methodSig: "(Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &ClassValue.get_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
@@ -97,7 +97,7 @@ open class ClassValue: java_swift.JavaObject {
     open func computeValue( type: java_swift.JavaClass? ) -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type != nil ? type! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: type, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "computeValue", methodSig: "(Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &ClassValue.computeValue_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil

@@ -42,7 +42,7 @@ open class Character_Subset: java_swift.JavaObject {
     open func equals( obj: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj != nil ? obj! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Character_Subset.equals_MethodID_2, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Bool(), from: __return )
     }

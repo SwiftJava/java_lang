@@ -71,13 +71,13 @@ public protocol MethodHandleInfo: JavaProtocol {
 
     func getReferenceKind() -> Int
 
-    /// public static java.lang.String java.lang.invoke.MethodHandleInfo.referenceKindToString(int)
-
-    //    class func referenceKindToString( referenceKind: Int ) -> String!
-
     /// public abstract java.lang.reflect.Member java.lang.invoke.MethodHandleInfo.reflectAs(java.lang.Class,java.lang.invoke.MethodHandles$Lookup)
 
     func reflectAs( expected: java_swift.JavaClass?, lookup: MethodHandles_Lookup? ) -> Member!
+
+    /// public static java.lang.String java.lang.invoke.MethodHandleInfo.referenceKindToString(int)
+
+    //    class func referenceKindToString( referenceKind: Int ) -> String!
 
 }
 
@@ -193,9 +193,9 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
         var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: kind, locals: &__locals )
-        __args[1] = JNIType.toJava( value: defc != nil ? defc! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: defc, locals: &__locals )
         __args[2] = JNIType.toJava( value: name, locals: &__locals )
-        __args[3] = JNIType.toJava( value: type != nil ? type! as JNIObject : nil, locals: &__locals )
+        __args[3] = JNIType.toJava( value: type, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass, methodName: "toString", methodSig: "(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/String;", methodCache: &toString_MethodID_10, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: String(), from: __return )
     }
@@ -278,38 +278,38 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
     }
 
 
-    /// public static java.lang.String java.lang.invoke.MethodHandleInfo.referenceKindToString(int)
-
-    private static var referenceKindToString_MethodID_17: jmethodID?
-
-    open class func referenceKindToString( referenceKind: Int ) -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: referenceKind, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass, methodName: "referenceKindToString", methodSig: "(I)Ljava/lang/String;", methodCache: &referenceKindToString_MethodID_17, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-    open class func referenceKindToString( _ _referenceKind: Int ) -> String! {
-        return referenceKindToString( referenceKind: _referenceKind )
-    }
-
     /// public abstract java.lang.reflect.Member java.lang.invoke.MethodHandleInfo.reflectAs(java.lang.Class,java.lang.invoke.MethodHandles$Lookup)
 
-    private static var reflectAs_MethodID_18: jmethodID?
+    private static var reflectAs_MethodID_17: jmethodID?
 
     open func reflectAs( expected: java_swift.JavaClass?, lookup: MethodHandles_Lookup? ) -> Member! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: expected != nil ? expected! as JNIObject : nil, locals: &__locals )
-        __args[1] = JNIType.toJava( value: lookup != nil ? lookup! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "reflectAs", methodSig: "(Ljava/lang/Class;Ljava/lang/invoke/MethodHandles$Lookup;)Ljava/lang/reflect/Member;", methodCache: &MethodHandleInfoForward.reflectAs_MethodID_18, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: expected, locals: &__locals )
+        __args[1] = JNIType.toJava( value: lookup, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "reflectAs", methodSig: "(Ljava/lang/Class;Ljava/lang/invoke/MethodHandles$Lookup;)Ljava/lang/reflect/Member;", methodCache: &MethodHandleInfoForward.reflectAs_MethodID_17, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MemberForward( javaObject: __return ) : nil
     }
 
     open func reflectAs( _ _expected: java_swift.JavaClass?, _ _lookup: MethodHandles_Lookup? ) -> Member! {
         return reflectAs( expected: _expected, lookup: _lookup )
+    }
+
+    /// public static java.lang.String java.lang.invoke.MethodHandleInfo.referenceKindToString(int)
+
+    private static var referenceKindToString_MethodID_18: jmethodID?
+
+    open class func referenceKindToString( referenceKind: Int ) -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: referenceKind, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass, methodName: "referenceKindToString", methodSig: "(I)Ljava/lang/String;", methodCache: &referenceKindToString_MethodID_18, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+    open class func referenceKindToString( _ _referenceKind: Int ) -> String! {
+        return referenceKindToString( referenceKind: _referenceKind )
     }
 
 }

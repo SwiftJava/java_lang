@@ -5,7 +5,7 @@ import java_swift
 
 /// class java.lang.instrument.UnmodifiableClassException ///
 
-open class UnmodifiableClassException: Exception {
+open class UnmodifiableClassException: java_swift.Exception {
 
     public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
         self.init( javaObject: nil )

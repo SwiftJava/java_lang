@@ -34,7 +34,7 @@ open class MonitorInfo: LockInfo {
         __args[0] = JNIType.toJava( value: className, locals: &__locals )
         __args[1] = JNIType.toJava( value: identityHashCode, locals: &__locals )
         __args[2] = JNIType.toJava( value: stackDepth, locals: &__locals )
-        __args[3] = JNIType.toJava( value: stackFrame != nil ? stackFrame! as JNIObject : nil, locals: &__locals )
+        __args[3] = JNIType.toJava( value: stackFrame, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/management/MonitorInfo", classCache: &MonitorInfo.MonitorInfoJNIClass, methodSig: "(Ljava/lang/String;IILjava/lang/StackTraceElement;)V", methodCache: &MonitorInfo.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

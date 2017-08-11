@@ -152,7 +152,7 @@ open class MethodHandle: java_swift.JavaObject {
     open func asType( newType: MethodType? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: newType != nil ? newType! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: newType, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "asType", methodSig: "(Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandle.asType_MethodID_6, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
@@ -173,7 +173,7 @@ open class MethodHandle: java_swift.JavaObject {
     open func asSpreader( arrayType: java_swift.JavaClass?, arrayLength: Int ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arrayType != nil ? arrayType! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arrayType, locals: &__locals )
         __args[1] = JNIType.toJava( value: arrayLength, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "asSpreader", methodSig: "(Ljava/lang/Class;I)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandle.asSpreader_MethodID_7, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -195,7 +195,7 @@ open class MethodHandle: java_swift.JavaObject {
     open func asCollector( arrayType: java_swift.JavaClass?, arrayLength: Int ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arrayType != nil ? arrayType! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arrayType, locals: &__locals )
         __args[1] = JNIType.toJava( value: arrayLength, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "asCollector", methodSig: "(Ljava/lang/Class;I)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandle.asCollector_MethodID_8, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -215,7 +215,7 @@ open class MethodHandle: java_swift.JavaObject {
     open func asVarargsCollector( arrayType: java_swift.JavaClass? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arrayType != nil ? arrayType! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: arrayType, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "asVarargsCollector", methodSig: "(Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandle.asVarargsCollector_MethodID_9, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
@@ -257,7 +257,7 @@ open class MethodHandle: java_swift.JavaObject {
     open func bindTo( x: java_swift.JavaObject? ) -> MethodHandle! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "bindTo", methodSig: "(Ljava/lang/Object;)Ljava/lang/invoke/MethodHandle;", methodCache: &MethodHandle.bindTo_MethodID_12, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil

@@ -5,7 +5,7 @@ import java_swift
 
 /// class java.lang.InterruptedException ///
 
-open class InterruptedException: Exception {
+open class InterruptedException: java_swift.Exception {
 
     public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
         self.init( javaObject: nil )

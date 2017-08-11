@@ -74,7 +74,7 @@ open class ExceptionInInitializerError: LinkageError {
     public convenience init( thrown: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: thrown != nil ? thrown! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: thrown, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/ExceptionInInitializerError", classCache: &ExceptionInInitializerError.ExceptionInInitializerErrorJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &ExceptionInInitializerError.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

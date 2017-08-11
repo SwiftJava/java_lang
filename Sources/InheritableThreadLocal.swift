@@ -45,7 +45,7 @@ open class InheritableThreadLocal: ThreadLocal {
     open func childValue( parentValue: java_swift.JavaObject? ) -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: parentValue != nil ? parentValue! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: parentValue, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "childValue", methodSig: "(Ljava/lang/Object;)Ljava/lang/Object;", methodCache: &InheritableThreadLocal.childValue_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
