@@ -16,47 +16,52 @@ open class CallSite: java_swift.JavaObject {
 
     private static var CallSiteJNIClass: jclass?
 
-    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.target
-
     /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.GET_TARGET
-
-    /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.THROW_UCS
 
     /// private static final long java.lang.invoke.CallSite.TARGET_OFFSET
 
-    /// java.lang.invoke.CallSite(java.lang.invoke.MethodType)
+    /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.THROW_UCS
 
-    /// java.lang.invoke.CallSite(java.lang.invoke.MethodType,java.lang.invoke.MethodHandle) throws java.lang.Throwable
+    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.target
+
+    // Skipping field: true false false false false false 
 
     /// java.lang.invoke.CallSite(java.lang.invoke.MethodHandle)
 
-    /// void java.lang.invoke.CallSite.setTargetNormal(java.lang.invoke.MethodHandle)
+    // Skipping init: true false false 
 
-    /// void java.lang.invoke.CallSite.setTargetVolatile(java.lang.invoke.MethodHandle)
+    /// java.lang.invoke.CallSite(java.lang.invoke.MethodType)
 
-    /// public java.lang.invoke.MethodType java.lang.invoke.CallSite.type()
+    // Skipping init: true false false 
 
-    private static var type_MethodID_1: jmethodID?
+    /// java.lang.invoke.CallSite(java.lang.invoke.MethodType,java.lang.invoke.MethodHandle) throws java.lang.Throwable
 
-    open func type() -> MethodType! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "type", methodSig: "()Ljava/lang/invoke/MethodType;", methodCache: &CallSite.type_MethodID_1, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? MethodType( javaObject: __return ) : nil
-    }
-
+    // Skipping init: true false false 
 
     /// static java.lang.invoke.CallSite java.lang.invoke.CallSite.makeSite(java.lang.invoke.MethodHandle,java.lang.String,java.lang.invoke.MethodType,java.lang.Object,java.lang.Class)
 
+    // Skipping method: true false false false false 
+
+    /// private static java.lang.Object java.lang.invoke.CallSite.maybeReBox(java.lang.Object)
+
+    /// private static void java.lang.invoke.CallSite.maybeReBoxElements(java.lang.Object[])
+
+    /// private static java.lang.Object java.lang.invoke.CallSite.uninitializedCallSite(java.lang.Object[])
+
+    /// private static java.lang.invoke.WrongMethodTypeException java.lang.invoke.CallSite.wrongTargetType(java.lang.invoke.MethodHandle,java.lang.invoke.MethodType)
+
+    /// void java.lang.invoke.CallSite.checkTargetChange(java.lang.invoke.MethodHandle,java.lang.invoke.MethodHandle)
+
+    // Skipping method: true false false false false 
+
     /// public abstract java.lang.invoke.MethodHandle java.lang.invoke.CallSite.dynamicInvoker()
 
-    private static var dynamicInvoker_MethodID_2: jmethodID?
+    private static var dynamicInvoker_MethodID_1: jmethodID?
 
     open func dynamicInvoker() -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "dynamicInvoker", methodSig: "()Ljava/lang/invoke/MethodHandle;", methodCache: &CallSite.dynamicInvoker_MethodID_2, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "dynamicInvoker", methodSig: "()Ljava/lang/invoke/MethodHandle;", methodCache: &CallSite.dynamicInvoker_MethodID_1, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
     }
@@ -64,47 +69,62 @@ open class CallSite: java_swift.JavaObject {
 
     /// public abstract java.lang.invoke.MethodHandle java.lang.invoke.CallSite.getTarget()
 
-    private static var getTarget_MethodID_3: jmethodID?
+    private static var getTarget_MethodID_2: jmethodID?
 
     open func getTarget() -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTarget", methodSig: "()Ljava/lang/invoke/MethodHandle;", methodCache: &CallSite.getTarget_MethodID_3, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTarget", methodSig: "()Ljava/lang/invoke/MethodHandle;", methodCache: &CallSite.getTarget_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MethodHandle( javaObject: __return ) : nil
     }
 
 
+    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.getTargetVolatile()
+
+    // Skipping method: true false false false false 
+
+    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.makeDynamicInvoker()
+
+    // Skipping method: true false false false false 
+
+    /// private java.lang.invoke.MethodHandle java.lang.invoke.CallSite.makeUninitializedCallSite(java.lang.invoke.MethodType)
+
     /// public abstract void java.lang.invoke.CallSite.setTarget(java.lang.invoke.MethodHandle)
 
-    private static var setTarget_MethodID_4: jmethodID?
+    private static var setTarget_MethodID_3: jmethodID?
 
     open func setTarget( arg0: MethodHandle? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTarget", methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &CallSite.setTarget_MethodID_4, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTarget", methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &CallSite.setTarget_MethodID_3, args: &__args, locals: &__locals )
     }
 
     open func setTarget( _ _arg0: MethodHandle? ) {
         setTarget( arg0: _arg0 )
     }
 
-    /// void java.lang.invoke.CallSite.checkTargetChange(java.lang.invoke.MethodHandle,java.lang.invoke.MethodHandle)
+    /// void java.lang.invoke.CallSite.setTargetNormal(java.lang.invoke.MethodHandle)
 
-    /// private static java.lang.invoke.WrongMethodTypeException java.lang.invoke.CallSite.wrongTargetType(java.lang.invoke.MethodHandle,java.lang.invoke.MethodType)
+    // Skipping method: true false false false false 
 
-    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.makeDynamicInvoker()
+    /// void java.lang.invoke.CallSite.setTargetVolatile(java.lang.invoke.MethodHandle)
 
-    /// private static java.lang.Object java.lang.invoke.CallSite.uninitializedCallSite(java.lang.Object[])
+    // Skipping method: true false false false false 
 
-    /// private java.lang.invoke.MethodHandle java.lang.invoke.CallSite.makeUninitializedCallSite(java.lang.invoke.MethodType)
+    /// public java.lang.invoke.MethodType java.lang.invoke.CallSite.type()
 
-    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.getTargetVolatile()
+    private static var type_MethodID_4: jmethodID?
 
-    /// private static java.lang.Object java.lang.invoke.CallSite.maybeReBox(java.lang.Object)
+    open func type() -> MethodType! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "type", methodSig: "()Ljava/lang/invoke/MethodType;", methodCache: &CallSite.type_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? MethodType( javaObject: __return ) : nil
+    }
 
-    /// private static void java.lang.invoke.CallSite.maybeReBoxElements(java.lang.Object[])
 
 }
 

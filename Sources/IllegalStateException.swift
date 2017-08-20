@@ -18,80 +18,65 @@ open class IllegalStateException: RuntimeException {
 
     /// static final long java.lang.IllegalStateException.serialVersionUID
 
+    // Skipping field: true true false false false false 
+
     /// static final long java.lang.RuntimeException.serialVersionUID
+
+    // Skipping field: true true false false false false 
 
     /// static final long java.lang.Exception.serialVersionUID
 
-    /// private static final long java.lang.Throwable.serialVersionUID
+    // Skipping field: true true false false false false 
 
-    /// private java.lang.String java.lang.Throwable.detailMessage
+    /// static final boolean java.lang.Throwable.$assertionsDisabled
 
-    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
+    // Skipping field: true false false false false false 
 
-    /// private java.lang.Throwable java.lang.Throwable.cause
+    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
 
-    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
-
-    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
-
-    /// private java.util.List java.lang.Throwable.suppressedExceptions
+    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
 
     /// private static final java.lang.String java.lang.Throwable.NULL_CAUSE_MESSAGE
 
     /// private static final java.lang.String java.lang.Throwable.SELF_SUPPRESSION_MESSAGE
 
-    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
-
     /// private static final java.lang.String java.lang.Throwable.SUPPRESSED_CAPTION
 
-    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
+    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
 
-    /// static final boolean java.lang.Throwable.$assertionsDisabled
+    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
 
-    /// public java.lang.IllegalStateException(java.lang.Throwable)
+    /// private static final long java.lang.Throwable.serialVersionUID
+
+    /// private java.lang.Throwable java.lang.Throwable.cause
+
+    /// private java.lang.String java.lang.Throwable.detailMessage
+
+    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
+
+    /// private java.util.List java.lang.Throwable.suppressedExceptions
+
+    /// public java.lang.IllegalStateException()
 
     private static var new_MethodID_1: jmethodID?
 
-    public convenience init( cause: java_swift.Throwable? ) {
+    public convenience init() {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/IllegalStateException", classCache: &IllegalStateException.IllegalStateExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &IllegalStateException.new_MethodID_1, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/IllegalStateException", classCache: &IllegalStateException.IllegalStateExceptionJNIClass, methodSig: "()V", methodCache: &IllegalStateException.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _cause: java_swift.Throwable? ) {
-        self.init( cause: _cause )
-    }
-
-    /// public java.lang.IllegalStateException(java.lang.String,java.lang.Throwable)
-
-    private static var new_MethodID_2: jmethodID?
-
-    public convenience init( message: String?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: message, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/IllegalStateException", classCache: &IllegalStateException.IllegalStateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &IllegalStateException.new_MethodID_2, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _message: String?, _ _cause: java_swift.Throwable? ) {
-        self.init( message: _message, cause: _cause )
     }
 
     /// public java.lang.IllegalStateException(java.lang.String)
 
-    private static var new_MethodID_3: jmethodID?
+    private static var new_MethodID_2: jmethodID?
 
     public convenience init( s: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/IllegalStateException", classCache: &IllegalStateException.IllegalStateExceptionJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &IllegalStateException.new_MethodID_3, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/IllegalStateException", classCache: &IllegalStateException.IllegalStateExceptionJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &IllegalStateException.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -100,16 +85,39 @@ open class IllegalStateException: RuntimeException {
         self.init( s: _s )
     }
 
-    /// public java.lang.IllegalStateException()
+    /// public java.lang.IllegalStateException(java.lang.String,java.lang.Throwable)
+
+    private static var new_MethodID_3: jmethodID?
+
+    public convenience init( message: String?, cause: java_swift.Throwable? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: message, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/IllegalStateException", classCache: &IllegalStateException.IllegalStateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &IllegalStateException.new_MethodID_3, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _message: String?, _ _cause: java_swift.Throwable? ) {
+        self.init( message: _message, cause: _cause )
+    }
+
+    /// public java.lang.IllegalStateException(java.lang.Throwable)
 
     private static var new_MethodID_4: jmethodID?
 
-    public convenience init() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init( cause: java_swift.Throwable? ) {
         var __locals = [jobject]()
-        let __object = JNIMethod.NewObject( className: "java/lang/IllegalStateException", classCache: &IllegalStateException.IllegalStateExceptionJNIClass, methodSig: "()V", methodCache: &IllegalStateException.new_MethodID_4, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/IllegalStateException", classCache: &IllegalStateException.IllegalStateExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &IllegalStateException.new_MethodID_4, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _cause: java_swift.Throwable? ) {
+        self.init( cause: _cause )
     }
 
 }

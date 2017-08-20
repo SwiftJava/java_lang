@@ -18,21 +18,25 @@ open class MethodHandleProxies: java_swift.JavaObject {
 
     /// static final boolean java.lang.invoke.MethodHandleProxies.$assertionsDisabled
 
-    /// private java.lang.invoke.MethodHandleProxies()
+    // Skipping field: true false false false false false 
 
-    /// static java.lang.Object java.lang.invoke.MethodHandleProxies.access$100(java.lang.Object,java.lang.reflect.Method,java.lang.Object[])
+    /// private java.lang.invoke.MethodHandleProxies()
 
     /// static boolean java.lang.invoke.MethodHandleProxies.access$000(java.lang.reflect.Method)
 
-    /// private static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandleProxies.bindCaller(java.lang.invoke.MethodHandle,java.lang.Class)
+    // Skipping method: true false false false false 
+
+    /// static java.lang.Object java.lang.invoke.MethodHandleProxies.access$100(java.lang.Object,java.lang.reflect.Method,java.lang.Object[])
+
+    // Skipping method: true false false false false 
 
     /// public static java.lang.Object java.lang.invoke.MethodHandleProxies.asInterfaceInstance(java.lang.Class,java.lang.invoke.MethodHandle)
 
     private static var asInterfaceInstance_MethodID_1: jmethodID?
 
     open class func asInterfaceInstance( arg0: java_swift.JavaClass?, arg1: MethodHandle? ) -> java_swift.JavaObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandleProxies", classCache: &MethodHandleProxiesJNIClass, methodName: "asInterfaceInstance", methodSig: "(Ljava/lang/Class;Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;", methodCache: &asInterfaceInstance_MethodID_1, args: &__args, locals: &__locals )
@@ -44,31 +48,39 @@ open class MethodHandleProxies: java_swift.JavaObject {
         return asInterfaceInstance( arg0: _arg0, arg1: _arg1 )
     }
 
+    /// private static sun.invoke.WrapperInstance java.lang.invoke.MethodHandleProxies.asWrapperInstance(java.lang.Object)
+
+    /// private static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandleProxies.bindCaller(java.lang.invoke.MethodHandle,java.lang.Class)
+
+    /// private static java.lang.Object java.lang.invoke.MethodHandleProxies.callObjectMethod(java.lang.Object,java.lang.reflect.Method,java.lang.Object[])
+
+    /// private static java.lang.reflect.Method[] java.lang.invoke.MethodHandleProxies.getSingleNameMethods(java.lang.Class)
+
+    /// private static boolean java.lang.invoke.MethodHandleProxies.isObjectMethod(java.lang.reflect.Method)
+
     /// public static boolean java.lang.invoke.MethodHandleProxies.isWrapperInstance(java.lang.Object)
 
     private static var isWrapperInstance_MethodID_2: jmethodID?
 
     open class func isWrapperInstance( arg0: java_swift.JavaObject? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/invoke/MethodHandleProxies", classCache: &MethodHandleProxiesJNIClass, methodName: "isWrapperInstance", methodSig: "(Ljava/lang/Object;)Z", methodCache: &isWrapperInstance_MethodID_2, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
     open class func isWrapperInstance( _ _arg0: java_swift.JavaObject? ) -> Bool {
         return isWrapperInstance( arg0: _arg0 )
     }
 
-    /// private static sun.invoke.WrapperInstance java.lang.invoke.MethodHandleProxies.asWrapperInstance(java.lang.Object)
-
     /// public static java.lang.invoke.MethodHandle java.lang.invoke.MethodHandleProxies.wrapperInstanceTarget(java.lang.Object)
 
     private static var wrapperInstanceTarget_MethodID_3: jmethodID?
 
     open class func wrapperInstanceTarget( arg0: java_swift.JavaObject? ) -> MethodHandle! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandleProxies", classCache: &MethodHandleProxiesJNIClass, methodName: "wrapperInstanceTarget", methodSig: "(Ljava/lang/Object;)Ljava/lang/invoke/MethodHandle;", methodCache: &wrapperInstanceTarget_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -84,8 +96,8 @@ open class MethodHandleProxies: java_swift.JavaObject {
     private static var wrapperInstanceType_MethodID_4: jmethodID?
 
     open class func wrapperInstanceType( arg0: java_swift.JavaObject? ) -> java_swift.JavaClass! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/invoke/MethodHandleProxies", classCache: &MethodHandleProxiesJNIClass, methodName: "wrapperInstanceType", methodSig: "(Ljava/lang/Object;)Ljava/lang/Class;", methodCache: &wrapperInstanceType_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
@@ -95,12 +107,6 @@ open class MethodHandleProxies: java_swift.JavaObject {
     open class func wrapperInstanceType( _ _arg0: java_swift.JavaObject? ) -> java_swift.JavaClass! {
         return wrapperInstanceType( arg0: _arg0 )
     }
-
-    /// private static boolean java.lang.invoke.MethodHandleProxies.isObjectMethod(java.lang.reflect.Method)
-
-    /// private static java.lang.Object java.lang.invoke.MethodHandleProxies.callObjectMethod(java.lang.Object,java.lang.reflect.Method,java.lang.Object[])
-
-    /// private static java.lang.reflect.Method[] java.lang.invoke.MethodHandleProxies.getSingleNameMethods(java.lang.Class)
 
 }
 

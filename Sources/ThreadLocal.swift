@@ -16,106 +16,116 @@ open class ThreadLocal: java_swift.JavaObject {
 
     private static var ThreadLocalJNIClass: jclass?
 
-    /// private final int java.lang.ThreadLocal.threadLocalHashCode
+    /// private static final int java.lang.ThreadLocal.HASH_INCREMENT
 
     /// private static java.util.concurrent.atomic.AtomicInteger java.lang.ThreadLocal.nextHashCode
 
-    /// private static final int java.lang.ThreadLocal.HASH_INCREMENT
+    /// private final int java.lang.ThreadLocal.threadLocalHashCode
 
     /// public java.lang.ThreadLocal()
 
     private static var new_MethodID_1: jmethodID?
 
     public convenience init() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __object = JNIMethod.NewObject( className: "java/lang/ThreadLocal", classCache: &ThreadLocal.ThreadLocalJNIClass, methodSig: "()V", methodCache: &ThreadLocal.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
 
-    /// public void java.lang.ThreadLocal.remove()
+    /// static int java.lang.ThreadLocal.access$400(java.lang.ThreadLocal)
 
-    private static var remove_MethodID_2: jmethodID?
+    // Skipping method: true false false false false 
 
-    open func remove() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    /// static java.lang.ThreadLocal$ThreadLocalMap java.lang.ThreadLocal.createInheritedMap(java.lang.ThreadLocal$ThreadLocalMap)
+
+    // Skipping method: true false false false false 
+
+    /// private static int java.lang.ThreadLocal.nextHashCode()
+
+    /// public static java.lang.ThreadLocal java.lang.ThreadLocal.withInitial(java.util.function.Supplier)
+
+    private static var withInitial_MethodID_2: jmethodID?
+
+    open class func withInitial( supplier: /* interface java.util.function.Supplier */ UnavailableProtocol? ) -> ThreadLocal! {
         var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "remove", methodSig: "()V", methodCache: &ThreadLocal.remove_MethodID_2, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: supplier, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/ThreadLocal", classCache: &ThreadLocalJNIClass, methodName: "withInitial", methodSig: "(Ljava/util/function/Supplier;)Ljava/lang/ThreadLocal;", methodCache: &withInitial_MethodID_2, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? ThreadLocal( javaObject: __return ) : nil
     }
 
+    open class func withInitial( _ _supplier: /* interface java.util.function.Supplier */ UnavailableProtocol? ) -> ThreadLocal! {
+        return withInitial( supplier: _supplier )
+    }
+
+    /// java.lang.Object java.lang.ThreadLocal.childValue(java.lang.Object)
+
+    // Skipping method: true false false false false 
+
+    /// void java.lang.ThreadLocal.createMap(java.lang.Thread,java.lang.Object)
+
+    // Skipping method: true false false false false 
 
     /// public java.lang.Object java.lang.ThreadLocal.get()
 
     private static var get_MethodID_3: jmethodID?
 
     open func get() -> java_swift.JavaObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "get", methodSig: "()Ljava/lang/Object;", methodCache: &ThreadLocal.get_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
     }
 
 
-    /// static int java.lang.ThreadLocal.access$400(java.lang.ThreadLocal)
+    /// java.lang.ThreadLocal$ThreadLocalMap java.lang.ThreadLocal.getMap(java.lang.Thread)
 
-    /// static java.lang.ThreadLocal$ThreadLocalMap java.lang.ThreadLocal.createInheritedMap(java.lang.ThreadLocal$ThreadLocalMap)
+    // Skipping method: true false false false false 
+
+    /// protected java.lang.Object java.lang.ThreadLocal.initialValue()
+
+    private static var initialValue_MethodID_4: jmethodID?
+
+    open func initialValue() -> java_swift.JavaObject! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "initialValue", methodSig: "()Ljava/lang/Object;", methodCache: &ThreadLocal.initialValue_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
+    }
+
+
+    /// public void java.lang.ThreadLocal.remove()
+
+    private static var remove_MethodID_5: jmethodID?
+
+    open func remove() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "remove", methodSig: "()V", methodCache: &ThreadLocal.remove_MethodID_5, args: &__args, locals: &__locals )
+    }
+
 
     /// public void java.lang.ThreadLocal.set(java.lang.Object)
 
-    private static var set_MethodID_4: jmethodID?
+    private static var set_MethodID_6: jmethodID?
 
     open func set( value: java_swift.JavaObject? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: value, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "set", methodSig: "(Ljava/lang/Object;)V", methodCache: &ThreadLocal.set_MethodID_4, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "set", methodSig: "(Ljava/lang/Object;)V", methodCache: &ThreadLocal.set_MethodID_6, args: &__args, locals: &__locals )
     }
 
     open func set( _ _value: java_swift.JavaObject? ) {
         set( value: _value )
     }
 
-    /// private static int java.lang.ThreadLocal.nextHashCode()
-
-    /// protected java.lang.Object java.lang.ThreadLocal.initialValue()
-
-    private static var initialValue_MethodID_5: jmethodID?
-
-    open func initialValue() -> java_swift.JavaObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "initialValue", methodSig: "()Ljava/lang/Object;", methodCache: &ThreadLocal.initialValue_MethodID_5, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
-    }
-
-
-    /// public static java.lang.ThreadLocal java.lang.ThreadLocal.withInitial(java.util.function.Supplier)
-
-    private static var withInitial_MethodID_6: jmethodID?
-
-    open class func withInitial( supplier: /* java.util.function.Supplier */ UnclassedProtocol? ) -> ThreadLocal! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: supplier, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/ThreadLocal", classCache: &ThreadLocalJNIClass, methodName: "withInitial", methodSig: "(Ljava/util/function/Supplier;)Ljava/lang/ThreadLocal;", methodCache: &withInitial_MethodID_6, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? ThreadLocal( javaObject: __return ) : nil
-    }
-
-    open class func withInitial( _ _supplier: /* java.util.function.Supplier */ UnclassedProtocol? ) -> ThreadLocal! {
-        return withInitial( supplier: _supplier )
-    }
-
     /// private java.lang.Object java.lang.ThreadLocal.setInitialValue()
-
-    /// java.lang.ThreadLocal$ThreadLocalMap java.lang.ThreadLocal.getMap(java.lang.Thread)
-
-    /// void java.lang.ThreadLocal.createMap(java.lang.Thread,java.lang.Object)
-
-    /// java.lang.Object java.lang.ThreadLocal.childValue(java.lang.Object)
 
 }
 

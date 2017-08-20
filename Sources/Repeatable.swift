@@ -18,14 +18,14 @@ open class RepeatableForward: AnnotationForward, Repeatable {
 
     private static var RepeatableJNIClass: jclass?
 
-    /// public abstract java.lang.Class java.lang.annotation.Repeatable.value()
+    /// public abstract java.lang.Class java.lang.annotation.Annotation.annotationType()
 
-    private static var value_MethodID_2: jmethodID?
+    private static var annotationType_MethodID_2: jmethodID?
 
-    open func value() -> java_swift.JavaClass! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    override open func annotationType() -> java_swift.JavaClass! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "value", methodSig: "()Ljava/lang/Class;", methodCache: &RepeatableForward.value_MethodID_2, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "annotationType", methodSig: "()Ljava/lang/Class;", methodCache: &RepeatableForward.annotationType_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
     }
@@ -36,54 +36,54 @@ open class RepeatableForward: AnnotationForward, Repeatable {
     private static var equals_MethodID_3: jmethodID?
 
     override open func equals( obj: java_swift.JavaObject? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: obj, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &RepeatableForward.equals_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
     override open func equals( _ _obj: java_swift.JavaObject? ) -> Bool {
         return equals( obj: _obj )
     }
 
-    /// public abstract java.lang.String java.lang.annotation.Annotation.toString()
-
-    private static var toString_MethodID_4: jmethodID?
-
-    override open func toString() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toString", methodSig: "()Ljava/lang/String;", methodCache: &RepeatableForward.toString_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
     /// public abstract int java.lang.annotation.Annotation.hashCode()
 
-    private static var hashCode_MethodID_5: jmethodID?
+    private static var hashCode_MethodID_4: jmethodID?
 
     override open func hashCode() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "hashCode", methodSig: "()I", methodCache: &RepeatableForward.hashCode_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "hashCode", methodSig: "()I", methodCache: &RepeatableForward.hashCode_MethodID_4, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
 
-    /// public abstract java.lang.Class java.lang.annotation.Annotation.annotationType()
+    /// public abstract java.lang.String java.lang.annotation.Annotation.toString()
 
-    private static var annotationType_MethodID_6: jmethodID?
+    private static var toString_MethodID_5: jmethodID?
 
-    override open func annotationType() -> java_swift.JavaClass! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    override open func toString() -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "annotationType", methodSig: "()Ljava/lang/Class;", methodCache: &RepeatableForward.annotationType_MethodID_6, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toString", methodSig: "()Ljava/lang/String;", methodCache: &RepeatableForward.toString_MethodID_5, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.lang.Class java.lang.annotation.Repeatable.value()
+
+    private static var value_MethodID_6: jmethodID?
+
+    open func value() -> java_swift.JavaClass! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "value", methodSig: "()Ljava/lang/Class;", methodCache: &RepeatableForward.value_MethodID_6, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
     }
 
 
 }
-
 

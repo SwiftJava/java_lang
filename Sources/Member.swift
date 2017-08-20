@@ -7,13 +7,17 @@ import java_swift
 
 public protocol Member: JavaProtocol {
 
-    /// public static final int java.lang.reflect.Member.PUBLIC
-
-    static var PUBLIC: Int { get }
-
     /// public static final int java.lang.reflect.Member.DECLARED
 
-    static var DECLARED: Int { get }
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.lang.reflect.Member.PUBLIC
+
+    // Skipping field: false false false false false true 
+
+    /// public abstract java.lang.Class java.lang.reflect.Member.getDeclaringClass()
+
+    func getDeclaringClass() -> java_swift.JavaClass!
 
     /// public abstract int java.lang.reflect.Member.getModifiers()
 
@@ -27,27 +31,12 @@ public protocol Member: JavaProtocol {
 
     func isSynthetic() -> Bool
 
-    /// public abstract java.lang.Class java.lang.reflect.Member.getDeclaringClass()
-
-    func getDeclaringClass() -> java_swift.JavaClass!
-
 }
 
 
 open class MemberForward: JNIObjectForward, Member {
 
     private static var MemberJNIClass: jclass?
-
-    /// public static final int java.lang.reflect.Member.PUBLIC
-
-    private static var PUBLIC_FieldID: jfieldID?
-
-    open static var PUBLIC: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "PUBLIC", fieldType: "I", fieldCache: &PUBLIC_FieldID, className: "java/lang/reflect/Member", classCache: &MemberJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
 
     /// public static final int java.lang.reflect.Member.DECLARED
 
@@ -56,59 +45,70 @@ open class MemberForward: JNIObjectForward, Member {
     open static var DECLARED: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "DECLARED", fieldType: "I", fieldCache: &DECLARED_FieldID, className: "java/lang/reflect/Member", classCache: &MemberJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
 
-    /// public abstract int java.lang.reflect.Member.getModifiers()
+    /// public static final int java.lang.reflect.Member.PUBLIC
 
-    private static var getModifiers_MethodID_5: jmethodID?
+    private static var PUBLIC_FieldID: jfieldID?
 
-    open func getModifiers() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getModifiers", methodSig: "()I", methodCache: &MemberForward.getModifiers_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+    open static var PUBLIC: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "PUBLIC", fieldType: "I", fieldCache: &PUBLIC_FieldID, className: "java/lang/reflect/Member", classCache: &MemberJNIClass )
+            return Int(__value)
+        }
     }
-
-
-    /// public abstract java.lang.String java.lang.reflect.Member.getName()
-
-    private static var getName_MethodID_6: jmethodID?
-
-    open func getName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &MemberForward.getName_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract boolean java.lang.reflect.Member.isSynthetic()
-
-    private static var isSynthetic_MethodID_7: jmethodID?
-
-    open func isSynthetic() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isSynthetic", methodSig: "()Z", methodCache: &MemberForward.isSynthetic_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
 
     /// public abstract java.lang.Class java.lang.reflect.Member.getDeclaringClass()
 
-    private static var getDeclaringClass_MethodID_8: jmethodID?
+    private static var getDeclaringClass_MethodID_5: jmethodID?
 
     open func getDeclaringClass() -> java_swift.JavaClass! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDeclaringClass", methodSig: "()Ljava/lang/Class;", methodCache: &MemberForward.getDeclaringClass_MethodID_8, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDeclaringClass", methodSig: "()Ljava/lang/Class;", methodCache: &MemberForward.getDeclaringClass_MethodID_5, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
     }
 
 
-}
+    /// public abstract int java.lang.reflect.Member.getModifiers()
 
+    private static var getModifiers_MethodID_6: jmethodID?
+
+    open func getModifiers() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getModifiers", methodSig: "()I", methodCache: &MemberForward.getModifiers_MethodID_6, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+
+    /// public abstract java.lang.String java.lang.reflect.Member.getName()
+
+    private static var getName_MethodID_7: jmethodID?
+
+    open func getName() -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &MemberForward.getName_MethodID_7, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract boolean java.lang.reflect.Member.isSynthetic()
+
+    private static var isSynthetic_MethodID_8: jmethodID?
+
+    open func isSynthetic() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isSynthetic", methodSig: "()Z", methodCache: &MemberForward.isSynthetic_MethodID_8, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+}
 

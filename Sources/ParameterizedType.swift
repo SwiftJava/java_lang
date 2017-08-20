@@ -7,10 +7,6 @@ import java_swift
 
 public protocol ParameterizedType: Type {
 
-    /// public abstract java.lang.reflect.Type java.lang.reflect.ParameterizedType.getRawType()
-
-    func getRawType() -> Type!
-
     /// public abstract java.lang.reflect.Type[] java.lang.reflect.ParameterizedType.getActualTypeArguments()
 
     func getActualTypeArguments() -> [Type]!
@@ -19,6 +15,10 @@ public protocol ParameterizedType: Type {
 
     func getOwnerType() -> Type!
 
+    /// public abstract java.lang.reflect.Type java.lang.reflect.ParameterizedType.getRawType()
+
+    func getRawType() -> Type!
+
 }
 
 
@@ -26,39 +26,39 @@ open class ParameterizedTypeForward: TypeForward, ParameterizedType {
 
     private static var ParameterizedTypeJNIClass: jclass?
 
-    /// public abstract java.lang.reflect.Type java.lang.reflect.ParameterizedType.getRawType()
-
-    private static var getRawType_MethodID_4: jmethodID?
-
-    open func getRawType() -> Type! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getRawType", methodSig: "()Ljava/lang/reflect/Type;", methodCache: &ParameterizedTypeForward.getRawType_MethodID_4, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? TypeForward( javaObject: __return ) : nil
-    }
-
-
     /// public abstract java.lang.reflect.Type[] java.lang.reflect.ParameterizedType.getActualTypeArguments()
 
-    private static var getActualTypeArguments_MethodID_5: jmethodID?
+    private static var getActualTypeArguments_MethodID_4: jmethodID?
 
     open func getActualTypeArguments() -> [Type]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getActualTypeArguments", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &ParameterizedTypeForward.getActualTypeArguments_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [TypeForward](), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getActualTypeArguments", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &ParameterizedTypeForward.getActualTypeArguments_MethodID_4, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [TypeForward].self, from: __return )
     }
 
 
     /// public abstract java.lang.reflect.Type java.lang.reflect.ParameterizedType.getOwnerType()
 
-    private static var getOwnerType_MethodID_6: jmethodID?
+    private static var getOwnerType_MethodID_5: jmethodID?
 
     open func getOwnerType() -> Type! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getOwnerType", methodSig: "()Ljava/lang/reflect/Type;", methodCache: &ParameterizedTypeForward.getOwnerType_MethodID_6, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getOwnerType", methodSig: "()Ljava/lang/reflect/Type;", methodCache: &ParameterizedTypeForward.getOwnerType_MethodID_5, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? TypeForward( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.lang.reflect.Type java.lang.reflect.ParameterizedType.getRawType()
+
+    private static var getRawType_MethodID_6: jmethodID?
+
+    open func getRawType() -> Type! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getRawType", methodSig: "()Ljava/lang/reflect/Type;", methodCache: &ParameterizedTypeForward.getRawType_MethodID_6, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? TypeForward( javaObject: __return ) : nil
     }
@@ -69,13 +69,13 @@ open class ParameterizedTypeForward: TypeForward, ParameterizedType {
     private static var getTypeName_MethodID_7: jmethodID?
 
     override open func getTypeName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTypeName", methodSig: "()Ljava/lang/String;", methodCache: &ParameterizedTypeForward.getTypeName_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
 }
-
 

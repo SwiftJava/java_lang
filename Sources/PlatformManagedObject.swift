@@ -9,6 +9,8 @@ public protocol PlatformManagedObject: JavaProtocol {
 
     /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
+    // Skipping method: false false true false false 
+
 }
 
 
@@ -18,6 +20,7 @@ open class PlatformManagedObjectForward: JNIObjectForward, PlatformManagedObject
 
     /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
-}
+    // Skipping method: false false true false false 
 
+}
 

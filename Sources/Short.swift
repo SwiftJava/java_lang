@@ -16,14 +16,14 @@ open class Short: Number, JavaComparable {
 
     private static var ShortJNIClass: jclass?
 
-    /// public static final short java.lang.Short.MIN_VALUE
+    /// public static final int java.lang.Short.BYTES
 
-    private static var MIN_VALUE_FieldID: jfieldID?
+    private static var BYTES_FieldID: jfieldID?
 
-    open static var MIN_VALUE: Int16 {
+    open static var BYTES: Int {
         get {
-            let __value = JNIField.GetStaticShortField( fieldName: "MIN_VALUE", fieldType: "S", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Short", classCache: &ShortJNIClass )
-            return JNIType.toSwift( type: Int16(), from: __value )
+            let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Short", classCache: &ShortJNIClass )
+            return Int(__value)
         }
     }
 
@@ -34,7 +34,29 @@ open class Short: Number, JavaComparable {
     open static var MAX_VALUE: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "MAX_VALUE", fieldType: "S", fieldCache: &MAX_VALUE_FieldID, className: "java/lang/Short", classCache: &ShortJNIClass )
-            return JNIType.toSwift( type: Int16(), from: __value )
+            return __value
+        }
+    }
+
+    /// public static final short java.lang.Short.MIN_VALUE
+
+    private static var MIN_VALUE_FieldID: jfieldID?
+
+    open static var MIN_VALUE: Int16 {
+        get {
+            let __value = JNIField.GetStaticShortField( fieldName: "MIN_VALUE", fieldType: "S", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Short", classCache: &ShortJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final int java.lang.Short.SIZE
+
+    private static var SIZE_FieldID: jfieldID?
+
+    open static var SIZE: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "SIZE", fieldType: "I", fieldCache: &SIZE_FieldID, className: "java/lang/Short", classCache: &ShortJNIClass )
+            return Int(__value)
         }
     }
 
@@ -45,35 +67,14 @@ open class Short: Number, JavaComparable {
     open static var TYPE: java_swift.JavaClass! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/Class;", fieldCache: &TYPE_FieldID, className: "java/lang/Short", classCache: &ShortJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? java_swift.JavaClass( javaObject: __value ) : nil
         }
     }
 
-    /// private final short java.lang.Short.value
-
-    /// public static final int java.lang.Short.SIZE
-
-    private static var SIZE_FieldID: jfieldID?
-
-    open static var SIZE: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "SIZE", fieldType: "I", fieldCache: &SIZE_FieldID, className: "java/lang/Short", classCache: &ShortJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.lang.Short.BYTES
-
-    private static var BYTES_FieldID: jfieldID?
-
-    open static var BYTES: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Short", classCache: &ShortJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
     /// private static final long java.lang.Short.serialVersionUID
+
+    /// private final short java.lang.Short.value
 
     /// private static final long java.lang.Number.serialVersionUID
 
@@ -82,9 +83,9 @@ open class Short: Number, JavaComparable {
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( value: Int16 ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( s: value )
         let __object = JNIMethod.NewObject( className: "java/lang/Short", classCache: &Short.ShortJNIClass, methodSig: "(S)V", methodCache: &Short.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -99,11 +100,12 @@ open class Short: Number, JavaComparable {
     private static var new_MethodID_2: jmethodID?
 
     public convenience init( s: String? ) throws {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: s, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/Short", classCache: &Short.ShortJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &Short.new_MethodID_2, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw NumberFormatException( javaObject: throwable )
         }
         self.init( javaObject: __object )
@@ -114,148 +116,175 @@ open class Short: Number, JavaComparable {
         try self.init( s: _s )
     }
 
-    /// public boolean java.lang.Short.equals(java.lang.Object)
+    /// public static int java.lang.Short.compare(short,short)
 
-    private static var equals_MethodID_3: jmethodID?
+    private static var compare_MethodID_3: jmethodID?
 
-    open func equals( obj: java_swift.JavaObject? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func compare( x: Int16, y: Int16 ) -> Int {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Short.equals_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( s: x )
+        __args[1] = jvalue( s: y )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "compare", methodSig: "(SS)I", methodCache: &compare_MethodID_3, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
-    override open func equals( _ _obj: java_swift.JavaObject? ) -> Bool {
-        return equals( obj: _obj )
+    open class func compare( _ _x: Int16, _ _y: Int16 ) -> Int {
+        return compare( x: _x, y: _y )
     }
 
-    /// public java.lang.String java.lang.Short.toString()
+    /// public static java.lang.Short java.lang.Short.decode(java.lang.String) throws java.lang.NumberFormatException
 
-    /// public static java.lang.String java.lang.Short.toString(short)
+    private static var decode_MethodID_4: jmethodID?
 
-    private static var toString_MethodID_4: jmethodID?
-
-    open class func toString( s: Int16 ) -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func decode( nm: String? ) throws /* java.lang.NumberFormatException */ -> Short! {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "toString", methodSig: "(S)Ljava/lang/String;", methodCache: &toString_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: nm, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "decode", methodSig: "(Ljava/lang/String;)Ljava/lang/Short;", methodCache: &decode_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw NumberFormatException( javaObject: throwable )
+        }
+        return __return != nil ? Short( javaObject: __return ) : nil
     }
 
-    open class func toString( _ _s: Int16 ) -> String! {
-        return toString( s: _s )
+    open class func decode( _ _nm: String? ) throws /* java.lang.NumberFormatException */ -> Short! {
+        return try decode( nm: _nm )
     }
-
-    /// public int java.lang.Short.hashCode()
 
     /// public static int java.lang.Short.hashCode(short)
 
     private static var hashCode_MethodID_5: jmethodID?
 
     open class func hashCode( value: Int16 ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( s: value )
         let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "hashCode", methodSig: "(S)I", methodCache: &hashCode_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        return Int(__return)
     }
 
     open class func hashCode( _ _value: Int16 ) -> Int {
         return hashCode( value: _value )
     }
 
+    /// public static short java.lang.Short.parseShort(java.lang.String) throws java.lang.NumberFormatException
+
+    private static var parseShort_MethodID_6: jmethodID?
+
+    open class func parseShort( s: String? ) throws /* java.lang.NumberFormatException */ -> Int16 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: s, locals: &__locals )
+        let __return = JNIMethod.CallStaticShortMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "parseShort", methodSig: "(Ljava/lang/String;)S", methodCache: &parseShort_MethodID_6, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw NumberFormatException( javaObject: throwable )
+        }
+        return __return
+    }
+
+    open class func parseShort( _ _s: String? ) throws /* java.lang.NumberFormatException */ -> Int16 {
+        return try parseShort( s: _s )
+    }
+
+    /// public static short java.lang.Short.parseShort(java.lang.String,int) throws java.lang.NumberFormatException
+
+    private static var parseShort_MethodID_7: jmethodID?
+
+    open class func parseShort( s: String?, radix: Int ) throws /* java.lang.NumberFormatException */ -> Int16 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: s, locals: &__locals )
+        __args[1] = jvalue( i: jint(radix) )
+        let __return = JNIMethod.CallStaticShortMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "parseShort", methodSig: "(Ljava/lang/String;I)S", methodCache: &parseShort_MethodID_7, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw NumberFormatException( javaObject: throwable )
+        }
+        return __return
+    }
+
+    open class func parseShort( _ _s: String?, _ _radix: Int ) throws /* java.lang.NumberFormatException */ -> Int16 {
+        return try parseShort( s: _s, radix: _radix )
+    }
+
     /// public static short java.lang.Short.reverseBytes(short)
 
-    private static var reverseBytes_MethodID_6: jmethodID?
+    private static var reverseBytes_MethodID_8: jmethodID?
 
     open class func reverseBytes( i: Int16 ) -> Int16 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: i, locals: &__locals )
-        let __return = JNIMethod.CallStaticShortMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "reverseBytes", methodSig: "(S)S", methodCache: &reverseBytes_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int16(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( s: i )
+        let __return = JNIMethod.CallStaticShortMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "reverseBytes", methodSig: "(S)S", methodCache: &reverseBytes_MethodID_8, args: &__args, locals: &__locals )
+        return __return
     }
 
     open class func reverseBytes( _ _i: Int16 ) -> Int16 {
         return reverseBytes( i: _i )
     }
 
-    /// public int java.lang.Short.compareTo(java.lang.Short)
+    /// public static java.lang.String java.lang.Short.toString(short)
 
-    private static var compareTo_MethodID_7: jmethodID?
+    private static var toString_MethodID_9: jmethodID?
 
-    open func compareTo( anotherShort: Short? ) -> Int {
+    open class func toString( s: Int16 ) -> String! {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: anotherShort, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Short;)I", methodCache: &Short.compareTo_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open func compareTo( _ _anotherShort: Short? ) -> Int {
-        return compareTo( anotherShort: _anotherShort )
-    }
-
-    /// public int java.lang.Short.compareTo(java.lang.Object)
-
-    private static var compareTo_MethodID_8: jmethodID?
-
-    open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &Short.compareTo_MethodID_8, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open func compareTo( _ _arg0: java_swift.JavaObject? ) -> Int {
-        return compareTo( arg0: _arg0 )
-    }
-
-    /// public byte java.lang.Short.byteValue()
-
-    /// public short java.lang.Short.shortValue()
-
-    /// public int java.lang.Short.intValue()
-
-    /// public long java.lang.Short.longValue()
-
-    /// public float java.lang.Short.floatValue()
-
-    /// public double java.lang.Short.doubleValue()
-
-    /// public static java.lang.Short java.lang.Short.valueOf(java.lang.String,int) throws java.lang.NumberFormatException
-
-    private static var valueOf_MethodID_9: jmethodID?
-
-    open class func valueOf( s: String?, radix: Int ) throws /* java.lang.NumberFormatException */ -> Short! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        __args[1] = JNIType.toJava( value: radix, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;I)Ljava/lang/Short;", methodCache: &valueOf_MethodID_9, args: &__args, locals: &__locals )
+        __args[0] = jvalue( s: s )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "toString", methodSig: "(S)Ljava/lang/String;", methodCache: &toString_MethodID_9, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw NumberFormatException( javaObject: throwable )
-        }
-        return __return != nil ? Short( javaObject: __return ) : nil
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
-    open class func valueOf( _ _s: String?, _ _radix: Int ) throws /* java.lang.NumberFormatException */ -> Short! {
-        return try valueOf( s: _s, radix: _radix )
+    open class func toString( _ _s: Int16 ) -> String! {
+        return toString( s: _s )
+    }
+
+    /// public static int java.lang.Short.toUnsignedInt(short)
+
+    private static var toUnsignedInt_MethodID_10: jmethodID?
+
+    open class func toUnsignedInt( x: Int16 ) -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( s: x )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "toUnsignedInt", methodSig: "(S)I", methodCache: &toUnsignedInt_MethodID_10, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open class func toUnsignedInt( _ _x: Int16 ) -> Int {
+        return toUnsignedInt( x: _x )
+    }
+
+    /// public static long java.lang.Short.toUnsignedLong(short)
+
+    private static var toUnsignedLong_MethodID_11: jmethodID?
+
+    open class func toUnsignedLong( x: Int16 ) -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( s: x )
+        let __return = JNIMethod.CallStaticLongMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "toUnsignedLong", methodSig: "(S)J", methodCache: &toUnsignedLong_MethodID_11, args: &__args, locals: &__locals )
+        return __return
+    }
+
+    open class func toUnsignedLong( _ _x: Int16 ) -> Int64 {
+        return toUnsignedLong( x: _x )
     }
 
     /// public static java.lang.Short java.lang.Short.valueOf(short)
 
-    private static var valueOf_MethodID_10: jmethodID?
+    private static var valueOf_MethodID_12: jmethodID?
 
     open class func valueOf( s: Int16 ) -> Short! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "valueOf", methodSig: "(S)Ljava/lang/Short;", methodCache: &valueOf_MethodID_10, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( s: s )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "valueOf", methodSig: "(S)Ljava/lang/Short;", methodCache: &valueOf_MethodID_12, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? Short( javaObject: __return ) : nil
     }
@@ -266,15 +295,16 @@ open class Short: Number, JavaComparable {
 
     /// public static java.lang.Short java.lang.Short.valueOf(java.lang.String) throws java.lang.NumberFormatException
 
-    private static var valueOf_MethodID_11: jmethodID?
+    private static var valueOf_MethodID_13: jmethodID?
 
     open class func valueOf( s: String? ) throws /* java.lang.NumberFormatException */ -> Short! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/lang/Short;", methodCache: &valueOf_MethodID_11, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/lang/Short;", methodCache: &valueOf_MethodID_13, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw NumberFormatException( javaObject: throwable )
         }
         return __return != nil ? Short( javaObject: __return ) : nil
@@ -284,113 +314,107 @@ open class Short: Number, JavaComparable {
         return try valueOf( s: _s )
     }
 
-    /// public static java.lang.Short java.lang.Short.decode(java.lang.String) throws java.lang.NumberFormatException
+    /// public static java.lang.Short java.lang.Short.valueOf(java.lang.String,int) throws java.lang.NumberFormatException
 
-    private static var decode_MethodID_12: jmethodID?
+    private static var valueOf_MethodID_14: jmethodID?
 
-    open class func decode( nm: String? ) throws /* java.lang.NumberFormatException */ -> Short! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func valueOf( s: String?, radix: Int ) throws /* java.lang.NumberFormatException */ -> Short! {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: nm, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "decode", methodSig: "(Ljava/lang/String;)Ljava/lang/Short;", methodCache: &decode_MethodID_12, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: s, locals: &__locals )
+        __args[1] = jvalue( i: jint(radix) )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;I)Ljava/lang/Short;", methodCache: &valueOf_MethodID_14, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw NumberFormatException( javaObject: throwable )
         }
         return __return != nil ? Short( javaObject: __return ) : nil
     }
 
-    open class func decode( _ _nm: String? ) throws /* java.lang.NumberFormatException */ -> Short! {
-        return try decode( nm: _nm )
+    open class func valueOf( _ _s: String?, _ _radix: Int ) throws /* java.lang.NumberFormatException */ -> Short! {
+        return try valueOf( s: _s, radix: _radix )
     }
 
-    /// public static int java.lang.Short.compare(short,short)
+    /// public byte java.lang.Short.byteValue()
 
-    private static var compare_MethodID_13: jmethodID?
+    // Skipping method: false true false false false 
 
-    open class func compare( x: Int16, y: Int16 ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+    /// public int java.lang.Short.compareTo(java.lang.Short)
+
+    private static var compareTo_MethodID_15: jmethodID?
+
+    open func compareTo( anotherShort: Short? ) -> Int {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        __args[1] = JNIType.toJava( value: y, locals: &__locals )
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "compare", methodSig: "(SS)I", methodCache: &compare_MethodID_13, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open class func compare( _ _x: Int16, _ _y: Int16 ) -> Int {
-        return compare( x: _x, y: _y )
-    }
-
-    /// public static int java.lang.Short.toUnsignedInt(short)
-
-    private static var toUnsignedInt_MethodID_14: jmethodID?
-
-    open class func toUnsignedInt( x: Int16 ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: anotherShort, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Short;)I", methodCache: &Short.compareTo_MethodID_15, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open func compareTo( _ _anotherShort: Short? ) -> Int {
+        return compareTo( anotherShort: _anotherShort )
+    }
+
+    /// public int java.lang.Short.compareTo(java.lang.Object)
+
+    private static var compareTo_MethodID_16: jmethodID?
+
+    open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "toUnsignedInt", methodSig: "(S)I", methodCache: &toUnsignedInt_MethodID_14, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open class func toUnsignedInt( _ _x: Int16 ) -> Int {
-        return toUnsignedInt( x: _x )
-    }
-
-    /// public static long java.lang.Short.toUnsignedLong(short)
-
-    private static var toUnsignedLong_MethodID_15: jmethodID?
-
-    open class func toUnsignedLong( x: Int16 ) -> Int64 {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &Short.compareTo_MethodID_16, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open func compareTo( _ _arg0: java_swift.JavaObject? ) -> Int {
+        return compareTo( arg0: _arg0 )
+    }
+
+    /// public double java.lang.Short.doubleValue()
+
+    // Skipping method: false true false false false 
+
+    /// public boolean java.lang.Short.equals(java.lang.Object)
+
+    private static var equals_MethodID_17: jmethodID?
+
+    open func equals( obj: java_swift.JavaObject? ) -> Bool {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        let __return = JNIMethod.CallStaticLongMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "toUnsignedLong", methodSig: "(S)J", methodCache: &toUnsignedLong_MethodID_15, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
-    }
-
-    open class func toUnsignedLong( _ _x: Int16 ) -> Int64 {
-        return toUnsignedLong( x: _x )
-    }
-
-    /// public static short java.lang.Short.parseShort(java.lang.String,int) throws java.lang.NumberFormatException
-
-    private static var parseShort_MethodID_16: jmethodID?
-
-    open class func parseShort( s: String?, radix: Int ) throws /* java.lang.NumberFormatException */ -> Int16 {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        __args[1] = JNIType.toJava( value: radix, locals: &__locals )
-        let __return = JNIMethod.CallStaticShortMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "parseShort", methodSig: "(Ljava/lang/String;I)S", methodCache: &parseShort_MethodID_16, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw NumberFormatException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int16(), from: __return )
-    }
-
-    open class func parseShort( _ _s: String?, _ _radix: Int ) throws /* java.lang.NumberFormatException */ -> Int16 {
-        return try parseShort( s: _s, radix: _radix )
-    }
-
-    /// public static short java.lang.Short.parseShort(java.lang.String) throws java.lang.NumberFormatException
-
-    private static var parseShort_MethodID_17: jmethodID?
-
-    open class func parseShort( s: String? ) throws /* java.lang.NumberFormatException */ -> Int16 {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __return = JNIMethod.CallStaticShortMethod( className: "java/lang/Short", classCache: &ShortJNIClass, methodName: "parseShort", methodSig: "(Ljava/lang/String;)S", methodCache: &parseShort_MethodID_17, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw NumberFormatException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int16(), from: __return )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Short.equals_MethodID_17, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
-    open class func parseShort( _ _s: String? ) throws /* java.lang.NumberFormatException */ -> Int16 {
-        return try parseShort( s: _s )
+    override open func equals( _ _obj: java_swift.JavaObject? ) -> Bool {
+        return equals( obj: _obj )
     }
+
+    /// public float java.lang.Short.floatValue()
+
+    // Skipping method: false true false false false 
+
+    /// public int java.lang.Short.hashCode()
+
+    // Skipping method: false true false false false 
+
+    /// public int java.lang.Short.intValue()
+
+    // Skipping method: false true false false false 
+
+    /// public long java.lang.Short.longValue()
+
+    // Skipping method: false true false false false 
+
+    /// public short java.lang.Short.shortValue()
+
+    // Skipping method: false true false false false 
+
+    /// public java.lang.String java.lang.Short.toString()
+
+    // Skipping method: false true false false false 
 
 }
 

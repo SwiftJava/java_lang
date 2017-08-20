@@ -7,9 +7,29 @@ import java_swift
 
 public protocol MemoryPoolMXBean: PlatformManagedObject {
 
+    /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryPoolMXBean.getCollectionUsage()
+
+    func getCollectionUsage() -> MemoryUsage!
+
+    /// public abstract long java.lang.management.MemoryPoolMXBean.getCollectionUsageThreshold()
+
+    func getCollectionUsageThreshold() -> Int64
+
+    /// public abstract long java.lang.management.MemoryPoolMXBean.getCollectionUsageThresholdCount()
+
+    func getCollectionUsageThresholdCount() -> Int64
+
+    /// public abstract java.lang.String[] java.lang.management.MemoryPoolMXBean.getMemoryManagerNames()
+
+    func getMemoryManagerNames() -> [String]!
+
     /// public abstract java.lang.String java.lang.management.MemoryPoolMXBean.getName()
 
     func getName() -> String!
+
+    /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryPoolMXBean.getPeakUsage()
+
+    func getPeakUsage() -> MemoryUsage!
 
     /// public abstract java.lang.management.MemoryType java.lang.management.MemoryPoolMXBean.getType()
 
@@ -19,65 +39,45 @@ public protocol MemoryPoolMXBean: PlatformManagedObject {
 
     func getUsage() -> MemoryUsage!
 
-    /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryPoolMXBean.getPeakUsage()
-
-    func getPeakUsage() -> MemoryUsage!
-
-    /// public abstract void java.lang.management.MemoryPoolMXBean.resetPeakUsage()
-
-    func resetPeakUsage()
-
-    /// public abstract java.lang.String[] java.lang.management.MemoryPoolMXBean.getMemoryManagerNames()
-
-    func getMemoryManagerNames() -> [String]!
-
     /// public abstract long java.lang.management.MemoryPoolMXBean.getUsageThreshold()
 
     func getUsageThreshold() -> Int64
-
-    /// public abstract void java.lang.management.MemoryPoolMXBean.setUsageThreshold(long)
-
-    func setUsageThreshold( threshold: Int64 )
-
-    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isUsageThresholdExceeded()
-
-    func isUsageThresholdExceeded() -> Bool
 
     /// public abstract long java.lang.management.MemoryPoolMXBean.getUsageThresholdCount()
 
     func getUsageThresholdCount() -> Int64
 
-    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isUsageThresholdSupported()
-
-    func isUsageThresholdSupported() -> Bool
-
-    /// public abstract long java.lang.management.MemoryPoolMXBean.getCollectionUsageThreshold()
-
-    func getCollectionUsageThreshold() -> Int64
-
-    /// public abstract void java.lang.management.MemoryPoolMXBean.setCollectionUsageThreshold(long)
-
-    func setCollectionUsageThreshold( threshold: Int64 )
-
     /// public abstract boolean java.lang.management.MemoryPoolMXBean.isCollectionUsageThresholdExceeded()
 
     func isCollectionUsageThresholdExceeded() -> Bool
-
-    /// public abstract long java.lang.management.MemoryPoolMXBean.getCollectionUsageThresholdCount()
-
-    func getCollectionUsageThresholdCount() -> Int64
-
-    /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryPoolMXBean.getCollectionUsage()
-
-    func getCollectionUsage() -> MemoryUsage!
 
     /// public abstract boolean java.lang.management.MemoryPoolMXBean.isCollectionUsageThresholdSupported()
 
     func isCollectionUsageThresholdSupported() -> Bool
 
+    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isUsageThresholdExceeded()
+
+    func isUsageThresholdExceeded() -> Bool
+
+    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isUsageThresholdSupported()
+
+    func isUsageThresholdSupported() -> Bool
+
     /// public abstract boolean java.lang.management.MemoryPoolMXBean.isValid()
 
     func isValid() -> Bool
+
+    /// public abstract void java.lang.management.MemoryPoolMXBean.resetPeakUsage()
+
+    func resetPeakUsage()
+
+    /// public abstract void java.lang.management.MemoryPoolMXBean.setCollectionUsageThreshold(long)
+
+    func setCollectionUsageThreshold( threshold: Int64 )
+
+    /// public abstract void java.lang.management.MemoryPoolMXBean.setUsageThreshold(long)
+
+    func setUsageThreshold( threshold: Int64 )
 
 }
 
@@ -86,26 +86,93 @@ open class MemoryPoolMXBeanForward: PlatformManagedObjectForward, MemoryPoolMXBe
 
     private static var MemoryPoolMXBeanJNIClass: jclass?
 
+    /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryPoolMXBean.getCollectionUsage()
+
+    private static var getCollectionUsage_MethodID_19: jmethodID?
+
+    open func getCollectionUsage() -> MemoryUsage! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCollectionUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryPoolMXBeanForward.getCollectionUsage_MethodID_19, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? MemoryUsage( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract long java.lang.management.MemoryPoolMXBean.getCollectionUsageThreshold()
+
+    private static var getCollectionUsageThreshold_MethodID_20: jmethodID?
+
+    open func getCollectionUsageThreshold() -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getCollectionUsageThreshold", methodSig: "()J", methodCache: &MemoryPoolMXBeanForward.getCollectionUsageThreshold_MethodID_20, args: &__args, locals: &__locals )
+        return __return
+    }
+
+
+    /// public abstract long java.lang.management.MemoryPoolMXBean.getCollectionUsageThresholdCount()
+
+    private static var getCollectionUsageThresholdCount_MethodID_21: jmethodID?
+
+    open func getCollectionUsageThresholdCount() -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getCollectionUsageThresholdCount", methodSig: "()J", methodCache: &MemoryPoolMXBeanForward.getCollectionUsageThresholdCount_MethodID_21, args: &__args, locals: &__locals )
+        return __return
+    }
+
+
+    /// public abstract java.lang.String[] java.lang.management.MemoryPoolMXBean.getMemoryManagerNames()
+
+    private static var getMemoryManagerNames_MethodID_22: jmethodID?
+
+    open func getMemoryManagerNames() -> [String]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getMemoryManagerNames", methodSig: "()[Ljava/lang/String;", methodCache: &MemoryPoolMXBeanForward.getMemoryManagerNames_MethodID_22, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [String].self, from: __return )
+    }
+
+
     /// public abstract java.lang.String java.lang.management.MemoryPoolMXBean.getName()
 
-    private static var getName_MethodID_19: jmethodID?
+    private static var getName_MethodID_23: jmethodID?
 
     open func getName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &MemoryPoolMXBeanForward.getName_MethodID_19, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &MemoryPoolMXBeanForward.getName_MethodID_23, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
+
+    // Skipping method: false false true false false 
+
+    /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryPoolMXBean.getPeakUsage()
+
+    private static var getPeakUsage_MethodID_24: jmethodID?
+
+    open func getPeakUsage() -> MemoryUsage! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getPeakUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryPoolMXBeanForward.getPeakUsage_MethodID_24, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? MemoryUsage( javaObject: __return ) : nil
     }
 
 
     /// public abstract java.lang.management.MemoryType java.lang.management.MemoryPoolMXBean.getType()
 
-    private static var getType_MethodID_20: jmethodID?
+    private static var getType_MethodID_25: jmethodID?
 
     open func getType() -> MemoryType! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getType", methodSig: "()Ljava/lang/management/MemoryType;", methodCache: &MemoryPoolMXBeanForward.getType_MethodID_20, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getType", methodSig: "()Ljava/lang/management/MemoryType;", methodCache: &MemoryPoolMXBeanForward.getType_MethodID_25, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MemoryType( javaObject: __return ) : nil
     }
@@ -113,89 +180,26 @@ open class MemoryPoolMXBeanForward: PlatformManagedObjectForward, MemoryPoolMXBe
 
     /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryPoolMXBean.getUsage()
 
-    private static var getUsage_MethodID_21: jmethodID?
+    private static var getUsage_MethodID_26: jmethodID?
 
     open func getUsage() -> MemoryUsage! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryPoolMXBeanForward.getUsage_MethodID_21, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryPoolMXBeanForward.getUsage_MethodID_26, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MemoryUsage( javaObject: __return ) : nil
-    }
-
-
-    /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryPoolMXBean.getPeakUsage()
-
-    private static var getPeakUsage_MethodID_22: jmethodID?
-
-    open func getPeakUsage() -> MemoryUsage! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getPeakUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryPoolMXBeanForward.getPeakUsage_MethodID_22, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? MemoryUsage( javaObject: __return ) : nil
-    }
-
-
-    /// public abstract void java.lang.management.MemoryPoolMXBean.resetPeakUsage()
-
-    private static var resetPeakUsage_MethodID_23: jmethodID?
-
-    open func resetPeakUsage() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "resetPeakUsage", methodSig: "()V", methodCache: &MemoryPoolMXBeanForward.resetPeakUsage_MethodID_23, args: &__args, locals: &__locals )
-    }
-
-
-    /// public abstract java.lang.String[] java.lang.management.MemoryPoolMXBean.getMemoryManagerNames()
-
-    private static var getMemoryManagerNames_MethodID_24: jmethodID?
-
-    open func getMemoryManagerNames() -> [String]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getMemoryManagerNames", methodSig: "()[Ljava/lang/String;", methodCache: &MemoryPoolMXBeanForward.getMemoryManagerNames_MethodID_24, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [String](), from: __return )
     }
 
 
     /// public abstract long java.lang.management.MemoryPoolMXBean.getUsageThreshold()
 
-    private static var getUsageThreshold_MethodID_25: jmethodID?
+    private static var getUsageThreshold_MethodID_27: jmethodID?
 
     open func getUsageThreshold() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getUsageThreshold", methodSig: "()J", methodCache: &MemoryPoolMXBeanForward.getUsageThreshold_MethodID_25, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
-    }
-
-
-    /// public abstract void java.lang.management.MemoryPoolMXBean.setUsageThreshold(long)
-
-    private static var setUsageThreshold_MethodID_26: jmethodID?
-
-    open func setUsageThreshold( threshold: Int64 ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: threshold, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setUsageThreshold", methodSig: "(J)V", methodCache: &MemoryPoolMXBeanForward.setUsageThreshold_MethodID_26, args: &__args, locals: &__locals )
-    }
-
-    open func setUsageThreshold( _ _threshold: Int64 ) {
-        setUsageThreshold( threshold: _threshold )
-    }
-
-    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isUsageThresholdExceeded()
-
-    private static var isUsageThresholdExceeded_MethodID_27: jmethodID?
-
-    open func isUsageThresholdExceeded() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isUsageThresholdExceeded", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isUsageThresholdExceeded_MethodID_27, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getUsageThreshold", methodSig: "()J", methodCache: &MemoryPoolMXBeanForward.getUsageThreshold_MethodID_27, args: &__args, locals: &__locals )
+        return __return
     }
 
 
@@ -204,119 +208,119 @@ open class MemoryPoolMXBeanForward: PlatformManagedObjectForward, MemoryPoolMXBe
     private static var getUsageThresholdCount_MethodID_28: jmethodID?
 
     open func getUsageThresholdCount() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getUsageThresholdCount", methodSig: "()J", methodCache: &MemoryPoolMXBeanForward.getUsageThresholdCount_MethodID_28, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        return __return
+    }
+
+
+    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isCollectionUsageThresholdExceeded()
+
+    private static var isCollectionUsageThresholdExceeded_MethodID_29: jmethodID?
+
+    open func isCollectionUsageThresholdExceeded() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCollectionUsageThresholdExceeded", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isCollectionUsageThresholdExceeded_MethodID_29, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isCollectionUsageThresholdSupported()
+
+    private static var isCollectionUsageThresholdSupported_MethodID_30: jmethodID?
+
+    open func isCollectionUsageThresholdSupported() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCollectionUsageThresholdSupported", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isCollectionUsageThresholdSupported_MethodID_30, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isUsageThresholdExceeded()
+
+    private static var isUsageThresholdExceeded_MethodID_31: jmethodID?
+
+    open func isUsageThresholdExceeded() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isUsageThresholdExceeded", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isUsageThresholdExceeded_MethodID_31, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
     /// public abstract boolean java.lang.management.MemoryPoolMXBean.isUsageThresholdSupported()
 
-    private static var isUsageThresholdSupported_MethodID_29: jmethodID?
+    private static var isUsageThresholdSupported_MethodID_32: jmethodID?
 
     open func isUsageThresholdSupported() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isUsageThresholdSupported", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isUsageThresholdSupported_MethodID_29, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isUsageThresholdSupported", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isUsageThresholdSupported_MethodID_32, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public abstract long java.lang.management.MemoryPoolMXBean.getCollectionUsageThreshold()
+    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isValid()
 
-    private static var getCollectionUsageThreshold_MethodID_30: jmethodID?
+    private static var isValid_MethodID_33: jmethodID?
 
-    open func getCollectionUsageThreshold() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func isValid() -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getCollectionUsageThreshold", methodSig: "()J", methodCache: &MemoryPoolMXBeanForward.getCollectionUsageThreshold_MethodID_30, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isValid", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isValid_MethodID_33, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract void java.lang.management.MemoryPoolMXBean.resetPeakUsage()
+
+    private static var resetPeakUsage_MethodID_34: jmethodID?
+
+    open func resetPeakUsage() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "resetPeakUsage", methodSig: "()V", methodCache: &MemoryPoolMXBeanForward.resetPeakUsage_MethodID_34, args: &__args, locals: &__locals )
     }
 
 
     /// public abstract void java.lang.management.MemoryPoolMXBean.setCollectionUsageThreshold(long)
 
-    private static var setCollectionUsageThreshold_MethodID_31: jmethodID?
+    private static var setCollectionUsageThreshold_MethodID_35: jmethodID?
 
     open func setCollectionUsageThreshold( threshold: Int64 ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: threshold, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setCollectionUsageThreshold", methodSig: "(J)V", methodCache: &MemoryPoolMXBeanForward.setCollectionUsageThreshold_MethodID_31, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( j: threshold )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setCollectionUsageThreshold", methodSig: "(J)V", methodCache: &MemoryPoolMXBeanForward.setCollectionUsageThreshold_MethodID_35, args: &__args, locals: &__locals )
     }
 
     open func setCollectionUsageThreshold( _ _threshold: Int64 ) {
         setCollectionUsageThreshold( threshold: _threshold )
     }
 
-    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isCollectionUsageThresholdExceeded()
+    /// public abstract void java.lang.management.MemoryPoolMXBean.setUsageThreshold(long)
 
-    private static var isCollectionUsageThresholdExceeded_MethodID_32: jmethodID?
+    private static var setUsageThreshold_MethodID_36: jmethodID?
 
-    open func isCollectionUsageThresholdExceeded() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func setUsageThreshold( threshold: Int64 ) {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCollectionUsageThresholdExceeded", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isCollectionUsageThresholdExceeded_MethodID_32, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( j: threshold )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setUsageThreshold", methodSig: "(J)V", methodCache: &MemoryPoolMXBeanForward.setUsageThreshold_MethodID_36, args: &__args, locals: &__locals )
     }
 
-
-    /// public abstract long java.lang.management.MemoryPoolMXBean.getCollectionUsageThresholdCount()
-
-    private static var getCollectionUsageThresholdCount_MethodID_33: jmethodID?
-
-    open func getCollectionUsageThresholdCount() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getCollectionUsageThresholdCount", methodSig: "()J", methodCache: &MemoryPoolMXBeanForward.getCollectionUsageThresholdCount_MethodID_33, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+    open func setUsageThreshold( _ _threshold: Int64 ) {
+        setUsageThreshold( threshold: _threshold )
     }
-
-
-    /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryPoolMXBean.getCollectionUsage()
-
-    private static var getCollectionUsage_MethodID_34: jmethodID?
-
-    open func getCollectionUsage() -> MemoryUsage! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCollectionUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryPoolMXBeanForward.getCollectionUsage_MethodID_34, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? MemoryUsage( javaObject: __return ) : nil
-    }
-
-
-    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isCollectionUsageThresholdSupported()
-
-    private static var isCollectionUsageThresholdSupported_MethodID_35: jmethodID?
-
-    open func isCollectionUsageThresholdSupported() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCollectionUsageThresholdSupported", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isCollectionUsageThresholdSupported_MethodID_35, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.lang.management.MemoryPoolMXBean.isValid()
-
-    private static var isValid_MethodID_36: jmethodID?
-
-    open func isValid() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isValid", methodSig: "()Z", methodCache: &MemoryPoolMXBeanForward.isValid_MethodID_36, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
     /// In declared protocol but not defined.. ///
 
     /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
-}
+    // Skipping method: false false true false false 
 
+}
 

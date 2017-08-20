@@ -16,4 +16,3 @@ open class FunctionalInterfaceForward: AnnotationForward, FunctionalInterface {
 
 }
 
-

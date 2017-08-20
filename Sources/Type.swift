@@ -23,13 +23,13 @@ open class TypeForward: JNIObjectForward, Type {
     private static var getTypeName_MethodID_2: jmethodID?
 
     open func getTypeName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTypeName", methodSig: "()Ljava/lang/String;", methodCache: &TypeForward.getTypeName_MethodID_2, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
 }
-
 

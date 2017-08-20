@@ -74,7 +74,9 @@ extension JNIType {
                                                args: &args, locals: locals ) )
     }
 
-    public static func toSwiftFloat( from: jobject? ) -> Float {
+    public static func toSwiftFloat( from: jobject?, consume: Bool = true ) -> Float {
+        guard let from = from else { return 0.0 }
+        defer { if consume { JNI.DeleteLocalRef( from ) } }
         var args: [jvalue] = [jvalue()]
         var locals = [jobject]()
         var floatValueMethodID: jmethodID?

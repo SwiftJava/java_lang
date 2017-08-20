@@ -18,40 +18,25 @@ open class MutableCallSite: CallSite {
 
     /// private static final java.util.concurrent.atomic.AtomicInteger java.lang.invoke.MutableCallSite.STORE_BARRIER
 
-    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.target
-
     /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.GET_TARGET
-
-    /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.THROW_UCS
 
     /// private static final long java.lang.invoke.CallSite.TARGET_OFFSET
 
-    /// public java.lang.invoke.MutableCallSite(java.lang.invoke.MethodType)
+    /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.THROW_UCS
 
-    private static var new_MethodID_1: jmethodID?
+    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.target
 
-    public convenience init( type: MethodType? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/invoke/MutableCallSite", classCache: &MutableCallSite.MutableCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodType;)V", methodCache: &MutableCallSite.new_MethodID_1, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _type: MethodType? ) {
-        self.init( type: _type )
-    }
+    // Skipping field: true false false false false false 
 
     /// public java.lang.invoke.MutableCallSite(java.lang.invoke.MethodHandle)
 
-    private static var new_MethodID_2: jmethodID?
+    private static var new_MethodID_1: jmethodID?
 
     public convenience init( target: MethodHandle? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: target, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/invoke/MutableCallSite", classCache: &MutableCallSite.MutableCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &MutableCallSite.new_MethodID_2, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/invoke/MutableCallSite", classCache: &MutableCallSite.MutableCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &MutableCallSite.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -60,38 +45,59 @@ open class MutableCallSite: CallSite {
         self.init( target: _target )
     }
 
-    /// public final java.lang.invoke.MethodHandle java.lang.invoke.MutableCallSite.dynamicInvoker()
+    /// public java.lang.invoke.MutableCallSite(java.lang.invoke.MethodType)
 
-    /// public final java.lang.invoke.MethodHandle java.lang.invoke.MutableCallSite.getTarget()
+    private static var new_MethodID_2: jmethodID?
 
-    /// public void java.lang.invoke.MutableCallSite.setTarget(java.lang.invoke.MethodHandle)
-
-    private static var setTarget_MethodID_3: jmethodID?
-
-    open func setTarget( newTarget: MethodHandle? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init( type: MethodType? ) {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: newTarget, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTarget", methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &MutableCallSite.setTarget_MethodID_3, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: type, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/invoke/MutableCallSite", classCache: &MutableCallSite.MutableCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodType;)V", methodCache: &MutableCallSite.new_MethodID_2, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
     }
 
-    override open func setTarget( _ _newTarget: MethodHandle? ) {
-        setTarget( newTarget: _newTarget )
+    public convenience init( _ _type: MethodType? ) {
+        self.init( type: _type )
     }
 
     /// public static void java.lang.invoke.MutableCallSite.syncAll(java.lang.invoke.MutableCallSite[])
 
-    private static var syncAll_MethodID_4: jmethodID?
+    private static var syncAll_MethodID_3: jmethodID?
 
     open class func syncAll( sites: [MutableCallSite]? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: sites, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/lang/invoke/MutableCallSite", classCache: &MutableCallSiteJNIClass, methodName: "syncAll", methodSig: "([Ljava/lang/invoke/MutableCallSite;)V", methodCache: &syncAll_MethodID_4, args: &__args, locals: &__locals )
+        JNIMethod.CallStaticVoidMethod( className: "java/lang/invoke/MutableCallSite", classCache: &MutableCallSiteJNIClass, methodName: "syncAll", methodSig: "([Ljava/lang/invoke/MutableCallSite;)V", methodCache: &syncAll_MethodID_3, args: &__args, locals: &__locals )
     }
 
     open class func syncAll( _ _sites: [MutableCallSite]? ) {
         syncAll( sites: _sites )
+    }
+
+    /// public final java.lang.invoke.MethodHandle java.lang.invoke.MutableCallSite.dynamicInvoker()
+
+    // Skipping method: false true false false false 
+
+    /// public final java.lang.invoke.MethodHandle java.lang.invoke.MutableCallSite.getTarget()
+
+    // Skipping method: false true false false false 
+
+    /// public void java.lang.invoke.MutableCallSite.setTarget(java.lang.invoke.MethodHandle)
+
+    private static var setTarget_MethodID_4: jmethodID?
+
+    open func setTarget( newTarget: MethodHandle? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: newTarget, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTarget", methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &MutableCallSite.setTarget_MethodID_4, args: &__args, locals: &__locals )
+    }
+
+    override open func setTarget( _ _newTarget: MethodHandle? ) {
+        setTarget( newTarget: _newTarget )
     }
 
 }

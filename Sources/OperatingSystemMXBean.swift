@@ -7,25 +7,25 @@ import java_swift
 
 public protocol OperatingSystemMXBean: PlatformManagedObject {
 
-    /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getName()
-
-    func getName() -> String!
-
     /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getArch()
 
     func getArch() -> String!
-
-    /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getVersion()
-
-    func getVersion() -> String!
 
     /// public abstract int java.lang.management.OperatingSystemMXBean.getAvailableProcessors()
 
     func getAvailableProcessors() -> Int
 
+    /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getName()
+
+    func getName() -> String!
+
     /// public abstract double java.lang.management.OperatingSystemMXBean.getSystemLoadAverage()
 
     func getSystemLoadAverage() -> Double
+
+    /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getVersion()
+
+    func getVersion() -> String!
 
 }
 
@@ -34,72 +34,78 @@ open class OperatingSystemMXBeanForward: PlatformManagedObjectForward, Operating
 
     private static var OperatingSystemMXBeanJNIClass: jclass?
 
-    /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getName()
-
-    private static var getName_MethodID_6: jmethodID?
-
-    open func getName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &OperatingSystemMXBeanForward.getName_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
     /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getArch()
 
-    private static var getArch_MethodID_7: jmethodID?
+    private static var getArch_MethodID_6: jmethodID?
 
     open func getArch() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getArch", methodSig: "()Ljava/lang/String;", methodCache: &OperatingSystemMXBeanForward.getArch_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getVersion()
-
-    private static var getVersion_MethodID_8: jmethodID?
-
-    open func getVersion() -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVersion", methodSig: "()Ljava/lang/String;", methodCache: &OperatingSystemMXBeanForward.getVersion_MethodID_8, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getArch", methodSig: "()Ljava/lang/String;", methodCache: &OperatingSystemMXBeanForward.getArch_MethodID_6, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
     /// public abstract int java.lang.management.OperatingSystemMXBean.getAvailableProcessors()
 
-    private static var getAvailableProcessors_MethodID_9: jmethodID?
+    private static var getAvailableProcessors_MethodID_7: jmethodID?
 
     open func getAvailableProcessors() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getAvailableProcessors", methodSig: "()I", methodCache: &OperatingSystemMXBeanForward.getAvailableProcessors_MethodID_9, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getAvailableProcessors", methodSig: "()I", methodCache: &OperatingSystemMXBeanForward.getAvailableProcessors_MethodID_7, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
 
-    /// public abstract double java.lang.management.OperatingSystemMXBean.getSystemLoadAverage()
+    /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getName()
 
-    private static var getSystemLoadAverage_MethodID_10: jmethodID?
+    private static var getName_MethodID_8: jmethodID?
 
-    open func getSystemLoadAverage() -> Double {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getName() -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallDoubleMethod( object: javaObject, methodName: "getSystemLoadAverage", methodSig: "()D", methodCache: &OperatingSystemMXBeanForward.getSystemLoadAverage_MethodID_10, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Double(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &OperatingSystemMXBeanForward.getName_MethodID_8, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
     /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
+
+    // Skipping method: false false true false false 
+
+    /// public abstract double java.lang.management.OperatingSystemMXBean.getSystemLoadAverage()
+
+    private static var getSystemLoadAverage_MethodID_9: jmethodID?
+
+    open func getSystemLoadAverage() -> Double {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallDoubleMethod( object: javaObject, methodName: "getSystemLoadAverage", methodSig: "()D", methodCache: &OperatingSystemMXBeanForward.getSystemLoadAverage_MethodID_9, args: &__args, locals: &__locals )
+        return __return
+    }
+
+
+    /// public abstract java.lang.String java.lang.management.OperatingSystemMXBean.getVersion()
+
+    private static var getVersion_MethodID_10: jmethodID?
+
+    open func getVersion() -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVersion", methodSig: "()Ljava/lang/String;", methodCache: &OperatingSystemMXBeanForward.getVersion_MethodID_10, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
 
     /// In declared protocol but not defined.. ///
 
     /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
-}
+    // Skipping method: false false true false false 
 
+}
 

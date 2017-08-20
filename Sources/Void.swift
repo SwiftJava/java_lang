@@ -23,6 +23,7 @@ open class Void: java_swift.JavaObject {
     open static var TYPE: java_swift.JavaClass! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/Class;", fieldCache: &TYPE_FieldID, className: "java/lang/Void", classCache: &VoidJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? java_swift.JavaClass( javaObject: __value ) : nil
         }
     }

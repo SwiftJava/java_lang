@@ -7,13 +7,13 @@ import java_swift
 
 public protocol WildcardType: Type {
 
-    /// public abstract java.lang.reflect.Type[] java.lang.reflect.WildcardType.getUpperBounds()
-
-    func getUpperBounds() -> [Type]!
-
     /// public abstract java.lang.reflect.Type[] java.lang.reflect.WildcardType.getLowerBounds()
 
     func getLowerBounds() -> [Type]!
+
+    /// public abstract java.lang.reflect.Type[] java.lang.reflect.WildcardType.getUpperBounds()
+
+    func getUpperBounds() -> [Type]!
 
 }
 
@@ -22,42 +22,42 @@ open class WildcardTypeForward: TypeForward, WildcardType {
 
     private static var WildcardTypeJNIClass: jclass?
 
-    /// public abstract java.lang.reflect.Type[] java.lang.reflect.WildcardType.getUpperBounds()
-
-    private static var getUpperBounds_MethodID_3: jmethodID?
-
-    open func getUpperBounds() -> [Type]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUpperBounds", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &WildcardTypeForward.getUpperBounds_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [TypeForward](), from: __return )
-    }
-
-
     /// public abstract java.lang.reflect.Type[] java.lang.reflect.WildcardType.getLowerBounds()
 
-    private static var getLowerBounds_MethodID_4: jmethodID?
+    private static var getLowerBounds_MethodID_3: jmethodID?
 
     open func getLowerBounds() -> [Type]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getLowerBounds", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &WildcardTypeForward.getLowerBounds_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [TypeForward](), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getLowerBounds", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &WildcardTypeForward.getLowerBounds_MethodID_3, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [TypeForward].self, from: __return )
     }
 
 
     /// public default java.lang.String java.lang.reflect.Type.getTypeName()
 
-    private static var getTypeName_MethodID_5: jmethodID?
+    private static var getTypeName_MethodID_4: jmethodID?
 
     override open func getTypeName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTypeName", methodSig: "()Ljava/lang/String;", methodCache: &WildcardTypeForward.getTypeName_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTypeName", methodSig: "()Ljava/lang/String;", methodCache: &WildcardTypeForward.getTypeName_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.lang.reflect.Type[] java.lang.reflect.WildcardType.getUpperBounds()
+
+    private static var getUpperBounds_MethodID_5: jmethodID?
+
+    open func getUpperBounds() -> [Type]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUpperBounds", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &WildcardTypeForward.getUpperBounds_MethodID_5, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [TypeForward].self, from: __return )
     }
 
 
 }
-
 

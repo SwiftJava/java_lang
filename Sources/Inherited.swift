@@ -16,4 +16,3 @@ open class InheritedForward: AnnotationForward, Inherited {
 
 }
 
-

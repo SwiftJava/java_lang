@@ -11,10 +11,6 @@ public protocol MemoryMXBean: PlatformManagedObject {
 
     func gc()
 
-    /// public abstract int java.lang.management.MemoryMXBean.getObjectPendingFinalizationCount()
-
-    func getObjectPendingFinalizationCount() -> Int
-
     /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryMXBean.getHeapMemoryUsage()
 
     func getHeapMemoryUsage() -> MemoryUsage!
@@ -22,6 +18,10 @@ public protocol MemoryMXBean: PlatformManagedObject {
     /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryMXBean.getNonHeapMemoryUsage()
 
     func getNonHeapMemoryUsage() -> MemoryUsage!
+
+    /// public abstract int java.lang.management.MemoryMXBean.getObjectPendingFinalizationCount()
+
+    func getObjectPendingFinalizationCount() -> Int
 
     /// public abstract boolean java.lang.management.MemoryMXBean.isVerbose()
 
@@ -43,32 +43,20 @@ open class MemoryMXBeanForward: PlatformManagedObjectForward, MemoryMXBean {
     private static var gc_MethodID_7: jmethodID?
 
     open func gc() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "gc", methodSig: "()V", methodCache: &MemoryMXBeanForward.gc_MethodID_7, args: &__args, locals: &__locals )
-    }
-
-
-    /// public abstract int java.lang.management.MemoryMXBean.getObjectPendingFinalizationCount()
-
-    private static var getObjectPendingFinalizationCount_MethodID_8: jmethodID?
-
-    open func getObjectPendingFinalizationCount() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getObjectPendingFinalizationCount", methodSig: "()I", methodCache: &MemoryMXBeanForward.getObjectPendingFinalizationCount_MethodID_8, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
     }
 
 
     /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryMXBean.getHeapMemoryUsage()
 
-    private static var getHeapMemoryUsage_MethodID_9: jmethodID?
+    private static var getHeapMemoryUsage_MethodID_8: jmethodID?
 
     open func getHeapMemoryUsage() -> MemoryUsage! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getHeapMemoryUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryMXBeanForward.getHeapMemoryUsage_MethodID_9, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getHeapMemoryUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryMXBeanForward.getHeapMemoryUsage_MethodID_8, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MemoryUsage( javaObject: __return ) : nil
     }
@@ -76,14 +64,30 @@ open class MemoryMXBeanForward: PlatformManagedObjectForward, MemoryMXBean {
 
     /// public abstract java.lang.management.MemoryUsage java.lang.management.MemoryMXBean.getNonHeapMemoryUsage()
 
-    private static var getNonHeapMemoryUsage_MethodID_10: jmethodID?
+    private static var getNonHeapMemoryUsage_MethodID_9: jmethodID?
 
     open func getNonHeapMemoryUsage() -> MemoryUsage! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNonHeapMemoryUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryMXBeanForward.getNonHeapMemoryUsage_MethodID_10, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNonHeapMemoryUsage", methodSig: "()Ljava/lang/management/MemoryUsage;", methodCache: &MemoryMXBeanForward.getNonHeapMemoryUsage_MethodID_9, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MemoryUsage( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
+
+    // Skipping method: false false true false false 
+
+    /// public abstract int java.lang.management.MemoryMXBean.getObjectPendingFinalizationCount()
+
+    private static var getObjectPendingFinalizationCount_MethodID_10: jmethodID?
+
+    open func getObjectPendingFinalizationCount() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getObjectPendingFinalizationCount", methodSig: "()I", methodCache: &MemoryMXBeanForward.getObjectPendingFinalizationCount_MethodID_10, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
 
@@ -92,10 +96,10 @@ open class MemoryMXBeanForward: PlatformManagedObjectForward, MemoryMXBean {
     private static var isVerbose_MethodID_11: jmethodID?
 
     open func isVerbose() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isVerbose", methodSig: "()Z", methodCache: &MemoryMXBeanForward.isVerbose_MethodID_11, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
@@ -104,9 +108,9 @@ open class MemoryMXBeanForward: PlatformManagedObjectForward, MemoryMXBean {
     private static var setVerbose_MethodID_12: jmethodID?
 
     open func setVerbose( value: Bool ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( z: jboolean(value ? JNI_TRUE : JNI_FALSE) )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setVerbose", methodSig: "(Z)V", methodCache: &MemoryMXBeanForward.setVerbose_MethodID_12, args: &__args, locals: &__locals )
     }
 
@@ -114,12 +118,11 @@ open class MemoryMXBeanForward: PlatformManagedObjectForward, MemoryMXBean {
         setVerbose( value: _value )
     }
 
-    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
-
     /// In declared protocol but not defined.. ///
 
     /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
-}
+    // Skipping method: false false true false false 
 
+}
 

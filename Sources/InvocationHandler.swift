@@ -23,14 +23,15 @@ open class InvocationHandlerForward: JNIObjectForward, InvocationHandler {
     private static var invoke_MethodID_2: jmethodID?
 
     open func invoke( proxy: java_swift.JavaObject?, method: Method?, args: [JavaObject]? ) throws /* java.lang.Throwable */ -> java_swift.JavaObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         __args[0] = JNIType.toJava( value: proxy, locals: &__locals )
         __args[1] = JNIType.toJava( value: method, locals: &__locals )
         __args[2] = JNIType.toJava( value: args, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "invoke", methodSig: "(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;", methodCache: &InvocationHandlerForward.invoke_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw java_swift.Throwable( javaObject: throwable )
         }
         return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
@@ -42,16 +43,13 @@ open class InvocationHandlerForward: JNIObjectForward, InvocationHandler {
 
 }
 
-
 private typealias InvocationHandler_invoke_0_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong, _: jobject?, _: jobject?, _: jobject? ) -> jobject?
 
 private func InvocationHandler_invoke_0( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong, _ proxy: jobject?, _ method: jobject?, _ args: jobject? ) -> jobject? {
     do {
-    JNI.inNative = true;
-    let __return = try InvocationHandlerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).invoke( proxy: proxy != nil ? java_swift.JavaObject( javaObject: proxy ) : nil, method: method != nil ? Method( javaObject: method ) : nil, args: JNIType.toSwift( type: [JavaObject](), from: args ) )
-    JNI.inNative = false;
-    var locals = [jobject]()
-    return JNI.check( JNIType.toJava( value: __return, locals: &locals ).l, &locals, removeLast: true )
+        let __return = try InvocationHandlerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).invoke( proxy: proxy != nil ? java_swift.JavaObject( javaObject: proxy ) : nil, method: method != nil ? Method( javaObject: method ) : nil, args: JNIType.toSwift( type: [JavaObject].self, from: args, consume: false ) )
+        var __locals = [jobject]()
+        return JNI.check( JNIType.toJava( value: __return, locals: &__locals ).l, &__locals, removeLast: true )
     }
     catch let exception as Throwable {
         _ = exception.withJavaObject { JNI.api.Throw( JNI.env, $0 ) }
@@ -108,8 +106,5 @@ open class InvocationHandlerBase: InvocationHandler {
         return nil
     }
 
-    open func invoke( _ _proxy: java_swift.JavaObject?, _ _method: Method?, _ _args: [JavaObject]? ) throws /* java.lang.Throwable */ -> java_swift.JavaObject! /**/ {
-        return try invoke( proxy: _proxy, method: _method, args: _args )
-    }
 
 }

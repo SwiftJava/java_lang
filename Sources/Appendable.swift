@@ -31,13 +31,14 @@ open class AppendableForward: JNIObjectForward, Appendable {
     private static var append_MethodID_4: jmethodID?
 
     open func append( csq: CharSequence? ) throws /* java.io.IOException */ -> Appendable! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: csq, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "append", methodSig: "(Ljava/lang/CharSequence;)Ljava/lang/Appendable;", methodCache: &AppendableForward.append_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
-            throw /* java.io.IOException */ UnclassedObject( javaObject: throwable )
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw /* class java.io.IOException */ UnavailableObject( javaObject: throwable )
         }
         return __return != nil ? AppendableForward( javaObject: __return ) : nil
     }
@@ -51,15 +52,16 @@ open class AppendableForward: JNIObjectForward, Appendable {
     private static var append_MethodID_5: jmethodID?
 
     open func append( csq: CharSequence?, start: Int, end: Int ) throws /* java.io.IOException */ -> Appendable! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         __args[0] = JNIType.toJava( value: csq, locals: &__locals )
-        __args[1] = JNIType.toJava( value: start, locals: &__locals )
-        __args[2] = JNIType.toJava( value: end, locals: &__locals )
+        __args[1] = jvalue( i: jint(start) )
+        __args[2] = jvalue( i: jint(end) )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "append", methodSig: "(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;", methodCache: &AppendableForward.append_MethodID_5, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
-            throw /* java.io.IOException */ UnclassedObject( javaObject: throwable )
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw /* class java.io.IOException */ UnavailableObject( javaObject: throwable )
         }
         return __return != nil ? AppendableForward( javaObject: __return ) : nil
     }
@@ -73,13 +75,14 @@ open class AppendableForward: JNIObjectForward, Appendable {
     private static var append_MethodID_6: jmethodID?
 
     open func append( c: UInt16 ) throws /* java.io.IOException */ -> Appendable! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: c, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( c: c )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "append", methodSig: "(C)Ljava/lang/Appendable;", methodCache: &AppendableForward.append_MethodID_6, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
-            throw /* java.io.IOException */ UnclassedObject( javaObject: throwable )
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw /* class java.io.IOException */ UnavailableObject( javaObject: throwable )
         }
         return __return != nil ? AppendableForward( javaObject: __return ) : nil
     }
@@ -89,5 +92,4 @@ open class AppendableForward: JNIObjectForward, Appendable {
     }
 
 }
-
 

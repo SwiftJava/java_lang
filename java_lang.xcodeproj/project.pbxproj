@@ -56,7 +56,6 @@
 		CED753E21F2E7A6F007C97C7 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753241F2E7A6F007C97C7 /* Deprecated.swift */; };
 		CED753E31F2E7A6F007C97C7 /* Documented.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753251F2E7A6F007C97C7 /* Documented.swift */; };
 		CED753E41F2E7A6F007C97C7 /* ElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753261F2E7A6F007C97C7 /* ElementType.swift */; };
-		CED753E51F2E7A6F007C97C7 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753271F2E7A6F007C97C7 /* Enum.swift */; };
 		CED753E61F2E7A6F007C97C7 /* EnumConstantNotPresentException.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753281F2E7A6F007C97C7 /* EnumConstantNotPresentException.swift */; };
 		CED753E81F2E7A6F007C97C7 /* ExceptionInInitializerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7532A1F2E7A6F007C97C7 /* ExceptionInInitializerError.swift */; };
 		CED753E91F2E7A6F007C97C7 /* Executable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7532B1F2E7A6F007C97C7 /* Executable.swift */; };
@@ -252,7 +251,6 @@
 		CED753241F2E7A6F007C97C7 /* Deprecated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/Deprecated.swift; sourceTree = "<group>"; };
 		CED753251F2E7A6F007C97C7 /* Documented.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Documented.swift; path = Sources/Documented.swift; sourceTree = "<group>"; };
 		CED753261F2E7A6F007C97C7 /* ElementType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElementType.swift; path = Sources/ElementType.swift; sourceTree = "<group>"; };
-		CED753271F2E7A6F007C97C7 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = Sources/Enum.swift; sourceTree = "<group>"; };
 		CED753281F2E7A6F007C97C7 /* EnumConstantNotPresentException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnumConstantNotPresentException.swift; path = Sources/EnumConstantNotPresentException.swift; sourceTree = "<group>"; };
 		CED7532A1F2E7A6F007C97C7 /* ExceptionInInitializerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionInInitializerError.swift; path = Sources/ExceptionInInitializerError.swift; sourceTree = "<group>"; };
 		CED7532B1F2E7A6F007C97C7 /* Executable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Executable.swift; path = Sources/Executable.swift; sourceTree = "<group>"; };
@@ -477,7 +475,6 @@
 				CED753241F2E7A6F007C97C7 /* Deprecated.swift */,
 				CED753251F2E7A6F007C97C7 /* Documented.swift */,
 				CED753261F2E7A6F007C97C7 /* ElementType.swift */,
-				CED753271F2E7A6F007C97C7 /* Enum.swift */,
 				CED753281F2E7A6F007C97C7 /* EnumConstantNotPresentException.swift */,
 				CED7532A1F2E7A6F007C97C7 /* ExceptionInInitializerError.swift */,
 				CED7532B1F2E7A6F007C97C7 /* Executable.swift */,
@@ -811,7 +808,6 @@
 				CED753E81F2E7A6F007C97C7 /* ExceptionInInitializerError.swift in Sources */,
 				CED753C01F2E7A6F007C97C7 /* AnnotationTypeMismatchException.swift in Sources */,
 				CED754101F2E7A6F007C97C7 /* Long.swift in Sources */,
-				CED753E51F2E7A6F007C97C7 /* Enum.swift in Sources */,
 				CED7544B1F2E7A6F007C97C7 /* RuntimePermission.swift in Sources */,
 				CED7542D1F2E7A6F007C97C7 /* NoSuchMethodException.swift in Sources */,
 				CED753F51F2E7A6F007C97C7 /* IllegalStateException.swift in Sources */,

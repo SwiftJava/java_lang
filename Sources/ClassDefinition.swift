@@ -25,8 +25,8 @@ open class ClassDefinition: java_swift.JavaObject {
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( theClass: java_swift.JavaClass?, theClassFile: [Int8]? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: theClass, locals: &__locals )
         __args[1] = JNIType.toJava( value: theClassFile, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/instrument/ClassDefinition", classCache: &ClassDefinition.ClassDefinitionJNIClass, methodSig: "(Ljava/lang/Class;[B)V", methodCache: &ClassDefinition.new_MethodID_1, args: &__args, locals: &__locals )
@@ -43,8 +43,8 @@ open class ClassDefinition: java_swift.JavaObject {
     private static var getDefinitionClass_MethodID_2: jmethodID?
 
     open func getDefinitionClass() -> java_swift.JavaClass! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDefinitionClass", methodSig: "()Ljava/lang/Class;", methodCache: &ClassDefinition.getDefinitionClass_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
@@ -56,10 +56,10 @@ open class ClassDefinition: java_swift.JavaObject {
     private static var getDefinitionClassFile_MethodID_3: jmethodID?
 
     open func getDefinitionClassFile() -> [Int8]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDefinitionClassFile", methodSig: "()[B", methodCache: &ClassDefinition.getDefinitionClassFile_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [Int8](), from: __return )
+        return JNIType.toSwift( type: [Int8].self, from: __return )
     }
 
 

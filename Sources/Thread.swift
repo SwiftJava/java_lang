@@ -16,49 +16,18 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
 
     private static var ThreadJNIClass: jclass?
 
-    /// private volatile char[] java.lang.Thread.name
+    /// private static final java.lang.StackTraceElement[] java.lang.Thread.EMPTY_STACK_TRACE
 
-    /// private int java.lang.Thread.priority
+    /// public static final int java.lang.Thread.MAX_PRIORITY
 
-    /// private java.lang.Thread java.lang.Thread.threadQ
+    private static var MAX_PRIORITY_FieldID: jfieldID?
 
-    /// private long java.lang.Thread.eetop
-
-    /// private boolean java.lang.Thread.single_step
-
-    /// private boolean java.lang.Thread.daemon
-
-    /// private boolean java.lang.Thread.stillborn
-
-    /// private java.lang.Runnable java.lang.Thread.target
-
-    /// private java.lang.ThreadGroup java.lang.Thread.group
-
-    /// private java.lang.ClassLoader java.lang.Thread.contextClassLoader
-
-    /// private java.security.AccessControlContext java.lang.Thread.inheritedAccessControlContext
-
-    /// private static int java.lang.Thread.threadInitNumber
-
-    /// java.lang.ThreadLocal$ThreadLocalMap java.lang.Thread.threadLocals
-
-    /// java.lang.ThreadLocal$ThreadLocalMap java.lang.Thread.inheritableThreadLocals
-
-    /// private long java.lang.Thread.stackSize
-
-    /// private long java.lang.Thread.nativeParkEventPointer
-
-    /// private long java.lang.Thread.tid
-
-    /// private static long java.lang.Thread.threadSeqNumber
-
-    /// private volatile int java.lang.Thread.threadStatus
-
-    /// volatile java.lang.Object java.lang.Thread.parkBlocker
-
-    /// private volatile sun.nio.ch.Interruptible java.lang.Thread.blocker
-
-    /// private final java.lang.Object java.lang.Thread.blockerLock
+    open static var MAX_PRIORITY: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "MAX_PRIORITY", fieldType: "I", fieldCache: &MAX_PRIORITY_FieldID, className: "java/lang/Thread", classCache: &ThreadJNIClass )
+            return Int(__value)
+        }
+    }
 
     /// public static final int java.lang.Thread.MIN_PRIORITY
 
@@ -67,7 +36,7 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
     open static var MIN_PRIORITY: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MIN_PRIORITY", fieldType: "I", fieldCache: &MIN_PRIORITY_FieldID, className: "java/lang/Thread", classCache: &ThreadJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
 
@@ -78,130 +47,99 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
     open static var NORM_PRIORITY: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "NORM_PRIORITY", fieldType: "I", fieldCache: &NORM_PRIORITY_FieldID, className: "java/lang/Thread", classCache: &ThreadJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
-
-    /// public static final int java.lang.Thread.MAX_PRIORITY
-
-    private static var MAX_PRIORITY_FieldID: jfieldID?
-
-    open static var MAX_PRIORITY: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "MAX_PRIORITY", fieldType: "I", fieldCache: &MAX_PRIORITY_FieldID, className: "java/lang/Thread", classCache: &ThreadJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// private static final java.lang.StackTraceElement[] java.lang.Thread.EMPTY_STACK_TRACE
 
     /// private static final java.lang.RuntimePermission java.lang.Thread.SUBCLASS_IMPLEMENTATION_PERMISSION
 
-    /// private volatile java.lang.Thread$UncaughtExceptionHandler java.lang.Thread.uncaughtExceptionHandler
-
     /// private static volatile java.lang.Thread$UncaughtExceptionHandler java.lang.Thread.defaultUncaughtExceptionHandler
 
-    /// long java.lang.Thread.threadLocalRandomSeed
+    /// private static int java.lang.Thread.threadInitNumber
+
+    /// private static long java.lang.Thread.threadSeqNumber
+
+    /// private volatile sun.nio.ch.Interruptible java.lang.Thread.blocker
+
+    /// private final java.lang.Object java.lang.Thread.blockerLock
+
+    /// private java.lang.ClassLoader java.lang.Thread.contextClassLoader
+
+    /// private boolean java.lang.Thread.daemon
+
+    /// private long java.lang.Thread.eetop
+
+    /// private java.lang.ThreadGroup java.lang.Thread.group
+
+    /// java.lang.ThreadLocal$ThreadLocalMap java.lang.Thread.inheritableThreadLocals
+
+    // Skipping field: true false false false false false 
+
+    /// private java.security.AccessControlContext java.lang.Thread.inheritedAccessControlContext
+
+    /// private volatile char[] java.lang.Thread.name
+
+    /// private long java.lang.Thread.nativeParkEventPointer
+
+    /// volatile java.lang.Object java.lang.Thread.parkBlocker
+
+    // Skipping field: true false false false false false 
+
+    /// private int java.lang.Thread.priority
+
+    /// private boolean java.lang.Thread.single_step
+
+    /// private long java.lang.Thread.stackSize
+
+    /// private boolean java.lang.Thread.stillborn
+
+    /// private java.lang.Runnable java.lang.Thread.target
 
     /// int java.lang.Thread.threadLocalRandomProbe
 
+    // Skipping field: true false false false false false 
+
     /// int java.lang.Thread.threadLocalRandomSecondarySeed
 
-    /// java.lang.Thread(java.lang.Runnable,java.security.AccessControlContext)
+    // Skipping field: true false false false false false 
 
-    /// public java.lang.Thread(java.lang.Runnable)
+    /// long java.lang.Thread.threadLocalRandomSeed
 
-    private static var new_MethodID_1: jmethodID?
+    // Skipping field: true false false false false false 
 
-    public convenience init( arg0: java_swift.Runnable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/Runnable;)V", methodCache: &Thread.new_MethodID_1, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
+    /// java.lang.ThreadLocal$ThreadLocalMap java.lang.Thread.threadLocals
 
-    public convenience init( _ _arg0: java_swift.Runnable? ) {
-        self.init( arg0: _arg0 )
-    }
+    // Skipping field: true false false false false false 
+
+    /// private java.lang.Thread java.lang.Thread.threadQ
+
+    /// private volatile int java.lang.Thread.threadStatus
+
+    /// private long java.lang.Thread.tid
+
+    /// private volatile java.lang.Thread$UncaughtExceptionHandler java.lang.Thread.uncaughtExceptionHandler
 
     /// public java.lang.Thread()
 
-    private static var new_MethodID_2: jmethodID?
+    private static var new_MethodID_1: jmethodID?
 
     public convenience init() {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "()V", methodCache: &Thread.new_MethodID_2, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "()V", methodCache: &Thread.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
-    }
-
-    /// public java.lang.Thread(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String)
-
-    private static var new_MethodID_3: jmethodID?
-
-    public convenience init( arg0: ThreadGroup?, arg1: java_swift.Runnable?, arg2: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_3, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _arg0: ThreadGroup?, _ _arg1: java_swift.Runnable?, _ _arg2: String? ) {
-        self.init( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
-    }
-
-    /// public java.lang.Thread(java.lang.Runnable,java.lang.String)
-
-    private static var new_MethodID_4: jmethodID?
-
-    public convenience init( arg0: java_swift.Runnable?, arg1: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/Runnable;Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_4, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _arg0: java_swift.Runnable?, _ _arg1: String? ) {
-        self.init( arg0: _arg0, arg1: _arg1 )
-    }
-
-    /// public java.lang.Thread(java.lang.ThreadGroup,java.lang.String)
-
-    private static var new_MethodID_5: jmethodID?
-
-    public convenience init( arg0: ThreadGroup?, arg1: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_5, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _arg0: ThreadGroup?, _ _arg1: String? ) {
-        self.init( arg0: _arg0, arg1: _arg1 )
     }
 
     /// public java.lang.Thread(java.lang.String)
 
-    private static var new_MethodID_6: jmethodID?
+    private static var new_MethodID_2: jmethodID?
 
     public convenience init( arg0: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_6, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -210,16 +148,34 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
         self.init( arg0: _arg0 )
     }
 
-    /// public java.lang.Thread(java.lang.ThreadGroup,java.lang.Runnable)
+    /// public java.lang.Thread(java.lang.ThreadGroup,java.lang.String)
 
-    private static var new_MethodID_7: jmethodID?
+    private static var new_MethodID_3: jmethodID?
 
-    public convenience init( arg0: ThreadGroup?, arg1: java_swift.Runnable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+    public convenience init( arg0: ThreadGroup?, arg1: String? ) {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;)V", methodCache: &Thread.new_MethodID_7, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_3, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _arg0: ThreadGroup?, _ _arg1: String? ) {
+        self.init( arg0: _arg0, arg1: _arg1 )
+    }
+
+    /// public java.lang.Thread(java.lang.ThreadGroup,java.lang.Runnable)
+
+    private static var new_MethodID_4: jmethodID?
+
+    public convenience init( arg0: ThreadGroup?, arg1: java_swift.Runnable? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;)V", methodCache: &Thread.new_MethodID_4, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -228,18 +184,37 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
         self.init( arg0: _arg0, arg1: _arg1 )
     }
 
-    /// public java.lang.Thread(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String,long)
+    /// public java.lang.Thread(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String)
 
-    private static var new_MethodID_8: jmethodID?
+    private static var new_MethodID_5: jmethodID?
 
-    public convenience init( arg0: ThreadGroup?, arg1: java_swift.Runnable?, arg2: String?, arg3: Int64 ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+    public convenience init( arg0: ThreadGroup?, arg1: java_swift.Runnable?, arg2: String? ) {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
-        __args[3] = JNIType.toJava( value: arg3, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;J)V", methodCache: &Thread.new_MethodID_8, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_5, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _arg0: ThreadGroup?, _ _arg1: java_swift.Runnable?, _ _arg2: String? ) {
+        self.init( arg0: _arg0, arg1: _arg1, arg2: _arg2 )
+    }
+
+    /// public java.lang.Thread(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String,long)
+
+    private static var new_MethodID_6: jmethodID?
+
+    public convenience init( arg0: ThreadGroup?, arg1: java_swift.Runnable?, arg2: String?, arg3: Int64 ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        __args[2] = JNIType.toJava( value: arg2, locals: &__locals )
+        __args[3] = jvalue( j: arg3 )
+        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;J)V", methodCache: &Thread.new_MethodID_6, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -248,266 +223,194 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
         self.init( arg0: _arg0, arg1: _arg1, arg2: _arg2, arg3: _arg3 )
     }
 
-    /// public void java.lang.Thread.run()
+    /// public java.lang.Thread(java.lang.Runnable)
 
-    private static var run_MethodID_9: jmethodID?
+    private static var new_MethodID_7: jmethodID?
 
-    open func run() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init( arg0: java_swift.Runnable? ) {
         var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "run", methodSig: "()V", methodCache: &Thread.run_MethodID_9, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/Runnable;)V", methodCache: &Thread.new_MethodID_7, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _arg0: java_swift.Runnable? ) {
+        self.init( arg0: _arg0 )
+    }
+
+    /// public java.lang.Thread(java.lang.Runnable,java.lang.String)
+
+    private static var new_MethodID_8: jmethodID?
+
+    public convenience init( arg0: java_swift.Runnable?, arg1: String? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/Thread", classCache: &Thread.ThreadJNIClass, methodSig: "(Ljava/lang/Runnable;Ljava/lang/String;)V", methodCache: &Thread.new_MethodID_8, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _arg0: java_swift.Runnable?, _ _arg1: String? ) {
+        self.init( arg0: _arg0, arg1: _arg1 )
+    }
+
+    /// java.lang.Thread(java.lang.Runnable,java.security.AccessControlContext)
+
+    // Skipping init: true false false 
+
+    /// public static int java.lang.Thread.activeCount()
+
+    private static var activeCount_MethodID_9: jmethodID?
+
+    open class func activeCount() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "activeCount", methodSig: "()I", methodCache: &activeCount_MethodID_9, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
 
-    /// private void java.lang.Thread.exit()
-
-    /// private void java.lang.Thread.dispatchUncaughtException(java.lang.Throwable)
-
-    /// public java.lang.String java.lang.Thread.toString()
-
-    /// protected java.lang.Object java.lang.Thread.clone() throws java.lang.CloneNotSupportedException
-
-    private static var clone_MethodID_10: jmethodID?
-
-    override open func clone() throws /* java.lang.CloneNotSupportedException */ -> java_swift.JavaObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "clone", methodSig: "()Ljava/lang/Object;", methodCache: &Thread.clone_MethodID_10, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw CloneNotSupportedException( javaObject: throwable )
-        }
-        return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
-    }
-
-
-    /// public boolean java.lang.Thread.isInterrupted()
-
-    private static var isInterrupted_MethodID_11: jmethodID?
-
-    open func isInterrupted() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isInterrupted", methodSig: "()Z", methodCache: &Thread.isInterrupted_MethodID_11, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// private native boolean java.lang.Thread.isInterrupted(boolean)
+    /// private static boolean java.lang.Thread.auditSubclass(java.lang.Class)
 
     /// public static native java.lang.Thread java.lang.Thread.currentThread()
 
-    private static var currentThread_MethodID_12: jmethodID?
+    private static var currentThread_MethodID_10: jmethodID?
 
     open class func currentThread() -> Thread! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "currentThread", methodSig: "()Ljava/lang/Thread;", methodCache: &currentThread_MethodID_12, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "currentThread", methodSig: "()Ljava/lang/Thread;", methodCache: &currentThread_MethodID_10, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? Thread( javaObject: __return ) : nil
     }
 
 
-    /// private static native void java.lang.Thread.registerNatives()
+    /// public static void java.lang.Thread.dumpStack()
 
-    /// public final java.lang.String java.lang.Thread.getName()
+    private static var dumpStack_MethodID_11: jmethodID?
 
-    private static var getName_MethodID_13: jmethodID?
-
-    open func getName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func dumpStack() {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &Thread.getName_MethodID_13, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "dumpStack", methodSig: "()V", methodCache: &dumpStack_MethodID_11, args: &__args, locals: &__locals )
     }
 
 
-    /// public synchronized void java.lang.Thread.start()
+    /// private static native java.lang.StackTraceElement[][] java.lang.Thread.dumpThreads(java.lang.Thread[])
 
-    private static var start_MethodID_14: jmethodID?
+    /// public static int java.lang.Thread.enumerate(java.lang.Thread[])
 
-    open func start() {
+    private static var enumerate_MethodID_12: jmethodID?
+
+    open class func enumerate( arg0: [Thread]? ) -> Int {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "start", methodSig: "()V", methodCache: &Thread.start_MethodID_14, args: &__args, locals: &__locals )
-    }
-
-
-    /// public final synchronized void java.lang.Thread.join(long,int) throws java.lang.InterruptedException
-
-    private static var join_MethodID_15: jmethodID?
-
-    open func join( arg0: Int64, arg1: Int ) throws /* java.lang.InterruptedException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "join", methodSig: "(JI)V", methodCache: &Thread.join_MethodID_15, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw InterruptedException( javaObject: throwable )
-        }
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "enumerate", methodSig: "([Ljava/lang/Thread;)I", methodCache: &enumerate_MethodID_12, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
-    open func join( _ _arg0: Int64, _ _arg1: Int ) throws /* java.lang.InterruptedException */ {
-        try join( arg0: _arg0, arg1: _arg1 )
+    open class func enumerate( _ _arg0: [Thread]? ) -> Int {
+        return enumerate( arg0: _arg0 )
     }
 
-    /// public final synchronized void java.lang.Thread.join(long) throws java.lang.InterruptedException
+    /// public static java.util.Map java.lang.Thread.getAllStackTraces()
 
-    private static var join_MethodID_16: jmethodID?
+    private static var getAllStackTraces_MethodID_13: jmethodID?
 
-    open func join( arg0: Int64 ) throws /* java.lang.InterruptedException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func getAllStackTraces() -> java_swift.JavaMap! {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "join", methodSig: "(J)V", methodCache: &Thread.join_MethodID_16, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw InterruptedException( javaObject: throwable )
-        }
-    }
-
-    open func join( _ _arg0: Int64 ) throws /* java.lang.InterruptedException */ {
-        try join( arg0: _arg0 )
-    }
-
-    /// public final void java.lang.Thread.join() throws java.lang.InterruptedException
-
-    private static var join_MethodID_17: jmethodID?
-
-    open func join() throws /* java.lang.InterruptedException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "join", methodSig: "()V", methodCache: &Thread.join_MethodID_17, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw InterruptedException( javaObject: throwable )
-        }
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "getAllStackTraces", methodSig: "()Ljava/util/Map;", methodCache: &getAllStackTraces_MethodID_13, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: java_swift.JavaMapForward.self, from: __return )
     }
 
 
-    /// private void java.lang.Thread.init(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String,long,java.security.AccessControlContext)
+    /// public static java.lang.Thread$UncaughtExceptionHandler java.lang.Thread.getDefaultUncaughtExceptionHandler()
 
-    /// private void java.lang.Thread.init(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String,long)
+    private static var getDefaultUncaughtExceptionHandler_MethodID_14: jmethodID?
 
-    /// public final java.lang.ThreadGroup java.lang.Thread.getThreadGroup()
-
-    private static var getThreadGroup_MethodID_18: jmethodID?
-
-    open func getThreadGroup() -> ThreadGroup! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func getDefaultUncaughtExceptionHandler() -> Thread_UncaughtExceptionHandler! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getThreadGroup", methodSig: "()Ljava/lang/ThreadGroup;", methodCache: &Thread.getThreadGroup_MethodID_18, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "getDefaultUncaughtExceptionHandler", methodSig: "()Ljava/lang/Thread$UncaughtExceptionHandler;", methodCache: &getDefaultUncaughtExceptionHandler_MethodID_14, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? ThreadGroup( javaObject: __return ) : nil
+        return __return != nil ? Thread_UncaughtExceptionHandlerForward( javaObject: __return ) : nil
     }
 
 
-    /// public java.lang.StackTraceElement[] java.lang.Thread.getStackTrace()
-
-    private static var getStackTrace_MethodID_19: jmethodID?
-
-    open func getStackTrace() -> [StackTraceElement]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getStackTrace", methodSig: "()[Ljava/lang/StackTraceElement;", methodCache: &Thread.getStackTrace_MethodID_19, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [StackTraceElement](), from: __return )
-    }
-
+    /// private static native java.lang.Thread[] java.lang.Thread.getThreads()
 
     /// public static native boolean java.lang.Thread.holdsLock(java.lang.Object)
 
-    private static var holdsLock_MethodID_20: jmethodID?
+    private static var holdsLock_MethodID_15: jmethodID?
 
     open class func holdsLock( arg0: java_swift.JavaObject? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "holdsLock", methodSig: "(Ljava/lang/Object;)Z", methodCache: &holdsLock_MethodID_20, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "holdsLock", methodSig: "(Ljava/lang/Object;)Z", methodCache: &holdsLock_MethodID_15, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
     open class func holdsLock( _ _arg0: java_swift.JavaObject? ) -> Bool {
         return holdsLock( arg0: _arg0 )
     }
 
-    /// public final void java.lang.Thread.checkAccess()
+    /// public static boolean java.lang.Thread.interrupted()
 
-    private static var checkAccess_MethodID_21: jmethodID?
+    private static var interrupted_MethodID_16: jmethodID?
 
-    open func checkAccess() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func interrupted() -> Bool {
         var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkAccess", methodSig: "()V", methodCache: &Thread.checkAccess_MethodID_21, args: &__args, locals: &__locals )
-    }
-
-
-    /// public static void java.lang.Thread.dumpStack()
-
-    private static var dumpStack_MethodID_22: jmethodID?
-
-    open class func dumpStack() {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "dumpStack", methodSig: "()V", methodCache: &dumpStack_MethodID_22, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "interrupted", methodSig: "()Z", methodCache: &interrupted_MethodID_16, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public static native void java.lang.Thread.yield()
-
-    private static var yield_MethodID_23: jmethodID?
-
-    open class func yield() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "yield", methodSig: "()V", methodCache: &yield_MethodID_23, args: &__args, locals: &__locals )
-    }
-
-
-    /// public final void java.lang.Thread.setPriority(int)
-
-    private static var setPriority_MethodID_24: jmethodID?
-
-    open func setPriority( arg0: Int ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setPriority", methodSig: "(I)V", methodCache: &Thread.setPriority_MethodID_24, args: &__args, locals: &__locals )
-    }
-
-    open func setPriority( _ _arg0: Int ) {
-        setPriority( arg0: _arg0 )
-    }
-
-    /// public final void java.lang.Thread.setDaemon(boolean)
-
-    private static var setDaemon_MethodID_25: jmethodID?
-
-    open func setDaemon( arg0: Bool ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setDaemon", methodSig: "(Z)V", methodCache: &Thread.setDaemon_MethodID_25, args: &__args, locals: &__locals )
-    }
-
-    open func setDaemon( _ _arg0: Bool ) {
-        setDaemon( arg0: _arg0 )
-    }
-
-    /// private static synchronized int java.lang.Thread.nextThreadNum()
+    /// private static boolean java.lang.Thread.isCCLOverridden(java.lang.Class)
 
     /// private static synchronized long java.lang.Thread.nextThreadID()
 
-    /// void java.lang.Thread.blockedOn(sun.nio.ch.Interruptible)
+    /// private static synchronized int java.lang.Thread.nextThreadNum()
+
+    /// static void java.lang.Thread.processQueue(java.lang.ref.ReferenceQueue,java.util.concurrent.ConcurrentMap)
+
+    // Skipping method: true false false false false 
+
+    /// private static native void java.lang.Thread.registerNatives()
+
+    /// public static void java.lang.Thread.setDefaultUncaughtExceptionHandler(java.lang.Thread$UncaughtExceptionHandler)
+
+    private static var setDefaultUncaughtExceptionHandler_MethodID_17: jmethodID?
+
+    open class func setDefaultUncaughtExceptionHandler( arg0: Thread_UncaughtExceptionHandler? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "setDefaultUncaughtExceptionHandler", methodSig: "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", methodCache: &setDefaultUncaughtExceptionHandler_MethodID_17, args: &__args, locals: &__locals )
+    }
+
+    open class func setDefaultUncaughtExceptionHandler( _ _arg0: Thread_UncaughtExceptionHandler? ) {
+        setDefaultUncaughtExceptionHandler( arg0: _arg0 )
+    }
 
     /// public static native void java.lang.Thread.sleep(long) throws java.lang.InterruptedException
 
-    private static var sleep_MethodID_26: jmethodID?
+    private static var sleep_MethodID_18: jmethodID?
 
     open class func sleep( arg0: Int64 ) throws /* java.lang.InterruptedException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "sleep", methodSig: "(J)V", methodCache: &sleep_MethodID_26, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( j: arg0 )
+        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "sleep", methodSig: "(J)V", methodCache: &sleep_MethodID_18, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw InterruptedException( javaObject: throwable )
         }
     }
@@ -518,15 +421,16 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
 
     /// public static void java.lang.Thread.sleep(long,int) throws java.lang.InterruptedException
 
-    private static var sleep_MethodID_27: jmethodID?
+    private static var sleep_MethodID_19: jmethodID?
 
     open class func sleep( arg0: Int64, arg1: Int ) throws /* java.lang.InterruptedException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "sleep", methodSig: "(JI)V", methodCache: &sleep_MethodID_27, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( j: arg0 )
+        __args[1] = jvalue( i: jint(arg1) )
+        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "sleep", methodSig: "(JI)V", methodCache: &sleep_MethodID_19, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw InterruptedException( javaObject: throwable )
         }
     }
@@ -535,17 +439,411 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
         try sleep( arg0: _arg0, arg1: _arg1 )
     }
 
+    /// public static native void java.lang.Thread.yield()
+
+    private static var yield_MethodID_20: jmethodID?
+
+    open class func yield() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "yield", methodSig: "()V", methodCache: &yield_MethodID_20, args: &__args, locals: &__locals )
+    }
+
+
+    /// private void java.lang.Thread.init(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String,long)
+
+    /// private void java.lang.Thread.init(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String,long,java.security.AccessControlContext)
+
+    /// void java.lang.Thread.blockedOn(sun.nio.ch.Interruptible)
+
+    // Skipping method: true false false false false 
+
+    /// public final void java.lang.Thread.checkAccess()
+
+    private static var checkAccess_MethodID_21: jmethodID?
+
+    open func checkAccess() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkAccess", methodSig: "()V", methodCache: &Thread.checkAccess_MethodID_21, args: &__args, locals: &__locals )
+    }
+
+
+    /// protected java.lang.Object java.lang.Thread.clone() throws java.lang.CloneNotSupportedException
+
+    private static var clone_MethodID_22: jmethodID?
+
+    override open func clone() throws /* java.lang.CloneNotSupportedException */ -> java_swift.JavaObject! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "clone", methodSig: "()Ljava/lang/Object;", methodCache: &Thread.clone_MethodID_22, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw CloneNotSupportedException( javaObject: throwable )
+        }
+        return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
+    }
+
+
+    /// public native int java.lang.Thread.countStackFrames()
+
+    private static var countStackFrames_MethodID_23: jmethodID?
+
+    open func countStackFrames() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "countStackFrames", methodSig: "()I", methodCache: &Thread.countStackFrames_MethodID_23, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+
+    /// public void java.lang.Thread.destroy()
+
+    private static var destroy_MethodID_24: jmethodID?
+
+    open func destroy() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "destroy", methodSig: "()V", methodCache: &Thread.destroy_MethodID_24, args: &__args, locals: &__locals )
+    }
+
+
+    /// private void java.lang.Thread.dispatchUncaughtException(java.lang.Throwable)
+
+    /// private void java.lang.Thread.exit()
+
+    /// public java.lang.ClassLoader java.lang.Thread.getContextClassLoader()
+
+    private static var getContextClassLoader_MethodID_25: jmethodID?
+
+    open func getContextClassLoader() -> ClassLoader! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getContextClassLoader", methodSig: "()Ljava/lang/ClassLoader;", methodCache: &Thread.getContextClassLoader_MethodID_25, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? ClassLoader( javaObject: __return ) : nil
+    }
+
+
+    /// public long java.lang.Thread.getId()
+
+    private static var getId_MethodID_26: jmethodID?
+
+    open func getId() -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getId", methodSig: "()J", methodCache: &Thread.getId_MethodID_26, args: &__args, locals: &__locals )
+        return __return
+    }
+
+
+    /// public final java.lang.String java.lang.Thread.getName()
+
+    private static var getName_MethodID_27: jmethodID?
+
+    open func getName() -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &Thread.getName_MethodID_27, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public final int java.lang.Thread.getPriority()
+
+    private static var getPriority_MethodID_28: jmethodID?
+
+    open func getPriority() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getPriority", methodSig: "()I", methodCache: &Thread.getPriority_MethodID_28, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+
+    /// public java.lang.StackTraceElement[] java.lang.Thread.getStackTrace()
+
+    private static var getStackTrace_MethodID_29: jmethodID?
+
+    open func getStackTrace() -> [StackTraceElement]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getStackTrace", methodSig: "()[Ljava/lang/StackTraceElement;", methodCache: &Thread.getStackTrace_MethodID_29, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [StackTraceElement].self, from: __return )
+    }
+
+
+    /// public java.lang.Thread$State java.lang.Thread.getState()
+
+    private static var getState_MethodID_30: jmethodID?
+
+    open func getState() -> Thread_State! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getState", methodSig: "()Ljava/lang/Thread$State;", methodCache: &Thread.getState_MethodID_30, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? Thread_State( javaObject: __return ) : nil
+    }
+
+
+    /// public final java.lang.ThreadGroup java.lang.Thread.getThreadGroup()
+
+    private static var getThreadGroup_MethodID_31: jmethodID?
+
+    open func getThreadGroup() -> ThreadGroup! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getThreadGroup", methodSig: "()Ljava/lang/ThreadGroup;", methodCache: &Thread.getThreadGroup_MethodID_31, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? ThreadGroup( javaObject: __return ) : nil
+    }
+
+
+    /// public java.lang.Thread$UncaughtExceptionHandler java.lang.Thread.getUncaughtExceptionHandler()
+
+    private static var getUncaughtExceptionHandler_MethodID_32: jmethodID?
+
+    open func getUncaughtExceptionHandler() -> Thread_UncaughtExceptionHandler! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUncaughtExceptionHandler", methodSig: "()Ljava/lang/Thread$UncaughtExceptionHandler;", methodCache: &Thread.getUncaughtExceptionHandler_MethodID_32, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? Thread_UncaughtExceptionHandlerForward( javaObject: __return ) : nil
+    }
+
+
+    /// public void java.lang.Thread.interrupt()
+
+    private static var interrupt_MethodID_33: jmethodID?
+
+    open func interrupt() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "interrupt", methodSig: "()V", methodCache: &Thread.interrupt_MethodID_33, args: &__args, locals: &__locals )
+    }
+
+
+    /// private native void java.lang.Thread.interrupt0()
+
+    /// public final native boolean java.lang.Thread.isAlive()
+
+    private static var isAlive_MethodID_34: jmethodID?
+
+    open func isAlive() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isAlive", methodSig: "()Z", methodCache: &Thread.isAlive_MethodID_34, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public final boolean java.lang.Thread.isDaemon()
+
+    private static var isDaemon_MethodID_35: jmethodID?
+
+    open func isDaemon() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isDaemon", methodSig: "()Z", methodCache: &Thread.isDaemon_MethodID_35, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// private native boolean java.lang.Thread.isInterrupted(boolean)
+
+    /// public boolean java.lang.Thread.isInterrupted()
+
+    private static var isInterrupted_MethodID_36: jmethodID?
+
+    open func isInterrupted() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isInterrupted", methodSig: "()Z", methodCache: &Thread.isInterrupted_MethodID_36, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public final synchronized void java.lang.Thread.join(long) throws java.lang.InterruptedException
+
+    private static var join_MethodID_37: jmethodID?
+
+    open func join( arg0: Int64 ) throws /* java.lang.InterruptedException */ {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( j: arg0 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "join", methodSig: "(J)V", methodCache: &Thread.join_MethodID_37, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw InterruptedException( javaObject: throwable )
+        }
+    }
+
+    open func join( _ _arg0: Int64 ) throws /* java.lang.InterruptedException */ {
+        try join( arg0: _arg0 )
+    }
+
+    /// public final synchronized void java.lang.Thread.join(long,int) throws java.lang.InterruptedException
+
+    private static var join_MethodID_38: jmethodID?
+
+    open func join( arg0: Int64, arg1: Int ) throws /* java.lang.InterruptedException */ {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( j: arg0 )
+        __args[1] = jvalue( i: jint(arg1) )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "join", methodSig: "(JI)V", methodCache: &Thread.join_MethodID_38, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw InterruptedException( javaObject: throwable )
+        }
+    }
+
+    open func join( _ _arg0: Int64, _ _arg1: Int ) throws /* java.lang.InterruptedException */ {
+        try join( arg0: _arg0, arg1: _arg1 )
+    }
+
+    /// public final void java.lang.Thread.join() throws java.lang.InterruptedException
+
+    private static var join_MethodID_39: jmethodID?
+
+    open func join() throws /* java.lang.InterruptedException */ {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "join", methodSig: "()V", methodCache: &Thread.join_MethodID_39, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw InterruptedException( javaObject: throwable )
+        }
+    }
+
+
+    /// public final void java.lang.Thread.resume()
+
+    private static var resume_MethodID_40: jmethodID?
+
+    open func resume() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "resume", methodSig: "()V", methodCache: &Thread.resume_MethodID_40, args: &__args, locals: &__locals )
+    }
+
+
+    /// private native void java.lang.Thread.resume0()
+
+    /// public void java.lang.Thread.run()
+
+    private static var run_MethodID_41: jmethodID?
+
+    open func run() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "run", methodSig: "()V", methodCache: &Thread.run_MethodID_41, args: &__args, locals: &__locals )
+    }
+
+
+    /// public void java.lang.Thread.setContextClassLoader(java.lang.ClassLoader)
+
+    private static var setContextClassLoader_MethodID_42: jmethodID?
+
+    open func setContextClassLoader( arg0: ClassLoader? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setContextClassLoader", methodSig: "(Ljava/lang/ClassLoader;)V", methodCache: &Thread.setContextClassLoader_MethodID_42, args: &__args, locals: &__locals )
+    }
+
+    open func setContextClassLoader( _ _arg0: ClassLoader? ) {
+        setContextClassLoader( arg0: _arg0 )
+    }
+
+    /// public final void java.lang.Thread.setDaemon(boolean)
+
+    private static var setDaemon_MethodID_43: jmethodID?
+
+    open func setDaemon( arg0: Bool ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( z: jboolean(arg0 ? JNI_TRUE : JNI_FALSE) )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setDaemon", methodSig: "(Z)V", methodCache: &Thread.setDaemon_MethodID_43, args: &__args, locals: &__locals )
+    }
+
+    open func setDaemon( _ _arg0: Bool ) {
+        setDaemon( arg0: _arg0 )
+    }
+
+    /// public final synchronized void java.lang.Thread.setName(java.lang.String)
+
+    private static var setName_MethodID_44: jmethodID?
+
+    open func setName( arg0: String? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setName", methodSig: "(Ljava/lang/String;)V", methodCache: &Thread.setName_MethodID_44, args: &__args, locals: &__locals )
+    }
+
+    open func setName( _ _arg0: String? ) {
+        setName( arg0: _arg0 )
+    }
+
+    /// private native void java.lang.Thread.setNativeName(java.lang.String)
+
+    /// public final void java.lang.Thread.setPriority(int)
+
+    private static var setPriority_MethodID_45: jmethodID?
+
+    open func setPriority( arg0: Int ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(arg0) )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setPriority", methodSig: "(I)V", methodCache: &Thread.setPriority_MethodID_45, args: &__args, locals: &__locals )
+    }
+
+    open func setPriority( _ _arg0: Int ) {
+        setPriority( arg0: _arg0 )
+    }
+
+    /// private native void java.lang.Thread.setPriority0(int)
+
+    /// public void java.lang.Thread.setUncaughtExceptionHandler(java.lang.Thread$UncaughtExceptionHandler)
+
+    private static var setUncaughtExceptionHandler_MethodID_46: jmethodID?
+
+    open func setUncaughtExceptionHandler( arg0: Thread_UncaughtExceptionHandler? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setUncaughtExceptionHandler", methodSig: "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", methodCache: &Thread.setUncaughtExceptionHandler_MethodID_46, args: &__args, locals: &__locals )
+    }
+
+    open func setUncaughtExceptionHandler( _ _arg0: Thread_UncaughtExceptionHandler? ) {
+        setUncaughtExceptionHandler( arg0: _arg0 )
+    }
+
+    /// public synchronized void java.lang.Thread.start()
+
+    private static var start_MethodID_47: jmethodID?
+
+    open func start() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "start", methodSig: "()V", methodCache: &Thread.start_MethodID_47, args: &__args, locals: &__locals )
+    }
+
+
     /// private native void java.lang.Thread.start0()
 
     /// public final synchronized void java.lang.Thread.stop(java.lang.Throwable)
 
-    private static var stop_MethodID_28: jmethodID?
+    private static var stop_MethodID_48: jmethodID?
 
     open func stop( arg0: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "stop", methodSig: "(Ljava/lang/Throwable;)V", methodCache: &Thread.stop_MethodID_28, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "stop", methodSig: "(Ljava/lang/Throwable;)V", methodCache: &Thread.stop_MethodID_48, args: &__args, locals: &__locals )
     }
 
     open func stop( _ _arg0: java_swift.Throwable? ) {
@@ -554,305 +852,33 @@ open class Thread: java_swift.JavaObject, java_swift.Runnable {
 
     /// public final void java.lang.Thread.stop()
 
-    private static var stop_MethodID_29: jmethodID?
+    private static var stop_MethodID_49: jmethodID?
 
     open func stop() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "stop", methodSig: "()V", methodCache: &Thread.stop_MethodID_29, args: &__args, locals: &__locals )
-    }
-
-
-    /// public void java.lang.Thread.interrupt()
-
-    private static var interrupt_MethodID_30: jmethodID?
-
-    open func interrupt() {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "interrupt", methodSig: "()V", methodCache: &Thread.interrupt_MethodID_30, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "stop", methodSig: "()V", methodCache: &Thread.stop_MethodID_49, args: &__args, locals: &__locals )
     }
 
-
-    /// public static boolean java.lang.Thread.interrupted()
-
-    private static var interrupted_MethodID_31: jmethodID?
-
-    open class func interrupted() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "interrupted", methodSig: "()Z", methodCache: &interrupted_MethodID_31, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public void java.lang.Thread.destroy()
-
-    private static var destroy_MethodID_32: jmethodID?
-
-    open func destroy() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "destroy", methodSig: "()V", methodCache: &Thread.destroy_MethodID_32, args: &__args, locals: &__locals )
-    }
-
-
-    /// public final native boolean java.lang.Thread.isAlive()
-
-    private static var isAlive_MethodID_33: jmethodID?
-
-    open func isAlive() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isAlive", methodSig: "()Z", methodCache: &Thread.isAlive_MethodID_33, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public final void java.lang.Thread.suspend()
-
-    private static var suspend_MethodID_34: jmethodID?
-
-    open func suspend() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "suspend", methodSig: "()V", methodCache: &Thread.suspend_MethodID_34, args: &__args, locals: &__locals )
-    }
-
-
-    /// public final void java.lang.Thread.resume()
-
-    private static var resume_MethodID_35: jmethodID?
-
-    open func resume() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "resume", methodSig: "()V", methodCache: &Thread.resume_MethodID_35, args: &__args, locals: &__locals )
-    }
-
-
-    /// public final int java.lang.Thread.getPriority()
-
-    private static var getPriority_MethodID_36: jmethodID?
-
-    open func getPriority() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getPriority", methodSig: "()I", methodCache: &Thread.getPriority_MethodID_36, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public final synchronized void java.lang.Thread.setName(java.lang.String)
-
-    private static var setName_MethodID_37: jmethodID?
-
-    open func setName( arg0: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setName", methodSig: "(Ljava/lang/String;)V", methodCache: &Thread.setName_MethodID_37, args: &__args, locals: &__locals )
-    }
-
-    open func setName( _ _arg0: String? ) {
-        setName( arg0: _arg0 )
-    }
-
-    /// public static int java.lang.Thread.activeCount()
-
-    private static var activeCount_MethodID_38: jmethodID?
-
-    open class func activeCount() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "activeCount", methodSig: "()I", methodCache: &activeCount_MethodID_38, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public static int java.lang.Thread.enumerate(java.lang.Thread[])
-
-    private static var enumerate_MethodID_39: jmethodID?
-
-    open class func enumerate( arg0: [Thread]? ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "enumerate", methodSig: "([Ljava/lang/Thread;)I", methodCache: &enumerate_MethodID_39, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open class func enumerate( _ _arg0: [Thread]? ) -> Int {
-        return enumerate( arg0: _arg0 )
-    }
-
-    /// public native int java.lang.Thread.countStackFrames()
-
-    private static var countStackFrames_MethodID_40: jmethodID?
-
-    open func countStackFrames() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "countStackFrames", methodSig: "()I", methodCache: &Thread.countStackFrames_MethodID_40, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public final boolean java.lang.Thread.isDaemon()
-
-    private static var isDaemon_MethodID_41: jmethodID?
-
-    open func isDaemon() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isDaemon", methodSig: "()Z", methodCache: &Thread.isDaemon_MethodID_41, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public java.lang.ClassLoader java.lang.Thread.getContextClassLoader()
-
-    private static var getContextClassLoader_MethodID_42: jmethodID?
-
-    open func getContextClassLoader() -> ClassLoader! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getContextClassLoader", methodSig: "()Ljava/lang/ClassLoader;", methodCache: &Thread.getContextClassLoader_MethodID_42, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? ClassLoader( javaObject: __return ) : nil
-    }
-
-
-    /// public void java.lang.Thread.setContextClassLoader(java.lang.ClassLoader)
-
-    private static var setContextClassLoader_MethodID_43: jmethodID?
-
-    open func setContextClassLoader( arg0: ClassLoader? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setContextClassLoader", methodSig: "(Ljava/lang/ClassLoader;)V", methodCache: &Thread.setContextClassLoader_MethodID_43, args: &__args, locals: &__locals )
-    }
-
-    open func setContextClassLoader( _ _arg0: ClassLoader? ) {
-        setContextClassLoader( arg0: _arg0 )
-    }
-
-    /// public static java.util.Map java.lang.Thread.getAllStackTraces()
-
-    private static var getAllStackTraces_MethodID_44: jmethodID?
-
-    open class func getAllStackTraces() -> java_swift.JavaMap! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "getAllStackTraces", methodSig: "()Ljava/util/Map;", methodCache: &getAllStackTraces_MethodID_44, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return JNIType.toSwift( type: java_swift.JavaMapForward(), from: __return )
-    }
-
-
-    /// private static boolean java.lang.Thread.isCCLOverridden(java.lang.Class)
-
-    /// private static boolean java.lang.Thread.auditSubclass(java.lang.Class)
-
-    /// private static native java.lang.StackTraceElement[][] java.lang.Thread.dumpThreads(java.lang.Thread[])
-
-    /// private static native java.lang.Thread[] java.lang.Thread.getThreads()
-
-    /// public long java.lang.Thread.getId()
-
-    private static var getId_MethodID_45: jmethodID?
-
-    open func getId() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getId", methodSig: "()J", methodCache: &Thread.getId_MethodID_45, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
-    }
-
-
-    /// public java.lang.Thread$State java.lang.Thread.getState()
-
-    private static var getState_MethodID_46: jmethodID?
-
-    open func getState() -> Thread_State! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getState", methodSig: "()Ljava/lang/Thread$State;", methodCache: &Thread.getState_MethodID_46, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? Thread_State( javaObject: __return ) : nil
-    }
-
-
-    /// public static void java.lang.Thread.setDefaultUncaughtExceptionHandler(java.lang.Thread$UncaughtExceptionHandler)
-
-    private static var setDefaultUncaughtExceptionHandler_MethodID_47: jmethodID?
-
-    open class func setDefaultUncaughtExceptionHandler( arg0: Thread_UncaughtExceptionHandler? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "setDefaultUncaughtExceptionHandler", methodSig: "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", methodCache: &setDefaultUncaughtExceptionHandler_MethodID_47, args: &__args, locals: &__locals )
-    }
-
-    open class func setDefaultUncaughtExceptionHandler( _ _arg0: Thread_UncaughtExceptionHandler? ) {
-        setDefaultUncaughtExceptionHandler( arg0: _arg0 )
-    }
-
-    /// public static java.lang.Thread$UncaughtExceptionHandler java.lang.Thread.getDefaultUncaughtExceptionHandler()
-
-    private static var getDefaultUncaughtExceptionHandler_MethodID_48: jmethodID?
-
-    open class func getDefaultUncaughtExceptionHandler() -> Thread_UncaughtExceptionHandler! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Thread", classCache: &ThreadJNIClass, methodName: "getDefaultUncaughtExceptionHandler", methodSig: "()Ljava/lang/Thread$UncaughtExceptionHandler;", methodCache: &getDefaultUncaughtExceptionHandler_MethodID_48, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? Thread_UncaughtExceptionHandlerForward( javaObject: __return ) : nil
-    }
-
-
-    /// public java.lang.Thread$UncaughtExceptionHandler java.lang.Thread.getUncaughtExceptionHandler()
-
-    private static var getUncaughtExceptionHandler_MethodID_49: jmethodID?
-
-    open func getUncaughtExceptionHandler() -> Thread_UncaughtExceptionHandler! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUncaughtExceptionHandler", methodSig: "()Ljava/lang/Thread$UncaughtExceptionHandler;", methodCache: &Thread.getUncaughtExceptionHandler_MethodID_49, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? Thread_UncaughtExceptionHandlerForward( javaObject: __return ) : nil
-    }
-
-
-    /// public void java.lang.Thread.setUncaughtExceptionHandler(java.lang.Thread$UncaughtExceptionHandler)
-
-    private static var setUncaughtExceptionHandler_MethodID_50: jmethodID?
-
-    open func setUncaughtExceptionHandler( arg0: Thread_UncaughtExceptionHandler? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setUncaughtExceptionHandler", methodSig: "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", methodCache: &Thread.setUncaughtExceptionHandler_MethodID_50, args: &__args, locals: &__locals )
-    }
-
-    open func setUncaughtExceptionHandler( _ _arg0: Thread_UncaughtExceptionHandler? ) {
-        setUncaughtExceptionHandler( arg0: _arg0 )
-    }
-
-    /// static void java.lang.Thread.processQueue(java.lang.ref.ReferenceQueue,java.util.concurrent.ConcurrentMap)
-
-    /// private native void java.lang.Thread.setPriority0(int)
 
     /// private native void java.lang.Thread.stop0(java.lang.Object)
 
+    /// public final void java.lang.Thread.suspend()
+
+    private static var suspend_MethodID_50: jmethodID?
+
+    open func suspend() {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "suspend", methodSig: "()V", methodCache: &Thread.suspend_MethodID_50, args: &__args, locals: &__locals )
+    }
+
+
     /// private native void java.lang.Thread.suspend0()
 
-    /// private native void java.lang.Thread.resume0()
+    /// public java.lang.String java.lang.Thread.toString()
 
-    /// private native void java.lang.Thread.interrupt0()
-
-    /// private native void java.lang.Thread.setNativeName(java.lang.String)
+    // Skipping method: false true false false false 
 
 }
 

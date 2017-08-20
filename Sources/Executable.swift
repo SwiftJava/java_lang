@@ -16,30 +16,25 @@ open class Executable: AccessibleObject, Member, GenericDeclaration {
 
     private static var ExecutableJNIClass: jclass?
 
+    /// private transient java.util.Map java.lang.reflect.Executable.declaredAnnotations
+
     /// private transient volatile boolean java.lang.reflect.Executable.hasRealParameterData
 
     /// private transient volatile java.lang.reflect.Parameter[] java.lang.reflect.Executable.parameters
 
-    /// private transient java.util.Map java.lang.reflect.Executable.declaredAnnotations
-
     /// private static final java.security.Permission java.lang.reflect.AccessibleObject.ACCESS_PERMISSION
-
-    /// boolean java.lang.reflect.AccessibleObject.override
 
     /// static final sun.reflect.ReflectionFactory java.lang.reflect.AccessibleObject.reflectionFactory
 
+    // Skipping field: true false false false false false 
+
+    /// boolean java.lang.reflect.AccessibleObject.override
+
+    // Skipping field: true false false false false false 
+
     /// volatile java.lang.Object java.lang.reflect.AccessibleObject.securityCheckCache
 
-    /// public static final int java.lang.reflect.Member.PUBLIC
-
-    private static var PUBLIC_FieldID: jfieldID?
-
-    open static var PUBLIC: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "PUBLIC", fieldType: "I", fieldCache: &PUBLIC_FieldID, className: "java/lang/reflect/Executable", classCache: &ExecutableJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
+    // Skipping field: true false false false false false 
 
     /// public static final int java.lang.reflect.Member.DECLARED
 
@@ -48,96 +43,98 @@ open class Executable: AccessibleObject, Member, GenericDeclaration {
     open static var DECLARED: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "DECLARED", fieldType: "I", fieldCache: &DECLARED_FieldID, className: "java/lang/reflect/Executable", classCache: &ExecutableJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.lang.reflect.Member.PUBLIC
+
+    private static var PUBLIC_FieldID: jfieldID?
+
+    open static var PUBLIC: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "PUBLIC", fieldType: "I", fieldCache: &PUBLIC_FieldID, className: "java/lang/reflect/Executable", classCache: &ExecutableJNIClass )
+            return Int(__value)
         }
     }
 
     /// java.lang.reflect.Executable()
 
-    /// public abstract int java.lang.reflect.Executable.getModifiers()
+    // Skipping init: true false false 
 
-    private static var getModifiers_MethodID_1: jmethodID?
+    /// private synchronized java.util.Map java.lang.reflect.Executable.declaredAnnotations()
 
-    open func getModifiers() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    /// boolean java.lang.reflect.Executable.equalParamTypes(java.lang.Class[],java.lang.Class[])
+
+    // Skipping method: true false false false false 
+
+    /// java.lang.reflect.Type[] java.lang.reflect.Executable.getAllGenericParameterTypes()
+
+    // Skipping method: true false false false false 
+
+    /// public java.lang.reflect.AnnotatedType[] java.lang.reflect.Executable.getAnnotatedExceptionTypes()
+
+    private static var getAnnotatedExceptionTypes_MethodID_1: jmethodID?
+
+    open func getAnnotatedExceptionTypes() -> [AnnotatedType]! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getModifiers", methodSig: "()I", methodCache: &Executable.getModifiers_MethodID_1, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotatedExceptionTypes", methodSig: "()[Ljava/lang/reflect/AnnotatedType;", methodCache: &Executable.getAnnotatedExceptionTypes_MethodID_1, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [AnnotatedTypeForward].self, from: __return )
     }
 
 
-    /// public abstract java.lang.String java.lang.reflect.Executable.getName()
+    /// public java.lang.reflect.AnnotatedType[] java.lang.reflect.Executable.getAnnotatedParameterTypes()
 
-    private static var getName_MethodID_2: jmethodID?
+    private static var getAnnotatedParameterTypes_MethodID_2: jmethodID?
 
-    open func getName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getAnnotatedParameterTypes() -> [AnnotatedType]! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &Executable.getName_MethodID_2, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotatedParameterTypes", methodSig: "()[Ljava/lang/reflect/AnnotatedType;", methodCache: &Executable.getAnnotatedParameterTypes_MethodID_2, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [AnnotatedTypeForward].self, from: __return )
     }
 
 
-    /// public abstract java.lang.String java.lang.reflect.Executable.toGenericString()
+    /// public java.lang.reflect.AnnotatedType java.lang.reflect.Executable.getAnnotatedReceiverType()
 
-    private static var toGenericString_MethodID_3: jmethodID?
+    private static var getAnnotatedReceiverType_MethodID_3: jmethodID?
 
-    open func toGenericString() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getAnnotatedReceiverType() -> AnnotatedType! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toGenericString", methodSig: "()Ljava/lang/String;", methodCache: &Executable.toGenericString_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public boolean java.lang.reflect.Executable.isSynthetic()
-
-    private static var isSynthetic_MethodID_4: jmethodID?
-
-    open func isSynthetic() -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isSynthetic", methodSig: "()Z", methodCache: &Executable.isSynthetic_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.lang.reflect.TypeVariable[] java.lang.reflect.Executable.getTypeParameters()
-
-    private static var getTypeParameters_MethodID_5: jmethodID?
-
-    open func getTypeParameters() -> [TypeVariable]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTypeParameters", methodSig: "()[Ljava/lang/reflect/TypeVariable;", methodCache: &Executable.getTypeParameters_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [TypeVariableForward](), from: __return )
-    }
-
-
-    /// public abstract java.lang.Class java.lang.reflect.Executable.getDeclaringClass()
-
-    private static var getDeclaringClass_MethodID_6: jmethodID?
-
-    open func getDeclaringClass() -> java_swift.JavaClass! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDeclaringClass", methodSig: "()Ljava/lang/Class;", methodCache: &Executable.getDeclaringClass_MethodID_6, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotatedReceiverType", methodSig: "()Ljava/lang/reflect/AnnotatedType;", methodCache: &Executable.getAnnotatedReceiverType_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
+        return __return != nil ? AnnotatedTypeForward( javaObject: __return ) : nil
     }
 
 
-    /// abstract sun.reflect.generics.repository.ConstructorRepository java.lang.reflect.Executable.getGenericInfo()
+    /// public abstract java.lang.reflect.AnnotatedType java.lang.reflect.Executable.getAnnotatedReturnType()
+
+    private static var getAnnotatedReturnType_MethodID_4: jmethodID?
+
+    open func getAnnotatedReturnType() -> AnnotatedType! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotatedReturnType", methodSig: "()Ljava/lang/reflect/AnnotatedType;", methodCache: &Executable.getAnnotatedReturnType_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? AnnotatedTypeForward( javaObject: __return ) : nil
+    }
+
+
+    /// java.lang.reflect.AnnotatedType java.lang.reflect.Executable.getAnnotatedReturnType0(java.lang.reflect.Type)
+
+    // Skipping method: true false false false false 
 
     /// public java.lang.annotation.Annotation java.lang.reflect.Executable.getAnnotation(java.lang.Class)
 
-    private static var getAnnotation_MethodID_7: jmethodID?
+    private static var getAnnotation_MethodID_5: jmethodID?
 
     override open func getAnnotation( arg0: java_swift.JavaClass? ) -> Annotation! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotation", methodSig: "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", methodCache: &Executable.getAnnotation_MethodID_7, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotation", methodSig: "(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;", methodCache: &Executable.getAnnotation_MethodID_5, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? AnnotationForward( javaObject: __return ) : nil
     }
@@ -146,16 +143,20 @@ open class Executable: AccessibleObject, Member, GenericDeclaration {
         return getAnnotation( arg0: _arg0 )
     }
 
+    /// abstract byte[] java.lang.reflect.Executable.getAnnotationBytes()
+
+    // Skipping method: true false false false false 
+
     /// public java.lang.annotation.Annotation[] java.lang.reflect.Executable.getAnnotationsByType(java.lang.Class)
 
-    private static var getAnnotationsByType_MethodID_8: jmethodID?
+    private static var getAnnotationsByType_MethodID_6: jmethodID?
 
     override open func getAnnotationsByType( arg0: java_swift.JavaClass? ) -> [Annotation]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotationsByType", methodSig: "(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;", methodCache: &Executable.getAnnotationsByType_MethodID_8, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [AnnotationForward](), from: __return )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotationsByType", methodSig: "(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;", methodCache: &Executable.getAnnotationsByType_MethodID_6, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [AnnotationForward].self, from: __return )
     }
 
     override open func getAnnotationsByType( _ _arg0: java_swift.JavaClass? ) -> [Annotation]! {
@@ -164,59 +165,83 @@ open class Executable: AccessibleObject, Member, GenericDeclaration {
 
     /// public java.lang.annotation.Annotation[] java.lang.reflect.Executable.getDeclaredAnnotations()
 
-    /// public abstract java.lang.Class[] java.lang.reflect.Executable.getParameterTypes()
+    // Skipping method: false true false false false 
 
-    private static var getParameterTypes_MethodID_9: jmethodID?
+    /// public abstract java.lang.Class java.lang.reflect.Executable.getDeclaringClass()
 
-    open func getParameterTypes() -> [JavaClass]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    private static var getDeclaringClass_MethodID_7: jmethodID?
+
+    open func getDeclaringClass() -> java_swift.JavaClass! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getParameterTypes", methodSig: "()[Ljava/lang/Class;", methodCache: &Executable.getParameterTypes_MethodID_9, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [JavaClass](), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDeclaringClass", methodSig: "()Ljava/lang/Class;", methodCache: &Executable.getDeclaringClass_MethodID_7, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
     }
 
 
-    /// private synchronized java.util.Map java.lang.reflect.Executable.declaredAnnotations()
+    /// public abstract java.lang.Class[] java.lang.reflect.Executable.getExceptionTypes()
 
-    /// native byte[] java.lang.reflect.Executable.getTypeAnnotationBytes0()
+    private static var getExceptionTypes_MethodID_8: jmethodID?
 
-    /// public boolean java.lang.reflect.Executable.isVarArgs()
-
-    private static var isVarArgs_MethodID_10: jmethodID?
-
-    open func isVarArgs() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getExceptionTypes() -> [JavaClass]! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isVarArgs", methodSig: "()Z", methodCache: &Executable.isVarArgs_MethodID_10, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getExceptionTypes", methodSig: "()[Ljava/lang/Class;", methodCache: &Executable.getExceptionTypes_MethodID_8, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [JavaClass].self, from: __return )
     }
 
 
-    /// boolean java.lang.reflect.Executable.hasRealParameterData()
+    /// public java.lang.reflect.Type[] java.lang.reflect.Executable.getGenericExceptionTypes()
 
-    /// java.lang.reflect.Type[] java.lang.reflect.Executable.getAllGenericParameterTypes()
+    private static var getGenericExceptionTypes_MethodID_9: jmethodID?
 
-    /// public java.lang.reflect.AnnotatedType[] java.lang.reflect.Executable.getAnnotatedParameterTypes()
-
-    private static var getAnnotatedParameterTypes_MethodID_11: jmethodID?
-
-    open func getAnnotatedParameterTypes() -> [AnnotatedType]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getGenericExceptionTypes() -> [Type]! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotatedParameterTypes", methodSig: "()[Ljava/lang/reflect/AnnotatedType;", methodCache: &Executable.getAnnotatedParameterTypes_MethodID_11, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [AnnotatedTypeForward](), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getGenericExceptionTypes", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &Executable.getGenericExceptionTypes_MethodID_9, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [TypeForward].self, from: __return )
     }
 
 
-    /// public int java.lang.reflect.Executable.getParameterCount()
+    /// abstract sun.reflect.generics.repository.ConstructorRepository java.lang.reflect.Executable.getGenericInfo()
 
-    private static var getParameterCount_MethodID_12: jmethodID?
+    // Skipping method: true false false false false 
 
-    open func getParameterCount() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    /// public java.lang.reflect.Type[] java.lang.reflect.Executable.getGenericParameterTypes()
+
+    private static var getGenericParameterTypes_MethodID_10: jmethodID?
+
+    open func getGenericParameterTypes() -> [Type]! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getParameterCount", methodSig: "()I", methodCache: &Executable.getParameterCount_MethodID_12, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getGenericParameterTypes", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &Executable.getGenericParameterTypes_MethodID_10, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [TypeForward].self, from: __return )
+    }
+
+
+    /// public abstract int java.lang.reflect.Executable.getModifiers()
+
+    private static var getModifiers_MethodID_11: jmethodID?
+
+    open func getModifiers() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getModifiers", methodSig: "()I", methodCache: &Executable.getModifiers_MethodID_11, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+
+    /// public abstract java.lang.String java.lang.reflect.Executable.getName()
+
+    private static var getName_MethodID_12: jmethodID?
+
+    open func getName() -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &Executable.getName_MethodID_12, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
@@ -225,148 +250,183 @@ open class Executable: AccessibleObject, Member, GenericDeclaration {
     private static var getParameterAnnotations_MethodID_13: jmethodID?
 
     open func getParameterAnnotations() -> [[Annotation]]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getParameterAnnotations", methodSig: "()[[Ljava/lang/annotation/Annotation;", methodCache: &Executable.getParameterAnnotations_MethodID_13, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [[AnnotationForward]](), from: __return )
+        return JNIType.toSwift( type: [[AnnotationForward]].self, from: __return )
     }
 
+
+    /// public int java.lang.reflect.Executable.getParameterCount()
+
+    private static var getParameterCount_MethodID_14: jmethodID?
+
+    open func getParameterCount() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getParameterCount", methodSig: "()I", methodCache: &Executable.getParameterCount_MethodID_14, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+
+    /// public abstract java.lang.Class[] java.lang.reflect.Executable.getParameterTypes()
+
+    private static var getParameterTypes_MethodID_15: jmethodID?
+
+    open func getParameterTypes() -> [JavaClass]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getParameterTypes", methodSig: "()[Ljava/lang/Class;", methodCache: &Executable.getParameterTypes_MethodID_15, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [JavaClass].self, from: __return )
+    }
+
+
+    /// public java.lang.reflect.Parameter[] java.lang.reflect.Executable.getParameters()
+
+    private static var getParameters_MethodID_16: jmethodID?
+
+    open func getParameters() -> [Parameter]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getParameters", methodSig: "()[Ljava/lang/reflect/Parameter;", methodCache: &Executable.getParameters_MethodID_16, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [Parameter].self, from: __return )
+    }
+
+
+    /// private native java.lang.reflect.Parameter[] java.lang.reflect.Executable.getParameters0()
 
     /// abstract java.lang.reflect.Executable java.lang.reflect.Executable.getRoot()
 
-    /// abstract boolean java.lang.reflect.Executable.hasGenericInformation()
+    // Skipping method: true false false false false 
 
-    /// abstract byte[] java.lang.reflect.Executable.getAnnotationBytes()
+    /// byte[] java.lang.reflect.Executable.getTypeAnnotationBytes()
 
-    /// public java.lang.reflect.Type[] java.lang.reflect.Executable.getGenericParameterTypes()
+    // Skipping method: true false false false false 
 
-    private static var getGenericParameterTypes_MethodID_14: jmethodID?
+    /// native byte[] java.lang.reflect.Executable.getTypeAnnotationBytes0()
 
-    open func getGenericParameterTypes() -> [Type]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    // Skipping method: true false false false false 
+
+    /// public abstract java.lang.reflect.TypeVariable[] java.lang.reflect.Executable.getTypeParameters()
+
+    private static var getTypeParameters_MethodID_17: jmethodID?
+
+    open func getTypeParameters() -> [TypeVariable]! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getGenericParameterTypes", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &Executable.getGenericParameterTypes_MethodID_14, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [TypeForward](), from: __return )
-    }
-
-
-    /// public abstract java.lang.Class[] java.lang.reflect.Executable.getExceptionTypes()
-
-    private static var getExceptionTypes_MethodID_15: jmethodID?
-
-    open func getExceptionTypes() -> [JavaClass]! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getExceptionTypes", methodSig: "()[Ljava/lang/Class;", methodCache: &Executable.getExceptionTypes_MethodID_15, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [JavaClass](), from: __return )
-    }
-
-
-    /// public java.lang.reflect.Type[] java.lang.reflect.Executable.getGenericExceptionTypes()
-
-    private static var getGenericExceptionTypes_MethodID_16: jmethodID?
-
-    open func getGenericExceptionTypes() -> [Type]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getGenericExceptionTypes", methodSig: "()[Ljava/lang/reflect/Type;", methodCache: &Executable.getGenericExceptionTypes_MethodID_16, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [TypeForward](), from: __return )
-    }
-
-
-    /// abstract void java.lang.reflect.Executable.specificToStringHeader(java.lang.StringBuilder)
-
-    /// abstract void java.lang.reflect.Executable.specificToGenericStringHeader(java.lang.StringBuilder)
-
-    /// public abstract java.lang.reflect.AnnotatedType java.lang.reflect.Executable.getAnnotatedReturnType()
-
-    private static var getAnnotatedReturnType_MethodID_17: jmethodID?
-
-    open func getAnnotatedReturnType() -> AnnotatedType! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotatedReturnType", methodSig: "()Ljava/lang/reflect/AnnotatedType;", methodCache: &Executable.getAnnotatedReturnType_MethodID_17, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? AnnotatedTypeForward( javaObject: __return ) : nil
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTypeParameters", methodSig: "()[Ljava/lang/reflect/TypeVariable;", methodCache: &Executable.getTypeParameters_MethodID_17, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [TypeVariableForward].self, from: __return )
     }
 
 
     /// abstract void java.lang.reflect.Executable.handleParameterNumberMismatch(int,int)
 
-    /// boolean java.lang.reflect.Executable.equalParamTypes(java.lang.Class[],java.lang.Class[])
+    // Skipping method: true false false false false 
 
-    /// java.lang.String java.lang.reflect.Executable.sharedToString(int,boolean,java.lang.Class[],java.lang.Class[])
+    /// abstract boolean java.lang.reflect.Executable.hasGenericInformation()
 
-    /// java.lang.String java.lang.reflect.Executable.sharedToGenericString(int,boolean)
+    // Skipping method: true false false false false 
 
-    /// java.lang.annotation.Annotation[][] java.lang.reflect.Executable.sharedGetParameterAnnotations(java.lang.Class[],byte[])
+    /// boolean java.lang.reflect.Executable.hasRealParameterData()
 
-    /// java.lang.reflect.AnnotatedType java.lang.reflect.Executable.getAnnotatedReturnType0(java.lang.reflect.Type)
+    // Skipping method: true false false false false 
+
+    /// public boolean java.lang.reflect.Executable.isSynthetic()
+
+    private static var isSynthetic_MethodID_18: jmethodID?
+
+    open func isSynthetic() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isSynthetic", methodSig: "()Z", methodCache: &Executable.isSynthetic_MethodID_18, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public boolean java.lang.reflect.Executable.isVarArgs()
+
+    private static var isVarArgs_MethodID_19: jmethodID?
+
+    open func isVarArgs() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isVarArgs", methodSig: "()Z", methodCache: &Executable.isVarArgs_MethodID_19, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
 
     /// java.lang.annotation.Annotation[][] java.lang.reflect.Executable.parseParameterAnnotations(byte[])
 
-    /// void java.lang.reflect.Executable.separateWithCommas(java.lang.Class[],java.lang.StringBuilder)
+    // Skipping method: true false false false false 
 
     /// void java.lang.reflect.Executable.printModifiersIfNonzero(java.lang.StringBuilder,int,boolean)
 
-    /// public java.lang.reflect.Parameter[] java.lang.reflect.Executable.getParameters()
-
-    private static var getParameters_MethodID_18: jmethodID?
-
-    open func getParameters() -> [Parameter]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getParameters", methodSig: "()[Ljava/lang/reflect/Parameter;", methodCache: &Executable.getParameters_MethodID_18, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [Parameter](), from: __return )
-    }
-
-
-    /// private java.lang.reflect.Parameter[] java.lang.reflect.Executable.synthesizeAllParams()
-
-    /// private void java.lang.reflect.Executable.verifyParameters(java.lang.reflect.Parameter[])
+    // Skipping method: true false false false false 
 
     /// private java.lang.reflect.Parameter[] java.lang.reflect.Executable.privateGetParameters()
 
-    /// private native java.lang.reflect.Parameter[] java.lang.reflect.Executable.getParameters0()
+    /// void java.lang.reflect.Executable.separateWithCommas(java.lang.Class[],java.lang.StringBuilder)
 
-    /// byte[] java.lang.reflect.Executable.getTypeAnnotationBytes()
+    // Skipping method: true false false false false 
 
-    /// public java.lang.reflect.AnnotatedType java.lang.reflect.Executable.getAnnotatedReceiverType()
+    /// java.lang.annotation.Annotation[][] java.lang.reflect.Executable.sharedGetParameterAnnotations(java.lang.Class[],byte[])
 
-    private static var getAnnotatedReceiverType_MethodID_19: jmethodID?
+    // Skipping method: true false false false false 
 
-    open func getAnnotatedReceiverType() -> AnnotatedType! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    /// java.lang.String java.lang.reflect.Executable.sharedToGenericString(int,boolean)
+
+    // Skipping method: true false false false false 
+
+    /// java.lang.String java.lang.reflect.Executable.sharedToString(int,boolean,java.lang.Class[],java.lang.Class[])
+
+    // Skipping method: true false false false false 
+
+    /// abstract void java.lang.reflect.Executable.specificToGenericStringHeader(java.lang.StringBuilder)
+
+    // Skipping method: true false false false false 
+
+    /// abstract void java.lang.reflect.Executable.specificToStringHeader(java.lang.StringBuilder)
+
+    // Skipping method: true false false false false 
+
+    /// private java.lang.reflect.Parameter[] java.lang.reflect.Executable.synthesizeAllParams()
+
+    /// public abstract java.lang.String java.lang.reflect.Executable.toGenericString()
+
+    private static var toGenericString_MethodID_20: jmethodID?
+
+    open func toGenericString() -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotatedReceiverType", methodSig: "()Ljava/lang/reflect/AnnotatedType;", methodCache: &Executable.getAnnotatedReceiverType_MethodID_19, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toGenericString", methodSig: "()Ljava/lang/String;", methodCache: &Executable.toGenericString_MethodID_20, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? AnnotatedTypeForward( javaObject: __return ) : nil
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
-    /// public java.lang.reflect.AnnotatedType[] java.lang.reflect.Executable.getAnnotatedExceptionTypes()
-
-    private static var getAnnotatedExceptionTypes_MethodID_20: jmethodID?
-
-    open func getAnnotatedExceptionTypes() -> [AnnotatedType]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAnnotatedExceptionTypes", methodSig: "()[Ljava/lang/reflect/AnnotatedType;", methodCache: &Executable.getAnnotatedExceptionTypes_MethodID_20, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [AnnotatedTypeForward](), from: __return )
-    }
-
+    /// private void java.lang.reflect.Executable.verifyParameters(java.lang.reflect.Parameter[])
 
     /// In declared protocol but not defined.. ///
 
-    /// public default java.lang.annotation.Annotation[] java.lang.reflect.AnnotatedElement.getDeclaredAnnotationsByType(java.lang.Class)
+    /// public abstract java.lang.annotation.Annotation[] java.lang.reflect.AnnotatedElement.getAnnotations()
+
+    // Skipping method: false true false false false 
+
+    /// public default java.lang.annotation.Annotation java.lang.reflect.AnnotatedElement.getDeclaredAnnotation(java.lang.Class)
+
+    // Skipping method: false true false false false 
 
     /// public abstract java.lang.annotation.Annotation[] java.lang.reflect.AnnotatedElement.getDeclaredAnnotations()
 
-    /// public abstract java.lang.annotation.Annotation[] java.lang.reflect.AnnotatedElement.getAnnotations()
+    // Skipping method: false true false false false 
+
+    /// public default java.lang.annotation.Annotation[] java.lang.reflect.AnnotatedElement.getDeclaredAnnotationsByType(java.lang.Class)
+
+    // Skipping method: false true false false false 
 
     /// public default boolean java.lang.reflect.AnnotatedElement.isAnnotationPresent(java.lang.Class)
 
-    /// public default java.lang.annotation.Annotation java.lang.reflect.AnnotatedElement.getDeclaredAnnotation(java.lang.Class)
+    // Skipping method: false true false false false 
 
 }
 

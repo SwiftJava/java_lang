@@ -5,24 +5,61 @@ import java_swift
 
 /// class java.lang.ProcessBuilder$Redirect$Type ///
 
-open class ProcessBuilder_Redirect_Type: Enum {
+public enum ProcessBuilder_Redirect_Type: Int, JNIObjectProtocol, JNIObjectInit {
 
-    public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
-        self.init( javaObject: nil )
-        object.withJavaObject {
-            self.javaObject = $0
-        }
+    case PIPE, INHERIT, READ, WRITE, APPEND
+
+    static let enumConstants = try! JavaClass.forName("java.lang.ProcessBuilder$Redirect$Type")
+        .getEnumConstants()!.map { ProcessBuilder_Redirect_TypeForward( javaObject: $0.javaObject ) }
+
+    public func underlier() -> ProcessBuilder_Redirect_TypeForward {
+        return ProcessBuilder_Redirect_Type.enumConstants[self.rawValue]
     }
+
+    public func localJavaObject(_ locals: UnsafeMutablePointer<[jobject]>) -> jobject? {
+        return underlier().localJavaObject( locals )
+    }
+
+    public init( javaObject: jobject? ) {
+        self = ProcessBuilder_Redirect_Type( rawValue: JavaEnum( javaObject: javaObject ).ordinal() )!
+    }
+
+    /// public static java.lang.ProcessBuilder$Redirect$Type java.lang.ProcessBuilder$Redirect$Type.valueOf(java.lang.String)
+
+    private static var valueOf_MethodID_1: jmethodID?
+
+    public static func valueOf( name: String? ) -> ProcessBuilder_Redirect_Type! {
+        return ProcessBuilder_Redirect_TypeForward.valueOf( name: name )
+    }
+    public static func valueOf( _ _name: String? ) -> ProcessBuilder_Redirect_Type! {
+        return valueOf( name: _name )
+    }
+
+    /// public static java.lang.ProcessBuilder$Redirect$Type[] java.lang.ProcessBuilder$Redirect$Type.values()
+
+    private static var values_MethodID_2: jmethodID?
+
+    public static func values() -> [ProcessBuilder_Redirect_Type]! {
+        return ProcessBuilder_Redirect_TypeForward.values( )
+    }
+
+}
+
+
+open class ProcessBuilder_Redirect_TypeForward: JNIObjectForward {
 
     private static var ProcessBuilder_Redirect_TypeJNIClass: jclass?
 
-    /// public static final java.lang.ProcessBuilder$Redirect$Type java.lang.ProcessBuilder$Redirect$Type.PIPE
+    /// private static final java.lang.ProcessBuilder$Redirect$Type[] java.lang.ProcessBuilder$Redirect$Type.$VALUES
 
-    private static var PIPE_FieldID: jfieldID?
+    /// public static final java.lang.ProcessBuilder$Redirect$Type java.lang.ProcessBuilder$Redirect$Type.APPEND
 
-    open static var PIPE: ProcessBuilder_Redirect_Type! {
+    private static var APPEND_FieldID: jfieldID?
+
+    open static var APPEND: ProcessBuilder_Redirect_Type! {
         get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "PIPE", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &PIPE_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
+            let __value = JNIField.GetStaticObjectField( fieldName: "APPEND", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &APPEND_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? ProcessBuilder_Redirect_Type( javaObject: __value ) : nil
         }
     }
@@ -34,6 +71,19 @@ open class ProcessBuilder_Redirect_Type: Enum {
     open static var INHERIT: ProcessBuilder_Redirect_Type! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "INHERIT", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &INHERIT_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? ProcessBuilder_Redirect_Type( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.lang.ProcessBuilder$Redirect$Type java.lang.ProcessBuilder$Redirect$Type.PIPE
+
+    private static var PIPE_FieldID: jfieldID?
+
+    open static var PIPE: ProcessBuilder_Redirect_Type! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "PIPE", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &PIPE_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? ProcessBuilder_Redirect_Type( javaObject: __value ) : nil
         }
     }
@@ -45,6 +95,7 @@ open class ProcessBuilder_Redirect_Type: Enum {
     open static var READ: ProcessBuilder_Redirect_Type! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "READ", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &READ_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? ProcessBuilder_Redirect_Type( javaObject: __value ) : nil
         }
     }
@@ -56,50 +107,20 @@ open class ProcessBuilder_Redirect_Type: Enum {
     open static var WRITE: ProcessBuilder_Redirect_Type! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "WRITE", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &WRITE_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? ProcessBuilder_Redirect_Type( javaObject: __value ) : nil
         }
     }
-
-    /// public static final java.lang.ProcessBuilder$Redirect$Type java.lang.ProcessBuilder$Redirect$Type.APPEND
-
-    private static var APPEND_FieldID: jfieldID?
-
-    open static var APPEND: ProcessBuilder_Redirect_Type! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "APPEND", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &APPEND_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
-            return __value != nil ? ProcessBuilder_Redirect_Type( javaObject: __value ) : nil
-        }
-    }
-
-    /// private static final java.lang.ProcessBuilder$Redirect$Type[] java.lang.ProcessBuilder$Redirect$Type.$VALUES
-
-    /// private final java.lang.String java.lang.Enum.name
-
-    /// private final int java.lang.Enum.ordinal
-
-    /// private java.lang.ProcessBuilder$Redirect$Type(java.lang.String,int)
-
-    /// public static java.lang.ProcessBuilder$Redirect$Type[] java.lang.ProcessBuilder$Redirect$Type.values()
-
-    private static var values_MethodID_1: jmethodID?
-
-    open class func values() -> [ProcessBuilder_Redirect_Type]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass, methodName: "values", methodSig: "()[Ljava/lang/ProcessBuilder$Redirect$Type;", methodCache: &values_MethodID_1, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [ProcessBuilder_Redirect_Type](), from: __return )
-    }
-
 
     /// public static java.lang.ProcessBuilder$Redirect$Type java.lang.ProcessBuilder$Redirect$Type.valueOf(java.lang.String)
 
-    private static var valueOf_MethodID_2: jmethodID?
+    private static var valueOf_MethodID_3: jmethodID?
 
     open class func valueOf( name: String? ) -> ProcessBuilder_Redirect_Type! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: name, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/lang/ProcessBuilder$Redirect$Type;", methodCache: &valueOf_MethodID_2, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/lang/ProcessBuilder$Redirect$Type;", methodCache: &valueOf_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? ProcessBuilder_Redirect_Type( javaObject: __return ) : nil
     }
@@ -107,6 +128,92 @@ open class ProcessBuilder_Redirect_Type: Enum {
     open class func valueOf( _ _name: String? ) -> ProcessBuilder_Redirect_Type! {
         return valueOf( name: _name )
     }
+
+    /// public static java.lang.Enum java.lang.Enum.valueOf(java.lang.Class,java.lang.String)
+
+    private static var valueOf_MethodID_4: jmethodID?
+
+    open class func valueOf( enumType: java_swift.JavaClass?, name: String? ) -> java_swift.JavaEnum! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: enumType, locals: &__locals )
+        __args[1] = JNIType.toJava( value: name, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;", methodCache: &valueOf_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? java_swift.JavaEnum( javaObject: __return ) : nil
+    }
+
+    open class func valueOf( _ _enumType: java_swift.JavaClass?, _ _name: String? ) -> java_swift.JavaEnum! {
+        return valueOf( enumType: _enumType, name: _name )
+    }
+
+    /// public static java.lang.ProcessBuilder$Redirect$Type[] java.lang.ProcessBuilder$Redirect$Type.values()
+
+    private static var values_MethodID_5: jmethodID?
+
+    open class func values() -> [ProcessBuilder_Redirect_Type]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass, methodName: "values", methodSig: "()[Ljava/lang/ProcessBuilder$Redirect$Type;", methodCache: &values_MethodID_5, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [ProcessBuilder_Redirect_Type].self, from: __return )
+    }
+
+
+    /// public final int java.lang.Enum.compareTo(java.lang.Enum)
+
+    // Skipping method: false true false false false 
+
+    /// public int java.lang.Enum.compareTo(java.lang.Object)
+
+    // Skipping method: false true false false false 
+
+    /// public final boolean java.lang.Enum.equals(java.lang.Object)
+
+    // Skipping method: false true false false false 
+
+    /// public final native java.lang.Class java.lang.Object.getClass()
+
+    // Skipping method: false true false false false 
+
+    /// public final java.lang.Class java.lang.Enum.getDeclaringClass()
+
+    // Skipping method: false true false false false 
+
+    /// public final int java.lang.Enum.hashCode()
+
+    // Skipping method: false true false false false 
+
+    /// public final java.lang.String java.lang.Enum.name()
+
+    // Skipping method: false true false false false 
+
+    /// public final native void java.lang.Object.notify()
+
+    // Skipping method: false true false false false 
+
+    /// public final native void java.lang.Object.notifyAll()
+
+    // Skipping method: false true false false false 
+
+    /// public final int java.lang.Enum.ordinal()
+
+    // Skipping method: false true false false false 
+
+    /// public java.lang.String java.lang.Enum.toString()
+
+    // Skipping method: false true false false false 
+
+    /// public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+
+    // Skipping method: false true false false false 
+
+    /// public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+
+    // Skipping method: false true false false false 
+
+    /// public final void java.lang.Object.wait() throws java.lang.InterruptedException
+
+    // Skipping method: false true false false false 
 
 }
 

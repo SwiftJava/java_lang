@@ -16,69 +16,14 @@ open class JavaFloat: Number, JavaComparable {
 
     private static var JavaFloatJNIClass: jclass?
 
-    /// public static final float java.lang.Float.POSITIVE_INFINITY
+    /// public static final int java.lang.Float.BYTES
 
-    private static var POSITIVE_INFINITY_FieldID: jfieldID?
+    private static var BYTES_FieldID: jfieldID?
 
-    open static var POSITIVE_INFINITY: Float {
+    open static var BYTES: Int {
         get {
-            let __value = JNIField.GetStaticFloatField( fieldName: "POSITIVE_INFINITY", fieldType: "F", fieldCache: &POSITIVE_INFINITY_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Float(), from: __value )
-        }
-    }
-
-    /// public static final float java.lang.Float.NEGATIVE_INFINITY
-
-    private static var NEGATIVE_INFINITY_FieldID: jfieldID?
-
-    open static var NEGATIVE_INFINITY: Float {
-        get {
-            let __value = JNIField.GetStaticFloatField( fieldName: "NEGATIVE_INFINITY", fieldType: "F", fieldCache: &NEGATIVE_INFINITY_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Float(), from: __value )
-        }
-    }
-
-    /// public static final float java.lang.Float.NaN
-
-    private static var NaN_FieldID: jfieldID?
-
-    open static var NaN: Float {
-        get {
-            let __value = JNIField.GetStaticFloatField( fieldName: "NaN", fieldType: "F", fieldCache: &NaN_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Float(), from: __value )
-        }
-    }
-
-    /// public static final float java.lang.Float.MAX_VALUE
-
-    private static var MAX_VALUE_FieldID: jfieldID?
-
-    open static var MAX_VALUE: Float {
-        get {
-            let __value = JNIField.GetStaticFloatField( fieldName: "MAX_VALUE", fieldType: "F", fieldCache: &MAX_VALUE_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Float(), from: __value )
-        }
-    }
-
-    /// public static final float java.lang.Float.MIN_NORMAL
-
-    private static var MIN_NORMAL_FieldID: jfieldID?
-
-    open static var MIN_NORMAL: Float {
-        get {
-            let __value = JNIField.GetStaticFloatField( fieldName: "MIN_NORMAL", fieldType: "F", fieldCache: &MIN_NORMAL_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Float(), from: __value )
-        }
-    }
-
-    /// public static final float java.lang.Float.MIN_VALUE
-
-    private static var MIN_VALUE_FieldID: jfieldID?
-
-    open static var MIN_VALUE: Float {
-        get {
-            let __value = JNIField.GetStaticFloatField( fieldName: "MIN_VALUE", fieldType: "F", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Float(), from: __value )
+            let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
+            return Int(__value)
         }
     }
 
@@ -89,7 +34,18 @@ open class JavaFloat: Number, JavaComparable {
     open static var MAX_EXPONENT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MAX_EXPONENT", fieldType: "I", fieldCache: &MAX_EXPONENT_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
+        }
+    }
+
+    /// public static final float java.lang.Float.MAX_VALUE
+
+    private static var MAX_VALUE_FieldID: jfieldID?
+
+    open static var MAX_VALUE: Float {
+        get {
+            let __value = JNIField.GetStaticFloatField( fieldName: "MAX_VALUE", fieldType: "F", fieldCache: &MAX_VALUE_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
+            return __value
         }
     }
 
@@ -100,7 +56,62 @@ open class JavaFloat: Number, JavaComparable {
     open static var MIN_EXPONENT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MIN_EXPONENT", fieldType: "I", fieldCache: &MIN_EXPONENT_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
+        }
+    }
+
+    /// public static final float java.lang.Float.MIN_NORMAL
+
+    private static var MIN_NORMAL_FieldID: jfieldID?
+
+    open static var MIN_NORMAL: Float {
+        get {
+            let __value = JNIField.GetStaticFloatField( fieldName: "MIN_NORMAL", fieldType: "F", fieldCache: &MIN_NORMAL_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final float java.lang.Float.MIN_VALUE
+
+    private static var MIN_VALUE_FieldID: jfieldID?
+
+    open static var MIN_VALUE: Float {
+        get {
+            let __value = JNIField.GetStaticFloatField( fieldName: "MIN_VALUE", fieldType: "F", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final float java.lang.Float.NEGATIVE_INFINITY
+
+    private static var NEGATIVE_INFINITY_FieldID: jfieldID?
+
+    open static var NEGATIVE_INFINITY: Float {
+        get {
+            let __value = JNIField.GetStaticFloatField( fieldName: "NEGATIVE_INFINITY", fieldType: "F", fieldCache: &NEGATIVE_INFINITY_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final float java.lang.Float.NaN
+
+    private static var NaN_FieldID: jfieldID?
+
+    open static var NaN: Float {
+        get {
+            let __value = JNIField.GetStaticFloatField( fieldName: "NaN", fieldType: "F", fieldCache: &NaN_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final float java.lang.Float.POSITIVE_INFINITY
+
+    private static var POSITIVE_INFINITY_FieldID: jfieldID?
+
+    open static var POSITIVE_INFINITY: Float {
+        get {
+            let __value = JNIField.GetStaticFloatField( fieldName: "POSITIVE_INFINITY", fieldType: "F", fieldCache: &POSITIVE_INFINITY_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
+            return __value
         }
     }
 
@@ -111,18 +122,7 @@ open class JavaFloat: Number, JavaComparable {
     open static var SIZE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SIZE", fieldType: "I", fieldCache: &SIZE_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.lang.Float.BYTES
-
-    private static var BYTES_FieldID: jfieldID?
-
-    open static var BYTES: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
 
@@ -133,45 +133,26 @@ open class JavaFloat: Number, JavaComparable {
     open static var TYPE: java_swift.JavaClass! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/Class;", fieldCache: &TYPE_FieldID, className: "java/lang/Float", classCache: &JavaFloatJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? java_swift.JavaClass( javaObject: __value ) : nil
         }
     }
 
-    /// private final float java.lang.Float.value
-
     /// private static final long java.lang.Float.serialVersionUID
+
+    /// private final float java.lang.Float.value
 
     /// private static final long java.lang.Number.serialVersionUID
 
-    /// public java.lang.Float(java.lang.String) throws java.lang.NumberFormatException
+    /// public java.lang.Float(double)
 
     private static var new_MethodID_1: jmethodID?
 
-    public convenience init( s: String? ) throws {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Float", classCache: &JavaFloat.JavaFloatJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &JavaFloat.new_MethodID_1, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw NumberFormatException( javaObject: throwable )
-        }
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _s: String? ) throws {
-        try self.init( s: _s )
-    }
-
-    /// public java.lang.Float(double)
-
-    private static var new_MethodID_2: jmethodID?
-
     public convenience init( value: Double ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Float", classCache: &JavaFloat.JavaFloatJNIClass, methodSig: "(D)V", methodCache: &JavaFloat.new_MethodID_2, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: value )
+        let __object = JNIMethod.NewObject( className: "java/lang/Float", classCache: &JavaFloat.JavaFloatJNIClass, methodSig: "(D)V", methodCache: &JavaFloat.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -182,13 +163,13 @@ open class JavaFloat: Number, JavaComparable {
 
     /// public java.lang.Float(float)
 
-    private static var new_MethodID_3: jmethodID?
+    private static var new_MethodID_2: jmethodID?
 
     public convenience init( value: Float ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/Float", classCache: &JavaFloat.JavaFloatJNIClass, methodSig: "(F)V", methodCache: &JavaFloat.new_MethodID_3, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: value )
+        let __object = JNIMethod.NewObject( className: "java/lang/Float", classCache: &JavaFloat.JavaFloatJNIClass, methodSig: "(F)V", methodCache: &JavaFloat.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -197,193 +178,270 @@ open class JavaFloat: Number, JavaComparable {
         self.init( value: _value )
     }
 
-    /// public boolean java.lang.Float.equals(java.lang.Object)
+    /// public java.lang.Float(java.lang.String) throws java.lang.NumberFormatException
 
-    private static var equals_MethodID_4: jmethodID?
+    private static var new_MethodID_3: jmethodID?
 
-    open func equals( obj: java_swift.JavaObject? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init( s: String? ) throws {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &JavaFloat.equals_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    override open func equals( _ _obj: java_swift.JavaObject? ) -> Bool {
-        return equals( obj: _obj )
-    }
-
-    /// public static java.lang.String java.lang.Float.toString(float)
-
-    private static var toString_MethodID_5: jmethodID?
-
-    open class func toString( f: Float ) -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: s, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/Float", classCache: &JavaFloat.JavaFloatJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &JavaFloat.new_MethodID_3, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw NumberFormatException( javaObject: throwable )
+        }
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _s: String? ) throws {
+        try self.init( s: _s )
+    }
+
+    /// public static int java.lang.Float.compare(float,float)
+
+    private static var compare_MethodID_4: jmethodID?
+
+    open class func compare( f1: Float, f2: Float ) -> Int {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: f, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "toString", methodSig: "(F)Ljava/lang/String;", methodCache: &toString_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-    open class func toString( _ _f: Float ) -> String! {
-        return toString( f: _f )
-    }
-
-    /// public java.lang.String java.lang.Float.toString()
-
-    /// public int java.lang.Float.hashCode()
-
-    /// public static int java.lang.Float.hashCode(float)
-
-    private static var hashCode_MethodID_6: jmethodID?
-
-    open class func hashCode( value: Float ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "hashCode", methodSig: "(F)I", methodCache: &hashCode_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open class func hashCode( _ _value: Float ) -> Int {
-        return hashCode( value: _value )
-    }
-
-    /// public static float java.lang.Float.min(float,float)
-
-    private static var min_MethodID_7: jmethodID?
-
-    open class func min( a: Float, b: Float ) -> Float {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: a, locals: &__locals )
-        __args[1] = JNIType.toJava( value: b, locals: &__locals )
-        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "min", methodSig: "(FF)F", methodCache: &min_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Float(), from: __return )
+        __args[0] = jvalue( f: f1 )
+        __args[1] = jvalue( f: f2 )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "compare", methodSig: "(FF)I", methodCache: &compare_MethodID_4, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
-    open class func min( _ _a: Float, _ _b: Float ) -> Float {
-        return min( a: _a, b: _b )
-    }
-
-    /// public static float java.lang.Float.max(float,float)
-
-    private static var max_MethodID_8: jmethodID?
-
-    open class func max( a: Float, b: Float ) -> Float {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: a, locals: &__locals )
-        __args[1] = JNIType.toJava( value: b, locals: &__locals )
-        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "max", methodSig: "(FF)F", methodCache: &max_MethodID_8, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Float(), from: __return )
-    }
-
-    open class func max( _ _a: Float, _ _b: Float ) -> Float {
-        return max( a: _a, b: _b )
-    }
-
-    /// public static native int java.lang.Float.floatToRawIntBits(float)
-
-    private static var floatToRawIntBits_MethodID_9: jmethodID?
-
-    open class func floatToRawIntBits( value: Float ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "floatToRawIntBits", methodSig: "(F)I", methodCache: &floatToRawIntBits_MethodID_9, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open class func floatToRawIntBits( _ _value: Float ) -> Int {
-        return floatToRawIntBits( value: _value )
+    open class func compare( _ _f1: Float, _ _f2: Float ) -> Int {
+        return compare( f1: _f1, f2: _f2 )
     }
 
     /// public static int java.lang.Float.floatToIntBits(float)
 
-    private static var floatToIntBits_MethodID_10: jmethodID?
+    private static var floatToIntBits_MethodID_5: jmethodID?
 
     open class func floatToIntBits( value: Float ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "floatToIntBits", methodSig: "(F)I", methodCache: &floatToIntBits_MethodID_10, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: value )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "floatToIntBits", methodSig: "(F)I", methodCache: &floatToIntBits_MethodID_5, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
     open class func floatToIntBits( _ _value: Float ) -> Int {
         return floatToIntBits( value: _value )
     }
 
+    /// public static native int java.lang.Float.floatToRawIntBits(float)
+
+    private static var floatToRawIntBits_MethodID_6: jmethodID?
+
+    open class func floatToRawIntBits( value: Float ) -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: value )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "floatToRawIntBits", methodSig: "(F)I", methodCache: &floatToRawIntBits_MethodID_6, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open class func floatToRawIntBits( _ _value: Float ) -> Int {
+        return floatToRawIntBits( value: _value )
+    }
+
+    /// public static int java.lang.Float.hashCode(float)
+
+    private static var hashCode_MethodID_7: jmethodID?
+
+    open class func hashCode( value: Float ) -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: value )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "hashCode", methodSig: "(F)I", methodCache: &hashCode_MethodID_7, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open class func hashCode( _ _value: Float ) -> Int {
+        return hashCode( value: _value )
+    }
+
     /// public static native float java.lang.Float.intBitsToFloat(int)
 
-    private static var intBitsToFloat_MethodID_11: jmethodID?
+    private static var intBitsToFloat_MethodID_8: jmethodID?
 
     open class func intBitsToFloat( bits: Int ) -> Float {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: bits, locals: &__locals )
-        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "intBitsToFloat", methodSig: "(I)F", methodCache: &intBitsToFloat_MethodID_11, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Float(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(bits) )
+        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "intBitsToFloat", methodSig: "(I)F", methodCache: &intBitsToFloat_MethodID_8, args: &__args, locals: &__locals )
+        return __return
     }
 
     open class func intBitsToFloat( _ _bits: Int ) -> Float {
         return intBitsToFloat( bits: _bits )
     }
 
-    /// public int java.lang.Float.compareTo(java.lang.Float)
+    /// public static boolean java.lang.Float.isFinite(float)
 
-    private static var compareTo_MethodID_12: jmethodID?
+    private static var isFinite_MethodID_9: jmethodID?
 
-    open func compareTo( anotherFloat: Float! ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func isFinite( f: Float ) -> Bool {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJavaFloat( value: anotherFloat, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Float;)I", methodCache: &JavaFloat.compareTo_MethodID_12, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open func compareTo( _ _anotherFloat: Float! ) -> Int {
-        return compareTo( anotherFloat: _anotherFloat )
-    }
-
-    /// public int java.lang.Float.compareTo(java.lang.Object)
-
-    private static var compareTo_MethodID_13: jmethodID?
-
-    open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: f )
+        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "isFinite", methodSig: "(F)Z", methodCache: &isFinite_MethodID_9, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open class func isFinite( _ _f: Float ) -> Bool {
+        return isFinite( f: _f )
+    }
+
+    /// public static boolean java.lang.Float.isInfinite(float)
+
+    private static var isInfinite_MethodID_10: jmethodID?
+
+    open class func isInfinite( v: Float ) -> Bool {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &JavaFloat.compareTo_MethodID_13, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: v )
+        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "isInfinite", methodSig: "(F)Z", methodCache: &isInfinite_MethodID_10, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
-    open func compareTo( _ _arg0: java_swift.JavaObject? ) -> Int {
-        return compareTo( arg0: _arg0 )
+    open class func isInfinite( _ _v: Float ) -> Bool {
+        return isInfinite( v: _v )
     }
 
-    /// public byte java.lang.Float.byteValue()
+    /// public static boolean java.lang.Float.isNaN(float)
 
-    /// public short java.lang.Float.shortValue()
+    private static var isNaN_MethodID_11: jmethodID?
 
-    /// public int java.lang.Float.intValue()
+    open class func isNaN( v: Float ) -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: v )
+        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "isNaN", methodSig: "(F)Z", methodCache: &isNaN_MethodID_11, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
 
-    /// public long java.lang.Float.longValue()
+    open class func isNaN( _ _v: Float ) -> Bool {
+        return isNaN( v: _v )
+    }
 
-    /// public float java.lang.Float.floatValue()
+    /// public static float java.lang.Float.max(float,float)
 
-    /// public double java.lang.Float.doubleValue()
+    private static var max_MethodID_12: jmethodID?
+
+    open class func max( a: Float, b: Float ) -> Float {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( f: a )
+        __args[1] = jvalue( f: b )
+        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "max", methodSig: "(FF)F", methodCache: &max_MethodID_12, args: &__args, locals: &__locals )
+        return __return
+    }
+
+    open class func max( _ _a: Float, _ _b: Float ) -> Float {
+        return max( a: _a, b: _b )
+    }
+
+    /// public static float java.lang.Float.min(float,float)
+
+    private static var min_MethodID_13: jmethodID?
+
+    open class func min( a: Float, b: Float ) -> Float {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( f: a )
+        __args[1] = jvalue( f: b )
+        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "min", methodSig: "(FF)F", methodCache: &min_MethodID_13, args: &__args, locals: &__locals )
+        return __return
+    }
+
+    open class func min( _ _a: Float, _ _b: Float ) -> Float {
+        return min( a: _a, b: _b )
+    }
+
+    /// public static float java.lang.Float.parseFloat(java.lang.String) throws java.lang.NumberFormatException
+
+    private static var parseFloat_MethodID_14: jmethodID?
+
+    open class func parseFloat( s: String? ) throws /* java.lang.NumberFormatException */ -> Float {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: s, locals: &__locals )
+        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "parseFloat", methodSig: "(Ljava/lang/String;)F", methodCache: &parseFloat_MethodID_14, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw NumberFormatException( javaObject: throwable )
+        }
+        return __return
+    }
+
+    open class func parseFloat( _ _s: String? ) throws /* java.lang.NumberFormatException */ -> Float {
+        return try parseFloat( s: _s )
+    }
+
+    /// public static float java.lang.Float.sum(float,float)
+
+    private static var sum_MethodID_15: jmethodID?
+
+    open class func sum( a: Float, b: Float ) -> Float {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( f: a )
+        __args[1] = jvalue( f: b )
+        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "sum", methodSig: "(FF)F", methodCache: &sum_MethodID_15, args: &__args, locals: &__locals )
+        return __return
+    }
+
+    open class func sum( _ _a: Float, _ _b: Float ) -> Float {
+        return sum( a: _a, b: _b )
+    }
+
+    /// public static java.lang.String java.lang.Float.toHexString(float)
+
+    private static var toHexString_MethodID_16: jmethodID?
+
+    open class func toHexString( f: Float ) -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: f )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "toHexString", methodSig: "(F)Ljava/lang/String;", methodCache: &toHexString_MethodID_16, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+    open class func toHexString( _ _f: Float ) -> String! {
+        return toHexString( f: _f )
+    }
+
+    /// public static java.lang.String java.lang.Float.toString(float)
+
+    private static var toString_MethodID_17: jmethodID?
+
+    open class func toString( f: Float ) -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: f )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "toString", methodSig: "(F)Ljava/lang/String;", methodCache: &toString_MethodID_17, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+    open class func toString( _ _f: Float ) -> String! {
+        return toString( f: _f )
+    }
 
     /// public static java.lang.Float java.lang.Float.valueOf(float)
 
-    private static var valueOf_MethodID_14: jmethodID?
+    private static var valueOf_MethodID_18: jmethodID?
 
     open class func valueOf( f: Float ) -> Float! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: f, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "valueOf", methodSig: "(F)Ljava/lang/Float;", methodCache: &valueOf_MethodID_14, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( f: f )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "valueOf", methodSig: "(F)Ljava/lang/Float;", methodCache: &valueOf_MethodID_18, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return JNIType.toSwiftFloat( from: __return )
     }
@@ -394,15 +452,16 @@ open class JavaFloat: Number, JavaComparable {
 
     /// public static java.lang.Float java.lang.Float.valueOf(java.lang.String) throws java.lang.NumberFormatException
 
-    private static var valueOf_MethodID_15: jmethodID?
+    private static var valueOf_MethodID_19: jmethodID?
 
     open class func valueOf( s: String? ) throws /* java.lang.NumberFormatException */ -> Float! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/lang/Float;", methodCache: &valueOf_MethodID_15, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/lang/Float;", methodCache: &valueOf_MethodID_19, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw NumberFormatException( javaObject: throwable )
         }
         return JNIType.toSwiftFloat( from: __return )
@@ -412,146 +471,109 @@ open class JavaFloat: Number, JavaComparable {
         return try valueOf( s: _s )
     }
 
-    /// public static java.lang.String java.lang.Float.toHexString(float)
+    /// public byte java.lang.Float.byteValue()
 
-    private static var toHexString_MethodID_16: jmethodID?
+    // Skipping method: false true false false false 
 
-    open class func toHexString( f: Float ) -> String! {
+    /// public int java.lang.Float.compareTo(java.lang.Float)
+
+    private static var compareTo_MethodID_20: jmethodID?
+
+    open func compareTo( anotherFloat: Float! ) -> Int {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJavaFloat( value: anotherFloat, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Float;)I", methodCache: &JavaFloat.compareTo_MethodID_20, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open func compareTo( _ _anotherFloat: Float! ) -> Int {
+        return compareTo( anotherFloat: _anotherFloat )
+    }
+
+    /// public int java.lang.Float.compareTo(java.lang.Object)
+
+    private static var compareTo_MethodID_21: jmethodID?
+
+    open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: f, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "toHexString", methodSig: "(F)Ljava/lang/String;", methodCache: &toHexString_MethodID_16, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-    open class func toHexString( _ _f: Float ) -> String! {
-        return toHexString( f: _f )
-    }
-
-    /// public static int java.lang.Float.compare(float,float)
-
-    private static var compare_MethodID_17: jmethodID?
-
-    open class func compare( f1: Float, f2: Float ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: f1, locals: &__locals )
-        __args[1] = JNIType.toJava( value: f2, locals: &__locals )
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "compare", methodSig: "(FF)I", methodCache: &compare_MethodID_17, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open class func compare( _ _f1: Float, _ _f2: Float ) -> Int {
-        return compare( f1: _f1, f2: _f2 )
-    }
-
-    /// public static boolean java.lang.Float.isNaN(float)
-
-    private static var isNaN_MethodID_18: jmethodID?
-
-    open class func isNaN( v: Float ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &JavaFloat.compareTo_MethodID_21, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open func compareTo( _ _arg0: java_swift.JavaObject? ) -> Int {
+        return compareTo( arg0: _arg0 )
+    }
+
+    /// public double java.lang.Float.doubleValue()
+
+    // Skipping method: false true false false false 
+
+    /// public boolean java.lang.Float.equals(java.lang.Object)
+
+    private static var equals_MethodID_22: jmethodID?
+
+    open func equals( obj: java_swift.JavaObject? ) -> Bool {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: v, locals: &__locals )
-        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "isNaN", methodSig: "(F)Z", methodCache: &isNaN_MethodID_18, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open class func isNaN( _ _v: Float ) -> Bool {
-        return isNaN( v: _v )
-    }
-
-    /// public boolean java.lang.Float.isNaN()
-
-    private static var isNaN_MethodID_19: jmethodID?
-
-    open func isNaN() -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isNaN", methodSig: "()Z", methodCache: &JavaFloat.isNaN_MethodID_19, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &JavaFloat.equals_MethodID_22, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
-
-    /// public static float java.lang.Float.parseFloat(java.lang.String) throws java.lang.NumberFormatException
-
-    private static var parseFloat_MethodID_20: jmethodID?
-
-    open class func parseFloat( s: String? ) throws /* java.lang.NumberFormatException */ -> Float {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "parseFloat", methodSig: "(Ljava/lang/String;)F", methodCache: &parseFloat_MethodID_20, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw NumberFormatException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Float(), from: __return )
+    override open func equals( _ _obj: java_swift.JavaObject? ) -> Bool {
+        return equals( obj: _obj )
     }
 
-    open class func parseFloat( _ _s: String? ) throws /* java.lang.NumberFormatException */ -> Float {
-        return try parseFloat( s: _s )
-    }
+    /// public float java.lang.Float.floatValue()
 
-    /// public static boolean java.lang.Float.isInfinite(float)
+    // Skipping method: false true false false false 
 
-    private static var isInfinite_MethodID_21: jmethodID?
+    /// public int java.lang.Float.hashCode()
 
-    open class func isInfinite( v: Float ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: v, locals: &__locals )
-        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "isInfinite", methodSig: "(F)Z", methodCache: &isInfinite_MethodID_21, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
+    // Skipping method: false true false false false 
 
-    open class func isInfinite( _ _v: Float ) -> Bool {
-        return isInfinite( v: _v )
-    }
+    /// public int java.lang.Float.intValue()
+
+    // Skipping method: false true false false false 
 
     /// public boolean java.lang.Float.isInfinite()
 
-    private static var isInfinite_MethodID_22: jmethodID?
+    private static var isInfinite_MethodID_23: jmethodID?
 
     open func isInfinite() -> Bool {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isInfinite", methodSig: "()Z", methodCache: &JavaFloat.isInfinite_MethodID_22, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isInfinite", methodSig: "()Z", methodCache: &JavaFloat.isInfinite_MethodID_23, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public static boolean java.lang.Float.isFinite(float)
+    /// public boolean java.lang.Float.isNaN()
 
-    private static var isFinite_MethodID_23: jmethodID?
+    private static var isNaN_MethodID_24: jmethodID?
 
-    open class func isFinite( f: Float ) -> Bool {
+    open func isNaN() -> Bool {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: f, locals: &__locals )
-        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "isFinite", methodSig: "(F)Z", methodCache: &isFinite_MethodID_23, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isNaN", methodSig: "()Z", methodCache: &JavaFloat.isNaN_MethodID_24, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
-    open class func isFinite( _ _f: Float ) -> Bool {
-        return isFinite( f: _f )
-    }
 
-    /// public static float java.lang.Float.sum(float,float)
+    /// public long java.lang.Float.longValue()
 
-    private static var sum_MethodID_24: jmethodID?
+    // Skipping method: false true false false false 
 
-    open class func sum( a: Float, b: Float ) -> Float {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: a, locals: &__locals )
-        __args[1] = JNIType.toJava( value: b, locals: &__locals )
-        let __return = JNIMethod.CallStaticFloatMethod( className: "java/lang/Float", classCache: &JavaFloatJNIClass, methodName: "sum", methodSig: "(FF)F", methodCache: &sum_MethodID_24, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Float(), from: __return )
-    }
+    /// public short java.lang.Float.shortValue()
 
-    open class func sum( _ _a: Float, _ _b: Float ) -> Float {
-        return sum( a: _a, b: _b )
-    }
+    // Skipping method: false true false false false 
+
+    /// public java.lang.String java.lang.Float.toString()
+
+    // Skipping method: false true false false false 
 
 }
 

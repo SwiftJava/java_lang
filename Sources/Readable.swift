@@ -9,7 +9,7 @@ public protocol Readable: JavaProtocol {
 
     /// public abstract int java.lang.Readable.read(java.nio.CharBuffer) throws java.io.IOException
 
-    func read( cb: /* java.nio.CharBuffer */ UnclassedObject? ) throws /* java.io.IOException */ -> Int
+    func read( cb: /* class java.nio.CharBuffer */ UnavailableObject? ) throws /* java.io.IOException */ -> Int
 
 }
 
@@ -22,21 +22,21 @@ open class ReadableForward: JNIObjectForward, Readable {
 
     private static var read_MethodID_2: jmethodID?
 
-    open func read( cb: /* java.nio.CharBuffer */ UnclassedObject? ) throws /* java.io.IOException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func read( cb: /* class java.nio.CharBuffer */ UnavailableObject? ) throws /* java.io.IOException */ -> Int {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: cb, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "read", methodSig: "(Ljava/nio/CharBuffer;)I", methodCache: &ReadableForward.read_MethodID_2, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
-            throw /* java.io.IOException */ UnclassedObject( javaObject: throwable )
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw /* class java.io.IOException */ UnavailableObject( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int(), from: __return )
+        return Int(__return)
     }
 
-    open func read( _ _cb: /* java.nio.CharBuffer */ UnclassedObject? ) throws /* java.io.IOException */ -> Int {
+    open func read( _ _cb: /* class java.nio.CharBuffer */ UnavailableObject? ) throws /* java.io.IOException */ -> Int {
         return try read( cb: _cb )
     }
 
 }
-
 

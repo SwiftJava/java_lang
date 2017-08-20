@@ -16,69 +16,14 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var JavaDoubleJNIClass: jclass?
 
-    /// public static final double java.lang.Double.POSITIVE_INFINITY
+    /// public static final int java.lang.Double.BYTES
 
-    private static var POSITIVE_INFINITY_FieldID: jfieldID?
+    private static var BYTES_FieldID: jfieldID?
 
-    open static var POSITIVE_INFINITY: Double {
+    open static var BYTES: Int {
         get {
-            let __value = JNIField.GetStaticDoubleField( fieldName: "POSITIVE_INFINITY", fieldType: "D", fieldCache: &POSITIVE_INFINITY_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Double(), from: __value )
-        }
-    }
-
-    /// public static final double java.lang.Double.NEGATIVE_INFINITY
-
-    private static var NEGATIVE_INFINITY_FieldID: jfieldID?
-
-    open static var NEGATIVE_INFINITY: Double {
-        get {
-            let __value = JNIField.GetStaticDoubleField( fieldName: "NEGATIVE_INFINITY", fieldType: "D", fieldCache: &NEGATIVE_INFINITY_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Double(), from: __value )
-        }
-    }
-
-    /// public static final double java.lang.Double.NaN
-
-    private static var NaN_FieldID: jfieldID?
-
-    open static var NaN: Double {
-        get {
-            let __value = JNIField.GetStaticDoubleField( fieldName: "NaN", fieldType: "D", fieldCache: &NaN_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Double(), from: __value )
-        }
-    }
-
-    /// public static final double java.lang.Double.MAX_VALUE
-
-    private static var MAX_VALUE_FieldID: jfieldID?
-
-    open static var MAX_VALUE: Double {
-        get {
-            let __value = JNIField.GetStaticDoubleField( fieldName: "MAX_VALUE", fieldType: "D", fieldCache: &MAX_VALUE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Double(), from: __value )
-        }
-    }
-
-    /// public static final double java.lang.Double.MIN_NORMAL
-
-    private static var MIN_NORMAL_FieldID: jfieldID?
-
-    open static var MIN_NORMAL: Double {
-        get {
-            let __value = JNIField.GetStaticDoubleField( fieldName: "MIN_NORMAL", fieldType: "D", fieldCache: &MIN_NORMAL_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Double(), from: __value )
-        }
-    }
-
-    /// public static final double java.lang.Double.MIN_VALUE
-
-    private static var MIN_VALUE_FieldID: jfieldID?
-
-    open static var MIN_VALUE: Double {
-        get {
-            let __value = JNIField.GetStaticDoubleField( fieldName: "MIN_VALUE", fieldType: "D", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Double(), from: __value )
+            let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
+            return Int(__value)
         }
     }
 
@@ -89,7 +34,18 @@ open class JavaDouble: Number, JavaComparable {
     open static var MAX_EXPONENT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MAX_EXPONENT", fieldType: "I", fieldCache: &MAX_EXPONENT_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
+        }
+    }
+
+    /// public static final double java.lang.Double.MAX_VALUE
+
+    private static var MAX_VALUE_FieldID: jfieldID?
+
+    open static var MAX_VALUE: Double {
+        get {
+            let __value = JNIField.GetStaticDoubleField( fieldName: "MAX_VALUE", fieldType: "D", fieldCache: &MAX_VALUE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
+            return __value
         }
     }
 
@@ -100,7 +56,62 @@ open class JavaDouble: Number, JavaComparable {
     open static var MIN_EXPONENT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MIN_EXPONENT", fieldType: "I", fieldCache: &MIN_EXPONENT_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
+        }
+    }
+
+    /// public static final double java.lang.Double.MIN_NORMAL
+
+    private static var MIN_NORMAL_FieldID: jfieldID?
+
+    open static var MIN_NORMAL: Double {
+        get {
+            let __value = JNIField.GetStaticDoubleField( fieldName: "MIN_NORMAL", fieldType: "D", fieldCache: &MIN_NORMAL_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final double java.lang.Double.MIN_VALUE
+
+    private static var MIN_VALUE_FieldID: jfieldID?
+
+    open static var MIN_VALUE: Double {
+        get {
+            let __value = JNIField.GetStaticDoubleField( fieldName: "MIN_VALUE", fieldType: "D", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final double java.lang.Double.NEGATIVE_INFINITY
+
+    private static var NEGATIVE_INFINITY_FieldID: jfieldID?
+
+    open static var NEGATIVE_INFINITY: Double {
+        get {
+            let __value = JNIField.GetStaticDoubleField( fieldName: "NEGATIVE_INFINITY", fieldType: "D", fieldCache: &NEGATIVE_INFINITY_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final double java.lang.Double.NaN
+
+    private static var NaN_FieldID: jfieldID?
+
+    open static var NaN: Double {
+        get {
+            let __value = JNIField.GetStaticDoubleField( fieldName: "NaN", fieldType: "D", fieldCache: &NaN_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final double java.lang.Double.POSITIVE_INFINITY
+
+    private static var POSITIVE_INFINITY_FieldID: jfieldID?
+
+    open static var POSITIVE_INFINITY: Double {
+        get {
+            let __value = JNIField.GetStaticDoubleField( fieldName: "POSITIVE_INFINITY", fieldType: "D", fieldCache: &POSITIVE_INFINITY_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
+            return __value
         }
     }
 
@@ -111,18 +122,7 @@ open class JavaDouble: Number, JavaComparable {
     open static var SIZE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SIZE", fieldType: "I", fieldCache: &SIZE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.lang.Double.BYTES
-
-    private static var BYTES_FieldID: jfieldID?
-
-    open static var BYTES: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
 
@@ -133,13 +133,14 @@ open class JavaDouble: Number, JavaComparable {
     open static var TYPE: java_swift.JavaClass! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/Class;", fieldCache: &TYPE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? java_swift.JavaClass( javaObject: __value ) : nil
         }
     }
 
-    /// private final double java.lang.Double.value
-
     /// private static final long java.lang.Double.serialVersionUID
+
+    /// private final double java.lang.Double.value
 
     /// private static final long java.lang.Number.serialVersionUID
 
@@ -148,9 +149,9 @@ open class JavaDouble: Number, JavaComparable {
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( value: Double ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: value )
         let __object = JNIMethod.NewObject( className: "java/lang/Double", classCache: &JavaDouble.JavaDoubleJNIClass, methodSig: "(D)V", methodCache: &JavaDouble.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -165,11 +166,12 @@ open class JavaDouble: Number, JavaComparable {
     private static var new_MethodID_2: jmethodID?
 
     public convenience init( s: String? ) throws {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: s, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/Double", classCache: &JavaDouble.JavaDoubleJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &JavaDouble.new_MethodID_2, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw NumberFormatException( javaObject: throwable )
         }
         self.init( javaObject: __object )
@@ -180,122 +182,117 @@ open class JavaDouble: Number, JavaComparable {
         try self.init( s: _s )
     }
 
-    /// public boolean java.lang.Double.equals(java.lang.Object)
+    /// public static int java.lang.Double.compare(double,double)
 
-    private static var equals_MethodID_3: jmethodID?
+    private static var compare_MethodID_3: jmethodID?
 
-    open func equals( obj: java_swift.JavaObject? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func compare( d1: Double, d2: Double ) -> Int {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &JavaDouble.equals_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    override open func equals( _ _obj: java_swift.JavaObject? ) -> Bool {
-        return equals( obj: _obj )
-    }
-
-    /// public static java.lang.String java.lang.Double.toString(double)
-
-    private static var toString_MethodID_4: jmethodID?
-
-    open class func toString( d: Double ) -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: d, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "toString", methodSig: "(D)Ljava/lang/String;", methodCache: &toString_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-    open class func toString( _ _d: Double ) -> String! {
-        return toString( d: _d )
-    }
-
-    /// public java.lang.String java.lang.Double.toString()
-
-    /// public int java.lang.Double.hashCode()
-
-    /// public static int java.lang.Double.hashCode(double)
-
-    private static var hashCode_MethodID_5: jmethodID?
-
-    open class func hashCode( value: Double ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "hashCode", methodSig: "(D)I", methodCache: &hashCode_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open class func hashCode( _ _value: Double ) -> Int {
-        return hashCode( value: _value )
-    }
-
-    /// public static double java.lang.Double.min(double,double)
-
-    private static var min_MethodID_6: jmethodID?
-
-    open class func min( a: Double, b: Double ) -> Double {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( d: d1 )
+        __args[1] = jvalue( d: d2 )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "compare", methodSig: "(DD)I", methodCache: &compare_MethodID_3, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open class func compare( _ _d1: Double, _ _d2: Double ) -> Int {
+        return compare( d1: _d1, d2: _d2 )
+    }
+
+    /// public static long java.lang.Double.doubleToLongBits(double)
+
+    private static var doubleToLongBits_MethodID_4: jmethodID?
+
+    open class func doubleToLongBits( value: Double ) -> Int64 {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: a, locals: &__locals )
-        __args[1] = JNIType.toJava( value: b, locals: &__locals )
-        let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "min", methodSig: "(DD)D", methodCache: &min_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Double(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: value )
+        let __return = JNIMethod.CallStaticLongMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "doubleToLongBits", methodSig: "(D)J", methodCache: &doubleToLongBits_MethodID_4, args: &__args, locals: &__locals )
+        return __return
     }
 
-    open class func min( _ _a: Double, _ _b: Double ) -> Double {
-        return min( a: _a, b: _b )
-    }
-
-    /// public static double java.lang.Double.max(double,double)
-
-    private static var max_MethodID_7: jmethodID?
-
-    open class func max( a: Double, b: Double ) -> Double {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: a, locals: &__locals )
-        __args[1] = JNIType.toJava( value: b, locals: &__locals )
-        let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "max", methodSig: "(DD)D", methodCache: &max_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Double(), from: __return )
-    }
-
-    open class func max( _ _a: Double, _ _b: Double ) -> Double {
-        return max( a: _a, b: _b )
+    open class func doubleToLongBits( _ _value: Double ) -> Int64 {
+        return doubleToLongBits( value: _value )
     }
 
     /// public static native long java.lang.Double.doubleToRawLongBits(double)
 
-    private static var doubleToRawLongBits_MethodID_8: jmethodID?
+    private static var doubleToRawLongBits_MethodID_5: jmethodID?
 
     open class func doubleToRawLongBits( value: Double ) -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
-        let __return = JNIMethod.CallStaticLongMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "doubleToRawLongBits", methodSig: "(D)J", methodCache: &doubleToRawLongBits_MethodID_8, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: value )
+        let __return = JNIMethod.CallStaticLongMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "doubleToRawLongBits", methodSig: "(D)J", methodCache: &doubleToRawLongBits_MethodID_5, args: &__args, locals: &__locals )
+        return __return
     }
 
     open class func doubleToRawLongBits( _ _value: Double ) -> Int64 {
         return doubleToRawLongBits( value: _value )
     }
 
-    /// public static long java.lang.Double.doubleToLongBits(double)
+    /// public static int java.lang.Double.hashCode(double)
 
-    private static var doubleToLongBits_MethodID_9: jmethodID?
+    private static var hashCode_MethodID_6: jmethodID?
 
-    open class func doubleToLongBits( value: Double ) -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func hashCode( value: Double ) -> Int {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
-        let __return = JNIMethod.CallStaticLongMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "doubleToLongBits", methodSig: "(D)J", methodCache: &doubleToLongBits_MethodID_9, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: value )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "hashCode", methodSig: "(D)I", methodCache: &hashCode_MethodID_6, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
-    open class func doubleToLongBits( _ _value: Double ) -> Int64 {
-        return doubleToLongBits( value: _value )
+    open class func hashCode( _ _value: Double ) -> Int {
+        return hashCode( value: _value )
+    }
+
+    /// public static boolean java.lang.Double.isFinite(double)
+
+    private static var isFinite_MethodID_7: jmethodID?
+
+    open class func isFinite( d: Double ) -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: d )
+        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "isFinite", methodSig: "(D)Z", methodCache: &isFinite_MethodID_7, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open class func isFinite( _ _d: Double ) -> Bool {
+        return isFinite( d: _d )
+    }
+
+    /// public static boolean java.lang.Double.isInfinite(double)
+
+    private static var isInfinite_MethodID_8: jmethodID?
+
+    open class func isInfinite( v: Double ) -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: v )
+        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "isInfinite", methodSig: "(D)Z", methodCache: &isInfinite_MethodID_8, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open class func isInfinite( _ _v: Double ) -> Bool {
+        return isInfinite( v: _v )
+    }
+
+    /// public static boolean java.lang.Double.isNaN(double)
+
+    private static var isNaN_MethodID_9: jmethodID?
+
+    open class func isNaN( v: Double ) -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: v )
+        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "isNaN", methodSig: "(D)Z", methodCache: &isNaN_MethodID_9, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open class func isNaN( _ _v: Double ) -> Bool {
+        return isNaN( v: _v )
     }
 
     /// public static native double java.lang.Double.longBitsToDouble(long)
@@ -303,72 +300,151 @@ open class JavaDouble: Number, JavaComparable {
     private static var longBitsToDouble_MethodID_10: jmethodID?
 
     open class func longBitsToDouble( bits: Int64 ) -> Double {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: bits, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( j: bits )
         let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "longBitsToDouble", methodSig: "(J)D", methodCache: &longBitsToDouble_MethodID_10, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Double(), from: __return )
+        return __return
     }
 
     open class func longBitsToDouble( _ _bits: Int64 ) -> Double {
         return longBitsToDouble( bits: _bits )
     }
 
-    /// public int java.lang.Double.compareTo(java.lang.Object)
+    /// public static double java.lang.Double.max(double,double)
 
-    private static var compareTo_MethodID_11: jmethodID?
+    private static var max_MethodID_11: jmethodID?
 
-    open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func max( a: Double, b: Double ) -> Double {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &JavaDouble.compareTo_MethodID_11, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( d: a )
+        __args[1] = jvalue( d: b )
+        let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "max", methodSig: "(DD)D", methodCache: &max_MethodID_11, args: &__args, locals: &__locals )
+        return __return
     }
 
-    open func compareTo( _ _arg0: java_swift.JavaObject? ) -> Int {
-        return compareTo( arg0: _arg0 )
+    open class func max( _ _a: Double, _ _b: Double ) -> Double {
+        return max( a: _a, b: _b )
     }
 
-    /// public int java.lang.Double.compareTo(java.lang.Double)
+    /// public static double java.lang.Double.min(double,double)
 
-    private static var compareTo_MethodID_12: jmethodID?
+    private static var min_MethodID_12: jmethodID?
 
-    open func compareTo( anotherDouble: JavaDouble? ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func min( a: Double, b: Double ) -> Double {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: anotherDouble, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Double;)I", methodCache: &JavaDouble.compareTo_MethodID_12, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( d: a )
+        __args[1] = jvalue( d: b )
+        let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "min", methodSig: "(DD)D", methodCache: &min_MethodID_12, args: &__args, locals: &__locals )
+        return __return
     }
 
-    open func compareTo( _ _anotherDouble: JavaDouble? ) -> Int {
-        return compareTo( anotherDouble: _anotherDouble )
+    open class func min( _ _a: Double, _ _b: Double ) -> Double {
+        return min( a: _a, b: _b )
     }
 
-    /// public byte java.lang.Double.byteValue()
+    /// public static double java.lang.Double.parseDouble(java.lang.String) throws java.lang.NumberFormatException
 
-    /// public short java.lang.Double.shortValue()
+    private static var parseDouble_MethodID_13: jmethodID?
 
-    /// public int java.lang.Double.intValue()
+    open class func parseDouble( s: String? ) throws /* java.lang.NumberFormatException */ -> Double {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: s, locals: &__locals )
+        let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "parseDouble", methodSig: "(Ljava/lang/String;)D", methodCache: &parseDouble_MethodID_13, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw NumberFormatException( javaObject: throwable )
+        }
+        return __return
+    }
 
-    /// public long java.lang.Double.longValue()
+    open class func parseDouble( _ _s: String? ) throws /* java.lang.NumberFormatException */ -> Double {
+        return try parseDouble( s: _s )
+    }
 
-    /// public float java.lang.Double.floatValue()
+    /// public static double java.lang.Double.sum(double,double)
 
-    /// public double java.lang.Double.doubleValue()
+    private static var sum_MethodID_14: jmethodID?
+
+    open class func sum( a: Double, b: Double ) -> Double {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( d: a )
+        __args[1] = jvalue( d: b )
+        let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "sum", methodSig: "(DD)D", methodCache: &sum_MethodID_14, args: &__args, locals: &__locals )
+        return __return
+    }
+
+    open class func sum( _ _a: Double, _ _b: Double ) -> Double {
+        return sum( a: _a, b: _b )
+    }
+
+    /// public static java.lang.String java.lang.Double.toHexString(double)
+
+    private static var toHexString_MethodID_15: jmethodID?
+
+    open class func toHexString( d: Double ) -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: d )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "toHexString", methodSig: "(D)Ljava/lang/String;", methodCache: &toHexString_MethodID_15, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+    open class func toHexString( _ _d: Double ) -> String! {
+        return toHexString( d: _d )
+    }
+
+    /// public static java.lang.String java.lang.Double.toString(double)
+
+    private static var toString_MethodID_16: jmethodID?
+
+    open class func toString( d: Double ) -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: d )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "toString", methodSig: "(D)Ljava/lang/String;", methodCache: &toString_MethodID_16, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+    open class func toString( _ _d: Double ) -> String! {
+        return toString( d: _d )
+    }
+
+    /// public static java.lang.Double java.lang.Double.valueOf(double)
+
+    private static var valueOf_MethodID_17: jmethodID?
+
+    open class func valueOf( d: Double ) -> JavaDouble! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( d: d )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "valueOf", methodSig: "(D)Ljava/lang/Double;", methodCache: &valueOf_MethodID_17, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? JavaDouble( javaObject: __return ) : nil
+    }
+
+    open class func valueOf( _ _d: Double ) -> JavaDouble! {
+        return valueOf( d: _d )
+    }
 
     /// public static java.lang.Double java.lang.Double.valueOf(java.lang.String) throws java.lang.NumberFormatException
 
-    private static var valueOf_MethodID_13: jmethodID?
+    private static var valueOf_MethodID_18: jmethodID?
 
     open class func valueOf( s: String? ) throws /* java.lang.NumberFormatException */ -> JavaDouble! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/lang/Double;", methodCache: &valueOf_MethodID_13, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/lang/Double;", methodCache: &valueOf_MethodID_18, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw NumberFormatException( javaObject: throwable )
         }
         return __return != nil ? JavaDouble( javaObject: __return ) : nil
@@ -378,163 +454,109 @@ open class JavaDouble: Number, JavaComparable {
         return try valueOf( s: _s )
     }
 
-    /// public static java.lang.Double java.lang.Double.valueOf(double)
+    /// public byte java.lang.Double.byteValue()
 
-    private static var valueOf_MethodID_14: jmethodID?
+    // Skipping method: false true false false false 
 
-    open class func valueOf( d: Double ) -> JavaDouble! {
+    /// public int java.lang.Double.compareTo(java.lang.Double)
+
+    private static var compareTo_MethodID_19: jmethodID?
+
+    open func compareTo( anotherDouble: JavaDouble? ) -> Int {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: anotherDouble, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Double;)I", methodCache: &JavaDouble.compareTo_MethodID_19, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open func compareTo( _ _anotherDouble: JavaDouble? ) -> Int {
+        return compareTo( anotherDouble: _anotherDouble )
+    }
+
+    /// public int java.lang.Double.compareTo(java.lang.Object)
+
+    private static var compareTo_MethodID_20: jmethodID?
+
+    open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: d, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "valueOf", methodSig: "(D)Ljava/lang/Double;", methodCache: &valueOf_MethodID_14, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? JavaDouble( javaObject: __return ) : nil
-    }
-
-    open class func valueOf( _ _d: Double ) -> JavaDouble! {
-        return valueOf( d: _d )
-    }
-
-    /// public static java.lang.String java.lang.Double.toHexString(double)
-
-    private static var toHexString_MethodID_15: jmethodID?
-
-    open class func toHexString( d: Double ) -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &JavaDouble.compareTo_MethodID_20, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open func compareTo( _ _arg0: java_swift.JavaObject? ) -> Int {
+        return compareTo( arg0: _arg0 )
+    }
+
+    /// public double java.lang.Double.doubleValue()
+
+    // Skipping method: false true false false false 
+
+    /// public boolean java.lang.Double.equals(java.lang.Object)
+
+    private static var equals_MethodID_21: jmethodID?
+
+    open func equals( obj: java_swift.JavaObject? ) -> Bool {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: d, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "toHexString", methodSig: "(D)Ljava/lang/String;", methodCache: &toHexString_MethodID_15, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-    open class func toHexString( _ _d: Double ) -> String! {
-        return toHexString( d: _d )
-    }
-
-    /// public static int java.lang.Double.compare(double,double)
-
-    private static var compare_MethodID_16: jmethodID?
-
-    open class func compare( d1: Double, d2: Double ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: d1, locals: &__locals )
-        __args[1] = JNIType.toJava( value: d2, locals: &__locals )
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "compare", methodSig: "(DD)I", methodCache: &compare_MethodID_16, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open class func compare( _ _d1: Double, _ _d2: Double ) -> Int {
-        return compare( d1: _d1, d2: _d2 )
-    }
-
-    /// public static boolean java.lang.Double.isNaN(double)
-
-    private static var isNaN_MethodID_17: jmethodID?
-
-    open class func isNaN( v: Double ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: v, locals: &__locals )
-        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "isNaN", methodSig: "(D)Z", methodCache: &isNaN_MethodID_17, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        __args[0] = JNIType.toJava( value: obj, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &JavaDouble.equals_MethodID_21, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
-    open class func isNaN( _ _v: Double ) -> Bool {
-        return isNaN( v: _v )
+    override open func equals( _ _obj: java_swift.JavaObject? ) -> Bool {
+        return equals( obj: _obj )
     }
 
-    /// public boolean java.lang.Double.isNaN()
+    /// public float java.lang.Double.floatValue()
 
-    private static var isNaN_MethodID_18: jmethodID?
+    // Skipping method: false true false false false 
 
-    open func isNaN() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isNaN", methodSig: "()Z", methodCache: &JavaDouble.isNaN_MethodID_18, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
+    /// public int java.lang.Double.hashCode()
 
+    // Skipping method: false true false false false 
 
-    /// public static boolean java.lang.Double.isInfinite(double)
+    /// public int java.lang.Double.intValue()
 
-    private static var isInfinite_MethodID_19: jmethodID?
-
-    open class func isInfinite( v: Double ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: v, locals: &__locals )
-        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "isInfinite", methodSig: "(D)Z", methodCache: &isInfinite_MethodID_19, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open class func isInfinite( _ _v: Double ) -> Bool {
-        return isInfinite( v: _v )
-    }
+    // Skipping method: false true false false false 
 
     /// public boolean java.lang.Double.isInfinite()
 
-    private static var isInfinite_MethodID_20: jmethodID?
+    private static var isInfinite_MethodID_22: jmethodID?
 
     open func isInfinite() -> Bool {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isInfinite", methodSig: "()Z", methodCache: &JavaDouble.isInfinite_MethodID_20, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isInfinite", methodSig: "()Z", methodCache: &JavaDouble.isInfinite_MethodID_22, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public static boolean java.lang.Double.isFinite(double)
+    /// public boolean java.lang.Double.isNaN()
 
-    private static var isFinite_MethodID_21: jmethodID?
+    private static var isNaN_MethodID_23: jmethodID?
 
-    open class func isFinite( d: Double ) -> Bool {
+    open func isNaN() -> Bool {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: d, locals: &__locals )
-        let __return = JNIMethod.CallStaticBooleanMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "isFinite", methodSig: "(D)Z", methodCache: &isFinite_MethodID_21, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isNaN", methodSig: "()Z", methodCache: &JavaDouble.isNaN_MethodID_23, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
-    open class func isFinite( _ _d: Double ) -> Bool {
-        return isFinite( d: _d )
-    }
 
-    /// public static double java.lang.Double.sum(double,double)
+    /// public long java.lang.Double.longValue()
 
-    private static var sum_MethodID_22: jmethodID?
+    // Skipping method: false true false false false 
 
-    open class func sum( a: Double, b: Double ) -> Double {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: a, locals: &__locals )
-        __args[1] = JNIType.toJava( value: b, locals: &__locals )
-        let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "sum", methodSig: "(DD)D", methodCache: &sum_MethodID_22, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Double(), from: __return )
-    }
+    /// public short java.lang.Double.shortValue()
 
-    open class func sum( _ _a: Double, _ _b: Double ) -> Double {
-        return sum( a: _a, b: _b )
-    }
+    // Skipping method: false true false false false 
 
-    /// public static double java.lang.Double.parseDouble(java.lang.String) throws java.lang.NumberFormatException
+    /// public java.lang.String java.lang.Double.toString()
 
-    private static var parseDouble_MethodID_23: jmethodID?
-
-    open class func parseDouble( s: String? ) throws /* java.lang.NumberFormatException */ -> Double {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __return = JNIMethod.CallStaticDoubleMethod( className: "java/lang/Double", classCache: &JavaDoubleJNIClass, methodName: "parseDouble", methodSig: "(Ljava/lang/String;)D", methodCache: &parseDouble_MethodID_23, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw NumberFormatException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Double(), from: __return )
-    }
-
-    open class func parseDouble( _ _s: String? ) throws /* java.lang.NumberFormatException */ -> Double {
-        return try parseDouble( s: _s )
-    }
+    // Skipping method: false true false false false 
 
 }
 

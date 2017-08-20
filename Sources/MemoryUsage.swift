@@ -16,25 +16,25 @@ open class MemoryUsage: java_swift.JavaObject {
 
     private static var MemoryUsageJNIClass: jclass?
 
-    /// private final long java.lang.management.MemoryUsage.init
-
-    /// private final long java.lang.management.MemoryUsage.used
-
     /// private final long java.lang.management.MemoryUsage.committed
 
+    /// private final long java.lang.management.MemoryUsage.init
+
     /// private final long java.lang.management.MemoryUsage.max
+
+    /// private final long java.lang.management.MemoryUsage.used
 
     /// public java.lang.management.MemoryUsage(long,long,long,long)
 
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( _init: Int64, used: Int64, committed: Int64, max: Int64 ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: _init, locals: &__locals )
-        __args[1] = JNIType.toJava( value: used, locals: &__locals )
-        __args[2] = JNIType.toJava( value: committed, locals: &__locals )
-        __args[3] = JNIType.toJava( value: max, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = jvalue( j: _init )
+        __args[1] = jvalue( j: used )
+        __args[2] = jvalue( j: committed )
+        __args[3] = jvalue( j: max )
         let __object = JNIMethod.NewObject( className: "java/lang/management/MemoryUsage", classCache: &MemoryUsage.MemoryUsageJNIClass, methodSig: "(JJJJ)V", methodCache: &MemoryUsage.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -46,72 +46,74 @@ open class MemoryUsage: java_swift.JavaObject {
 
     /// private java.lang.management.MemoryUsage(javax.management.openmbean.CompositeData)
 
-    /// public java.lang.String java.lang.management.MemoryUsage.toString()
-
     /// public static java.lang.management.MemoryUsage java.lang.management.MemoryUsage.from(javax.management.openmbean.CompositeData)
 
     private static var from_MethodID_2: jmethodID?
 
-    open class func from( cd: /* javax.management.openmbean.CompositeData */ UnclassedProtocol? ) -> MemoryUsage! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func from( cd: /* interface javax.management.openmbean.CompositeData */ UnavailableProtocol? ) -> MemoryUsage! {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: cd, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/MemoryUsage", classCache: &MemoryUsageJNIClass, methodName: "from", methodSig: "(Ljavax/management/openmbean/CompositeData;)Ljava/lang/management/MemoryUsage;", methodCache: &from_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MemoryUsage( javaObject: __return ) : nil
     }
 
-    open class func from( _ _cd: /* javax.management.openmbean.CompositeData */ UnclassedProtocol? ) -> MemoryUsage! {
+    open class func from( _ _cd: /* interface javax.management.openmbean.CompositeData */ UnavailableProtocol? ) -> MemoryUsage! {
         return from( cd: _cd )
     }
 
-    /// public long java.lang.management.MemoryUsage.getInit()
-
-    private static var getInit_MethodID_3: jmethodID?
-
-    open func getInit() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getInit", methodSig: "()J", methodCache: &MemoryUsage.getInit_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
-    }
-
-
-    /// public long java.lang.management.MemoryUsage.getUsed()
-
-    private static var getUsed_MethodID_4: jmethodID?
-
-    open func getUsed() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getUsed", methodSig: "()J", methodCache: &MemoryUsage.getUsed_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
-    }
-
-
     /// public long java.lang.management.MemoryUsage.getCommitted()
 
-    private static var getCommitted_MethodID_5: jmethodID?
+    private static var getCommitted_MethodID_3: jmethodID?
 
     open func getCommitted() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getCommitted", methodSig: "()J", methodCache: &MemoryUsage.getCommitted_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getCommitted", methodSig: "()J", methodCache: &MemoryUsage.getCommitted_MethodID_3, args: &__args, locals: &__locals )
+        return __return
+    }
+
+
+    /// public long java.lang.management.MemoryUsage.getInit()
+
+    private static var getInit_MethodID_4: jmethodID?
+
+    open func getInit() -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getInit", methodSig: "()J", methodCache: &MemoryUsage.getInit_MethodID_4, args: &__args, locals: &__locals )
+        return __return
     }
 
 
     /// public long java.lang.management.MemoryUsage.getMax()
 
-    private static var getMax_MethodID_6: jmethodID?
+    private static var getMax_MethodID_5: jmethodID?
 
     open func getMax() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getMax", methodSig: "()J", methodCache: &MemoryUsage.getMax_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getMax", methodSig: "()J", methodCache: &MemoryUsage.getMax_MethodID_5, args: &__args, locals: &__locals )
+        return __return
     }
 
+
+    /// public long java.lang.management.MemoryUsage.getUsed()
+
+    private static var getUsed_MethodID_6: jmethodID?
+
+    open func getUsed() -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getUsed", methodSig: "()J", methodCache: &MemoryUsage.getUsed_MethodID_6, args: &__args, locals: &__locals )
+        return __return
+    }
+
+
+    /// public java.lang.String java.lang.management.MemoryUsage.toString()
+
+    // Skipping method: false true false false false 
 
 }
 

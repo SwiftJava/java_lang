@@ -16,41 +16,67 @@ open class ReferenceQueue: java_swift.JavaObject {
 
     private static var ReferenceQueueJNIClass: jclass?
 
-    /// static java.lang.ref.ReferenceQueue java.lang.ref.ReferenceQueue.NULL
+    /// static final boolean java.lang.ref.ReferenceQueue.$assertionsDisabled
+
+    // Skipping field: true false false false false false 
 
     /// static java.lang.ref.ReferenceQueue java.lang.ref.ReferenceQueue.ENQUEUED
 
-    /// private java.lang.ref.ReferenceQueue$Lock java.lang.ref.ReferenceQueue.lock
+    // Skipping field: true false false false false false 
+
+    /// static java.lang.ref.ReferenceQueue java.lang.ref.ReferenceQueue.NULL
+
+    // Skipping field: true false false false false false 
 
     /// private volatile java.lang.ref.Reference java.lang.ref.ReferenceQueue.head
 
-    /// private long java.lang.ref.ReferenceQueue.queueLength
+    /// private java.lang.ref.ReferenceQueue$Lock java.lang.ref.ReferenceQueue.lock
 
-    /// static final boolean java.lang.ref.ReferenceQueue.$assertionsDisabled
+    /// private long java.lang.ref.ReferenceQueue.queueLength
 
     /// public java.lang.ref.ReferenceQueue()
 
     private static var new_MethodID_1: jmethodID?
 
     public convenience init() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __object = JNIMethod.NewObject( className: "java/lang/ref/ReferenceQueue", classCache: &ReferenceQueue.ReferenceQueueJNIClass, methodSig: "()V", methodCache: &ReferenceQueue.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
 
+    /// boolean java.lang.ref.ReferenceQueue.enqueue(java.lang.ref.Reference)
+
+    // Skipping method: true false false false false 
+
+    /// public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+
+    private static var poll_MethodID_2: jmethodID?
+
+    open func poll() -> Reference! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "poll", methodSig: "()Ljava/lang/ref/Reference;", methodCache: &ReferenceQueue.poll_MethodID_2, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? Reference( javaObject: __return ) : nil
+    }
+
+
+    /// private java.lang.ref.Reference java.lang.ref.ReferenceQueue.reallyPoll()
+
     /// public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove(long) throws java.lang.IllegalArgumentException,java.lang.InterruptedException
 
-    private static var remove_MethodID_2: jmethodID?
+    private static var remove_MethodID_3: jmethodID?
 
     open func remove( timeout: Int64 ) throws /* java.lang.IllegalArgumentException, java.lang.InterruptedException */ -> Reference! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: timeout, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "remove", methodSig: "(J)Ljava/lang/ref/Reference;", methodCache: &ReferenceQueue.remove_MethodID_2, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( j: timeout )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "remove", methodSig: "(J)Ljava/lang/ref/Reference;", methodCache: &ReferenceQueue.remove_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw IllegalArgumentException( javaObject: throwable )
         }
         return __return != nil ? Reference( javaObject: __return ) : nil
@@ -62,36 +88,20 @@ open class ReferenceQueue: java_swift.JavaObject {
 
     /// public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove() throws java.lang.InterruptedException
 
-    private static var remove_MethodID_3: jmethodID?
+    private static var remove_MethodID_4: jmethodID?
 
     open func remove() throws /* java.lang.InterruptedException */ -> Reference! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "remove", methodSig: "()Ljava/lang/ref/Reference;", methodCache: &ReferenceQueue.remove_MethodID_3, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "remove", methodSig: "()Ljava/lang/ref/Reference;", methodCache: &ReferenceQueue.remove_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw InterruptedException( javaObject: throwable )
         }
         return __return != nil ? Reference( javaObject: __return ) : nil
     }
 
-
-    /// boolean java.lang.ref.ReferenceQueue.enqueue(java.lang.ref.Reference)
-
-    /// public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
-
-    private static var poll_MethodID_4: jmethodID?
-
-    open func poll() -> Reference! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "poll", methodSig: "()Ljava/lang/ref/Reference;", methodCache: &ReferenceQueue.poll_MethodID_4, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? Reference( javaObject: __return ) : nil
-    }
-
-
-    /// private java.lang.ref.Reference java.lang.ref.ReferenceQueue.reallyPoll()
 
 }
 

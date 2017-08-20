@@ -7,13 +7,13 @@ import java_swift
 
 public protocol ClassLoadingMXBean: PlatformManagedObject {
 
-    /// public abstract long java.lang.management.ClassLoadingMXBean.getTotalLoadedClassCount()
-
-    func getTotalLoadedClassCount() -> Int64
-
     /// public abstract int java.lang.management.ClassLoadingMXBean.getLoadedClassCount()
 
     func getLoadedClassCount() -> Int
+
+    /// public abstract long java.lang.management.ClassLoadingMXBean.getTotalLoadedClassCount()
+
+    func getTotalLoadedClassCount() -> Int64
 
     /// public abstract long java.lang.management.ClassLoadingMXBean.getUnloadedClassCount()
 
@@ -34,27 +34,31 @@ open class ClassLoadingMXBeanForward: PlatformManagedObjectForward, ClassLoading
 
     private static var ClassLoadingMXBeanJNIClass: jclass?
 
-    /// public abstract long java.lang.management.ClassLoadingMXBean.getTotalLoadedClassCount()
+    /// public abstract int java.lang.management.ClassLoadingMXBean.getLoadedClassCount()
 
-    private static var getTotalLoadedClassCount_MethodID_6: jmethodID?
+    private static var getLoadedClassCount_MethodID_6: jmethodID?
 
-    open func getTotalLoadedClassCount() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getLoadedClassCount() -> Int {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getTotalLoadedClassCount", methodSig: "()J", methodCache: &ClassLoadingMXBeanForward.getTotalLoadedClassCount_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getLoadedClassCount", methodSig: "()I", methodCache: &ClassLoadingMXBeanForward.getLoadedClassCount_MethodID_6, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
 
-    /// public abstract int java.lang.management.ClassLoadingMXBean.getLoadedClassCount()
+    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
-    private static var getLoadedClassCount_MethodID_7: jmethodID?
+    // Skipping method: false false true false false 
 
-    open func getLoadedClassCount() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    /// public abstract long java.lang.management.ClassLoadingMXBean.getTotalLoadedClassCount()
+
+    private static var getTotalLoadedClassCount_MethodID_7: jmethodID?
+
+    open func getTotalLoadedClassCount() -> Int64 {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getLoadedClassCount", methodSig: "()I", methodCache: &ClassLoadingMXBeanForward.getLoadedClassCount_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getTotalLoadedClassCount", methodSig: "()J", methodCache: &ClassLoadingMXBeanForward.getTotalLoadedClassCount_MethodID_7, args: &__args, locals: &__locals )
+        return __return
     }
 
 
@@ -63,10 +67,10 @@ open class ClassLoadingMXBeanForward: PlatformManagedObjectForward, ClassLoading
     private static var getUnloadedClassCount_MethodID_8: jmethodID?
 
     open func getUnloadedClassCount() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getUnloadedClassCount", methodSig: "()J", methodCache: &ClassLoadingMXBeanForward.getUnloadedClassCount_MethodID_8, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        return __return
     }
 
 
@@ -75,10 +79,10 @@ open class ClassLoadingMXBeanForward: PlatformManagedObjectForward, ClassLoading
     private static var isVerbose_MethodID_9: jmethodID?
 
     open func isVerbose() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isVerbose", methodSig: "()Z", methodCache: &ClassLoadingMXBeanForward.isVerbose_MethodID_9, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
@@ -87,9 +91,9 @@ open class ClassLoadingMXBeanForward: PlatformManagedObjectForward, ClassLoading
     private static var setVerbose_MethodID_10: jmethodID?
 
     open func setVerbose( value: Bool ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( z: jboolean(value ? JNI_TRUE : JNI_FALSE) )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setVerbose", methodSig: "(Z)V", methodCache: &ClassLoadingMXBeanForward.setVerbose_MethodID_10, args: &__args, locals: &__locals )
     }
 
@@ -97,12 +101,11 @@ open class ClassLoadingMXBeanForward: PlatformManagedObjectForward, ClassLoading
         setVerbose( value: _value )
     }
 
-    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
-
     /// In declared protocol but not defined.. ///
 
     /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
-}
+    // Skipping method: false false true false false 
 
+}
 

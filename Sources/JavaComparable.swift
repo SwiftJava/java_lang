@@ -23,11 +23,11 @@ open class JavaComparableForward: JNIObjectForward, JavaComparable {
     private static var compareTo_MethodID_2: jmethodID?
 
     open func compareTo( arg0: java_swift.JavaObject? ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &JavaComparableForward.compareTo_MethodID_2, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        return Int(__return)
     }
 
     open func compareTo( _ _arg0: java_swift.JavaObject? ) -> Int {
@@ -35,5 +35,4 @@ open class JavaComparableForward: JNIObjectForward, JavaComparable {
     }
 
 }
-
 

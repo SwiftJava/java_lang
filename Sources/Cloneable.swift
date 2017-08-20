@@ -16,4 +16,3 @@ open class CloneableForward: JNIObjectForward, Cloneable {
 
 }
 
-

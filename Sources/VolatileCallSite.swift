@@ -16,40 +16,25 @@ open class VolatileCallSite: CallSite {
 
     private static var VolatileCallSiteJNIClass: jclass?
 
-    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.target
-
     /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.GET_TARGET
-
-    /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.THROW_UCS
 
     /// private static final long java.lang.invoke.CallSite.TARGET_OFFSET
 
-    /// public java.lang.invoke.VolatileCallSite(java.lang.invoke.MethodType)
+    /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.THROW_UCS
 
-    private static var new_MethodID_1: jmethodID?
+    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.target
 
-    public convenience init( type: MethodType? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/invoke/VolatileCallSite", classCache: &VolatileCallSite.VolatileCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodType;)V", methodCache: &VolatileCallSite.new_MethodID_1, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _type: MethodType? ) {
-        self.init( type: _type )
-    }
+    // Skipping field: true false false false false false 
 
     /// public java.lang.invoke.VolatileCallSite(java.lang.invoke.MethodHandle)
 
-    private static var new_MethodID_2: jmethodID?
+    private static var new_MethodID_1: jmethodID?
 
     public convenience init( target: MethodHandle? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: target, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/lang/invoke/VolatileCallSite", classCache: &VolatileCallSite.VolatileCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &VolatileCallSite.new_MethodID_2, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/invoke/VolatileCallSite", classCache: &VolatileCallSite.VolatileCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &VolatileCallSite.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -58,17 +43,38 @@ open class VolatileCallSite: CallSite {
         self.init( target: _target )
     }
 
+    /// public java.lang.invoke.VolatileCallSite(java.lang.invoke.MethodType)
+
+    private static var new_MethodID_2: jmethodID?
+
+    public convenience init( type: MethodType? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: type, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/lang/invoke/VolatileCallSite", classCache: &VolatileCallSite.VolatileCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodType;)V", methodCache: &VolatileCallSite.new_MethodID_2, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _type: MethodType? ) {
+        self.init( type: _type )
+    }
+
     /// public final java.lang.invoke.MethodHandle java.lang.invoke.VolatileCallSite.dynamicInvoker()
 
+    // Skipping method: false true false false false 
+
     /// public final java.lang.invoke.MethodHandle java.lang.invoke.VolatileCallSite.getTarget()
+
+    // Skipping method: false true false false false 
 
     /// public void java.lang.invoke.VolatileCallSite.setTarget(java.lang.invoke.MethodHandle)
 
     private static var setTarget_MethodID_3: jmethodID?
 
     open func setTarget( newTarget: MethodHandle? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: newTarget, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTarget", methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &VolatileCallSite.setTarget_MethodID_3, args: &__args, locals: &__locals )
     }

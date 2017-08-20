@@ -11,13 +11,13 @@ public protocol CompilationMXBean: PlatformManagedObject {
 
     func getName() -> String!
 
-    /// public abstract boolean java.lang.management.CompilationMXBean.isCompilationTimeMonitoringSupported()
-
-    func isCompilationTimeMonitoringSupported() -> Bool
-
     /// public abstract long java.lang.management.CompilationMXBean.getTotalCompilationTime()
 
     func getTotalCompilationTime() -> Int64
+
+    /// public abstract boolean java.lang.management.CompilationMXBean.isCompilationTimeMonitoringSupported()
+
+    func isCompilationTimeMonitoringSupported() -> Bool
 
 }
 
@@ -31,43 +31,47 @@ open class CompilationMXBeanForward: PlatformManagedObjectForward, CompilationMX
     private static var getName_MethodID_4: jmethodID?
 
     open func getName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &CompilationMXBeanForward.getName_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
+
+    // Skipping method: false false true false false 
+
+    /// public abstract long java.lang.management.CompilationMXBean.getTotalCompilationTime()
+
+    private static var getTotalCompilationTime_MethodID_5: jmethodID?
+
+    open func getTotalCompilationTime() -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getTotalCompilationTime", methodSig: "()J", methodCache: &CompilationMXBeanForward.getTotalCompilationTime_MethodID_5, args: &__args, locals: &__locals )
+        return __return
     }
 
 
     /// public abstract boolean java.lang.management.CompilationMXBean.isCompilationTimeMonitoringSupported()
 
-    private static var isCompilationTimeMonitoringSupported_MethodID_5: jmethodID?
+    private static var isCompilationTimeMonitoringSupported_MethodID_6: jmethodID?
 
     open func isCompilationTimeMonitoringSupported() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCompilationTimeMonitoringSupported", methodSig: "()Z", methodCache: &CompilationMXBeanForward.isCompilationTimeMonitoringSupported_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCompilationTimeMonitoringSupported", methodSig: "()Z", methodCache: &CompilationMXBeanForward.isCompilationTimeMonitoringSupported_MethodID_6, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
-
-    /// public abstract long java.lang.management.CompilationMXBean.getTotalCompilationTime()
-
-    private static var getTotalCompilationTime_MethodID_6: jmethodID?
-
-    open func getTotalCompilationTime() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getTotalCompilationTime", methodSig: "()J", methodCache: &CompilationMXBeanForward.getTotalCompilationTime_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
-    }
-
-
-    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
     /// In declared protocol but not defined.. ///
 
     /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
-}
+    // Skipping method: false false true false false 
 
+}
 

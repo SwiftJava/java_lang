@@ -7,25 +7,29 @@ import java_swift
 
 public protocol RuntimeMXBean: PlatformManagedObject {
 
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getName()
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getBootClassPath()
 
-    func getName() -> String!
+    func getBootClassPath() -> String!
 
     /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getClassPath()
 
     func getClassPath() -> String!
 
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmName()
+    /// public abstract java.util.List java.lang.management.RuntimeMXBean.getInputArguments()
 
-    func getVmName() -> String!
+    // Skipping method: false false true false false 
 
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmVendor()
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getLibraryPath()
 
-    func getVmVendor() -> String!
+    func getLibraryPath() -> String!
 
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmVersion()
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getManagementSpecVersion()
 
-    func getVmVersion() -> String!
+    func getManagementSpecVersion() -> String!
+
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getName()
+
+    func getName() -> String!
 
     /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getSpecName()
 
@@ -39,28 +43,6 @@ public protocol RuntimeMXBean: PlatformManagedObject {
 
     func getSpecVersion() -> String!
 
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getManagementSpecVersion()
-
-    func getManagementSpecVersion() -> String!
-
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getLibraryPath()
-
-    func getLibraryPath() -> String!
-
-    /// public abstract boolean java.lang.management.RuntimeMXBean.isBootClassPathSupported()
-
-    func isBootClassPathSupported() -> Bool
-
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getBootClassPath()
-
-    func getBootClassPath() -> String!
-
-    /// public abstract java.util.List java.lang.management.RuntimeMXBean.getInputArguments()
-
-    /// public abstract long java.lang.management.RuntimeMXBean.getUptime()
-
-    func getUptime() -> Int64
-
     /// public abstract long java.lang.management.RuntimeMXBean.getStartTime()
 
     func getStartTime() -> Int64
@@ -69,6 +51,26 @@ public protocol RuntimeMXBean: PlatformManagedObject {
 
     func getSystemProperties() -> java_swift.JavaMap!
 
+    /// public abstract long java.lang.management.RuntimeMXBean.getUptime()
+
+    func getUptime() -> Int64
+
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmName()
+
+    func getVmName() -> String!
+
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmVendor()
+
+    func getVmVendor() -> String!
+
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmVersion()
+
+    func getVmVersion() -> String!
+
+    /// public abstract boolean java.lang.management.RuntimeMXBean.isBootClassPathSupported()
+
+    func isBootClassPathSupported() -> Bool
+
 }
 
 
@@ -76,15 +78,16 @@ open class RuntimeMXBeanForward: PlatformManagedObjectForward, RuntimeMXBean {
 
     private static var RuntimeMXBeanJNIClass: jclass?
 
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getName()
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getBootClassPath()
 
-    private static var getName_MethodID_16: jmethodID?
+    private static var getBootClassPath_MethodID_16: jmethodID?
 
-    open func getName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getBootClassPath() -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getName_MethodID_16, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBootClassPath", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getBootClassPath_MethodID_16, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
@@ -93,58 +96,71 @@ open class RuntimeMXBeanForward: PlatformManagedObjectForward, RuntimeMXBean {
     private static var getClassPath_MethodID_17: jmethodID?
 
     open func getClassPath() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getClassPath", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getClassPath_MethodID_17, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmName()
+    /// public abstract java.util.List java.lang.management.RuntimeMXBean.getInputArguments()
 
-    private static var getVmName_MethodID_18: jmethodID?
+    // Skipping method: false false true false false 
 
-    open func getVmName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getLibraryPath()
+
+    private static var getLibraryPath_MethodID_18: jmethodID?
+
+    open func getLibraryPath() -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVmName", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getVmName_MethodID_18, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmVendor()
-
-    private static var getVmVendor_MethodID_19: jmethodID?
-
-    open func getVmVendor() -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVmVendor", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getVmVendor_MethodID_19, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getLibraryPath", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getLibraryPath_MethodID_18, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmVersion()
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getManagementSpecVersion()
 
-    private static var getVmVersion_MethodID_20: jmethodID?
+    private static var getManagementSpecVersion_MethodID_19: jmethodID?
 
-    open func getVmVersion() -> String! {
+    open func getManagementSpecVersion() -> String! {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVmVersion", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getVmVersion_MethodID_20, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getManagementSpecVersion", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getManagementSpecVersion_MethodID_19, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
+
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getName()
+
+    private static var getName_MethodID_20: jmethodID?
+
+    open func getName() -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getName_MethodID_20, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
+
+    // Skipping method: false false true false false 
 
     /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getSpecName()
 
     private static var getSpecName_MethodID_21: jmethodID?
 
     open func getSpecName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSpecName", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getSpecName_MethodID_21, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
@@ -153,10 +169,11 @@ open class RuntimeMXBeanForward: PlatformManagedObjectForward, RuntimeMXBean {
     private static var getSpecVendor_MethodID_22: jmethodID?
 
     open func getSpecVendor() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSpecVendor", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getSpecVendor_MethodID_22, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
@@ -165,106 +182,106 @@ open class RuntimeMXBeanForward: PlatformManagedObjectForward, RuntimeMXBean {
     private static var getSpecVersion_MethodID_23: jmethodID?
 
     open func getSpecVersion() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSpecVersion", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getSpecVersion_MethodID_23, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getManagementSpecVersion()
-
-    private static var getManagementSpecVersion_MethodID_24: jmethodID?
-
-    open func getManagementSpecVersion() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getManagementSpecVersion", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getManagementSpecVersion_MethodID_24, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getLibraryPath()
-
-    private static var getLibraryPath_MethodID_25: jmethodID?
-
-    open func getLibraryPath() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getLibraryPath", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getLibraryPath_MethodID_25, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract boolean java.lang.management.RuntimeMXBean.isBootClassPathSupported()
-
-    private static var isBootClassPathSupported_MethodID_26: jmethodID?
-
-    open func isBootClassPathSupported() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isBootClassPathSupported", methodSig: "()Z", methodCache: &RuntimeMXBeanForward.isBootClassPathSupported_MethodID_26, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getBootClassPath()
-
-    private static var getBootClassPath_MethodID_27: jmethodID?
-
-    open func getBootClassPath() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBootClassPath", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getBootClassPath_MethodID_27, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.util.List java.lang.management.RuntimeMXBean.getInputArguments()
-
-    /// public abstract long java.lang.management.RuntimeMXBean.getUptime()
-
-    private static var getUptime_MethodID_28: jmethodID?
-
-    open func getUptime() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getUptime", methodSig: "()J", methodCache: &RuntimeMXBeanForward.getUptime_MethodID_28, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
     /// public abstract long java.lang.management.RuntimeMXBean.getStartTime()
 
-    private static var getStartTime_MethodID_29: jmethodID?
+    private static var getStartTime_MethodID_24: jmethodID?
 
     open func getStartTime() -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getStartTime", methodSig: "()J", methodCache: &RuntimeMXBeanForward.getStartTime_MethodID_29, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int64(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getStartTime", methodSig: "()J", methodCache: &RuntimeMXBeanForward.getStartTime_MethodID_24, args: &__args, locals: &__locals )
+        return __return
     }
 
 
     /// public abstract java.util.Map java.lang.management.RuntimeMXBean.getSystemProperties()
 
-    private static var getSystemProperties_MethodID_30: jmethodID?
+    private static var getSystemProperties_MethodID_25: jmethodID?
 
     open func getSystemProperties() -> java_swift.JavaMap! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSystemProperties", methodSig: "()Ljava/util/Map;", methodCache: &RuntimeMXBeanForward.getSystemProperties_MethodID_30, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return JNIType.toSwift( type: java_swift.JavaMapForward(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSystemProperties", methodSig: "()Ljava/util/Map;", methodCache: &RuntimeMXBeanForward.getSystemProperties_MethodID_25, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: java_swift.JavaMapForward.self, from: __return )
     }
 
 
-    /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
+    /// public abstract long java.lang.management.RuntimeMXBean.getUptime()
+
+    private static var getUptime_MethodID_26: jmethodID?
+
+    open func getUptime() -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getUptime", methodSig: "()J", methodCache: &RuntimeMXBeanForward.getUptime_MethodID_26, args: &__args, locals: &__locals )
+        return __return
+    }
+
+
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmName()
+
+    private static var getVmName_MethodID_27: jmethodID?
+
+    open func getVmName() -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVmName", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getVmName_MethodID_27, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmVendor()
+
+    private static var getVmVendor_MethodID_28: jmethodID?
+
+    open func getVmVendor() -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVmVendor", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getVmVendor_MethodID_28, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.lang.String java.lang.management.RuntimeMXBean.getVmVersion()
+
+    private static var getVmVersion_MethodID_29: jmethodID?
+
+    open func getVmVersion() -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVmVersion", methodSig: "()Ljava/lang/String;", methodCache: &RuntimeMXBeanForward.getVmVersion_MethodID_29, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract boolean java.lang.management.RuntimeMXBean.isBootClassPathSupported()
+
+    private static var isBootClassPathSupported_MethodID_30: jmethodID?
+
+    open func isBootClassPathSupported() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isBootClassPathSupported", methodSig: "()Z", methodCache: &RuntimeMXBeanForward.isBootClassPathSupported_MethodID_30, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
 
     /// In declared protocol but not defined.. ///
 
     /// public abstract javax.management.ObjectName java.lang.management.PlatformManagedObject.getObjectName()
 
-}
+    // Skipping method: false false true false false 
 
+}
 

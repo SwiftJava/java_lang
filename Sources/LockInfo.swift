@@ -25,10 +25,10 @@ open class LockInfo: java_swift.JavaObject {
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( className: String?, identityHashCode: Int ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: className, locals: &__locals )
-        __args[1] = JNIType.toJava( value: identityHashCode, locals: &__locals )
+        __args[1] = jvalue( i: jint(identityHashCode) )
         let __object = JNIMethod.NewObject( className: "java/lang/management/LockInfo", classCache: &LockInfo.LockInfoJNIClass, methodSig: "(Ljava/lang/String;I)V", methodCache: &LockInfo.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -40,48 +40,53 @@ open class LockInfo: java_swift.JavaObject {
 
     /// java.lang.management.LockInfo(java.lang.Object)
 
-    /// public java.lang.String java.lang.management.LockInfo.toString()
-
-    /// public java.lang.String java.lang.management.LockInfo.getClassName()
-
-    private static var getClassName_MethodID_2: jmethodID?
-
-    open func getClassName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getClassName", methodSig: "()Ljava/lang/String;", methodCache: &LockInfo.getClassName_MethodID_2, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
+    // Skipping init: true false false 
 
     /// public static java.lang.management.LockInfo java.lang.management.LockInfo.from(javax.management.openmbean.CompositeData)
 
-    private static var from_MethodID_3: jmethodID?
+    private static var from_MethodID_2: jmethodID?
 
-    open class func from( cd: /* javax.management.openmbean.CompositeData */ UnclassedProtocol? ) -> LockInfo! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func from( cd: /* interface javax.management.openmbean.CompositeData */ UnavailableProtocol? ) -> LockInfo! {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: cd, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/LockInfo", classCache: &LockInfoJNIClass, methodName: "from", methodSig: "(Ljavax/management/openmbean/CompositeData;)Ljava/lang/management/LockInfo;", methodCache: &from_MethodID_3, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/LockInfo", classCache: &LockInfoJNIClass, methodName: "from", methodSig: "(Ljavax/management/openmbean/CompositeData;)Ljava/lang/management/LockInfo;", methodCache: &from_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? LockInfo( javaObject: __return ) : nil
     }
 
-    open class func from( _ _cd: /* javax.management.openmbean.CompositeData */ UnclassedProtocol? ) -> LockInfo! {
+    open class func from( _ _cd: /* interface javax.management.openmbean.CompositeData */ UnavailableProtocol? ) -> LockInfo! {
         return from( cd: _cd )
     }
+
+    /// public java.lang.String java.lang.management.LockInfo.getClassName()
+
+    private static var getClassName_MethodID_3: jmethodID?
+
+    open func getClassName() -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getClassName", methodSig: "()Ljava/lang/String;", methodCache: &LockInfo.getClassName_MethodID_3, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
 
     /// public int java.lang.management.LockInfo.getIdentityHashCode()
 
     private static var getIdentityHashCode_MethodID_4: jmethodID?
 
     open func getIdentityHashCode() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getIdentityHashCode", methodSig: "()I", methodCache: &LockInfo.getIdentityHashCode_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        return Int(__return)
     }
 
+
+    /// public java.lang.String java.lang.management.LockInfo.toString()
+
+    // Skipping method: false true false false false 
 
 }
 

@@ -23,15 +23,15 @@ open class AutoCloseableForward: JNIObjectForward, AutoCloseable {
     private static var close_MethodID_2: jmethodID?
 
     open func close() throws /* java.lang.Exception */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "close", methodSig: "()V", methodCache: &AutoCloseableForward.close_MethodID_2, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw java_swift.Exception( javaObject: throwable )
         }
     }
 
 
 }
-
 

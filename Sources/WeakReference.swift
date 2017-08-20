@@ -16,25 +16,29 @@ open class WeakReference: Reference {
 
     private static var WeakReferenceJNIClass: jclass?
 
-    /// private java.lang.Object java.lang.ref.Reference.referent
-
-    /// volatile java.lang.ref.ReferenceQueue java.lang.ref.Reference.queue
-
-    /// java.lang.ref.Reference java.lang.ref.Reference.next
-
-    /// private transient java.lang.ref.Reference java.lang.ref.Reference.discovered
-
     /// private static java.lang.ref.Reference$Lock java.lang.ref.Reference.lock
 
     /// private static java.lang.ref.Reference java.lang.ref.Reference.pending
+
+    /// private transient java.lang.ref.Reference java.lang.ref.Reference.discovered
+
+    /// java.lang.ref.Reference java.lang.ref.Reference.next
+
+    // Skipping field: true false false false false false 
+
+    /// volatile java.lang.ref.ReferenceQueue java.lang.ref.Reference.queue
+
+    // Skipping field: true false false false false false 
+
+    /// private java.lang.Object java.lang.ref.Reference.referent
 
     /// public java.lang.ref.WeakReference(java.lang.Object)
 
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( arg0: java_swift.JavaObject? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/ref/WeakReference", classCache: &WeakReference.WeakReferenceJNIClass, methodSig: "(Ljava/lang/Object;)V", methodCache: &WeakReference.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
@@ -50,8 +54,8 @@ open class WeakReference: Reference {
     private static var new_MethodID_2: jmethodID?
 
     public convenience init( arg0: java_swift.JavaObject?, arg1: ReferenceQueue? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/ref/WeakReference", classCache: &WeakReference.WeakReferenceJNIClass, methodSig: "(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V", methodCache: &WeakReference.new_MethodID_2, args: &__args, locals: &__locals )

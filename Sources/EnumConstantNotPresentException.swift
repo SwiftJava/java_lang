@@ -18,47 +18,53 @@ open class EnumConstantNotPresentException: RuntimeException {
 
     /// private static final long java.lang.EnumConstantNotPresentException.serialVersionUID
 
-    /// private java.lang.Class java.lang.EnumConstantNotPresentException.enumType
-
     /// private java.lang.String java.lang.EnumConstantNotPresentException.constantName
+
+    /// private java.lang.Class java.lang.EnumConstantNotPresentException.enumType
 
     /// static final long java.lang.RuntimeException.serialVersionUID
 
+    // Skipping field: true true false false false false 
+
     /// static final long java.lang.Exception.serialVersionUID
 
-    /// private static final long java.lang.Throwable.serialVersionUID
+    // Skipping field: true true false false false false 
 
-    /// private java.lang.String java.lang.Throwable.detailMessage
+    /// static final boolean java.lang.Throwable.$assertionsDisabled
 
-    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
+    // Skipping field: true false false false false false 
 
-    /// private java.lang.Throwable java.lang.Throwable.cause
+    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
 
-    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
-
-    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
-
-    /// private java.util.List java.lang.Throwable.suppressedExceptions
+    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
 
     /// private static final java.lang.String java.lang.Throwable.NULL_CAUSE_MESSAGE
 
     /// private static final java.lang.String java.lang.Throwable.SELF_SUPPRESSION_MESSAGE
 
-    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
-
     /// private static final java.lang.String java.lang.Throwable.SUPPRESSED_CAPTION
 
-    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
+    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
 
-    /// static final boolean java.lang.Throwable.$assertionsDisabled
+    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
+
+    /// private static final long java.lang.Throwable.serialVersionUID
+
+    /// private java.lang.Throwable java.lang.Throwable.cause
+
+    /// private java.lang.String java.lang.Throwable.detailMessage
+
+    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
+
+    /// private java.util.List java.lang.Throwable.suppressedExceptions
 
     /// public java.lang.EnumConstantNotPresentException(java.lang.Class,java.lang.String)
 
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( enumType: java_swift.JavaClass?, constantName: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: enumType, locals: &__locals )
         __args[1] = JNIType.toJava( value: constantName, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/EnumConstantNotPresentException", classCache: &EnumConstantNotPresentException.EnumConstantNotPresentExceptionJNIClass, methodSig: "(Ljava/lang/Class;Ljava/lang/String;)V", methodCache: &EnumConstantNotPresentException.new_MethodID_1, args: &__args, locals: &__locals )
@@ -70,28 +76,29 @@ open class EnumConstantNotPresentException: RuntimeException {
         self.init( enumType: _enumType, constantName: _constantName )
     }
 
-    /// public java.lang.Class java.lang.EnumConstantNotPresentException.enumType()
+    /// public java.lang.String java.lang.EnumConstantNotPresentException.constantName()
 
-    private static var enumType_MethodID_2: jmethodID?
+    private static var constantName_MethodID_2: jmethodID?
 
-    open func enumType() -> java_swift.JavaClass! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func constantName() -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "enumType", methodSig: "()Ljava/lang/Class;", methodCache: &EnumConstantNotPresentException.enumType_MethodID_2, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "constantName", methodSig: "()Ljava/lang/String;", methodCache: &EnumConstantNotPresentException.constantName_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
-    /// public java.lang.String java.lang.EnumConstantNotPresentException.constantName()
+    /// public java.lang.Class java.lang.EnumConstantNotPresentException.enumType()
 
-    private static var constantName_MethodID_3: jmethodID?
+    private static var enumType_MethodID_3: jmethodID?
 
-    open func constantName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func enumType() -> java_swift.JavaClass! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "constantName", methodSig: "()Ljava/lang/String;", methodCache: &EnumConstantNotPresentException.constantName_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "enumType", methodSig: "()Ljava/lang/Class;", methodCache: &EnumConstantNotPresentException.enumType_MethodID_3, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? java_swift.JavaClass( javaObject: __return ) : nil
     }
 
 

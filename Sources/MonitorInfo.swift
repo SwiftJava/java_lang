@@ -29,11 +29,11 @@ open class MonitorInfo: LockInfo {
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( className: String?, identityHashCode: Int, stackDepth: Int, stackFrame: StackTraceElement? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
         __args[0] = JNIType.toJava( value: className, locals: &__locals )
-        __args[1] = JNIType.toJava( value: identityHashCode, locals: &__locals )
-        __args[2] = JNIType.toJava( value: stackDepth, locals: &__locals )
+        __args[1] = jvalue( i: jint(identityHashCode) )
+        __args[2] = jvalue( i: jint(stackDepth) )
         __args[3] = JNIType.toJava( value: stackFrame, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/management/MonitorInfo", classCache: &MonitorInfo.MonitorInfoJNIClass, methodSig: "(Ljava/lang/String;IILjava/lang/StackTraceElement;)V", methodCache: &MonitorInfo.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
@@ -48,16 +48,16 @@ open class MonitorInfo: LockInfo {
 
     private static var from_MethodID_2: jmethodID?
 
-    override open class func from( cd: /* javax.management.openmbean.CompositeData */ UnclassedProtocol? ) -> MonitorInfo! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    override open class func from( cd: /* interface javax.management.openmbean.CompositeData */ UnavailableProtocol? ) -> MonitorInfo! {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: cd, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/MonitorInfo", classCache: &MonitorInfoJNIClass, methodName: "from", methodSig: "(Ljavax/management/openmbean/CompositeData;)Ljava/lang/management/MonitorInfo;", methodCache: &from_MethodID_2, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? MonitorInfo( javaObject: __return ) : nil
     }
 
-    override open class func from( _ _cd: /* javax.management.openmbean.CompositeData */ UnclassedProtocol? ) -> MonitorInfo! {
+    override open class func from( _ _cd: /* interface javax.management.openmbean.CompositeData */ UnavailableProtocol? ) -> MonitorInfo! {
         return from( cd: _cd )
     }
 
@@ -66,10 +66,10 @@ open class MonitorInfo: LockInfo {
     private static var getLockedStackDepth_MethodID_3: jmethodID?
 
     open func getLockedStackDepth() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getLockedStackDepth", methodSig: "()I", methodCache: &MonitorInfo.getLockedStackDepth_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        return Int(__return)
     }
 
 
@@ -78,8 +78,8 @@ open class MonitorInfo: LockInfo {
     private static var getLockedStackFrame_MethodID_4: jmethodID?
 
     open func getLockedStackFrame() -> StackTraceElement! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getLockedStackFrame", methodSig: "()Ljava/lang/StackTraceElement;", methodCache: &MonitorInfo.getLockedStackFrame_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? StackTraceElement( javaObject: __return ) : nil

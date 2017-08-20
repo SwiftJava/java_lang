@@ -18,21 +18,23 @@ open class ConstantCallSite: CallSite {
 
     /// private final boolean java.lang.invoke.ConstantCallSite.isFrozen
 
-    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.target
-
     /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.GET_TARGET
+
+    /// private static final long java.lang.invoke.CallSite.TARGET_OFFSET
 
     /// private static final java.lang.invoke.MethodHandle java.lang.invoke.CallSite.THROW_UCS
 
-    /// private static final long java.lang.invoke.CallSite.TARGET_OFFSET
+    /// java.lang.invoke.MethodHandle java.lang.invoke.CallSite.target
+
+    // Skipping field: true false false false false false 
 
     /// public java.lang.invoke.ConstantCallSite(java.lang.invoke.MethodHandle)
 
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( target: MethodHandle? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: target, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/invoke/ConstantCallSite", classCache: &ConstantCallSite.ConstantCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &ConstantCallSite.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
@@ -48,12 +50,13 @@ open class ConstantCallSite: CallSite {
     private static var new_MethodID_2: jmethodID?
 
     public convenience init( targetType: MethodType?, createTargetHook: MethodHandle? ) throws {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: targetType, locals: &__locals )
         __args[1] = JNIType.toJava( value: createTargetHook, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/lang/invoke/ConstantCallSite", classCache: &ConstantCallSite.ConstantCallSiteJNIClass, methodSig: "(Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;)V", methodCache: &ConstantCallSite.new_MethodID_2, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw java_swift.Throwable( javaObject: throwable )
         }
         self.init( javaObject: __object )
@@ -66,15 +69,19 @@ open class ConstantCallSite: CallSite {
 
     /// public final java.lang.invoke.MethodHandle java.lang.invoke.ConstantCallSite.dynamicInvoker()
 
+    // Skipping method: false true false false false 
+
     /// public final java.lang.invoke.MethodHandle java.lang.invoke.ConstantCallSite.getTarget()
+
+    // Skipping method: false true false false false 
 
     /// public final void java.lang.invoke.ConstantCallSite.setTarget(java.lang.invoke.MethodHandle)
 
     private static var setTarget_MethodID_3: jmethodID?
 
     open func setTarget( ignore: MethodHandle? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: ignore, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTarget", methodSig: "(Ljava/lang/invoke/MethodHandle;)V", methodCache: &ConstantCallSite.setTarget_MethodID_3, args: &__args, locals: &__locals )
     }

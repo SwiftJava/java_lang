@@ -23,8 +23,8 @@ open class Thread_UncaughtExceptionHandlerForward: JNIObjectForward, Thread_Unca
     private static var uncaughtException_MethodID_2: jmethodID?
 
     open func uncaughtException( arg0: Thread?, arg1: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = JNIType.toJava( value: arg1, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "uncaughtException", methodSig: "(Ljava/lang/Thread;Ljava/lang/Throwable;)V", methodCache: &Thread_UncaughtExceptionHandlerForward.uncaughtException_MethodID_2, args: &__args, locals: &__locals )
@@ -36,13 +36,10 @@ open class Thread_UncaughtExceptionHandlerForward: JNIObjectForward, Thread_Unca
 
 }
 
-
 private typealias Thread_UncaughtExceptionHandler_uncaughtException_0_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong, _: jobject?, _: jobject? ) -> ()
 
 private func Thread_UncaughtExceptionHandler_uncaughtException_0( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong, _ arg0: jobject?, _ arg1: jobject? ) -> () {
-    JNI.inNative = true;
     Thread_UncaughtExceptionHandlerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).uncaughtException( arg0: arg0 != nil ? Thread( javaObject: arg0 ) : nil, arg1: arg1 != nil ? java_swift.Throwable( javaObject: arg1 ) : nil )
-    JNI.inNative = false;
 }
 
 fileprivate class Thread_UncaughtExceptionHandlerLocal_: JNILocalProxy<Thread_UncaughtExceptionHandler, Any> {
@@ -89,8 +86,5 @@ open class Thread_UncaughtExceptionHandlerBase: Thread_UncaughtExceptionHandler 
     open func uncaughtException( arg0: Thread?, arg1: java_swift.Throwable? ) /**/ {
     }
 
-    open func uncaughtException( _ _arg0: Thread?, _ _arg1: java_swift.Throwable? ) /**/ {
-        uncaughtException( arg0: _arg0, arg1: _arg1 )
-    }
 
 }

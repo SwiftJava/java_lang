@@ -23,7 +23,8 @@ open class ManagementFactory: java_swift.JavaObject {
     open static var CLASS_LOADING_MXBEAN_NAME: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CLASS_LOADING_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &CLASS_LOADING_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
-            return JNIType.toSwift( type: String(), from: __value )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
         }
     }
 
@@ -34,51 +35,8 @@ open class ManagementFactory: java_swift.JavaObject {
     open static var COMPILATION_MXBEAN_NAME: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COMPILATION_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &COMPILATION_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
-            return JNIType.toSwift( type: String(), from: __value )
-        }
-    }
-
-    /// public static final java.lang.String java.lang.management.ManagementFactory.MEMORY_MXBEAN_NAME
-
-    private static var MEMORY_MXBEAN_NAME_FieldID: jfieldID?
-
-    open static var MEMORY_MXBEAN_NAME: String! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "MEMORY_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &MEMORY_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
-            return JNIType.toSwift( type: String(), from: __value )
-        }
-    }
-
-    /// public static final java.lang.String java.lang.management.ManagementFactory.OPERATING_SYSTEM_MXBEAN_NAME
-
-    private static var OPERATING_SYSTEM_MXBEAN_NAME_FieldID: jfieldID?
-
-    open static var OPERATING_SYSTEM_MXBEAN_NAME: String! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "OPERATING_SYSTEM_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &OPERATING_SYSTEM_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
-            return JNIType.toSwift( type: String(), from: __value )
-        }
-    }
-
-    /// public static final java.lang.String java.lang.management.ManagementFactory.RUNTIME_MXBEAN_NAME
-
-    private static var RUNTIME_MXBEAN_NAME_FieldID: jfieldID?
-
-    open static var RUNTIME_MXBEAN_NAME: String! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "RUNTIME_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &RUNTIME_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
-            return JNIType.toSwift( type: String(), from: __value )
-        }
-    }
-
-    /// public static final java.lang.String java.lang.management.ManagementFactory.THREAD_MXBEAN_NAME
-
-    private static var THREAD_MXBEAN_NAME_FieldID: jfieldID?
-
-    open static var THREAD_MXBEAN_NAME: String! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "THREAD_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &THREAD_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
-            return JNIType.toSwift( type: String(), from: __value )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
         }
     }
 
@@ -89,7 +47,8 @@ open class ManagementFactory: java_swift.JavaObject {
     open static var GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE", fieldType: "Ljava/lang/String;", fieldCache: &GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
-            return JNIType.toSwift( type: String(), from: __value )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
         }
     }
 
@@ -100,7 +59,20 @@ open class ManagementFactory: java_swift.JavaObject {
     open static var MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE", fieldType: "Ljava/lang/String;", fieldCache: &MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
-            return JNIType.toSwift( type: String(), from: __value )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.lang.String java.lang.management.ManagementFactory.MEMORY_MXBEAN_NAME
+
+    private static var MEMORY_MXBEAN_NAME_FieldID: jfieldID?
+
+    open static var MEMORY_MXBEAN_NAME: String! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "MEMORY_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &MEMORY_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
         }
     }
 
@@ -111,25 +83,192 @@ open class ManagementFactory: java_swift.JavaObject {
     open static var MEMORY_POOL_MXBEAN_DOMAIN_TYPE: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEMORY_POOL_MXBEAN_DOMAIN_TYPE", fieldType: "Ljava/lang/String;", fieldCache: &MEMORY_POOL_MXBEAN_DOMAIN_TYPE_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
-            return JNIType.toSwift( type: String(), from: __value )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
+        }
+    }
+
+    /// private static final java.lang.String java.lang.management.ManagementFactory.NOTIF_EMITTER
+
+    /// public static final java.lang.String java.lang.management.ManagementFactory.OPERATING_SYSTEM_MXBEAN_NAME
+
+    private static var OPERATING_SYSTEM_MXBEAN_NAME_FieldID: jfieldID?
+
+    open static var OPERATING_SYSTEM_MXBEAN_NAME: String! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "OPERATING_SYSTEM_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &OPERATING_SYSTEM_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.lang.String java.lang.management.ManagementFactory.RUNTIME_MXBEAN_NAME
+
+    private static var RUNTIME_MXBEAN_NAME_FieldID: jfieldID?
+
+    open static var RUNTIME_MXBEAN_NAME: String! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "RUNTIME_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &RUNTIME_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.lang.String java.lang.management.ManagementFactory.THREAD_MXBEAN_NAME
+
+    private static var THREAD_MXBEAN_NAME_FieldID: jfieldID?
+
+    open static var THREAD_MXBEAN_NAME: String! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "THREAD_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &THREAD_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
         }
     }
 
     /// private static javax.management.MBeanServer java.lang.management.ManagementFactory.platformMBeanServer
 
-    /// private static final java.lang.String java.lang.management.ManagementFactory.NOTIF_EMITTER
-
     /// private java.lang.management.ManagementFactory()
+
+    /// private static void java.lang.management.ManagementFactory.addDynamicMBean(javax.management.MBeanServer,javax.management.DynamicMBean,javax.management.ObjectName)
+
+    /// private static void java.lang.management.ManagementFactory.addMXBean(javax.management.MBeanServer,java.lang.management.PlatformManagedObject)
+
+    /// public static java.lang.management.ClassLoadingMXBean java.lang.management.ManagementFactory.getClassLoadingMXBean()
+
+    private static var getClassLoadingMXBean_MethodID_1: jmethodID?
+
+    open class func getClassLoadingMXBean() -> ClassLoadingMXBean! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getClassLoadingMXBean", methodSig: "()Ljava/lang/management/ClassLoadingMXBean;", methodCache: &getClassLoadingMXBean_MethodID_1, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? ClassLoadingMXBeanForward( javaObject: __return ) : nil
+    }
+
+
+    /// public static java.lang.management.CompilationMXBean java.lang.management.ManagementFactory.getCompilationMXBean()
+
+    private static var getCompilationMXBean_MethodID_2: jmethodID?
+
+    open class func getCompilationMXBean() -> CompilationMXBean! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getCompilationMXBean", methodSig: "()Ljava/lang/management/CompilationMXBean;", methodCache: &getCompilationMXBean_MethodID_2, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? CompilationMXBeanForward( javaObject: __return ) : nil
+    }
+
+
+    /// public static java.util.List java.lang.management.ManagementFactory.getGarbageCollectorMXBeans()
+
+    private static var getGarbageCollectorMXBeans_MethodID_3: jmethodID?
+
+    open class func getGarbageCollectorMXBeans() -> /* interface java.util.List */ UnavailableProtocol! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getGarbageCollectorMXBeans", methodSig: "()Ljava/util/List;", methodCache: &getGarbageCollectorMXBeans_MethodID_3, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? /* interface java.util.List */ UnavailableProtocolForward( javaObject: __return ) : nil
+    }
+
+
+    /// public static java.lang.management.MemoryMXBean java.lang.management.ManagementFactory.getMemoryMXBean()
+
+    private static var getMemoryMXBean_MethodID_4: jmethodID?
+
+    open class func getMemoryMXBean() -> MemoryMXBean! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getMemoryMXBean", methodSig: "()Ljava/lang/management/MemoryMXBean;", methodCache: &getMemoryMXBean_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? MemoryMXBeanForward( javaObject: __return ) : nil
+    }
+
+
+    /// public static java.util.List java.lang.management.ManagementFactory.getMemoryManagerMXBeans()
+
+    private static var getMemoryManagerMXBeans_MethodID_5: jmethodID?
+
+    open class func getMemoryManagerMXBeans() -> /* interface java.util.List */ UnavailableProtocol! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getMemoryManagerMXBeans", methodSig: "()Ljava/util/List;", methodCache: &getMemoryManagerMXBeans_MethodID_5, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? /* interface java.util.List */ UnavailableProtocolForward( javaObject: __return ) : nil
+    }
+
+
+    /// public static java.util.List java.lang.management.ManagementFactory.getMemoryPoolMXBeans()
+
+    private static var getMemoryPoolMXBeans_MethodID_6: jmethodID?
+
+    open class func getMemoryPoolMXBeans() -> /* interface java.util.List */ UnavailableProtocol! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getMemoryPoolMXBeans", methodSig: "()Ljava/util/List;", methodCache: &getMemoryPoolMXBeans_MethodID_6, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? /* interface java.util.List */ UnavailableProtocolForward( javaObject: __return ) : nil
+    }
+
+
+    /// public static java.lang.management.OperatingSystemMXBean java.lang.management.ManagementFactory.getOperatingSystemMXBean()
+
+    private static var getOperatingSystemMXBean_MethodID_7: jmethodID?
+
+    open class func getOperatingSystemMXBean() -> OperatingSystemMXBean! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getOperatingSystemMXBean", methodSig: "()Ljava/lang/management/OperatingSystemMXBean;", methodCache: &getOperatingSystemMXBean_MethodID_7, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? OperatingSystemMXBeanForward( javaObject: __return ) : nil
+    }
+
+
+    /// public static synchronized javax.management.MBeanServer java.lang.management.ManagementFactory.getPlatformMBeanServer()
+
+    private static var getPlatformMBeanServer_MethodID_8: jmethodID?
+
+    open class func getPlatformMBeanServer() -> /* interface javax.management.MBeanServer */ UnavailableProtocol! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMBeanServer", methodSig: "()Ljavax/management/MBeanServer;", methodCache: &getPlatformMBeanServer_MethodID_8, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? /* interface javax.management.MBeanServer */ UnavailableProtocolForward( javaObject: __return ) : nil
+    }
+
+
+    /// public static java.lang.management.PlatformManagedObject java.lang.management.ManagementFactory.getPlatformMXBean(javax.management.MBeanServerConnection,java.lang.Class) throws java.io.IOException
+
+    private static var getPlatformMXBean_MethodID_9: jmethodID?
+
+    open class func getPlatformMXBean( connection: /* interface javax.management.MBeanServerConnection */ UnavailableProtocol?, mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> PlatformManagedObject! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: connection, locals: &__locals )
+        __args[1] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBean", methodSig: "(Ljavax/management/MBeanServerConnection;Ljava/lang/Class;)Ljava/lang/management/PlatformManagedObject;", methodCache: &getPlatformMXBean_MethodID_9, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw /* class java.io.IOException */ UnavailableObject( javaObject: throwable )
+        }
+        return __return != nil ? PlatformManagedObjectForward( javaObject: __return ) : nil
+    }
+
+    open class func getPlatformMXBean( _ _connection: /* interface javax.management.MBeanServerConnection */ UnavailableProtocol?, _ _mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> PlatformManagedObject! {
+        return try getPlatformMXBean( connection: _connection, mxbeanInterface: _mxbeanInterface )
+    }
 
     /// public static java.lang.management.PlatformManagedObject java.lang.management.ManagementFactory.getPlatformMXBean(java.lang.Class)
 
-    private static var getPlatformMXBean_MethodID_1: jmethodID?
+    private static var getPlatformMXBean_MethodID_10: jmethodID?
 
     open class func getPlatformMXBean( mxbeanInterface: java_swift.JavaClass? ) -> PlatformManagedObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBean", methodSig: "(Ljava/lang/Class;)Ljava/lang/management/PlatformManagedObject;", methodCache: &getPlatformMXBean_MethodID_1, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBean", methodSig: "(Ljava/lang/Class;)Ljava/lang/management/PlatformManagedObject;", methodCache: &getPlatformMXBean_MethodID_10, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? PlatformManagedObjectForward( javaObject: __return ) : nil
     }
@@ -138,233 +277,106 @@ open class ManagementFactory: java_swift.JavaObject {
         return getPlatformMXBean( mxbeanInterface: _mxbeanInterface )
     }
 
-    /// public static java.lang.management.PlatformManagedObject java.lang.management.ManagementFactory.getPlatformMXBean(javax.management.MBeanServerConnection,java.lang.Class) throws java.io.IOException
+    /// public static java.util.List java.lang.management.ManagementFactory.getPlatformMXBeans(javax.management.MBeanServerConnection,java.lang.Class) throws java.io.IOException
 
-    private static var getPlatformMXBean_MethodID_2: jmethodID?
+    private static var getPlatformMXBeans_MethodID_11: jmethodID?
 
-    open class func getPlatformMXBean( connection: /* javax.management.MBeanServerConnection */ UnclassedProtocol?, mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> PlatformManagedObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+    open class func getPlatformMXBeans( connection: /* interface javax.management.MBeanServerConnection */ UnavailableProtocol?, mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> /* interface java.util.List */ UnavailableProtocol! {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: connection, locals: &__locals )
         __args[1] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBean", methodSig: "(Ljavax/management/MBeanServerConnection;Ljava/lang/Class;)Ljava/lang/management/PlatformManagedObject;", methodCache: &getPlatformMXBean_MethodID_2, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBeans", methodSig: "(Ljavax/management/MBeanServerConnection;Ljava/lang/Class;)Ljava/util/List;", methodCache: &getPlatformMXBeans_MethodID_11, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
-            throw /* java.io.IOException */ UnclassedObject( javaObject: throwable )
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw /* class java.io.IOException */ UnavailableObject( javaObject: throwable )
         }
-        return __return != nil ? PlatformManagedObjectForward( javaObject: __return ) : nil
+        return __return != nil ? /* interface java.util.List */ UnavailableProtocolForward( javaObject: __return ) : nil
     }
 
-    open class func getPlatformMXBean( _ _connection: /* javax.management.MBeanServerConnection */ UnclassedProtocol?, _ _mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> PlatformManagedObject! {
-        return try getPlatformMXBean( connection: _connection, mxbeanInterface: _mxbeanInterface )
+    open class func getPlatformMXBeans( _ _connection: /* interface javax.management.MBeanServerConnection */ UnavailableProtocol?, _ _mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> /* interface java.util.List */ UnavailableProtocol! {
+        return try getPlatformMXBeans( connection: _connection, mxbeanInterface: _mxbeanInterface )
     }
 
     /// public static java.util.List java.lang.management.ManagementFactory.getPlatformMXBeans(java.lang.Class)
 
-    private static var getPlatformMXBeans_MethodID_3: jmethodID?
+    private static var getPlatformMXBeans_MethodID_12: jmethodID?
 
-    open class func getPlatformMXBeans( mxbeanInterface: java_swift.JavaClass? ) -> /* java.util.List */ UnclassedProtocol! {
+    open class func getPlatformMXBeans( mxbeanInterface: java_swift.JavaClass? ) -> /* interface java.util.List */ UnavailableProtocol! {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBeans", methodSig: "(Ljava/lang/Class;)Ljava/util/List;", methodCache: &getPlatformMXBeans_MethodID_3, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBeans", methodSig: "(Ljava/lang/Class;)Ljava/util/List;", methodCache: &getPlatformMXBeans_MethodID_12, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? /* java.util.List */ UnclassedProtocolForward( javaObject: __return ) : nil
+        return __return != nil ? /* interface java.util.List */ UnavailableProtocolForward( javaObject: __return ) : nil
     }
 
-    open class func getPlatformMXBeans( _ _mxbeanInterface: java_swift.JavaClass? ) -> /* java.util.List */ UnclassedProtocol! {
+    open class func getPlatformMXBeans( _ _mxbeanInterface: java_swift.JavaClass? ) -> /* interface java.util.List */ UnavailableProtocol! {
         return getPlatformMXBeans( mxbeanInterface: _mxbeanInterface )
-    }
-
-    /// public static java.util.List java.lang.management.ManagementFactory.getPlatformMXBeans(javax.management.MBeanServerConnection,java.lang.Class) throws java.io.IOException
-
-    private static var getPlatformMXBeans_MethodID_4: jmethodID?
-
-    open class func getPlatformMXBeans( connection: /* javax.management.MBeanServerConnection */ UnclassedProtocol?, mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> /* java.util.List */ UnclassedProtocol! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: connection, locals: &__locals )
-        __args[1] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMXBeans", methodSig: "(Ljavax/management/MBeanServerConnection;Ljava/lang/Class;)Ljava/util/List;", methodCache: &getPlatformMXBeans_MethodID_4, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw /* java.io.IOException */ UnclassedObject( javaObject: throwable )
-        }
-        return __return != nil ? /* java.util.List */ UnclassedProtocolForward( javaObject: __return ) : nil
-    }
-
-    open class func getPlatformMXBeans( _ _connection: /* javax.management.MBeanServerConnection */ UnclassedProtocol?, _ _mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> /* java.util.List */ UnclassedProtocol! {
-        return try getPlatformMXBeans( connection: _connection, mxbeanInterface: _mxbeanInterface )
     }
 
     /// public static java.util.Set java.lang.management.ManagementFactory.getPlatformManagementInterfaces()
 
-    private static var getPlatformManagementInterfaces_MethodID_5: jmethodID?
+    private static var getPlatformManagementInterfaces_MethodID_13: jmethodID?
 
     open class func getPlatformManagementInterfaces() -> java_swift.JavaSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformManagementInterfaces", methodSig: "()Ljava/util/Set;", methodCache: &getPlatformManagementInterfaces_MethodID_5, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformManagementInterfaces", methodSig: "()Ljava/util/Set;", methodCache: &getPlatformManagementInterfaces_MethodID_13, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_swift.JavaSetForward( javaObject: __return ) : nil
     }
 
 
-    /// public static java.lang.Object java.lang.management.ManagementFactory.newPlatformMXBeanProxy(javax.management.MBeanServerConnection,java.lang.String,java.lang.Class) throws java.io.IOException
-
-    private static var newPlatformMXBeanProxy_MethodID_6: jmethodID?
-
-    open class func newPlatformMXBeanProxy( connection: /* javax.management.MBeanServerConnection */ UnclassedProtocol?, mxbeanName: String?, mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> java_swift.JavaObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: connection, locals: &__locals )
-        __args[1] = JNIType.toJava( value: mxbeanName, locals: &__locals )
-        __args[2] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "newPlatformMXBeanProxy", methodSig: "(Ljavax/management/MBeanServerConnection;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &newPlatformMXBeanProxy_MethodID_6, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw /* java.io.IOException */ UnclassedObject( javaObject: throwable )
-        }
-        return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
-    }
-
-    open class func newPlatformMXBeanProxy( _ _connection: /* javax.management.MBeanServerConnection */ UnclassedProtocol?, _ _mxbeanName: String?, _ _mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> java_swift.JavaObject! {
-        return try newPlatformMXBeanProxy( connection: _connection, mxbeanName: _mxbeanName, mxbeanInterface: _mxbeanInterface )
-    }
-
-    /// private static void java.lang.management.ManagementFactory.addMXBean(javax.management.MBeanServer,java.lang.management.PlatformManagedObject)
-
-    /// private static void java.lang.management.ManagementFactory.addDynamicMBean(javax.management.MBeanServer,javax.management.DynamicMBean,javax.management.ObjectName)
-
-    /// public static java.lang.management.ClassLoadingMXBean java.lang.management.ManagementFactory.getClassLoadingMXBean()
-
-    private static var getClassLoadingMXBean_MethodID_7: jmethodID?
-
-    open class func getClassLoadingMXBean() -> ClassLoadingMXBean! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getClassLoadingMXBean", methodSig: "()Ljava/lang/management/ClassLoadingMXBean;", methodCache: &getClassLoadingMXBean_MethodID_7, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? ClassLoadingMXBeanForward( javaObject: __return ) : nil
-    }
-
-
-    /// public static java.lang.management.MemoryMXBean java.lang.management.ManagementFactory.getMemoryMXBean()
-
-    private static var getMemoryMXBean_MethodID_8: jmethodID?
-
-    open class func getMemoryMXBean() -> MemoryMXBean! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getMemoryMXBean", methodSig: "()Ljava/lang/management/MemoryMXBean;", methodCache: &getMemoryMXBean_MethodID_8, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? MemoryMXBeanForward( javaObject: __return ) : nil
-    }
-
-
-    /// public static java.lang.management.ThreadMXBean java.lang.management.ManagementFactory.getThreadMXBean()
-
-    private static var getThreadMXBean_MethodID_9: jmethodID?
-
-    open class func getThreadMXBean() -> ThreadMXBean! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getThreadMXBean", methodSig: "()Ljava/lang/management/ThreadMXBean;", methodCache: &getThreadMXBean_MethodID_9, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? ThreadMXBeanForward( javaObject: __return ) : nil
-    }
-
-
     /// public static java.lang.management.RuntimeMXBean java.lang.management.ManagementFactory.getRuntimeMXBean()
 
-    private static var getRuntimeMXBean_MethodID_10: jmethodID?
+    private static var getRuntimeMXBean_MethodID_14: jmethodID?
 
     open class func getRuntimeMXBean() -> RuntimeMXBean! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getRuntimeMXBean", methodSig: "()Ljava/lang/management/RuntimeMXBean;", methodCache: &getRuntimeMXBean_MethodID_10, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getRuntimeMXBean", methodSig: "()Ljava/lang/management/RuntimeMXBean;", methodCache: &getRuntimeMXBean_MethodID_14, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? RuntimeMXBeanForward( javaObject: __return ) : nil
     }
 
 
-    /// public static java.lang.management.CompilationMXBean java.lang.management.ManagementFactory.getCompilationMXBean()
+    /// public static java.lang.management.ThreadMXBean java.lang.management.ManagementFactory.getThreadMXBean()
 
-    private static var getCompilationMXBean_MethodID_11: jmethodID?
+    private static var getThreadMXBean_MethodID_15: jmethodID?
 
-    open class func getCompilationMXBean() -> CompilationMXBean! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func getThreadMXBean() -> ThreadMXBean! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getCompilationMXBean", methodSig: "()Ljava/lang/management/CompilationMXBean;", methodCache: &getCompilationMXBean_MethodID_11, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getThreadMXBean", methodSig: "()Ljava/lang/management/ThreadMXBean;", methodCache: &getThreadMXBean_MethodID_15, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? CompilationMXBeanForward( javaObject: __return ) : nil
+        return __return != nil ? ThreadMXBeanForward( javaObject: __return ) : nil
     }
 
 
-    /// public static java.lang.management.OperatingSystemMXBean java.lang.management.ManagementFactory.getOperatingSystemMXBean()
+    /// public static java.lang.Object java.lang.management.ManagementFactory.newPlatformMXBeanProxy(javax.management.MBeanServerConnection,java.lang.String,java.lang.Class) throws java.io.IOException
 
-    private static var getOperatingSystemMXBean_MethodID_12: jmethodID?
+    private static var newPlatformMXBeanProxy_MethodID_16: jmethodID?
 
-    open class func getOperatingSystemMXBean() -> OperatingSystemMXBean! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func newPlatformMXBeanProxy( connection: /* interface javax.management.MBeanServerConnection */ UnavailableProtocol?, mxbeanName: String?, mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> java_swift.JavaObject! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getOperatingSystemMXBean", methodSig: "()Ljava/lang/management/OperatingSystemMXBean;", methodCache: &getOperatingSystemMXBean_MethodID_12, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: connection, locals: &__locals )
+        __args[1] = JNIType.toJava( value: mxbeanName, locals: &__locals )
+        __args[2] = JNIType.toJava( value: mxbeanInterface, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "newPlatformMXBeanProxy", methodSig: "(Ljavax/management/MBeanServerConnection;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &newPlatformMXBeanProxy_MethodID_16, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? OperatingSystemMXBeanForward( javaObject: __return ) : nil
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw /* class java.io.IOException */ UnavailableObject( javaObject: throwable )
+        }
+        return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
     }
 
-
-    /// public static java.util.List java.lang.management.ManagementFactory.getMemoryPoolMXBeans()
-
-    private static var getMemoryPoolMXBeans_MethodID_13: jmethodID?
-
-    open class func getMemoryPoolMXBeans() -> /* java.util.List */ UnclassedProtocol! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getMemoryPoolMXBeans", methodSig: "()Ljava/util/List;", methodCache: &getMemoryPoolMXBeans_MethodID_13, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? /* java.util.List */ UnclassedProtocolForward( javaObject: __return ) : nil
+    open class func newPlatformMXBeanProxy( _ _connection: /* interface javax.management.MBeanServerConnection */ UnavailableProtocol?, _ _mxbeanName: String?, _ _mxbeanInterface: java_swift.JavaClass? ) throws /* java.io.IOException */ -> java_swift.JavaObject! {
+        return try newPlatformMXBeanProxy( connection: _connection, mxbeanName: _mxbeanName, mxbeanInterface: _mxbeanInterface )
     }
-
-
-    /// public static java.util.List java.lang.management.ManagementFactory.getMemoryManagerMXBeans()
-
-    private static var getMemoryManagerMXBeans_MethodID_14: jmethodID?
-
-    open class func getMemoryManagerMXBeans() -> /* java.util.List */ UnclassedProtocol! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getMemoryManagerMXBeans", methodSig: "()Ljava/util/List;", methodCache: &getMemoryManagerMXBeans_MethodID_14, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? /* java.util.List */ UnclassedProtocolForward( javaObject: __return ) : nil
-    }
-
-
-    /// public static java.util.List java.lang.management.ManagementFactory.getGarbageCollectorMXBeans()
-
-    private static var getGarbageCollectorMXBeans_MethodID_15: jmethodID?
-
-    open class func getGarbageCollectorMXBeans() -> /* java.util.List */ UnclassedProtocol! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getGarbageCollectorMXBeans", methodSig: "()Ljava/util/List;", methodCache: &getGarbageCollectorMXBeans_MethodID_15, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? /* java.util.List */ UnclassedProtocolForward( javaObject: __return ) : nil
-    }
-
-
-    /// public static synchronized javax.management.MBeanServer java.lang.management.ManagementFactory.getPlatformMBeanServer()
-
-    private static var getPlatformMBeanServer_MethodID_16: jmethodID?
-
-    open class func getPlatformMBeanServer() -> /* javax.management.MBeanServer */ UnclassedProtocol! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass, methodName: "getPlatformMBeanServer", methodSig: "()Ljavax/management/MBeanServer;", methodCache: &getPlatformMBeanServer_MethodID_16, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? /* javax.management.MBeanServer */ UnclassedProtocolForward( javaObject: __return ) : nil
-    }
-
 
 }
 
