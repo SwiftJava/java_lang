@@ -26,30 +26,9 @@ extension JavaObject {
         } catch let notFound as ClassNotFoundException {
             notFound.printStackTrace();
         } catch {
-            JNI.report("Uncaught exception casting")
+            JNI.report("validDownCast: Uncaught exception \(error)")
         }
         return false;
-    }
-
-}
-
-public class ClosureRunnable: RunnableBase {
-
-    var closure: () -> ()
-
-    public init( _ closure: @escaping () -> () ) {
-        self.closure = closure
-        super.init()
-    }
-
-    public required init(javaObject: jobject!) {
-        fatalError("init(javaObject:) has not been implemented")
-    }
-
-    public override func run() {
-        closure()
-        closure = { return }
-        JNI.envCache[JNI.threadKey] = nil
     }
 
 }
