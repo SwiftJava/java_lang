@@ -172,7 +172,6 @@
 		CED7545A1F2E7A70007C97C7 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7539C1F2E7A6F007C97C7 /* Target.swift */; };
 		CED7545B1F2E7A70007C97C7 /* Thread_State.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7539D1F2E7A6F007C97C7 /* Thread_State.swift */; };
 		CED7545C1F2E7A70007C97C7 /* Thread_UncaughtExceptionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7539E1F2E7A6F007C97C7 /* Thread_UncaughtExceptionHandler.swift */; };
-		CED7545D1F2E7A70007C97C7 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7539F1F2E7A6F007C97C7 /* Thread.swift */; };
 		CED7545E1F2E7A70007C97C7 /* ThreadDeath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753A01F2E7A6F007C97C7 /* ThreadDeath.swift */; };
 		CED7545F1F2E7A70007C97C7 /* ThreadGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753A11F2E7A6F007C97C7 /* ThreadGroup.swift */; };
 		CED754601F2E7A70007C97C7 /* ThreadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED753A21F2E7A6F007C97C7 /* ThreadInfo.swift */; };
@@ -367,7 +366,6 @@
 		CED7539C1F2E7A6F007C97C7 /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Target.swift; path = Sources/Target.swift; sourceTree = "<group>"; };
 		CED7539D1F2E7A6F007C97C7 /* Thread_State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Thread_State.swift; path = Sources/Thread_State.swift; sourceTree = "<group>"; };
 		CED7539E1F2E7A6F007C97C7 /* Thread_UncaughtExceptionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Thread_UncaughtExceptionHandler.swift; path = Sources/Thread_UncaughtExceptionHandler.swift; sourceTree = "<group>"; };
-		CED7539F1F2E7A6F007C97C7 /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Thread.swift; path = Sources/Thread.swift; sourceTree = "<group>"; };
 		CED753A01F2E7A6F007C97C7 /* ThreadDeath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadDeath.swift; path = Sources/ThreadDeath.swift; sourceTree = "<group>"; };
 		CED753A11F2E7A6F007C97C7 /* ThreadGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadGroup.swift; path = Sources/ThreadGroup.swift; sourceTree = "<group>"; };
 		CED753A21F2E7A6F007C97C7 /* ThreadInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadInfo.swift; path = Sources/ThreadInfo.swift; sourceTree = "<group>"; };
@@ -591,7 +589,6 @@
 				CED7539C1F2E7A6F007C97C7 /* Target.swift */,
 				CED7539D1F2E7A6F007C97C7 /* Thread_State.swift */,
 				CED7539E1F2E7A6F007C97C7 /* Thread_UncaughtExceptionHandler.swift */,
-				CED7539F1F2E7A6F007C97C7 /* Thread.swift */,
 				CED753A01F2E7A6F007C97C7 /* ThreadDeath.swift */,
 				CED753A11F2E7A6F007C97C7 /* ThreadGroup.swift */,
 				CED753A21F2E7A6F007C97C7 /* ThreadInfo.swift */,
@@ -848,7 +845,6 @@
 				CED753BE1F2E7A6F007C97C7 /* Annotation.swift in Sources */,
 				CED753D31F2E7A6F007C97C7 /* ClassCastException.swift in Sources */,
 				CED7540A1F2E7A6F007C97C7 /* JavaSecurityException.swift in Sources */,
-				CED7545D1F2E7A70007C97C7 /* Thread.swift in Sources */,
 				CED7541A1F2E7A6F007C97C7 /* MemoryPoolMXBean.swift in Sources */,
 				CED754301F2E7A6F007C97C7 /* NumberFormatException.swift in Sources */,
 				CED754261F2E7A6F007C97C7 /* MutableCallSite.swift in Sources */,

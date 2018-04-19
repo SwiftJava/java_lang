@@ -9,7 +9,7 @@ public enum ProcessBuilder_Redirect_Type: Int, JNIObjectProtocol, JNIObjectInit 
 
     case PIPE, INHERIT, READ, WRITE, APPEND
 
-    static let enumConstants = try! JavaClass.forName("java.lang.ProcessBuilder$Redirect$Type")
+    static let enumConstants = JavaClass(loading: "java.lang.ProcessBuilder$Redirect$Type")
         .getEnumConstants()!.map { ProcessBuilder_Redirect_TypeForward( javaObject: $0.javaObject ) }
 
     public func underlier() -> ProcessBuilder_Redirect_TypeForward {

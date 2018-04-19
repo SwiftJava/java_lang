@@ -9,7 +9,7 @@ public enum ElementType: Int, JNIObjectProtocol, JNIObjectInit {
 
     case TYPE, FIELD, METHOD, PARAMETER, CONSTRUCTOR, LOCAL_VARIABLE, ANNOTATION_TYPE, PACKAGE, TYPE_PARAMETER, TYPE_USE
 
-    static let enumConstants = try! JavaClass.forName("java.lang.annotation.ElementType")
+    static let enumConstants = JavaClass(loading: "java.lang.annotation.ElementType")
         .getEnumConstants()!.map { ElementTypeForward( javaObject: $0.javaObject ) }
 
     public func underlier() -> ElementTypeForward {

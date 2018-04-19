@@ -54,14 +54,14 @@ open class Runtime: java_swift.JavaObject {
 
     private static var addShutdownHook_MethodID_3: jmethodID?
 
-    open func addShutdownHook( hook: Thread? ) {
+    open func addShutdownHook( hook: java_swift.JavaThread? ) {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: hook, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "addShutdownHook", methodSig: "(Ljava/lang/Thread;)V", methodCache: &Runtime.addShutdownHook_MethodID_3, args: &__args, locals: &__locals )
     }
 
-    open func addShutdownHook( _ _hook: Thread? ) {
+    open func addShutdownHook( _ _hook: java_swift.JavaThread? ) {
         addShutdownHook( hook: _hook )
     }
 
@@ -350,7 +350,7 @@ open class Runtime: java_swift.JavaObject {
 
     private static var removeShutdownHook_MethodID_20: jmethodID?
 
-    open func removeShutdownHook( hook: Thread? ) -> Bool {
+    open func removeShutdownHook( hook: java_swift.JavaThread? ) -> Bool {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: hook, locals: &__locals )
@@ -358,7 +358,7 @@ open class Runtime: java_swift.JavaObject {
         return __return != jboolean(JNI_FALSE)
     }
 
-    open func removeShutdownHook( _ _hook: Thread? ) -> Bool {
+    open func removeShutdownHook( _ _hook: java_swift.JavaThread? ) -> Bool {
         return removeShutdownHook( hook: _hook )
     }
 

@@ -80,33 +80,33 @@ open class SecurityManager: java_swift.JavaObject {
         checkAccept( arg0: _arg0, arg1: _arg1 )
     }
 
-    /// public void java.lang.SecurityManager.checkAccess(java.lang.Thread)
-
-    private static var checkAccess_MethodID_3: jmethodID?
-
-    open func checkAccess( arg0: Thread? ) {
-        var __locals = [jobject]()
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkAccess", methodSig: "(Ljava/lang/Thread;)V", methodCache: &SecurityManager.checkAccess_MethodID_3, args: &__args, locals: &__locals )
-    }
-
-    open func checkAccess( _ _arg0: Thread? ) {
-        checkAccess( arg0: _arg0 )
-    }
-
     /// public void java.lang.SecurityManager.checkAccess(java.lang.ThreadGroup)
 
-    private static var checkAccess_MethodID_4: jmethodID?
+    private static var checkAccess_MethodID_3: jmethodID?
 
     open func checkAccess( arg0: ThreadGroup? ) {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkAccess", methodSig: "(Ljava/lang/ThreadGroup;)V", methodCache: &SecurityManager.checkAccess_MethodID_4, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkAccess", methodSig: "(Ljava/lang/ThreadGroup;)V", methodCache: &SecurityManager.checkAccess_MethodID_3, args: &__args, locals: &__locals )
     }
 
     open func checkAccess( _ _arg0: ThreadGroup? ) {
+        checkAccess( arg0: _arg0 )
+    }
+
+    /// public void java.lang.SecurityManager.checkAccess(java.lang.Thread)
+
+    private static var checkAccess_MethodID_4: jmethodID?
+
+    open func checkAccess( arg0: java_swift.JavaThread? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "checkAccess", methodSig: "(Ljava/lang/Thread;)V", methodCache: &SecurityManager.checkAccess_MethodID_4, args: &__args, locals: &__locals )
+    }
+
+    open func checkAccess( _ _arg0: java_swift.JavaThread? ) {
         checkAccess( arg0: _arg0 )
     }
 

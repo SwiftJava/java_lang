@@ -123,11 +123,11 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
     }
 
 
+    /// private final void java.lang.ThreadGroup.add(java.lang.ThreadGroup)
+
     /// void java.lang.ThreadGroup.add(java.lang.Thread)
 
     // Skipping method: true false false false false 
-
-    /// private final void java.lang.ThreadGroup.add(java.lang.ThreadGroup)
 
     /// void java.lang.ThreadGroup.addUnstarted()
 
@@ -171,15 +171,50 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
     }
 
 
-    /// public int java.lang.ThreadGroup.enumerate(java.lang.ThreadGroup[])
+    /// public int java.lang.ThreadGroup.enumerate(java.lang.Thread[])
 
     private static var enumerate_MethodID_8: jmethodID?
+
+    open func enumerate( arg0: [JavaThread]? ) -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "enumerate", methodSig: "([Ljava/lang/Thread;)I", methodCache: &ThreadGroup.enumerate_MethodID_8, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open func enumerate( _ _arg0: [JavaThread]? ) -> Int {
+        return enumerate( arg0: _arg0 )
+    }
+
+    /// public int java.lang.ThreadGroup.enumerate(java.lang.Thread[],boolean)
+
+    private static var enumerate_MethodID_9: jmethodID?
+
+    open func enumerate( arg0: [JavaThread]?, arg1: Bool ) -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
+        __args[1] = jvalue( z: jboolean(arg1 ? JNI_TRUE : JNI_FALSE) )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "enumerate", methodSig: "([Ljava/lang/Thread;Z)I", methodCache: &ThreadGroup.enumerate_MethodID_9, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    open func enumerate( _ _arg0: [JavaThread]?, _ _arg1: Bool ) -> Int {
+        return enumerate( arg0: _arg0, arg1: _arg1 )
+    }
+
+    /// private int java.lang.ThreadGroup.enumerate(java.lang.Thread[],int,boolean)
+
+    /// public int java.lang.ThreadGroup.enumerate(java.lang.ThreadGroup[])
+
+    private static var enumerate_MethodID_10: jmethodID?
 
     open func enumerate( arg0: [ThreadGroup]? ) -> Int {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "enumerate", methodSig: "([Ljava/lang/ThreadGroup;)I", methodCache: &ThreadGroup.enumerate_MethodID_8, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "enumerate", methodSig: "([Ljava/lang/ThreadGroup;)I", methodCache: &ThreadGroup.enumerate_MethodID_10, args: &__args, locals: &__locals )
         return Int(__return)
     }
 
@@ -189,14 +224,14 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
 
     /// public int java.lang.ThreadGroup.enumerate(java.lang.ThreadGroup[],boolean)
 
-    private static var enumerate_MethodID_9: jmethodID?
+    private static var enumerate_MethodID_11: jmethodID?
 
     open func enumerate( arg0: [ThreadGroup]?, arg1: Bool ) -> Int {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
         __args[1] = jvalue( z: jboolean(arg1 ? JNI_TRUE : JNI_FALSE) )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "enumerate", methodSig: "([Ljava/lang/ThreadGroup;Z)I", methodCache: &ThreadGroup.enumerate_MethodID_9, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "enumerate", methodSig: "([Ljava/lang/ThreadGroup;Z)I", methodCache: &ThreadGroup.enumerate_MethodID_11, args: &__args, locals: &__locals )
         return Int(__return)
     }
 
@@ -205,41 +240,6 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
     }
 
     /// private int java.lang.ThreadGroup.enumerate(java.lang.ThreadGroup[],int,boolean)
-
-    /// public int java.lang.ThreadGroup.enumerate(java.lang.Thread[])
-
-    private static var enumerate_MethodID_10: jmethodID?
-
-    open func enumerate( arg0: [Thread]? ) -> Int {
-        var __locals = [jobject]()
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "enumerate", methodSig: "([Ljava/lang/Thread;)I", methodCache: &ThreadGroup.enumerate_MethodID_10, args: &__args, locals: &__locals )
-        return Int(__return)
-    }
-
-    open func enumerate( _ _arg0: [Thread]? ) -> Int {
-        return enumerate( arg0: _arg0 )
-    }
-
-    /// public int java.lang.ThreadGroup.enumerate(java.lang.Thread[],boolean)
-
-    private static var enumerate_MethodID_11: jmethodID?
-
-    open func enumerate( arg0: [Thread]?, arg1: Bool ) -> Int {
-        var __locals = [jobject]()
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
-        __args[1] = jvalue( z: jboolean(arg1 ? JNI_TRUE : JNI_FALSE) )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "enumerate", methodSig: "([Ljava/lang/Thread;Z)I", methodCache: &ThreadGroup.enumerate_MethodID_11, args: &__args, locals: &__locals )
-        return Int(__return)
-    }
-
-    open func enumerate( _ _arg0: [Thread]?, _ _arg1: Bool ) -> Int {
-        return enumerate( arg0: _arg0, arg1: _arg1 )
-    }
-
-    /// private int java.lang.ThreadGroup.enumerate(java.lang.Thread[],int,boolean)
 
     /// public final int java.lang.ThreadGroup.getMaxPriority()
 
@@ -345,9 +345,9 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
         return parentOf( arg0: _arg0 )
     }
 
-    /// private void java.lang.ThreadGroup.remove(java.lang.Thread)
-
     /// private void java.lang.ThreadGroup.remove(java.lang.ThreadGroup)
+
+    /// private void java.lang.ThreadGroup.remove(java.lang.Thread)
 
     /// public final void java.lang.ThreadGroup.resume()
 
@@ -430,7 +430,7 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
 
     private static var uncaughtException_MethodID_25: jmethodID?
 
-    open func uncaughtException( arg0: Thread?, arg1: java_swift.Throwable? ) {
+    open func uncaughtException( arg0: java_swift.JavaThread?, arg1: java_swift.Throwable? ) {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
@@ -438,7 +438,7 @@ open class ThreadGroup: java_swift.JavaObject, Thread_UncaughtExceptionHandler {
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "uncaughtException", methodSig: "(Ljava/lang/Thread;Ljava/lang/Throwable;)V", methodCache: &ThreadGroup.uncaughtException_MethodID_25, args: &__args, locals: &__locals )
     }
 
-    open func uncaughtException( _ _arg0: Thread?, _ _arg1: java_swift.Throwable? ) {
+    open func uncaughtException( _ _arg0: java_swift.JavaThread?, _ _arg1: java_swift.Throwable? ) {
         uncaughtException( arg0: _arg0, arg1: _arg1 )
     }
 

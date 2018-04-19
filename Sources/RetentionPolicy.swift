@@ -9,7 +9,7 @@ public enum RetentionPolicy: Int, JNIObjectProtocol, JNIObjectInit {
 
     case SOURCE, CLASS, RUNTIME
 
-    static let enumConstants = try! JavaClass.forName("java.lang.annotation.RetentionPolicy")
+    static let enumConstants = JavaClass(loading: "java.lang.annotation.RetentionPolicy")
         .getEnumConstants()!.map { RetentionPolicyForward( javaObject: $0.javaObject ) }
 
     public func underlier() -> RetentionPolicyForward {

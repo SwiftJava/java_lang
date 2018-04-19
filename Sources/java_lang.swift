@@ -33,7 +33,7 @@ extension JavaObject {
 
 }
 
-extension Thread {
+extension JavaThread {
 
     public convenience init( _ closure: @escaping () -> () )  {
         self.init( ClosureRunnable( closure ) )

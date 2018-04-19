@@ -9,7 +9,7 @@ public enum MemoryType: Int, JNIObjectProtocol, JNIObjectInit {
 
     case HEAP, NON_HEAP
 
-    static let enumConstants = try! JavaClass.forName("java.lang.management.MemoryType")
+    static let enumConstants = JavaClass(loading: "java.lang.management.MemoryType")
         .getEnumConstants()!.map { MemoryTypeForward( javaObject: $0.javaObject ) }
 
     public func underlier() -> MemoryTypeForward {

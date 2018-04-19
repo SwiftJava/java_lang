@@ -9,7 +9,7 @@ public enum Thread_State: Int, JNIObjectProtocol, JNIObjectInit {
 
     case NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED
 
-    static let enumConstants = try! JavaClass.forName("java.lang.Thread$State")
+    static let enumConstants = JavaClass(loading: "java.lang.Thread$State")
         .getEnumConstants()!.map { Thread_StateForward( javaObject: $0.javaObject ) }
 
     public func underlier() -> Thread_StateForward {

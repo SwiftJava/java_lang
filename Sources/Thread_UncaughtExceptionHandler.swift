@@ -9,7 +9,7 @@ public protocol Thread_UncaughtExceptionHandler: JavaProtocol {
 
     /// public abstract void java.lang.Thread$UncaughtExceptionHandler.uncaughtException(java.lang.Thread,java.lang.Throwable)
 
-    func uncaughtException( arg0: Thread?, arg1: java_swift.Throwable? )
+    func uncaughtException( arg0: java_swift.JavaThread?, arg1: java_swift.Throwable? )
 
 }
 
@@ -22,7 +22,7 @@ open class Thread_UncaughtExceptionHandlerForward: JNIObjectForward, Thread_Unca
 
     private static var uncaughtException_MethodID_2: jmethodID?
 
-    open func uncaughtException( arg0: Thread?, arg1: java_swift.Throwable? ) {
+    open func uncaughtException( arg0: java_swift.JavaThread?, arg1: java_swift.Throwable? ) {
         var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: arg0, locals: &__locals )
@@ -30,7 +30,7 @@ open class Thread_UncaughtExceptionHandlerForward: JNIObjectForward, Thread_Unca
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "uncaughtException", methodSig: "(Ljava/lang/Thread;Ljava/lang/Throwable;)V", methodCache: &Thread_UncaughtExceptionHandlerForward.uncaughtException_MethodID_2, args: &__args, locals: &__locals )
     }
 
-    open func uncaughtException( _ _arg0: Thread?, _ _arg1: java_swift.Throwable? ) {
+    open func uncaughtException( _ _arg0: java_swift.JavaThread?, _ _arg1: java_swift.Throwable? ) {
         uncaughtException( arg0: _arg0, arg1: _arg1 )
     }
 
@@ -39,7 +39,7 @@ open class Thread_UncaughtExceptionHandlerForward: JNIObjectForward, Thread_Unca
 private typealias Thread_UncaughtExceptionHandler_uncaughtException_0_type = @convention(c) ( _: UnsafeMutablePointer<JNIEnv?>, _: jobject?, _: jlong, _: jobject?, _: jobject? ) -> ()
 
 private func Thread_UncaughtExceptionHandler_uncaughtException_0( _ __env: UnsafeMutablePointer<JNIEnv?>, _ __this: jobject?, _ __swiftObject: jlong, _ arg0: jobject?, _ arg1: jobject? ) -> () {
-    Thread_UncaughtExceptionHandlerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).uncaughtException( arg0: arg0 != nil ? Thread( javaObject: arg0 ) : nil, arg1: arg1 != nil ? java_swift.Throwable( javaObject: arg1 ) : nil )
+    Thread_UncaughtExceptionHandlerLocal_.swiftObject( jniEnv: __env, javaObject: __this, swiftObject: __swiftObject ).uncaughtException( arg0: arg0 != nil ? java_swift.JavaThread( javaObject: arg0 ) : nil, arg1: arg1 != nil ? java_swift.Throwable( javaObject: arg1 ) : nil )
 }
 
 fileprivate class Thread_UncaughtExceptionHandlerLocal_: JNILocalProxy<Thread_UncaughtExceptionHandler, Any> {
@@ -53,9 +53,9 @@ fileprivate class Thread_UncaughtExceptionHandlerLocal_: JNILocalProxy<Thread_Un
         natives.append( JNINativeMethod( name: strdup("__finalize"), signature: strdup("(J)V"), fnPtr: unsafeBitCast( JNIReleasableProxy__finalize_thunk, to: UnsafeMutableRawPointer.self ) ) )
 
         let clazz = JNI.FindClass( proxyClassName() )
-        withUnsafePointer(to: &natives[0]) {
+        natives.withUnsafeBufferPointer {
             nativesPtr in
-            if JNI.api.RegisterNatives( JNI.env, clazz, nativesPtr, jint(natives.count) ) != jint(JNI_OK) {
+            if JNI.api.RegisterNatives( JNI.env, clazz, nativesPtr.baseAddress, jint(nativesPtr.count) ) != jint(JNI_OK) {
                 JNI.report( "Unable to register java natives" )
             }
         }
@@ -83,7 +83,7 @@ open class Thread_UncaughtExceptionHandlerBase: Thread_UncaughtExceptionHandler 
 
     /// public abstract void java.lang.Thread$UncaughtExceptionHandler.uncaughtException(java.lang.Thread,java.lang.Throwable)
 
-    open func uncaughtException( arg0: Thread?, arg1: java_swift.Throwable? ) /**/ {
+    open func uncaughtException( arg0: java_swift.JavaThread?, arg1: java_swift.Throwable? ) /**/ {
     }
 
 

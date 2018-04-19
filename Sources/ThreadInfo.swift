@@ -60,11 +60,11 @@ open class ThreadInfo: java_swift.JavaObject {
 
     /// private long java.lang.management.ThreadInfo.waitedTime
 
+    /// private java.lang.management.ThreadInfo(javax.management.openmbean.CompositeData)
+
     /// private java.lang.management.ThreadInfo(java.lang.Thread,int,java.lang.Object,java.lang.Thread,long,long,long,long,java.lang.StackTraceElement[])
 
     /// private java.lang.management.ThreadInfo(java.lang.Thread,int,java.lang.Object,java.lang.Thread,long,long,long,long,java.lang.StackTraceElement[],java.lang.Object[],int[],java.lang.Object[])
-
-    /// private java.lang.management.ThreadInfo(javax.management.openmbean.CompositeData)
 
     /// public static java.lang.management.ThreadInfo java.lang.management.ThreadInfo.from(javax.management.openmbean.CompositeData)
 
