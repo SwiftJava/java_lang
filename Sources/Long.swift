@@ -20,7 +20,7 @@ open class Long: Number, JavaComparable {
 
     private static var BYTES_FieldID: jfieldID?
 
-    open static var BYTES: Int {
+    public static var BYTES: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Long", classCache: &LongJNIClass )
             return Int(__value)
@@ -31,7 +31,7 @@ open class Long: Number, JavaComparable {
 
     private static var MAX_VALUE_FieldID: jfieldID?
 
-    open static var MAX_VALUE: Int64 {
+    public static var MAX_VALUE: Int64 {
         get {
             let __value = JNIField.GetStaticLongField( fieldName: "MAX_VALUE", fieldType: "J", fieldCache: &MAX_VALUE_FieldID, className: "java/lang/Long", classCache: &LongJNIClass )
             return __value
@@ -42,7 +42,7 @@ open class Long: Number, JavaComparable {
 
     private static var MIN_VALUE_FieldID: jfieldID?
 
-    open static var MIN_VALUE: Int64 {
+    public static var MIN_VALUE: Int64 {
         get {
             let __value = JNIField.GetStaticLongField( fieldName: "MIN_VALUE", fieldType: "J", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Long", classCache: &LongJNIClass )
             return __value
@@ -53,7 +53,7 @@ open class Long: Number, JavaComparable {
 
     private static var SIZE_FieldID: jfieldID?
 
-    open static var SIZE: Int {
+    public static var SIZE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SIZE", fieldType: "I", fieldCache: &SIZE_FieldID, className: "java/lang/Long", classCache: &LongJNIClass )
             return Int(__value)
@@ -64,7 +64,7 @@ open class Long: Number, JavaComparable {
 
     private static var TYPE_FieldID: jfieldID?
 
-    open static var TYPE: java_swift.JavaClass! {
+    public static var TYPE: java_swift.JavaClass! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/Class;", fieldCache: &TYPE_FieldID, className: "java/lang/Long", classCache: &LongJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

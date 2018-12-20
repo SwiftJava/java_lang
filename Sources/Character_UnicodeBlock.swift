@@ -20,7 +20,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var AEGEAN_NUMBERS_FieldID: jfieldID?
 
-    open static var AEGEAN_NUMBERS: Character_UnicodeBlock! {
+    public static var AEGEAN_NUMBERS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "AEGEAN_NUMBERS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &AEGEAN_NUMBERS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -32,7 +32,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ALCHEMICAL_SYMBOLS_FieldID: jfieldID?
 
-    open static var ALCHEMICAL_SYMBOLS: Character_UnicodeBlock! {
+    public static var ALCHEMICAL_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ALCHEMICAL_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ALCHEMICAL_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -44,7 +44,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ALPHABETIC_PRESENTATION_FORMS_FieldID: jfieldID?
 
-    open static var ALPHABETIC_PRESENTATION_FORMS: Character_UnicodeBlock! {
+    public static var ALPHABETIC_PRESENTATION_FORMS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ALPHABETIC_PRESENTATION_FORMS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ALPHABETIC_PRESENTATION_FORMS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -56,7 +56,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ANCIENT_GREEK_MUSICAL_NOTATION_FieldID: jfieldID?
 
-    open static var ANCIENT_GREEK_MUSICAL_NOTATION: Character_UnicodeBlock! {
+    public static var ANCIENT_GREEK_MUSICAL_NOTATION: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ANCIENT_GREEK_MUSICAL_NOTATION", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ANCIENT_GREEK_MUSICAL_NOTATION_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -68,7 +68,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ANCIENT_GREEK_NUMBERS_FieldID: jfieldID?
 
-    open static var ANCIENT_GREEK_NUMBERS: Character_UnicodeBlock! {
+    public static var ANCIENT_GREEK_NUMBERS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ANCIENT_GREEK_NUMBERS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ANCIENT_GREEK_NUMBERS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -80,7 +80,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ANCIENT_SYMBOLS_FieldID: jfieldID?
 
-    open static var ANCIENT_SYMBOLS: Character_UnicodeBlock! {
+    public static var ANCIENT_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ANCIENT_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ANCIENT_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -92,7 +92,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ARABIC_FieldID: jfieldID?
 
-    open static var ARABIC: Character_UnicodeBlock! {
+    public static var ARABIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARABIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ARABIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -104,7 +104,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ARABIC_EXTENDED_A_FieldID: jfieldID?
 
-    open static var ARABIC_EXTENDED_A: Character_UnicodeBlock! {
+    public static var ARABIC_EXTENDED_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARABIC_EXTENDED_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ARABIC_EXTENDED_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -116,7 +116,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS_FieldID: jfieldID?
 
-    open static var ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS: Character_UnicodeBlock! {
+    public static var ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -128,7 +128,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ARABIC_PRESENTATION_FORMS_A_FieldID: jfieldID?
 
-    open static var ARABIC_PRESENTATION_FORMS_A: Character_UnicodeBlock! {
+    public static var ARABIC_PRESENTATION_FORMS_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARABIC_PRESENTATION_FORMS_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ARABIC_PRESENTATION_FORMS_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -140,7 +140,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ARABIC_PRESENTATION_FORMS_B_FieldID: jfieldID?
 
-    open static var ARABIC_PRESENTATION_FORMS_B: Character_UnicodeBlock! {
+    public static var ARABIC_PRESENTATION_FORMS_B: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARABIC_PRESENTATION_FORMS_B", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ARABIC_PRESENTATION_FORMS_B_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -152,7 +152,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ARABIC_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var ARABIC_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var ARABIC_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARABIC_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ARABIC_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -164,7 +164,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ARMENIAN_FieldID: jfieldID?
 
-    open static var ARMENIAN: Character_UnicodeBlock! {
+    public static var ARMENIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARMENIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ARMENIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -176,7 +176,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ARROWS_FieldID: jfieldID?
 
-    open static var ARROWS: Character_UnicodeBlock! {
+    public static var ARROWS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARROWS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ARROWS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -188,7 +188,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var AVESTAN_FieldID: jfieldID?
 
-    open static var AVESTAN: Character_UnicodeBlock! {
+    public static var AVESTAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "AVESTAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &AVESTAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -200,7 +200,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BALINESE_FieldID: jfieldID?
 
-    open static var BALINESE: Character_UnicodeBlock! {
+    public static var BALINESE: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BALINESE", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BALINESE_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -212,7 +212,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BAMUM_FieldID: jfieldID?
 
-    open static var BAMUM: Character_UnicodeBlock! {
+    public static var BAMUM: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BAMUM", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BAMUM_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -224,7 +224,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BAMUM_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var BAMUM_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var BAMUM_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BAMUM_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BAMUM_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -236,7 +236,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BASIC_LATIN_FieldID: jfieldID?
 
-    open static var BASIC_LATIN: Character_UnicodeBlock! {
+    public static var BASIC_LATIN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BASIC_LATIN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BASIC_LATIN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -248,7 +248,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BATAK_FieldID: jfieldID?
 
-    open static var BATAK: Character_UnicodeBlock! {
+    public static var BATAK: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BATAK", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BATAK_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -260,7 +260,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BENGALI_FieldID: jfieldID?
 
-    open static var BENGALI: Character_UnicodeBlock! {
+    public static var BENGALI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BENGALI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BENGALI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -272,7 +272,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BLOCK_ELEMENTS_FieldID: jfieldID?
 
-    open static var BLOCK_ELEMENTS: Character_UnicodeBlock! {
+    public static var BLOCK_ELEMENTS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BLOCK_ELEMENTS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BLOCK_ELEMENTS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -284,7 +284,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BOPOMOFO_FieldID: jfieldID?
 
-    open static var BOPOMOFO: Character_UnicodeBlock! {
+    public static var BOPOMOFO: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BOPOMOFO", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BOPOMOFO_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -296,7 +296,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BOPOMOFO_EXTENDED_FieldID: jfieldID?
 
-    open static var BOPOMOFO_EXTENDED: Character_UnicodeBlock! {
+    public static var BOPOMOFO_EXTENDED: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BOPOMOFO_EXTENDED", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BOPOMOFO_EXTENDED_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -308,7 +308,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BOX_DRAWING_FieldID: jfieldID?
 
-    open static var BOX_DRAWING: Character_UnicodeBlock! {
+    public static var BOX_DRAWING: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BOX_DRAWING", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BOX_DRAWING_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -320,7 +320,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BRAHMI_FieldID: jfieldID?
 
-    open static var BRAHMI: Character_UnicodeBlock! {
+    public static var BRAHMI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BRAHMI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BRAHMI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -332,7 +332,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BRAILLE_PATTERNS_FieldID: jfieldID?
 
-    open static var BRAILLE_PATTERNS: Character_UnicodeBlock! {
+    public static var BRAILLE_PATTERNS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BRAILLE_PATTERNS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BRAILLE_PATTERNS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -344,7 +344,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BUGINESE_FieldID: jfieldID?
 
-    open static var BUGINESE: Character_UnicodeBlock! {
+    public static var BUGINESE: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BUGINESE", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BUGINESE_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -356,7 +356,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BUHID_FieldID: jfieldID?
 
-    open static var BUHID: Character_UnicodeBlock! {
+    public static var BUHID: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BUHID", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BUHID_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -368,7 +368,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var BYZANTINE_MUSICAL_SYMBOLS_FieldID: jfieldID?
 
-    open static var BYZANTINE_MUSICAL_SYMBOLS: Character_UnicodeBlock! {
+    public static var BYZANTINE_MUSICAL_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BYZANTINE_MUSICAL_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &BYZANTINE_MUSICAL_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -380,7 +380,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CARIAN_FieldID: jfieldID?
 
-    open static var CARIAN: Character_UnicodeBlock! {
+    public static var CARIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CARIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CARIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -392,7 +392,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CHAKMA_FieldID: jfieldID?
 
-    open static var CHAKMA: Character_UnicodeBlock! {
+    public static var CHAKMA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CHAKMA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CHAKMA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -404,7 +404,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CHAM_FieldID: jfieldID?
 
-    open static var CHAM: Character_UnicodeBlock! {
+    public static var CHAM: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CHAM", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CHAM_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -416,7 +416,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CHEROKEE_FieldID: jfieldID?
 
-    open static var CHEROKEE: Character_UnicodeBlock! {
+    public static var CHEROKEE: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CHEROKEE", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CHEROKEE_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -428,7 +428,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_COMPATIBILITY_FieldID: jfieldID?
 
-    open static var CJK_COMPATIBILITY: Character_UnicodeBlock! {
+    public static var CJK_COMPATIBILITY: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_COMPATIBILITY", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_COMPATIBILITY_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -440,7 +440,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_COMPATIBILITY_FORMS_FieldID: jfieldID?
 
-    open static var CJK_COMPATIBILITY_FORMS: Character_UnicodeBlock! {
+    public static var CJK_COMPATIBILITY_FORMS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_COMPATIBILITY_FORMS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_COMPATIBILITY_FORMS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -452,7 +452,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_COMPATIBILITY_IDEOGRAPHS_FieldID: jfieldID?
 
-    open static var CJK_COMPATIBILITY_IDEOGRAPHS: Character_UnicodeBlock! {
+    public static var CJK_COMPATIBILITY_IDEOGRAPHS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_COMPATIBILITY_IDEOGRAPHS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_COMPATIBILITY_IDEOGRAPHS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -464,7 +464,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -476,7 +476,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_RADICALS_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var CJK_RADICALS_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var CJK_RADICALS_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_RADICALS_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_RADICALS_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -488,7 +488,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_STROKES_FieldID: jfieldID?
 
-    open static var CJK_STROKES: Character_UnicodeBlock! {
+    public static var CJK_STROKES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_STROKES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_STROKES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -500,7 +500,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_SYMBOLS_AND_PUNCTUATION_FieldID: jfieldID?
 
-    open static var CJK_SYMBOLS_AND_PUNCTUATION: Character_UnicodeBlock! {
+    public static var CJK_SYMBOLS_AND_PUNCTUATION: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_SYMBOLS_AND_PUNCTUATION", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_SYMBOLS_AND_PUNCTUATION_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -512,7 +512,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_UNIFIED_IDEOGRAPHS_FieldID: jfieldID?
 
-    open static var CJK_UNIFIED_IDEOGRAPHS: Character_UnicodeBlock! {
+    public static var CJK_UNIFIED_IDEOGRAPHS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_UNIFIED_IDEOGRAPHS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_UNIFIED_IDEOGRAPHS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -524,7 +524,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A_FieldID: jfieldID?
 
-    open static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A: Character_UnicodeBlock! {
+    public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -536,7 +536,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B_FieldID: jfieldID?
 
-    open static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B: Character_UnicodeBlock! {
+    public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -548,7 +548,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C_FieldID: jfieldID?
 
-    open static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C: Character_UnicodeBlock! {
+    public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -560,7 +560,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D_FieldID: jfieldID?
 
-    open static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D: Character_UnicodeBlock! {
+    public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -572,7 +572,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var COMBINING_DIACRITICAL_MARKS_FieldID: jfieldID?
 
-    open static var COMBINING_DIACRITICAL_MARKS: Character_UnicodeBlock! {
+    public static var COMBINING_DIACRITICAL_MARKS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COMBINING_DIACRITICAL_MARKS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &COMBINING_DIACRITICAL_MARKS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -584,7 +584,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var COMBINING_DIACRITICAL_MARKS_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var COMBINING_DIACRITICAL_MARKS_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var COMBINING_DIACRITICAL_MARKS_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COMBINING_DIACRITICAL_MARKS_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &COMBINING_DIACRITICAL_MARKS_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -596,7 +596,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var COMBINING_HALF_MARKS_FieldID: jfieldID?
 
-    open static var COMBINING_HALF_MARKS: Character_UnicodeBlock! {
+    public static var COMBINING_HALF_MARKS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COMBINING_HALF_MARKS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &COMBINING_HALF_MARKS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -608,7 +608,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var COMBINING_MARKS_FOR_SYMBOLS_FieldID: jfieldID?
 
-    open static var COMBINING_MARKS_FOR_SYMBOLS: Character_UnicodeBlock! {
+    public static var COMBINING_MARKS_FOR_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COMBINING_MARKS_FOR_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &COMBINING_MARKS_FOR_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -620,7 +620,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var COMMON_INDIC_NUMBER_FORMS_FieldID: jfieldID?
 
-    open static var COMMON_INDIC_NUMBER_FORMS: Character_UnicodeBlock! {
+    public static var COMMON_INDIC_NUMBER_FORMS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COMMON_INDIC_NUMBER_FORMS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &COMMON_INDIC_NUMBER_FORMS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -632,7 +632,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CONTROL_PICTURES_FieldID: jfieldID?
 
-    open static var CONTROL_PICTURES: Character_UnicodeBlock! {
+    public static var CONTROL_PICTURES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CONTROL_PICTURES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CONTROL_PICTURES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -644,7 +644,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var COPTIC_FieldID: jfieldID?
 
-    open static var COPTIC: Character_UnicodeBlock! {
+    public static var COPTIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COPTIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &COPTIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -656,7 +656,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var COUNTING_ROD_NUMERALS_FieldID: jfieldID?
 
-    open static var COUNTING_ROD_NUMERALS: Character_UnicodeBlock! {
+    public static var COUNTING_ROD_NUMERALS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COUNTING_ROD_NUMERALS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &COUNTING_ROD_NUMERALS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -668,7 +668,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CUNEIFORM_FieldID: jfieldID?
 
-    open static var CUNEIFORM: Character_UnicodeBlock! {
+    public static var CUNEIFORM: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CUNEIFORM", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CUNEIFORM_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -680,7 +680,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CUNEIFORM_NUMBERS_AND_PUNCTUATION_FieldID: jfieldID?
 
-    open static var CUNEIFORM_NUMBERS_AND_PUNCTUATION: Character_UnicodeBlock! {
+    public static var CUNEIFORM_NUMBERS_AND_PUNCTUATION: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CUNEIFORM_NUMBERS_AND_PUNCTUATION", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CUNEIFORM_NUMBERS_AND_PUNCTUATION_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -692,7 +692,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CURRENCY_SYMBOLS_FieldID: jfieldID?
 
-    open static var CURRENCY_SYMBOLS: Character_UnicodeBlock! {
+    public static var CURRENCY_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CURRENCY_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CURRENCY_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -704,7 +704,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CYPRIOT_SYLLABARY_FieldID: jfieldID?
 
-    open static var CYPRIOT_SYLLABARY: Character_UnicodeBlock! {
+    public static var CYPRIOT_SYLLABARY: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CYPRIOT_SYLLABARY", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CYPRIOT_SYLLABARY_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -716,7 +716,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CYRILLIC_FieldID: jfieldID?
 
-    open static var CYRILLIC: Character_UnicodeBlock! {
+    public static var CYRILLIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CYRILLIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CYRILLIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -728,7 +728,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CYRILLIC_EXTENDED_A_FieldID: jfieldID?
 
-    open static var CYRILLIC_EXTENDED_A: Character_UnicodeBlock! {
+    public static var CYRILLIC_EXTENDED_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CYRILLIC_EXTENDED_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CYRILLIC_EXTENDED_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -740,7 +740,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CYRILLIC_EXTENDED_B_FieldID: jfieldID?
 
-    open static var CYRILLIC_EXTENDED_B: Character_UnicodeBlock! {
+    public static var CYRILLIC_EXTENDED_B: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CYRILLIC_EXTENDED_B", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CYRILLIC_EXTENDED_B_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -752,7 +752,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var CYRILLIC_SUPPLEMENTARY_FieldID: jfieldID?
 
-    open static var CYRILLIC_SUPPLEMENTARY: Character_UnicodeBlock! {
+    public static var CYRILLIC_SUPPLEMENTARY: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CYRILLIC_SUPPLEMENTARY", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &CYRILLIC_SUPPLEMENTARY_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -764,7 +764,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var DESERET_FieldID: jfieldID?
 
-    open static var DESERET: Character_UnicodeBlock! {
+    public static var DESERET: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DESERET", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &DESERET_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -776,7 +776,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var DEVANAGARI_FieldID: jfieldID?
 
-    open static var DEVANAGARI: Character_UnicodeBlock! {
+    public static var DEVANAGARI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DEVANAGARI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &DEVANAGARI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -788,7 +788,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var DEVANAGARI_EXTENDED_FieldID: jfieldID?
 
-    open static var DEVANAGARI_EXTENDED: Character_UnicodeBlock! {
+    public static var DEVANAGARI_EXTENDED: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DEVANAGARI_EXTENDED", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &DEVANAGARI_EXTENDED_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -800,7 +800,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var DINGBATS_FieldID: jfieldID?
 
-    open static var DINGBATS: Character_UnicodeBlock! {
+    public static var DINGBATS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DINGBATS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &DINGBATS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -812,7 +812,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var DOMINO_TILES_FieldID: jfieldID?
 
-    open static var DOMINO_TILES: Character_UnicodeBlock! {
+    public static var DOMINO_TILES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DOMINO_TILES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &DOMINO_TILES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -824,7 +824,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var EGYPTIAN_HIEROGLYPHS_FieldID: jfieldID?
 
-    open static var EGYPTIAN_HIEROGLYPHS: Character_UnicodeBlock! {
+    public static var EGYPTIAN_HIEROGLYPHS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "EGYPTIAN_HIEROGLYPHS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &EGYPTIAN_HIEROGLYPHS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -836,7 +836,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var EMOTICONS_FieldID: jfieldID?
 
-    open static var EMOTICONS: Character_UnicodeBlock! {
+    public static var EMOTICONS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "EMOTICONS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &EMOTICONS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -848,7 +848,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ENCLOSED_ALPHANUMERICS_FieldID: jfieldID?
 
-    open static var ENCLOSED_ALPHANUMERICS: Character_UnicodeBlock! {
+    public static var ENCLOSED_ALPHANUMERICS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ENCLOSED_ALPHANUMERICS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ENCLOSED_ALPHANUMERICS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -860,7 +860,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ENCLOSED_ALPHANUMERIC_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var ENCLOSED_ALPHANUMERIC_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var ENCLOSED_ALPHANUMERIC_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ENCLOSED_ALPHANUMERIC_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ENCLOSED_ALPHANUMERIC_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -872,7 +872,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ENCLOSED_CJK_LETTERS_AND_MONTHS_FieldID: jfieldID?
 
-    open static var ENCLOSED_CJK_LETTERS_AND_MONTHS: Character_UnicodeBlock! {
+    public static var ENCLOSED_CJK_LETTERS_AND_MONTHS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ENCLOSED_CJK_LETTERS_AND_MONTHS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ENCLOSED_CJK_LETTERS_AND_MONTHS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -884,7 +884,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ENCLOSED_IDEOGRAPHIC_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var ENCLOSED_IDEOGRAPHIC_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var ENCLOSED_IDEOGRAPHIC_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ENCLOSED_IDEOGRAPHIC_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ENCLOSED_IDEOGRAPHIC_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -896,7 +896,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ETHIOPIC_FieldID: jfieldID?
 
-    open static var ETHIOPIC: Character_UnicodeBlock! {
+    public static var ETHIOPIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ETHIOPIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ETHIOPIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -908,7 +908,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ETHIOPIC_EXTENDED_FieldID: jfieldID?
 
-    open static var ETHIOPIC_EXTENDED: Character_UnicodeBlock! {
+    public static var ETHIOPIC_EXTENDED: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ETHIOPIC_EXTENDED", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ETHIOPIC_EXTENDED_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -920,7 +920,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ETHIOPIC_EXTENDED_A_FieldID: jfieldID?
 
-    open static var ETHIOPIC_EXTENDED_A: Character_UnicodeBlock! {
+    public static var ETHIOPIC_EXTENDED_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ETHIOPIC_EXTENDED_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ETHIOPIC_EXTENDED_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -932,7 +932,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ETHIOPIC_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var ETHIOPIC_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var ETHIOPIC_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ETHIOPIC_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ETHIOPIC_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -944,7 +944,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GENERAL_PUNCTUATION_FieldID: jfieldID?
 
-    open static var GENERAL_PUNCTUATION: Character_UnicodeBlock! {
+    public static var GENERAL_PUNCTUATION: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GENERAL_PUNCTUATION", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GENERAL_PUNCTUATION_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -956,7 +956,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GEOMETRIC_SHAPES_FieldID: jfieldID?
 
-    open static var GEOMETRIC_SHAPES: Character_UnicodeBlock! {
+    public static var GEOMETRIC_SHAPES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GEOMETRIC_SHAPES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GEOMETRIC_SHAPES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -968,7 +968,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GEORGIAN_FieldID: jfieldID?
 
-    open static var GEORGIAN: Character_UnicodeBlock! {
+    public static var GEORGIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GEORGIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GEORGIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -980,7 +980,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GEORGIAN_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var GEORGIAN_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var GEORGIAN_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GEORGIAN_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GEORGIAN_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -992,7 +992,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GLAGOLITIC_FieldID: jfieldID?
 
-    open static var GLAGOLITIC: Character_UnicodeBlock! {
+    public static var GLAGOLITIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GLAGOLITIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GLAGOLITIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1004,7 +1004,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GOTHIC_FieldID: jfieldID?
 
-    open static var GOTHIC: Character_UnicodeBlock! {
+    public static var GOTHIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GOTHIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GOTHIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1016,7 +1016,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GREEK_FieldID: jfieldID?
 
-    open static var GREEK: Character_UnicodeBlock! {
+    public static var GREEK: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GREEK", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GREEK_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1028,7 +1028,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GREEK_EXTENDED_FieldID: jfieldID?
 
-    open static var GREEK_EXTENDED: Character_UnicodeBlock! {
+    public static var GREEK_EXTENDED: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GREEK_EXTENDED", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GREEK_EXTENDED_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1040,7 +1040,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GUJARATI_FieldID: jfieldID?
 
-    open static var GUJARATI: Character_UnicodeBlock! {
+    public static var GUJARATI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GUJARATI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GUJARATI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1052,7 +1052,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var GURMUKHI_FieldID: jfieldID?
 
-    open static var GURMUKHI: Character_UnicodeBlock! {
+    public static var GURMUKHI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GURMUKHI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &GURMUKHI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1064,7 +1064,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HALFWIDTH_AND_FULLWIDTH_FORMS_FieldID: jfieldID?
 
-    open static var HALFWIDTH_AND_FULLWIDTH_FORMS: Character_UnicodeBlock! {
+    public static var HALFWIDTH_AND_FULLWIDTH_FORMS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HALFWIDTH_AND_FULLWIDTH_FORMS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HALFWIDTH_AND_FULLWIDTH_FORMS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1076,7 +1076,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HANGUL_COMPATIBILITY_JAMO_FieldID: jfieldID?
 
-    open static var HANGUL_COMPATIBILITY_JAMO: Character_UnicodeBlock! {
+    public static var HANGUL_COMPATIBILITY_JAMO: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HANGUL_COMPATIBILITY_JAMO", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HANGUL_COMPATIBILITY_JAMO_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1088,7 +1088,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HANGUL_JAMO_FieldID: jfieldID?
 
-    open static var HANGUL_JAMO: Character_UnicodeBlock! {
+    public static var HANGUL_JAMO: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HANGUL_JAMO", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HANGUL_JAMO_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1100,7 +1100,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HANGUL_JAMO_EXTENDED_A_FieldID: jfieldID?
 
-    open static var HANGUL_JAMO_EXTENDED_A: Character_UnicodeBlock! {
+    public static var HANGUL_JAMO_EXTENDED_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HANGUL_JAMO_EXTENDED_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HANGUL_JAMO_EXTENDED_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1112,7 +1112,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HANGUL_JAMO_EXTENDED_B_FieldID: jfieldID?
 
-    open static var HANGUL_JAMO_EXTENDED_B: Character_UnicodeBlock! {
+    public static var HANGUL_JAMO_EXTENDED_B: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HANGUL_JAMO_EXTENDED_B", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HANGUL_JAMO_EXTENDED_B_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1124,7 +1124,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HANGUL_SYLLABLES_FieldID: jfieldID?
 
-    open static var HANGUL_SYLLABLES: Character_UnicodeBlock! {
+    public static var HANGUL_SYLLABLES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HANGUL_SYLLABLES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HANGUL_SYLLABLES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1136,7 +1136,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HANUNOO_FieldID: jfieldID?
 
-    open static var HANUNOO: Character_UnicodeBlock! {
+    public static var HANUNOO: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HANUNOO", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HANUNOO_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1148,7 +1148,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HEBREW_FieldID: jfieldID?
 
-    open static var HEBREW: Character_UnicodeBlock! {
+    public static var HEBREW: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HEBREW", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HEBREW_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1160,7 +1160,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HIGH_PRIVATE_USE_SURROGATES_FieldID: jfieldID?
 
-    open static var HIGH_PRIVATE_USE_SURROGATES: Character_UnicodeBlock! {
+    public static var HIGH_PRIVATE_USE_SURROGATES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HIGH_PRIVATE_USE_SURROGATES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HIGH_PRIVATE_USE_SURROGATES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1172,7 +1172,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HIGH_SURROGATES_FieldID: jfieldID?
 
-    open static var HIGH_SURROGATES: Character_UnicodeBlock! {
+    public static var HIGH_SURROGATES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HIGH_SURROGATES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HIGH_SURROGATES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1184,7 +1184,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var HIRAGANA_FieldID: jfieldID?
 
-    open static var HIRAGANA: Character_UnicodeBlock! {
+    public static var HIRAGANA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HIRAGANA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &HIRAGANA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1196,7 +1196,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var IDEOGRAPHIC_DESCRIPTION_CHARACTERS_FieldID: jfieldID?
 
-    open static var IDEOGRAPHIC_DESCRIPTION_CHARACTERS: Character_UnicodeBlock! {
+    public static var IDEOGRAPHIC_DESCRIPTION_CHARACTERS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "IDEOGRAPHIC_DESCRIPTION_CHARACTERS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &IDEOGRAPHIC_DESCRIPTION_CHARACTERS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1208,7 +1208,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var IMPERIAL_ARAMAIC_FieldID: jfieldID?
 
-    open static var IMPERIAL_ARAMAIC: Character_UnicodeBlock! {
+    public static var IMPERIAL_ARAMAIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "IMPERIAL_ARAMAIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &IMPERIAL_ARAMAIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1220,7 +1220,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var INSCRIPTIONAL_PAHLAVI_FieldID: jfieldID?
 
-    open static var INSCRIPTIONAL_PAHLAVI: Character_UnicodeBlock! {
+    public static var INSCRIPTIONAL_PAHLAVI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "INSCRIPTIONAL_PAHLAVI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &INSCRIPTIONAL_PAHLAVI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1232,7 +1232,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var INSCRIPTIONAL_PARTHIAN_FieldID: jfieldID?
 
-    open static var INSCRIPTIONAL_PARTHIAN: Character_UnicodeBlock! {
+    public static var INSCRIPTIONAL_PARTHIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "INSCRIPTIONAL_PARTHIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &INSCRIPTIONAL_PARTHIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1244,7 +1244,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var IPA_EXTENSIONS_FieldID: jfieldID?
 
-    open static var IPA_EXTENSIONS: Character_UnicodeBlock! {
+    public static var IPA_EXTENSIONS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "IPA_EXTENSIONS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &IPA_EXTENSIONS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1256,7 +1256,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var JAVANESE_FieldID: jfieldID?
 
-    open static var JAVANESE: Character_UnicodeBlock! {
+    public static var JAVANESE: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "JAVANESE", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &JAVANESE_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1268,7 +1268,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KAITHI_FieldID: jfieldID?
 
-    open static var KAITHI: Character_UnicodeBlock! {
+    public static var KAITHI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KAITHI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KAITHI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1280,7 +1280,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KANA_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var KANA_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var KANA_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KANA_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KANA_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1292,7 +1292,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KANBUN_FieldID: jfieldID?
 
-    open static var KANBUN: Character_UnicodeBlock! {
+    public static var KANBUN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KANBUN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KANBUN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1304,7 +1304,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KANGXI_RADICALS_FieldID: jfieldID?
 
-    open static var KANGXI_RADICALS: Character_UnicodeBlock! {
+    public static var KANGXI_RADICALS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KANGXI_RADICALS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KANGXI_RADICALS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1316,7 +1316,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KANNADA_FieldID: jfieldID?
 
-    open static var KANNADA: Character_UnicodeBlock! {
+    public static var KANNADA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KANNADA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KANNADA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1328,7 +1328,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KATAKANA_FieldID: jfieldID?
 
-    open static var KATAKANA: Character_UnicodeBlock! {
+    public static var KATAKANA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KATAKANA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KATAKANA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1340,7 +1340,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KATAKANA_PHONETIC_EXTENSIONS_FieldID: jfieldID?
 
-    open static var KATAKANA_PHONETIC_EXTENSIONS: Character_UnicodeBlock! {
+    public static var KATAKANA_PHONETIC_EXTENSIONS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KATAKANA_PHONETIC_EXTENSIONS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KATAKANA_PHONETIC_EXTENSIONS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1352,7 +1352,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KAYAH_LI_FieldID: jfieldID?
 
-    open static var KAYAH_LI: Character_UnicodeBlock! {
+    public static var KAYAH_LI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KAYAH_LI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KAYAH_LI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1364,7 +1364,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KHAROSHTHI_FieldID: jfieldID?
 
-    open static var KHAROSHTHI: Character_UnicodeBlock! {
+    public static var KHAROSHTHI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KHAROSHTHI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KHAROSHTHI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1376,7 +1376,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KHMER_FieldID: jfieldID?
 
-    open static var KHMER: Character_UnicodeBlock! {
+    public static var KHMER: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KHMER", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KHMER_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1388,7 +1388,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var KHMER_SYMBOLS_FieldID: jfieldID?
 
-    open static var KHMER_SYMBOLS: Character_UnicodeBlock! {
+    public static var KHMER_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KHMER_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &KHMER_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1400,7 +1400,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LAO_FieldID: jfieldID?
 
-    open static var LAO: Character_UnicodeBlock! {
+    public static var LAO: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LAO", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LAO_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1412,7 +1412,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LATIN_1_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var LATIN_1_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var LATIN_1_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LATIN_1_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LATIN_1_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1424,7 +1424,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LATIN_EXTENDED_A_FieldID: jfieldID?
 
-    open static var LATIN_EXTENDED_A: Character_UnicodeBlock! {
+    public static var LATIN_EXTENDED_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LATIN_EXTENDED_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LATIN_EXTENDED_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1436,7 +1436,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LATIN_EXTENDED_ADDITIONAL_FieldID: jfieldID?
 
-    open static var LATIN_EXTENDED_ADDITIONAL: Character_UnicodeBlock! {
+    public static var LATIN_EXTENDED_ADDITIONAL: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LATIN_EXTENDED_ADDITIONAL", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LATIN_EXTENDED_ADDITIONAL_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1448,7 +1448,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LATIN_EXTENDED_B_FieldID: jfieldID?
 
-    open static var LATIN_EXTENDED_B: Character_UnicodeBlock! {
+    public static var LATIN_EXTENDED_B: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LATIN_EXTENDED_B", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LATIN_EXTENDED_B_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1460,7 +1460,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LATIN_EXTENDED_C_FieldID: jfieldID?
 
-    open static var LATIN_EXTENDED_C: Character_UnicodeBlock! {
+    public static var LATIN_EXTENDED_C: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LATIN_EXTENDED_C", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LATIN_EXTENDED_C_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1472,7 +1472,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LATIN_EXTENDED_D_FieldID: jfieldID?
 
-    open static var LATIN_EXTENDED_D: Character_UnicodeBlock! {
+    public static var LATIN_EXTENDED_D: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LATIN_EXTENDED_D", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LATIN_EXTENDED_D_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1484,7 +1484,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LEPCHA_FieldID: jfieldID?
 
-    open static var LEPCHA: Character_UnicodeBlock! {
+    public static var LEPCHA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LEPCHA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LEPCHA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1496,7 +1496,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LETTERLIKE_SYMBOLS_FieldID: jfieldID?
 
-    open static var LETTERLIKE_SYMBOLS: Character_UnicodeBlock! {
+    public static var LETTERLIKE_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LETTERLIKE_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LETTERLIKE_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1508,7 +1508,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LIMBU_FieldID: jfieldID?
 
-    open static var LIMBU: Character_UnicodeBlock! {
+    public static var LIMBU: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LIMBU", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LIMBU_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1520,7 +1520,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LINEAR_B_IDEOGRAMS_FieldID: jfieldID?
 
-    open static var LINEAR_B_IDEOGRAMS: Character_UnicodeBlock! {
+    public static var LINEAR_B_IDEOGRAMS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LINEAR_B_IDEOGRAMS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LINEAR_B_IDEOGRAMS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1532,7 +1532,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LINEAR_B_SYLLABARY_FieldID: jfieldID?
 
-    open static var LINEAR_B_SYLLABARY: Character_UnicodeBlock! {
+    public static var LINEAR_B_SYLLABARY: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LINEAR_B_SYLLABARY", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LINEAR_B_SYLLABARY_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1544,7 +1544,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LISU_FieldID: jfieldID?
 
-    open static var LISU: Character_UnicodeBlock! {
+    public static var LISU: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LISU", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LISU_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1556,7 +1556,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LOW_SURROGATES_FieldID: jfieldID?
 
-    open static var LOW_SURROGATES: Character_UnicodeBlock! {
+    public static var LOW_SURROGATES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LOW_SURROGATES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LOW_SURROGATES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1568,7 +1568,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LYCIAN_FieldID: jfieldID?
 
-    open static var LYCIAN: Character_UnicodeBlock! {
+    public static var LYCIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LYCIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LYCIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1580,7 +1580,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var LYDIAN_FieldID: jfieldID?
 
-    open static var LYDIAN: Character_UnicodeBlock! {
+    public static var LYDIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LYDIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &LYDIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1592,7 +1592,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MAHJONG_TILES_FieldID: jfieldID?
 
-    open static var MAHJONG_TILES: Character_UnicodeBlock! {
+    public static var MAHJONG_TILES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MAHJONG_TILES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MAHJONG_TILES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1604,7 +1604,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MALAYALAM_FieldID: jfieldID?
 
-    open static var MALAYALAM: Character_UnicodeBlock! {
+    public static var MALAYALAM: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MALAYALAM", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MALAYALAM_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1616,7 +1616,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MANDAIC_FieldID: jfieldID?
 
-    open static var MANDAIC: Character_UnicodeBlock! {
+    public static var MANDAIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MANDAIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MANDAIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1628,7 +1628,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MATHEMATICAL_ALPHANUMERIC_SYMBOLS_FieldID: jfieldID?
 
-    open static var MATHEMATICAL_ALPHANUMERIC_SYMBOLS: Character_UnicodeBlock! {
+    public static var MATHEMATICAL_ALPHANUMERIC_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MATHEMATICAL_ALPHANUMERIC_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MATHEMATICAL_ALPHANUMERIC_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1640,7 +1640,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MATHEMATICAL_OPERATORS_FieldID: jfieldID?
 
-    open static var MATHEMATICAL_OPERATORS: Character_UnicodeBlock! {
+    public static var MATHEMATICAL_OPERATORS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MATHEMATICAL_OPERATORS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MATHEMATICAL_OPERATORS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1652,7 +1652,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MEETEI_MAYEK_FieldID: jfieldID?
 
-    open static var MEETEI_MAYEK: Character_UnicodeBlock! {
+    public static var MEETEI_MAYEK: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEETEI_MAYEK", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MEETEI_MAYEK_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1664,7 +1664,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MEETEI_MAYEK_EXTENSIONS_FieldID: jfieldID?
 
-    open static var MEETEI_MAYEK_EXTENSIONS: Character_UnicodeBlock! {
+    public static var MEETEI_MAYEK_EXTENSIONS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEETEI_MAYEK_EXTENSIONS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MEETEI_MAYEK_EXTENSIONS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1676,7 +1676,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MEROITIC_CURSIVE_FieldID: jfieldID?
 
-    open static var MEROITIC_CURSIVE: Character_UnicodeBlock! {
+    public static var MEROITIC_CURSIVE: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEROITIC_CURSIVE", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MEROITIC_CURSIVE_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1688,7 +1688,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MEROITIC_HIEROGLYPHS_FieldID: jfieldID?
 
-    open static var MEROITIC_HIEROGLYPHS: Character_UnicodeBlock! {
+    public static var MEROITIC_HIEROGLYPHS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEROITIC_HIEROGLYPHS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MEROITIC_HIEROGLYPHS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1700,7 +1700,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MIAO_FieldID: jfieldID?
 
-    open static var MIAO: Character_UnicodeBlock! {
+    public static var MIAO: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MIAO", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MIAO_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1712,7 +1712,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A_FieldID: jfieldID?
 
-    open static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A: Character_UnicodeBlock! {
+    public static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1724,7 +1724,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B_FieldID: jfieldID?
 
-    open static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B: Character_UnicodeBlock! {
+    public static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1736,7 +1736,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MISCELLANEOUS_SYMBOLS_FieldID: jfieldID?
 
-    open static var MISCELLANEOUS_SYMBOLS: Character_UnicodeBlock! {
+    public static var MISCELLANEOUS_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MISCELLANEOUS_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MISCELLANEOUS_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1748,7 +1748,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MISCELLANEOUS_SYMBOLS_AND_ARROWS_FieldID: jfieldID?
 
-    open static var MISCELLANEOUS_SYMBOLS_AND_ARROWS: Character_UnicodeBlock! {
+    public static var MISCELLANEOUS_SYMBOLS_AND_ARROWS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MISCELLANEOUS_SYMBOLS_AND_ARROWS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MISCELLANEOUS_SYMBOLS_AND_ARROWS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1760,7 +1760,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS_FieldID: jfieldID?
 
-    open static var MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS: Character_UnicodeBlock! {
+    public static var MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1772,7 +1772,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MISCELLANEOUS_TECHNICAL_FieldID: jfieldID?
 
-    open static var MISCELLANEOUS_TECHNICAL: Character_UnicodeBlock! {
+    public static var MISCELLANEOUS_TECHNICAL: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MISCELLANEOUS_TECHNICAL", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MISCELLANEOUS_TECHNICAL_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1784,7 +1784,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MODIFIER_TONE_LETTERS_FieldID: jfieldID?
 
-    open static var MODIFIER_TONE_LETTERS: Character_UnicodeBlock! {
+    public static var MODIFIER_TONE_LETTERS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MODIFIER_TONE_LETTERS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MODIFIER_TONE_LETTERS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1796,7 +1796,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MONGOLIAN_FieldID: jfieldID?
 
-    open static var MONGOLIAN: Character_UnicodeBlock! {
+    public static var MONGOLIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MONGOLIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MONGOLIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1808,7 +1808,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MUSICAL_SYMBOLS_FieldID: jfieldID?
 
-    open static var MUSICAL_SYMBOLS: Character_UnicodeBlock! {
+    public static var MUSICAL_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MUSICAL_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MUSICAL_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1820,7 +1820,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MYANMAR_FieldID: jfieldID?
 
-    open static var MYANMAR: Character_UnicodeBlock! {
+    public static var MYANMAR: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MYANMAR", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MYANMAR_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1832,7 +1832,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var MYANMAR_EXTENDED_A_FieldID: jfieldID?
 
-    open static var MYANMAR_EXTENDED_A: Character_UnicodeBlock! {
+    public static var MYANMAR_EXTENDED_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MYANMAR_EXTENDED_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &MYANMAR_EXTENDED_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1844,7 +1844,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var NEW_TAI_LUE_FieldID: jfieldID?
 
-    open static var NEW_TAI_LUE: Character_UnicodeBlock! {
+    public static var NEW_TAI_LUE: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NEW_TAI_LUE", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &NEW_TAI_LUE_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1856,7 +1856,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var NKO_FieldID: jfieldID?
 
-    open static var NKO: Character_UnicodeBlock! {
+    public static var NKO: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NKO", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &NKO_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1868,7 +1868,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var NUMBER_FORMS_FieldID: jfieldID?
 
-    open static var NUMBER_FORMS: Character_UnicodeBlock! {
+    public static var NUMBER_FORMS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NUMBER_FORMS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &NUMBER_FORMS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1880,7 +1880,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var OGHAM_FieldID: jfieldID?
 
-    open static var OGHAM: Character_UnicodeBlock! {
+    public static var OGHAM: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OGHAM", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &OGHAM_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1892,7 +1892,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var OLD_ITALIC_FieldID: jfieldID?
 
-    open static var OLD_ITALIC: Character_UnicodeBlock! {
+    public static var OLD_ITALIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OLD_ITALIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &OLD_ITALIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1904,7 +1904,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var OLD_PERSIAN_FieldID: jfieldID?
 
-    open static var OLD_PERSIAN: Character_UnicodeBlock! {
+    public static var OLD_PERSIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OLD_PERSIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &OLD_PERSIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1916,7 +1916,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var OLD_SOUTH_ARABIAN_FieldID: jfieldID?
 
-    open static var OLD_SOUTH_ARABIAN: Character_UnicodeBlock! {
+    public static var OLD_SOUTH_ARABIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OLD_SOUTH_ARABIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &OLD_SOUTH_ARABIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1928,7 +1928,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var OLD_TURKIC_FieldID: jfieldID?
 
-    open static var OLD_TURKIC: Character_UnicodeBlock! {
+    public static var OLD_TURKIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OLD_TURKIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &OLD_TURKIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1940,7 +1940,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var OL_CHIKI_FieldID: jfieldID?
 
-    open static var OL_CHIKI: Character_UnicodeBlock! {
+    public static var OL_CHIKI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OL_CHIKI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &OL_CHIKI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1952,7 +1952,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var OPTICAL_CHARACTER_RECOGNITION_FieldID: jfieldID?
 
-    open static var OPTICAL_CHARACTER_RECOGNITION: Character_UnicodeBlock! {
+    public static var OPTICAL_CHARACTER_RECOGNITION: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OPTICAL_CHARACTER_RECOGNITION", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &OPTICAL_CHARACTER_RECOGNITION_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1964,7 +1964,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var ORIYA_FieldID: jfieldID?
 
-    open static var ORIYA: Character_UnicodeBlock! {
+    public static var ORIYA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ORIYA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &ORIYA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1976,7 +1976,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var OSMANYA_FieldID: jfieldID?
 
-    open static var OSMANYA: Character_UnicodeBlock! {
+    public static var OSMANYA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OSMANYA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &OSMANYA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1988,7 +1988,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var PHAGS_PA_FieldID: jfieldID?
 
-    open static var PHAGS_PA: Character_UnicodeBlock! {
+    public static var PHAGS_PA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PHAGS_PA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &PHAGS_PA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2000,7 +2000,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var PHAISTOS_DISC_FieldID: jfieldID?
 
-    open static var PHAISTOS_DISC: Character_UnicodeBlock! {
+    public static var PHAISTOS_DISC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PHAISTOS_DISC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &PHAISTOS_DISC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2012,7 +2012,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var PHOENICIAN_FieldID: jfieldID?
 
-    open static var PHOENICIAN: Character_UnicodeBlock! {
+    public static var PHOENICIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PHOENICIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &PHOENICIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2024,7 +2024,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var PHONETIC_EXTENSIONS_FieldID: jfieldID?
 
-    open static var PHONETIC_EXTENSIONS: Character_UnicodeBlock! {
+    public static var PHONETIC_EXTENSIONS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PHONETIC_EXTENSIONS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &PHONETIC_EXTENSIONS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2036,7 +2036,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var PHONETIC_EXTENSIONS_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var PHONETIC_EXTENSIONS_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var PHONETIC_EXTENSIONS_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PHONETIC_EXTENSIONS_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &PHONETIC_EXTENSIONS_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2048,7 +2048,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var PLAYING_CARDS_FieldID: jfieldID?
 
-    open static var PLAYING_CARDS: Character_UnicodeBlock! {
+    public static var PLAYING_CARDS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PLAYING_CARDS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &PLAYING_CARDS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2060,7 +2060,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var PRIVATE_USE_AREA_FieldID: jfieldID?
 
-    open static var PRIVATE_USE_AREA: Character_UnicodeBlock! {
+    public static var PRIVATE_USE_AREA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PRIVATE_USE_AREA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &PRIVATE_USE_AREA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2072,7 +2072,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var REJANG_FieldID: jfieldID?
 
-    open static var REJANG: Character_UnicodeBlock! {
+    public static var REJANG: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REJANG", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &REJANG_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2084,7 +2084,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var RUMI_NUMERAL_SYMBOLS_FieldID: jfieldID?
 
-    open static var RUMI_NUMERAL_SYMBOLS: Character_UnicodeBlock! {
+    public static var RUMI_NUMERAL_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "RUMI_NUMERAL_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &RUMI_NUMERAL_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2096,7 +2096,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var RUNIC_FieldID: jfieldID?
 
-    open static var RUNIC: Character_UnicodeBlock! {
+    public static var RUNIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "RUNIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &RUNIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2108,7 +2108,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SAMARITAN_FieldID: jfieldID?
 
-    open static var SAMARITAN: Character_UnicodeBlock! {
+    public static var SAMARITAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SAMARITAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SAMARITAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2120,7 +2120,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SAURASHTRA_FieldID: jfieldID?
 
-    open static var SAURASHTRA: Character_UnicodeBlock! {
+    public static var SAURASHTRA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SAURASHTRA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SAURASHTRA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2132,7 +2132,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SHARADA_FieldID: jfieldID?
 
-    open static var SHARADA: Character_UnicodeBlock! {
+    public static var SHARADA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SHARADA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SHARADA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2144,7 +2144,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SHAVIAN_FieldID: jfieldID?
 
-    open static var SHAVIAN: Character_UnicodeBlock! {
+    public static var SHAVIAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SHAVIAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SHAVIAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2156,7 +2156,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SINHALA_FieldID: jfieldID?
 
-    open static var SINHALA: Character_UnicodeBlock! {
+    public static var SINHALA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SINHALA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SINHALA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2168,7 +2168,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SMALL_FORM_VARIANTS_FieldID: jfieldID?
 
-    open static var SMALL_FORM_VARIANTS: Character_UnicodeBlock! {
+    public static var SMALL_FORM_VARIANTS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SMALL_FORM_VARIANTS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SMALL_FORM_VARIANTS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2180,7 +2180,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SORA_SOMPENG_FieldID: jfieldID?
 
-    open static var SORA_SOMPENG: Character_UnicodeBlock! {
+    public static var SORA_SOMPENG: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SORA_SOMPENG", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SORA_SOMPENG_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2192,7 +2192,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SPACING_MODIFIER_LETTERS_FieldID: jfieldID?
 
-    open static var SPACING_MODIFIER_LETTERS: Character_UnicodeBlock! {
+    public static var SPACING_MODIFIER_LETTERS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SPACING_MODIFIER_LETTERS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SPACING_MODIFIER_LETTERS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2204,7 +2204,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SPECIALS_FieldID: jfieldID?
 
-    open static var SPECIALS: Character_UnicodeBlock! {
+    public static var SPECIALS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SPECIALS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SPECIALS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2216,7 +2216,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SUNDANESE_FieldID: jfieldID?
 
-    open static var SUNDANESE: Character_UnicodeBlock! {
+    public static var SUNDANESE: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUNDANESE", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SUNDANESE_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2228,7 +2228,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SUNDANESE_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var SUNDANESE_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var SUNDANESE_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUNDANESE_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SUNDANESE_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2240,7 +2240,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SUPERSCRIPTS_AND_SUBSCRIPTS_FieldID: jfieldID?
 
-    open static var SUPERSCRIPTS_AND_SUBSCRIPTS: Character_UnicodeBlock! {
+    public static var SUPERSCRIPTS_AND_SUBSCRIPTS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUPERSCRIPTS_AND_SUBSCRIPTS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SUPERSCRIPTS_AND_SUBSCRIPTS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2252,7 +2252,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SUPPLEMENTAL_ARROWS_A_FieldID: jfieldID?
 
-    open static var SUPPLEMENTAL_ARROWS_A: Character_UnicodeBlock! {
+    public static var SUPPLEMENTAL_ARROWS_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUPPLEMENTAL_ARROWS_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SUPPLEMENTAL_ARROWS_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2264,7 +2264,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SUPPLEMENTAL_ARROWS_B_FieldID: jfieldID?
 
-    open static var SUPPLEMENTAL_ARROWS_B: Character_UnicodeBlock! {
+    public static var SUPPLEMENTAL_ARROWS_B: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUPPLEMENTAL_ARROWS_B", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SUPPLEMENTAL_ARROWS_B_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2276,7 +2276,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SUPPLEMENTAL_MATHEMATICAL_OPERATORS_FieldID: jfieldID?
 
-    open static var SUPPLEMENTAL_MATHEMATICAL_OPERATORS: Character_UnicodeBlock! {
+    public static var SUPPLEMENTAL_MATHEMATICAL_OPERATORS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUPPLEMENTAL_MATHEMATICAL_OPERATORS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SUPPLEMENTAL_MATHEMATICAL_OPERATORS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2288,7 +2288,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SUPPLEMENTAL_PUNCTUATION_FieldID: jfieldID?
 
-    open static var SUPPLEMENTAL_PUNCTUATION: Character_UnicodeBlock! {
+    public static var SUPPLEMENTAL_PUNCTUATION: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUPPLEMENTAL_PUNCTUATION", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SUPPLEMENTAL_PUNCTUATION_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2300,7 +2300,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SUPPLEMENTARY_PRIVATE_USE_AREA_A_FieldID: jfieldID?
 
-    open static var SUPPLEMENTARY_PRIVATE_USE_AREA_A: Character_UnicodeBlock! {
+    public static var SUPPLEMENTARY_PRIVATE_USE_AREA_A: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUPPLEMENTARY_PRIVATE_USE_AREA_A", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SUPPLEMENTARY_PRIVATE_USE_AREA_A_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2312,7 +2312,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SUPPLEMENTARY_PRIVATE_USE_AREA_B_FieldID: jfieldID?
 
-    open static var SUPPLEMENTARY_PRIVATE_USE_AREA_B: Character_UnicodeBlock! {
+    public static var SUPPLEMENTARY_PRIVATE_USE_AREA_B: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUPPLEMENTARY_PRIVATE_USE_AREA_B", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SUPPLEMENTARY_PRIVATE_USE_AREA_B_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2324,7 +2324,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SURROGATES_AREA_FieldID: jfieldID?
 
-    open static var SURROGATES_AREA: Character_UnicodeBlock! {
+    public static var SURROGATES_AREA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SURROGATES_AREA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SURROGATES_AREA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2336,7 +2336,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SYLOTI_NAGRI_FieldID: jfieldID?
 
-    open static var SYLOTI_NAGRI: Character_UnicodeBlock! {
+    public static var SYLOTI_NAGRI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SYLOTI_NAGRI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SYLOTI_NAGRI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2348,7 +2348,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var SYRIAC_FieldID: jfieldID?
 
-    open static var SYRIAC: Character_UnicodeBlock! {
+    public static var SYRIAC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SYRIAC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &SYRIAC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2360,7 +2360,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TAGALOG_FieldID: jfieldID?
 
-    open static var TAGALOG: Character_UnicodeBlock! {
+    public static var TAGALOG: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAGALOG", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TAGALOG_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2372,7 +2372,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TAGBANWA_FieldID: jfieldID?
 
-    open static var TAGBANWA: Character_UnicodeBlock! {
+    public static var TAGBANWA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAGBANWA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TAGBANWA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2384,7 +2384,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TAGS_FieldID: jfieldID?
 
-    open static var TAGS: Character_UnicodeBlock! {
+    public static var TAGS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAGS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TAGS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2396,7 +2396,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TAI_LE_FieldID: jfieldID?
 
-    open static var TAI_LE: Character_UnicodeBlock! {
+    public static var TAI_LE: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAI_LE", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TAI_LE_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2408,7 +2408,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TAI_THAM_FieldID: jfieldID?
 
-    open static var TAI_THAM: Character_UnicodeBlock! {
+    public static var TAI_THAM: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAI_THAM", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TAI_THAM_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2420,7 +2420,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TAI_VIET_FieldID: jfieldID?
 
-    open static var TAI_VIET: Character_UnicodeBlock! {
+    public static var TAI_VIET: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAI_VIET", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TAI_VIET_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2432,7 +2432,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TAI_XUAN_JING_SYMBOLS_FieldID: jfieldID?
 
-    open static var TAI_XUAN_JING_SYMBOLS: Character_UnicodeBlock! {
+    public static var TAI_XUAN_JING_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAI_XUAN_JING_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TAI_XUAN_JING_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2444,7 +2444,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TAKRI_FieldID: jfieldID?
 
-    open static var TAKRI: Character_UnicodeBlock! {
+    public static var TAKRI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAKRI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TAKRI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2456,7 +2456,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TAMIL_FieldID: jfieldID?
 
-    open static var TAMIL: Character_UnicodeBlock! {
+    public static var TAMIL: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAMIL", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TAMIL_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2468,7 +2468,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TELUGU_FieldID: jfieldID?
 
-    open static var TELUGU: Character_UnicodeBlock! {
+    public static var TELUGU: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TELUGU", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TELUGU_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2480,7 +2480,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var THAANA_FieldID: jfieldID?
 
-    open static var THAANA: Character_UnicodeBlock! {
+    public static var THAANA: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "THAANA", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &THAANA_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2492,7 +2492,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var THAI_FieldID: jfieldID?
 
-    open static var THAI: Character_UnicodeBlock! {
+    public static var THAI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "THAI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &THAI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2504,7 +2504,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TIBETAN_FieldID: jfieldID?
 
-    open static var TIBETAN: Character_UnicodeBlock! {
+    public static var TIBETAN: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIBETAN", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TIBETAN_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2516,7 +2516,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TIFINAGH_FieldID: jfieldID?
 
-    open static var TIFINAGH: Character_UnicodeBlock! {
+    public static var TIFINAGH: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIFINAGH", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TIFINAGH_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2528,7 +2528,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var TRANSPORT_AND_MAP_SYMBOLS_FieldID: jfieldID?
 
-    open static var TRANSPORT_AND_MAP_SYMBOLS: Character_UnicodeBlock! {
+    public static var TRANSPORT_AND_MAP_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TRANSPORT_AND_MAP_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &TRANSPORT_AND_MAP_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2540,7 +2540,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var UGARITIC_FieldID: jfieldID?
 
-    open static var UGARITIC: Character_UnicodeBlock! {
+    public static var UGARITIC: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "UGARITIC", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &UGARITIC_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2552,7 +2552,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_FieldID: jfieldID?
 
-    open static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS: Character_UnicodeBlock! {
+    public static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2564,7 +2564,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED_FieldID: jfieldID?
 
-    open static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED: Character_UnicodeBlock! {
+    public static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2576,7 +2576,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var VAI_FieldID: jfieldID?
 
-    open static var VAI: Character_UnicodeBlock! {
+    public static var VAI: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "VAI", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &VAI_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2588,7 +2588,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var VARIATION_SELECTORS_FieldID: jfieldID?
 
-    open static var VARIATION_SELECTORS: Character_UnicodeBlock! {
+    public static var VARIATION_SELECTORS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "VARIATION_SELECTORS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &VARIATION_SELECTORS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2600,7 +2600,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var VARIATION_SELECTORS_SUPPLEMENT_FieldID: jfieldID?
 
-    open static var VARIATION_SELECTORS_SUPPLEMENT: Character_UnicodeBlock! {
+    public static var VARIATION_SELECTORS_SUPPLEMENT: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "VARIATION_SELECTORS_SUPPLEMENT", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &VARIATION_SELECTORS_SUPPLEMENT_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2612,7 +2612,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var VEDIC_EXTENSIONS_FieldID: jfieldID?
 
-    open static var VEDIC_EXTENSIONS: Character_UnicodeBlock! {
+    public static var VEDIC_EXTENSIONS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "VEDIC_EXTENSIONS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &VEDIC_EXTENSIONS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2624,7 +2624,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var VERTICAL_FORMS_FieldID: jfieldID?
 
-    open static var VERTICAL_FORMS: Character_UnicodeBlock! {
+    public static var VERTICAL_FORMS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "VERTICAL_FORMS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &VERTICAL_FORMS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2636,7 +2636,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var YIJING_HEXAGRAM_SYMBOLS_FieldID: jfieldID?
 
-    open static var YIJING_HEXAGRAM_SYMBOLS: Character_UnicodeBlock! {
+    public static var YIJING_HEXAGRAM_SYMBOLS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "YIJING_HEXAGRAM_SYMBOLS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &YIJING_HEXAGRAM_SYMBOLS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2648,7 +2648,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var YI_RADICALS_FieldID: jfieldID?
 
-    open static var YI_RADICALS: Character_UnicodeBlock! {
+    public static var YI_RADICALS: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "YI_RADICALS", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &YI_RADICALS_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -2660,7 +2660,7 @@ open class Character_UnicodeBlock: Character_Subset {
 
     private static var YI_SYLLABLES_FieldID: jfieldID?
 
-    open static var YI_SYLLABLES: Character_UnicodeBlock! {
+    public static var YI_SYLLABLES: Character_UnicodeBlock! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "YI_SYLLABLES", fieldType: "Ljava/lang/Character$UnicodeBlock;", fieldCache: &YI_SYLLABLES_FieldID, className: "java/lang/Character$UnicodeBlock", classCache: &Character_UnicodeBlockJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

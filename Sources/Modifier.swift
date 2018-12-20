@@ -20,7 +20,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var ABSTRACT_FieldID: jfieldID?
 
-    open static var ABSTRACT: Int {
+    public static var ABSTRACT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "ABSTRACT", fieldType: "I", fieldCache: &ABSTRACT_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -53,7 +53,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var FINAL_FieldID: jfieldID?
 
-    open static var FINAL: Int {
+    public static var FINAL: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "FINAL", fieldType: "I", fieldCache: &FINAL_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -64,7 +64,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var INTERFACE_FieldID: jfieldID?
 
-    open static var INTERFACE: Int {
+    public static var INTERFACE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "INTERFACE", fieldType: "I", fieldCache: &INTERFACE_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -83,7 +83,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var NATIVE_FieldID: jfieldID?
 
-    open static var NATIVE: Int {
+    public static var NATIVE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "NATIVE", fieldType: "I", fieldCache: &NATIVE_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -96,7 +96,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var PRIVATE_FieldID: jfieldID?
 
-    open static var PRIVATE: Int {
+    public static var PRIVATE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "PRIVATE", fieldType: "I", fieldCache: &PRIVATE_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -107,7 +107,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var PROTECTED_FieldID: jfieldID?
 
-    open static var PROTECTED: Int {
+    public static var PROTECTED: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "PROTECTED", fieldType: "I", fieldCache: &PROTECTED_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -118,7 +118,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var PUBLIC_FieldID: jfieldID?
 
-    open static var PUBLIC: Int {
+    public static var PUBLIC: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "PUBLIC", fieldType: "I", fieldCache: &PUBLIC_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -129,7 +129,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var STATIC_FieldID: jfieldID?
 
-    open static var STATIC: Int {
+    public static var STATIC: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "STATIC", fieldType: "I", fieldCache: &STATIC_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -140,7 +140,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var STRICT_FieldID: jfieldID?
 
-    open static var STRICT: Int {
+    public static var STRICT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "STRICT", fieldType: "I", fieldCache: &STRICT_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -151,7 +151,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var SYNCHRONIZED_FieldID: jfieldID?
 
-    open static var SYNCHRONIZED: Int {
+    public static var SYNCHRONIZED: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SYNCHRONIZED", fieldType: "I", fieldCache: &SYNCHRONIZED_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -166,7 +166,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var TRANSIENT_FieldID: jfieldID?
 
-    open static var TRANSIENT: Int {
+    public static var TRANSIENT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TRANSIENT", fieldType: "I", fieldCache: &TRANSIENT_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)
@@ -181,7 +181,7 @@ open class Modifier: java_swift.JavaObject {
 
     private static var VOLATILE_FieldID: jfieldID?
 
-    open static var VOLATILE: Int {
+    public static var VOLATILE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "VOLATILE", fieldType: "I", fieldCache: &VOLATILE_FieldID, className: "java/lang/reflect/Modifier", classCache: &ModifierJNIClass )
             return Int(__value)

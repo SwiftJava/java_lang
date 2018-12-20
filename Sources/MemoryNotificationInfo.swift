@@ -20,7 +20,7 @@ open class MemoryNotificationInfo: java_swift.JavaObject {
 
     private static var MEMORY_COLLECTION_THRESHOLD_EXCEEDED_FieldID: jfieldID?
 
-    open static var MEMORY_COLLECTION_THRESHOLD_EXCEEDED: String! {
+    public static var MEMORY_COLLECTION_THRESHOLD_EXCEEDED: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEMORY_COLLECTION_THRESHOLD_EXCEEDED", fieldType: "Ljava/lang/String;", fieldCache: &MEMORY_COLLECTION_THRESHOLD_EXCEEDED_FieldID, className: "java/lang/management/MemoryNotificationInfo", classCache: &MemoryNotificationInfoJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -32,7 +32,7 @@ open class MemoryNotificationInfo: java_swift.JavaObject {
 
     private static var MEMORY_THRESHOLD_EXCEEDED_FieldID: jfieldID?
 
-    open static var MEMORY_THRESHOLD_EXCEEDED: String! {
+    public static var MEMORY_THRESHOLD_EXCEEDED: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEMORY_THRESHOLD_EXCEEDED", fieldType: "Ljava/lang/String;", fieldCache: &MEMORY_THRESHOLD_EXCEEDED_FieldID, className: "java/lang/management/MemoryNotificationInfo", classCache: &MemoryNotificationInfoJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

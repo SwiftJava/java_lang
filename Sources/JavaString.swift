@@ -20,7 +20,7 @@ open class JavaString: java_swift.JavaObject, /* interface java.io.Serializable 
 
     private static var CASE_INSENSITIVE_ORDER_FieldID: jfieldID?
 
-    open static var CASE_INSENSITIVE_ORDER: /* interface java.util.Comparator */ UnavailableProtocol! {
+    public static var CASE_INSENSITIVE_ORDER: /* interface java.util.Comparator */ UnavailableProtocol! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CASE_INSENSITIVE_ORDER", fieldType: "Ljava/util/Comparator;", fieldCache: &CASE_INSENSITIVE_ORDER_FieldID, className: "java/lang/String", classCache: &JavaStringJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

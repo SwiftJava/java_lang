@@ -20,7 +20,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var BYTES_FieldID: jfieldID?
 
-    open static var BYTES: Int {
+    public static var BYTES: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return Int(__value)
@@ -31,7 +31,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var MAX_EXPONENT_FieldID: jfieldID?
 
-    open static var MAX_EXPONENT: Int {
+    public static var MAX_EXPONENT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MAX_EXPONENT", fieldType: "I", fieldCache: &MAX_EXPONENT_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return Int(__value)
@@ -42,7 +42,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var MAX_VALUE_FieldID: jfieldID?
 
-    open static var MAX_VALUE: Double {
+    public static var MAX_VALUE: Double {
         get {
             let __value = JNIField.GetStaticDoubleField( fieldName: "MAX_VALUE", fieldType: "D", fieldCache: &MAX_VALUE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return __value
@@ -53,7 +53,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var MIN_EXPONENT_FieldID: jfieldID?
 
-    open static var MIN_EXPONENT: Int {
+    public static var MIN_EXPONENT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MIN_EXPONENT", fieldType: "I", fieldCache: &MIN_EXPONENT_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return Int(__value)
@@ -64,7 +64,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var MIN_NORMAL_FieldID: jfieldID?
 
-    open static var MIN_NORMAL: Double {
+    public static var MIN_NORMAL: Double {
         get {
             let __value = JNIField.GetStaticDoubleField( fieldName: "MIN_NORMAL", fieldType: "D", fieldCache: &MIN_NORMAL_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return __value
@@ -75,7 +75,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var MIN_VALUE_FieldID: jfieldID?
 
-    open static var MIN_VALUE: Double {
+    public static var MIN_VALUE: Double {
         get {
             let __value = JNIField.GetStaticDoubleField( fieldName: "MIN_VALUE", fieldType: "D", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return __value
@@ -86,7 +86,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var NEGATIVE_INFINITY_FieldID: jfieldID?
 
-    open static var NEGATIVE_INFINITY: Double {
+    public static var NEGATIVE_INFINITY: Double {
         get {
             let __value = JNIField.GetStaticDoubleField( fieldName: "NEGATIVE_INFINITY", fieldType: "D", fieldCache: &NEGATIVE_INFINITY_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return __value
@@ -97,7 +97,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var NaN_FieldID: jfieldID?
 
-    open static var NaN: Double {
+    public static var NaN: Double {
         get {
             let __value = JNIField.GetStaticDoubleField( fieldName: "NaN", fieldType: "D", fieldCache: &NaN_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return __value
@@ -108,7 +108,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var POSITIVE_INFINITY_FieldID: jfieldID?
 
-    open static var POSITIVE_INFINITY: Double {
+    public static var POSITIVE_INFINITY: Double {
         get {
             let __value = JNIField.GetStaticDoubleField( fieldName: "POSITIVE_INFINITY", fieldType: "D", fieldCache: &POSITIVE_INFINITY_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return __value
@@ -119,7 +119,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var SIZE_FieldID: jfieldID?
 
-    open static var SIZE: Int {
+    public static var SIZE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SIZE", fieldType: "I", fieldCache: &SIZE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             return Int(__value)
@@ -130,7 +130,7 @@ open class JavaDouble: Number, JavaComparable {
 
     private static var TYPE_FieldID: jfieldID?
 
-    open static var TYPE: java_swift.JavaClass! {
+    public static var TYPE: java_swift.JavaClass! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/Class;", fieldCache: &TYPE_FieldID, className: "java/lang/Double", classCache: &JavaDoubleJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

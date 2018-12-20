@@ -56,7 +56,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var ANNOTATION_TYPE_FieldID: jfieldID?
 
-    open static var ANNOTATION_TYPE: ElementType! {
+    public static var ANNOTATION_TYPE: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ANNOTATION_TYPE", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &ANNOTATION_TYPE_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -68,7 +68,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var CONSTRUCTOR_FieldID: jfieldID?
 
-    open static var CONSTRUCTOR: ElementType! {
+    public static var CONSTRUCTOR: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CONSTRUCTOR", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &CONSTRUCTOR_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -80,7 +80,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var FIELD_FieldID: jfieldID?
 
-    open static var FIELD: ElementType! {
+    public static var FIELD: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "FIELD", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &FIELD_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -92,7 +92,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var LOCAL_VARIABLE_FieldID: jfieldID?
 
-    open static var LOCAL_VARIABLE: ElementType! {
+    public static var LOCAL_VARIABLE: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LOCAL_VARIABLE", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &LOCAL_VARIABLE_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -104,7 +104,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var METHOD_FieldID: jfieldID?
 
-    open static var METHOD: ElementType! {
+    public static var METHOD: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "METHOD", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &METHOD_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -116,7 +116,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var PACKAGE_FieldID: jfieldID?
 
-    open static var PACKAGE: ElementType! {
+    public static var PACKAGE: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PACKAGE", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &PACKAGE_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -128,7 +128,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var PARAMETER_FieldID: jfieldID?
 
-    open static var PARAMETER: ElementType! {
+    public static var PARAMETER: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PARAMETER", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &PARAMETER_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -140,7 +140,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var TYPE_FieldID: jfieldID?
 
-    open static var TYPE: ElementType! {
+    public static var TYPE: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &TYPE_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -152,7 +152,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var TYPE_PARAMETER_FieldID: jfieldID?
 
-    open static var TYPE_PARAMETER: ElementType! {
+    public static var TYPE_PARAMETER: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE_PARAMETER", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &TYPE_PARAMETER_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -164,7 +164,7 @@ open class ElementTypeForward: JNIObjectForward {
 
     private static var TYPE_USE_FieldID: jfieldID?
 
-    open static var TYPE_USE: ElementType! {
+    public static var TYPE_USE: ElementType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE_USE", fieldType: "Ljava/lang/annotation/ElementType;", fieldCache: &TYPE_USE_FieldID, className: "java/lang/annotation/ElementType", classCache: &ElementTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

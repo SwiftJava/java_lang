@@ -90,7 +90,7 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
 
     private static var REF_getField_FieldID: jfieldID?
 
-    open static var REF_getField: Int {
+    public static var REF_getField: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_getField", fieldType: "I", fieldCache: &REF_getField_FieldID, className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass )
             return Int(__value)
@@ -101,7 +101,7 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
 
     private static var REF_getStatic_FieldID: jfieldID?
 
-    open static var REF_getStatic: Int {
+    public static var REF_getStatic: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_getStatic", fieldType: "I", fieldCache: &REF_getStatic_FieldID, className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass )
             return Int(__value)
@@ -112,7 +112,7 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
 
     private static var REF_invokeInterface_FieldID: jfieldID?
 
-    open static var REF_invokeInterface: Int {
+    public static var REF_invokeInterface: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_invokeInterface", fieldType: "I", fieldCache: &REF_invokeInterface_FieldID, className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass )
             return Int(__value)
@@ -123,7 +123,7 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
 
     private static var REF_invokeSpecial_FieldID: jfieldID?
 
-    open static var REF_invokeSpecial: Int {
+    public static var REF_invokeSpecial: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_invokeSpecial", fieldType: "I", fieldCache: &REF_invokeSpecial_FieldID, className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass )
             return Int(__value)
@@ -134,7 +134,7 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
 
     private static var REF_invokeStatic_FieldID: jfieldID?
 
-    open static var REF_invokeStatic: Int {
+    public static var REF_invokeStatic: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_invokeStatic", fieldType: "I", fieldCache: &REF_invokeStatic_FieldID, className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass )
             return Int(__value)
@@ -145,7 +145,7 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
 
     private static var REF_invokeVirtual_FieldID: jfieldID?
 
-    open static var REF_invokeVirtual: Int {
+    public static var REF_invokeVirtual: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_invokeVirtual", fieldType: "I", fieldCache: &REF_invokeVirtual_FieldID, className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass )
             return Int(__value)
@@ -156,7 +156,7 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
 
     private static var REF_newInvokeSpecial_FieldID: jfieldID?
 
-    open static var REF_newInvokeSpecial: Int {
+    public static var REF_newInvokeSpecial: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_newInvokeSpecial", fieldType: "I", fieldCache: &REF_newInvokeSpecial_FieldID, className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass )
             return Int(__value)
@@ -167,7 +167,7 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
 
     private static var REF_putField_FieldID: jfieldID?
 
-    open static var REF_putField: Int {
+    public static var REF_putField: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_putField", fieldType: "I", fieldCache: &REF_putField_FieldID, className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass )
             return Int(__value)
@@ -178,7 +178,7 @@ open class MethodHandleInfoForward: JNIObjectForward, MethodHandleInfo {
 
     private static var REF_putStatic_FieldID: jfieldID?
 
-    open static var REF_putStatic: Int {
+    public static var REF_putStatic: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_putStatic", fieldType: "I", fieldCache: &REF_putStatic_FieldID, className: "java/lang/invoke/MethodHandleInfo", classCache: &MethodHandleInfoJNIClass )
             return Int(__value)

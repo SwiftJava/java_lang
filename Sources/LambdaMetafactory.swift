@@ -24,7 +24,7 @@ open class LambdaMetafactory: java_swift.JavaObject {
 
     private static var FLAG_BRIDGES_FieldID: jfieldID?
 
-    open static var FLAG_BRIDGES: Int {
+    public static var FLAG_BRIDGES: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "FLAG_BRIDGES", fieldType: "I", fieldCache: &FLAG_BRIDGES_FieldID, className: "java/lang/invoke/LambdaMetafactory", classCache: &LambdaMetafactoryJNIClass )
             return Int(__value)
@@ -35,7 +35,7 @@ open class LambdaMetafactory: java_swift.JavaObject {
 
     private static var FLAG_MARKERS_FieldID: jfieldID?
 
-    open static var FLAG_MARKERS: Int {
+    public static var FLAG_MARKERS: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "FLAG_MARKERS", fieldType: "I", fieldCache: &FLAG_MARKERS_FieldID, className: "java/lang/invoke/LambdaMetafactory", classCache: &LambdaMetafactoryJNIClass )
             return Int(__value)
@@ -46,7 +46,7 @@ open class LambdaMetafactory: java_swift.JavaObject {
 
     private static var FLAG_SERIALIZABLE_FieldID: jfieldID?
 
-    open static var FLAG_SERIALIZABLE: Int {
+    public static var FLAG_SERIALIZABLE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "FLAG_SERIALIZABLE", fieldType: "I", fieldCache: &FLAG_SERIALIZABLE_FieldID, className: "java/lang/invoke/LambdaMetafactory", classCache: &LambdaMetafactoryJNIClass )
             return Int(__value)

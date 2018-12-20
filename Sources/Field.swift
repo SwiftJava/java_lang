@@ -58,7 +58,7 @@ open class Field: AccessibleObject, Member {
 
     private static var DECLARED_FieldID: jfieldID?
 
-    open static var DECLARED: Int {
+    public static var DECLARED: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "DECLARED", fieldType: "I", fieldCache: &DECLARED_FieldID, className: "java/lang/reflect/Field", classCache: &FieldJNIClass )
             return Int(__value)
@@ -69,7 +69,7 @@ open class Field: AccessibleObject, Member {
 
     private static var PUBLIC_FieldID: jfieldID?
 
-    open static var PUBLIC: Int {
+    public static var PUBLIC: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "PUBLIC", fieldType: "I", fieldCache: &PUBLIC_FieldID, className: "java/lang/reflect/Field", classCache: &FieldJNIClass )
             return Int(__value)

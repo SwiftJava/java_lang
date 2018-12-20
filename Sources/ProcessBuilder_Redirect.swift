@@ -24,7 +24,7 @@ open class ProcessBuilder_Redirect: java_swift.JavaObject {
 
     private static var INHERIT_FieldID: jfieldID?
 
-    open static var INHERIT: ProcessBuilder_Redirect! {
+    public static var INHERIT: ProcessBuilder_Redirect! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "INHERIT", fieldType: "Ljava/lang/ProcessBuilder$Redirect;", fieldCache: &INHERIT_FieldID, className: "java/lang/ProcessBuilder$Redirect", classCache: &ProcessBuilder_RedirectJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -36,7 +36,7 @@ open class ProcessBuilder_Redirect: java_swift.JavaObject {
 
     private static var PIPE_FieldID: jfieldID?
 
-    open static var PIPE: ProcessBuilder_Redirect! {
+    public static var PIPE: ProcessBuilder_Redirect! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PIPE", fieldType: "Ljava/lang/ProcessBuilder$Redirect;", fieldCache: &PIPE_FieldID, className: "java/lang/ProcessBuilder$Redirect", classCache: &ProcessBuilder_RedirectJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

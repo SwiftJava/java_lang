@@ -36,7 +36,7 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     private static var PACKAGE_FieldID: jfieldID?
 
-    open static var PACKAGE: Int {
+    public static var PACKAGE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "PACKAGE", fieldType: "I", fieldCache: &PACKAGE_FieldID, className: "java/lang/invoke/MethodHandles$Lookup", classCache: &MethodHandles_LookupJNIClass )
             return Int(__value)
@@ -47,7 +47,7 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     private static var PRIVATE_FieldID: jfieldID?
 
-    open static var PRIVATE: Int {
+    public static var PRIVATE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "PRIVATE", fieldType: "I", fieldCache: &PRIVATE_FieldID, className: "java/lang/invoke/MethodHandles$Lookup", classCache: &MethodHandles_LookupJNIClass )
             return Int(__value)
@@ -58,7 +58,7 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     private static var PROTECTED_FieldID: jfieldID?
 
-    open static var PROTECTED: Int {
+    public static var PROTECTED: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "PROTECTED", fieldType: "I", fieldCache: &PROTECTED_FieldID, className: "java/lang/invoke/MethodHandles$Lookup", classCache: &MethodHandles_LookupJNIClass )
             return Int(__value)
@@ -69,7 +69,7 @@ open class MethodHandles_Lookup: java_swift.JavaObject {
 
     private static var PUBLIC_FieldID: jfieldID?
 
-    open static var PUBLIC: Int {
+    public static var PUBLIC: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "PUBLIC", fieldType: "I", fieldCache: &PUBLIC_FieldID, className: "java/lang/invoke/MethodHandles$Lookup", classCache: &MethodHandles_LookupJNIClass )
             return Int(__value)

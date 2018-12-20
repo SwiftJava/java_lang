@@ -78,7 +78,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var ARABIC_FieldID: jfieldID?
 
-    open static var ARABIC: Character_UnicodeScript! {
+    public static var ARABIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARABIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &ARABIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -90,7 +90,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var ARMENIAN_FieldID: jfieldID?
 
-    open static var ARMENIAN: Character_UnicodeScript! {
+    public static var ARMENIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARMENIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &ARMENIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -102,7 +102,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var AVESTAN_FieldID: jfieldID?
 
-    open static var AVESTAN: Character_UnicodeScript! {
+    public static var AVESTAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "AVESTAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &AVESTAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -114,7 +114,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var BALINESE_FieldID: jfieldID?
 
-    open static var BALINESE: Character_UnicodeScript! {
+    public static var BALINESE: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BALINESE", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &BALINESE_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -126,7 +126,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var BAMUM_FieldID: jfieldID?
 
-    open static var BAMUM: Character_UnicodeScript! {
+    public static var BAMUM: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BAMUM", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &BAMUM_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -138,7 +138,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var BATAK_FieldID: jfieldID?
 
-    open static var BATAK: Character_UnicodeScript! {
+    public static var BATAK: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BATAK", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &BATAK_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -150,7 +150,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var BENGALI_FieldID: jfieldID?
 
-    open static var BENGALI: Character_UnicodeScript! {
+    public static var BENGALI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BENGALI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &BENGALI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -162,7 +162,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var BOPOMOFO_FieldID: jfieldID?
 
-    open static var BOPOMOFO: Character_UnicodeScript! {
+    public static var BOPOMOFO: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BOPOMOFO", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &BOPOMOFO_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -174,7 +174,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var BRAHMI_FieldID: jfieldID?
 
-    open static var BRAHMI: Character_UnicodeScript! {
+    public static var BRAHMI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BRAHMI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &BRAHMI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -186,7 +186,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var BRAILLE_FieldID: jfieldID?
 
-    open static var BRAILLE: Character_UnicodeScript! {
+    public static var BRAILLE: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BRAILLE", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &BRAILLE_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -198,7 +198,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var BUGINESE_FieldID: jfieldID?
 
-    open static var BUGINESE: Character_UnicodeScript! {
+    public static var BUGINESE: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BUGINESE", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &BUGINESE_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -210,7 +210,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var BUHID_FieldID: jfieldID?
 
-    open static var BUHID: Character_UnicodeScript! {
+    public static var BUHID: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BUHID", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &BUHID_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -222,7 +222,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var CANADIAN_ABORIGINAL_FieldID: jfieldID?
 
-    open static var CANADIAN_ABORIGINAL: Character_UnicodeScript! {
+    public static var CANADIAN_ABORIGINAL: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CANADIAN_ABORIGINAL", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &CANADIAN_ABORIGINAL_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -234,7 +234,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var CARIAN_FieldID: jfieldID?
 
-    open static var CARIAN: Character_UnicodeScript! {
+    public static var CARIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CARIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &CARIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -246,7 +246,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var CHAKMA_FieldID: jfieldID?
 
-    open static var CHAKMA: Character_UnicodeScript! {
+    public static var CHAKMA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CHAKMA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &CHAKMA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -258,7 +258,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var CHAM_FieldID: jfieldID?
 
-    open static var CHAM: Character_UnicodeScript! {
+    public static var CHAM: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CHAM", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &CHAM_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -270,7 +270,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var CHEROKEE_FieldID: jfieldID?
 
-    open static var CHEROKEE: Character_UnicodeScript! {
+    public static var CHEROKEE: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CHEROKEE", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &CHEROKEE_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -282,7 +282,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var COMMON_FieldID: jfieldID?
 
-    open static var COMMON: Character_UnicodeScript! {
+    public static var COMMON: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COMMON", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &COMMON_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -294,7 +294,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var COPTIC_FieldID: jfieldID?
 
-    open static var COPTIC: Character_UnicodeScript! {
+    public static var COPTIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COPTIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &COPTIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -306,7 +306,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var CUNEIFORM_FieldID: jfieldID?
 
-    open static var CUNEIFORM: Character_UnicodeScript! {
+    public static var CUNEIFORM: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CUNEIFORM", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &CUNEIFORM_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -318,7 +318,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var CYPRIOT_FieldID: jfieldID?
 
-    open static var CYPRIOT: Character_UnicodeScript! {
+    public static var CYPRIOT: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CYPRIOT", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &CYPRIOT_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -330,7 +330,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var CYRILLIC_FieldID: jfieldID?
 
-    open static var CYRILLIC: Character_UnicodeScript! {
+    public static var CYRILLIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CYRILLIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &CYRILLIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -342,7 +342,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var DESERET_FieldID: jfieldID?
 
-    open static var DESERET: Character_UnicodeScript! {
+    public static var DESERET: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DESERET", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &DESERET_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -354,7 +354,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var DEVANAGARI_FieldID: jfieldID?
 
-    open static var DEVANAGARI: Character_UnicodeScript! {
+    public static var DEVANAGARI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DEVANAGARI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &DEVANAGARI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -366,7 +366,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var EGYPTIAN_HIEROGLYPHS_FieldID: jfieldID?
 
-    open static var EGYPTIAN_HIEROGLYPHS: Character_UnicodeScript! {
+    public static var EGYPTIAN_HIEROGLYPHS: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "EGYPTIAN_HIEROGLYPHS", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &EGYPTIAN_HIEROGLYPHS_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -378,7 +378,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var ETHIOPIC_FieldID: jfieldID?
 
-    open static var ETHIOPIC: Character_UnicodeScript! {
+    public static var ETHIOPIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ETHIOPIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &ETHIOPIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -390,7 +390,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var GEORGIAN_FieldID: jfieldID?
 
-    open static var GEORGIAN: Character_UnicodeScript! {
+    public static var GEORGIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GEORGIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &GEORGIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -402,7 +402,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var GLAGOLITIC_FieldID: jfieldID?
 
-    open static var GLAGOLITIC: Character_UnicodeScript! {
+    public static var GLAGOLITIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GLAGOLITIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &GLAGOLITIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -414,7 +414,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var GOTHIC_FieldID: jfieldID?
 
-    open static var GOTHIC: Character_UnicodeScript! {
+    public static var GOTHIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GOTHIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &GOTHIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -426,7 +426,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var GREEK_FieldID: jfieldID?
 
-    open static var GREEK: Character_UnicodeScript! {
+    public static var GREEK: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GREEK", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &GREEK_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -438,7 +438,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var GUJARATI_FieldID: jfieldID?
 
-    open static var GUJARATI: Character_UnicodeScript! {
+    public static var GUJARATI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GUJARATI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &GUJARATI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -450,7 +450,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var GURMUKHI_FieldID: jfieldID?
 
-    open static var GURMUKHI: Character_UnicodeScript! {
+    public static var GURMUKHI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GURMUKHI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &GURMUKHI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -462,7 +462,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var HAN_FieldID: jfieldID?
 
-    open static var HAN: Character_UnicodeScript! {
+    public static var HAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &HAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -474,7 +474,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var HANGUL_FieldID: jfieldID?
 
-    open static var HANGUL: Character_UnicodeScript! {
+    public static var HANGUL: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HANGUL", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &HANGUL_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -486,7 +486,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var HANUNOO_FieldID: jfieldID?
 
-    open static var HANUNOO: Character_UnicodeScript! {
+    public static var HANUNOO: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HANUNOO", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &HANUNOO_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -498,7 +498,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var HEBREW_FieldID: jfieldID?
 
-    open static var HEBREW: Character_UnicodeScript! {
+    public static var HEBREW: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HEBREW", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &HEBREW_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -510,7 +510,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var HIRAGANA_FieldID: jfieldID?
 
-    open static var HIRAGANA: Character_UnicodeScript! {
+    public static var HIRAGANA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HIRAGANA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &HIRAGANA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -522,7 +522,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var IMPERIAL_ARAMAIC_FieldID: jfieldID?
 
-    open static var IMPERIAL_ARAMAIC: Character_UnicodeScript! {
+    public static var IMPERIAL_ARAMAIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "IMPERIAL_ARAMAIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &IMPERIAL_ARAMAIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -534,7 +534,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var INHERITED_FieldID: jfieldID?
 
-    open static var INHERITED: Character_UnicodeScript! {
+    public static var INHERITED: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "INHERITED", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &INHERITED_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -546,7 +546,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var INSCRIPTIONAL_PAHLAVI_FieldID: jfieldID?
 
-    open static var INSCRIPTIONAL_PAHLAVI: Character_UnicodeScript! {
+    public static var INSCRIPTIONAL_PAHLAVI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "INSCRIPTIONAL_PAHLAVI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &INSCRIPTIONAL_PAHLAVI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -558,7 +558,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var INSCRIPTIONAL_PARTHIAN_FieldID: jfieldID?
 
-    open static var INSCRIPTIONAL_PARTHIAN: Character_UnicodeScript! {
+    public static var INSCRIPTIONAL_PARTHIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "INSCRIPTIONAL_PARTHIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &INSCRIPTIONAL_PARTHIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -570,7 +570,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var JAVANESE_FieldID: jfieldID?
 
-    open static var JAVANESE: Character_UnicodeScript! {
+    public static var JAVANESE: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "JAVANESE", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &JAVANESE_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -582,7 +582,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var KAITHI_FieldID: jfieldID?
 
-    open static var KAITHI: Character_UnicodeScript! {
+    public static var KAITHI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KAITHI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &KAITHI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -594,7 +594,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var KANNADA_FieldID: jfieldID?
 
-    open static var KANNADA: Character_UnicodeScript! {
+    public static var KANNADA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KANNADA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &KANNADA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -606,7 +606,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var KATAKANA_FieldID: jfieldID?
 
-    open static var KATAKANA: Character_UnicodeScript! {
+    public static var KATAKANA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KATAKANA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &KATAKANA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -618,7 +618,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var KAYAH_LI_FieldID: jfieldID?
 
-    open static var KAYAH_LI: Character_UnicodeScript! {
+    public static var KAYAH_LI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KAYAH_LI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &KAYAH_LI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -630,7 +630,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var KHAROSHTHI_FieldID: jfieldID?
 
-    open static var KHAROSHTHI: Character_UnicodeScript! {
+    public static var KHAROSHTHI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KHAROSHTHI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &KHAROSHTHI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -642,7 +642,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var KHMER_FieldID: jfieldID?
 
-    open static var KHMER: Character_UnicodeScript! {
+    public static var KHMER: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "KHMER", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &KHMER_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -654,7 +654,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var LAO_FieldID: jfieldID?
 
-    open static var LAO: Character_UnicodeScript! {
+    public static var LAO: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LAO", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &LAO_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -666,7 +666,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var LATIN_FieldID: jfieldID?
 
-    open static var LATIN: Character_UnicodeScript! {
+    public static var LATIN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LATIN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &LATIN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -678,7 +678,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var LEPCHA_FieldID: jfieldID?
 
-    open static var LEPCHA: Character_UnicodeScript! {
+    public static var LEPCHA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LEPCHA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &LEPCHA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -690,7 +690,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var LIMBU_FieldID: jfieldID?
 
-    open static var LIMBU: Character_UnicodeScript! {
+    public static var LIMBU: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LIMBU", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &LIMBU_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -702,7 +702,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var LINEAR_B_FieldID: jfieldID?
 
-    open static var LINEAR_B: Character_UnicodeScript! {
+    public static var LINEAR_B: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LINEAR_B", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &LINEAR_B_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -714,7 +714,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var LISU_FieldID: jfieldID?
 
-    open static var LISU: Character_UnicodeScript! {
+    public static var LISU: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LISU", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &LISU_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -726,7 +726,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var LYCIAN_FieldID: jfieldID?
 
-    open static var LYCIAN: Character_UnicodeScript! {
+    public static var LYCIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LYCIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &LYCIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -738,7 +738,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var LYDIAN_FieldID: jfieldID?
 
-    open static var LYDIAN: Character_UnicodeScript! {
+    public static var LYDIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LYDIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &LYDIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -750,7 +750,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var MALAYALAM_FieldID: jfieldID?
 
-    open static var MALAYALAM: Character_UnicodeScript! {
+    public static var MALAYALAM: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MALAYALAM", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &MALAYALAM_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -762,7 +762,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var MANDAIC_FieldID: jfieldID?
 
-    open static var MANDAIC: Character_UnicodeScript! {
+    public static var MANDAIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MANDAIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &MANDAIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -774,7 +774,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var MEETEI_MAYEK_FieldID: jfieldID?
 
-    open static var MEETEI_MAYEK: Character_UnicodeScript! {
+    public static var MEETEI_MAYEK: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEETEI_MAYEK", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &MEETEI_MAYEK_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -786,7 +786,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var MEROITIC_CURSIVE_FieldID: jfieldID?
 
-    open static var MEROITIC_CURSIVE: Character_UnicodeScript! {
+    public static var MEROITIC_CURSIVE: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEROITIC_CURSIVE", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &MEROITIC_CURSIVE_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -798,7 +798,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var MEROITIC_HIEROGLYPHS_FieldID: jfieldID?
 
-    open static var MEROITIC_HIEROGLYPHS: Character_UnicodeScript! {
+    public static var MEROITIC_HIEROGLYPHS: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEROITIC_HIEROGLYPHS", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &MEROITIC_HIEROGLYPHS_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -810,7 +810,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var MIAO_FieldID: jfieldID?
 
-    open static var MIAO: Character_UnicodeScript! {
+    public static var MIAO: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MIAO", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &MIAO_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -822,7 +822,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var MONGOLIAN_FieldID: jfieldID?
 
-    open static var MONGOLIAN: Character_UnicodeScript! {
+    public static var MONGOLIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MONGOLIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &MONGOLIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -834,7 +834,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var MYANMAR_FieldID: jfieldID?
 
-    open static var MYANMAR: Character_UnicodeScript! {
+    public static var MYANMAR: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MYANMAR", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &MYANMAR_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -846,7 +846,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var NEW_TAI_LUE_FieldID: jfieldID?
 
-    open static var NEW_TAI_LUE: Character_UnicodeScript! {
+    public static var NEW_TAI_LUE: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NEW_TAI_LUE", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &NEW_TAI_LUE_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -858,7 +858,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var NKO_FieldID: jfieldID?
 
-    open static var NKO: Character_UnicodeScript! {
+    public static var NKO: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NKO", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &NKO_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -870,7 +870,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var OGHAM_FieldID: jfieldID?
 
-    open static var OGHAM: Character_UnicodeScript! {
+    public static var OGHAM: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OGHAM", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &OGHAM_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -882,7 +882,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var OLD_ITALIC_FieldID: jfieldID?
 
-    open static var OLD_ITALIC: Character_UnicodeScript! {
+    public static var OLD_ITALIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OLD_ITALIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &OLD_ITALIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -894,7 +894,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var OLD_PERSIAN_FieldID: jfieldID?
 
-    open static var OLD_PERSIAN: Character_UnicodeScript! {
+    public static var OLD_PERSIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OLD_PERSIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &OLD_PERSIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -906,7 +906,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var OLD_SOUTH_ARABIAN_FieldID: jfieldID?
 
-    open static var OLD_SOUTH_ARABIAN: Character_UnicodeScript! {
+    public static var OLD_SOUTH_ARABIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OLD_SOUTH_ARABIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &OLD_SOUTH_ARABIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -918,7 +918,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var OLD_TURKIC_FieldID: jfieldID?
 
-    open static var OLD_TURKIC: Character_UnicodeScript! {
+    public static var OLD_TURKIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OLD_TURKIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &OLD_TURKIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -930,7 +930,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var OL_CHIKI_FieldID: jfieldID?
 
-    open static var OL_CHIKI: Character_UnicodeScript! {
+    public static var OL_CHIKI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OL_CHIKI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &OL_CHIKI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -942,7 +942,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var ORIYA_FieldID: jfieldID?
 
-    open static var ORIYA: Character_UnicodeScript! {
+    public static var ORIYA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ORIYA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &ORIYA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -954,7 +954,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var OSMANYA_FieldID: jfieldID?
 
-    open static var OSMANYA: Character_UnicodeScript! {
+    public static var OSMANYA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OSMANYA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &OSMANYA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -966,7 +966,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var PHAGS_PA_FieldID: jfieldID?
 
-    open static var PHAGS_PA: Character_UnicodeScript! {
+    public static var PHAGS_PA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PHAGS_PA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &PHAGS_PA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -978,7 +978,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var PHOENICIAN_FieldID: jfieldID?
 
-    open static var PHOENICIAN: Character_UnicodeScript! {
+    public static var PHOENICIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PHOENICIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &PHOENICIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -990,7 +990,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var REJANG_FieldID: jfieldID?
 
-    open static var REJANG: Character_UnicodeScript! {
+    public static var REJANG: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REJANG", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &REJANG_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1002,7 +1002,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var RUNIC_FieldID: jfieldID?
 
-    open static var RUNIC: Character_UnicodeScript! {
+    public static var RUNIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "RUNIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &RUNIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1014,7 +1014,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var SAMARITAN_FieldID: jfieldID?
 
-    open static var SAMARITAN: Character_UnicodeScript! {
+    public static var SAMARITAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SAMARITAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &SAMARITAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1026,7 +1026,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var SAURASHTRA_FieldID: jfieldID?
 
-    open static var SAURASHTRA: Character_UnicodeScript! {
+    public static var SAURASHTRA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SAURASHTRA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &SAURASHTRA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1038,7 +1038,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var SHARADA_FieldID: jfieldID?
 
-    open static var SHARADA: Character_UnicodeScript! {
+    public static var SHARADA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SHARADA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &SHARADA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1050,7 +1050,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var SHAVIAN_FieldID: jfieldID?
 
-    open static var SHAVIAN: Character_UnicodeScript! {
+    public static var SHAVIAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SHAVIAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &SHAVIAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1062,7 +1062,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var SINHALA_FieldID: jfieldID?
 
-    open static var SINHALA: Character_UnicodeScript! {
+    public static var SINHALA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SINHALA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &SINHALA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1074,7 +1074,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var SORA_SOMPENG_FieldID: jfieldID?
 
-    open static var SORA_SOMPENG: Character_UnicodeScript! {
+    public static var SORA_SOMPENG: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SORA_SOMPENG", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &SORA_SOMPENG_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1086,7 +1086,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var SUNDANESE_FieldID: jfieldID?
 
-    open static var SUNDANESE: Character_UnicodeScript! {
+    public static var SUNDANESE: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SUNDANESE", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &SUNDANESE_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1098,7 +1098,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var SYLOTI_NAGRI_FieldID: jfieldID?
 
-    open static var SYLOTI_NAGRI: Character_UnicodeScript! {
+    public static var SYLOTI_NAGRI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SYLOTI_NAGRI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &SYLOTI_NAGRI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1110,7 +1110,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var SYRIAC_FieldID: jfieldID?
 
-    open static var SYRIAC: Character_UnicodeScript! {
+    public static var SYRIAC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SYRIAC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &SYRIAC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1122,7 +1122,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TAGALOG_FieldID: jfieldID?
 
-    open static var TAGALOG: Character_UnicodeScript! {
+    public static var TAGALOG: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAGALOG", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TAGALOG_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1134,7 +1134,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TAGBANWA_FieldID: jfieldID?
 
-    open static var TAGBANWA: Character_UnicodeScript! {
+    public static var TAGBANWA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAGBANWA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TAGBANWA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1146,7 +1146,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TAI_LE_FieldID: jfieldID?
 
-    open static var TAI_LE: Character_UnicodeScript! {
+    public static var TAI_LE: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAI_LE", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TAI_LE_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1158,7 +1158,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TAI_THAM_FieldID: jfieldID?
 
-    open static var TAI_THAM: Character_UnicodeScript! {
+    public static var TAI_THAM: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAI_THAM", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TAI_THAM_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1170,7 +1170,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TAI_VIET_FieldID: jfieldID?
 
-    open static var TAI_VIET: Character_UnicodeScript! {
+    public static var TAI_VIET: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAI_VIET", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TAI_VIET_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1182,7 +1182,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TAKRI_FieldID: jfieldID?
 
-    open static var TAKRI: Character_UnicodeScript! {
+    public static var TAKRI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAKRI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TAKRI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1194,7 +1194,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TAMIL_FieldID: jfieldID?
 
-    open static var TAMIL: Character_UnicodeScript! {
+    public static var TAMIL: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TAMIL", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TAMIL_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1206,7 +1206,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TELUGU_FieldID: jfieldID?
 
-    open static var TELUGU: Character_UnicodeScript! {
+    public static var TELUGU: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TELUGU", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TELUGU_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1218,7 +1218,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var THAANA_FieldID: jfieldID?
 
-    open static var THAANA: Character_UnicodeScript! {
+    public static var THAANA: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "THAANA", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &THAANA_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1230,7 +1230,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var THAI_FieldID: jfieldID?
 
-    open static var THAI: Character_UnicodeScript! {
+    public static var THAI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "THAI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &THAI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1242,7 +1242,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TIBETAN_FieldID: jfieldID?
 
-    open static var TIBETAN: Character_UnicodeScript! {
+    public static var TIBETAN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIBETAN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TIBETAN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1254,7 +1254,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var TIFINAGH_FieldID: jfieldID?
 
-    open static var TIFINAGH: Character_UnicodeScript! {
+    public static var TIFINAGH: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIFINAGH", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &TIFINAGH_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1266,7 +1266,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var UGARITIC_FieldID: jfieldID?
 
-    open static var UGARITIC: Character_UnicodeScript! {
+    public static var UGARITIC: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "UGARITIC", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &UGARITIC_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1278,7 +1278,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var UNKNOWN_FieldID: jfieldID?
 
-    open static var UNKNOWN: Character_UnicodeScript! {
+    public static var UNKNOWN: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "UNKNOWN", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &UNKNOWN_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1290,7 +1290,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var VAI_FieldID: jfieldID?
 
-    open static var VAI: Character_UnicodeScript! {
+    public static var VAI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "VAI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &VAI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -1302,7 +1302,7 @@ open class Character_UnicodeScriptForward: JNIObjectForward {
 
     private static var YI_FieldID: jfieldID?
 
-    open static var YI: Character_UnicodeScript! {
+    public static var YI: Character_UnicodeScript! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "YI", fieldType: "Ljava/lang/Character$UnicodeScript;", fieldCache: &YI_FieldID, className: "java/lang/Character$UnicodeScript", classCache: &Character_UnicodeScriptJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

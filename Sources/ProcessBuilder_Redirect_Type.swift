@@ -56,7 +56,7 @@ open class ProcessBuilder_Redirect_TypeForward: JNIObjectForward {
 
     private static var APPEND_FieldID: jfieldID?
 
-    open static var APPEND: ProcessBuilder_Redirect_Type! {
+    public static var APPEND: ProcessBuilder_Redirect_Type! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "APPEND", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &APPEND_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -68,7 +68,7 @@ open class ProcessBuilder_Redirect_TypeForward: JNIObjectForward {
 
     private static var INHERIT_FieldID: jfieldID?
 
-    open static var INHERIT: ProcessBuilder_Redirect_Type! {
+    public static var INHERIT: ProcessBuilder_Redirect_Type! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "INHERIT", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &INHERIT_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -80,7 +80,7 @@ open class ProcessBuilder_Redirect_TypeForward: JNIObjectForward {
 
     private static var PIPE_FieldID: jfieldID?
 
-    open static var PIPE: ProcessBuilder_Redirect_Type! {
+    public static var PIPE: ProcessBuilder_Redirect_Type! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "PIPE", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &PIPE_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -92,7 +92,7 @@ open class ProcessBuilder_Redirect_TypeForward: JNIObjectForward {
 
     private static var READ_FieldID: jfieldID?
 
-    open static var READ: ProcessBuilder_Redirect_Type! {
+    public static var READ: ProcessBuilder_Redirect_Type! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "READ", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &READ_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -104,7 +104,7 @@ open class ProcessBuilder_Redirect_TypeForward: JNIObjectForward {
 
     private static var WRITE_FieldID: jfieldID?
 
-    open static var WRITE: ProcessBuilder_Redirect_Type! {
+    public static var WRITE: ProcessBuilder_Redirect_Type! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "WRITE", fieldType: "Ljava/lang/ProcessBuilder$Redirect$Type;", fieldCache: &WRITE_FieldID, className: "java/lang/ProcessBuilder$Redirect$Type", classCache: &ProcessBuilder_Redirect_TypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

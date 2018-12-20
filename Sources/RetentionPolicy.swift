@@ -56,7 +56,7 @@ open class RetentionPolicyForward: JNIObjectForward {
 
     private static var CLASS_FieldID: jfieldID?
 
-    open static var CLASS: RetentionPolicy! {
+    public static var CLASS: RetentionPolicy! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CLASS", fieldType: "Ljava/lang/annotation/RetentionPolicy;", fieldCache: &CLASS_FieldID, className: "java/lang/annotation/RetentionPolicy", classCache: &RetentionPolicyJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -68,7 +68,7 @@ open class RetentionPolicyForward: JNIObjectForward {
 
     private static var RUNTIME_FieldID: jfieldID?
 
-    open static var RUNTIME: RetentionPolicy! {
+    public static var RUNTIME: RetentionPolicy! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "RUNTIME", fieldType: "Ljava/lang/annotation/RetentionPolicy;", fieldCache: &RUNTIME_FieldID, className: "java/lang/annotation/RetentionPolicy", classCache: &RetentionPolicyJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -80,7 +80,7 @@ open class RetentionPolicyForward: JNIObjectForward {
 
     private static var SOURCE_FieldID: jfieldID?
 
-    open static var SOURCE: RetentionPolicy! {
+    public static var SOURCE: RetentionPolicy! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SOURCE", fieldType: "Ljava/lang/annotation/RetentionPolicy;", fieldCache: &SOURCE_FieldID, className: "java/lang/annotation/RetentionPolicy", classCache: &RetentionPolicyJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

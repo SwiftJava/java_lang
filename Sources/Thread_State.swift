@@ -56,7 +56,7 @@ open class Thread_StateForward: JNIObjectForward {
 
     private static var BLOCKED_FieldID: jfieldID?
 
-    open static var BLOCKED: Thread_State! {
+    public static var BLOCKED: Thread_State! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BLOCKED", fieldType: "Ljava/lang/Thread$State;", fieldCache: &BLOCKED_FieldID, className: "java/lang/Thread$State", classCache: &Thread_StateJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -68,7 +68,7 @@ open class Thread_StateForward: JNIObjectForward {
 
     private static var NEW_FieldID: jfieldID?
 
-    open static var NEW: Thread_State! {
+    public static var NEW: Thread_State! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NEW", fieldType: "Ljava/lang/Thread$State;", fieldCache: &NEW_FieldID, className: "java/lang/Thread$State", classCache: &Thread_StateJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -80,7 +80,7 @@ open class Thread_StateForward: JNIObjectForward {
 
     private static var RUNNABLE_FieldID: jfieldID?
 
-    open static var RUNNABLE: Thread_State! {
+    public static var RUNNABLE: Thread_State! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "RUNNABLE", fieldType: "Ljava/lang/Thread$State;", fieldCache: &RUNNABLE_FieldID, className: "java/lang/Thread$State", classCache: &Thread_StateJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -92,7 +92,7 @@ open class Thread_StateForward: JNIObjectForward {
 
     private static var TERMINATED_FieldID: jfieldID?
 
-    open static var TERMINATED: Thread_State! {
+    public static var TERMINATED: Thread_State! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TERMINATED", fieldType: "Ljava/lang/Thread$State;", fieldCache: &TERMINATED_FieldID, className: "java/lang/Thread$State", classCache: &Thread_StateJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -104,7 +104,7 @@ open class Thread_StateForward: JNIObjectForward {
 
     private static var TIMED_WAITING_FieldID: jfieldID?
 
-    open static var TIMED_WAITING: Thread_State! {
+    public static var TIMED_WAITING: Thread_State! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIMED_WAITING", fieldType: "Ljava/lang/Thread$State;", fieldCache: &TIMED_WAITING_FieldID, className: "java/lang/Thread$State", classCache: &Thread_StateJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -116,7 +116,7 @@ open class Thread_StateForward: JNIObjectForward {
 
     private static var WAITING_FieldID: jfieldID?
 
-    open static var WAITING: Thread_State! {
+    public static var WAITING: Thread_State! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "WAITING", fieldType: "Ljava/lang/Thread$State;", fieldCache: &WAITING_FieldID, className: "java/lang/Thread$State", classCache: &Thread_StateJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

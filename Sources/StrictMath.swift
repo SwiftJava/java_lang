@@ -24,7 +24,7 @@ open class StrictMath: java_swift.JavaObject {
 
     private static var E_FieldID: jfieldID?
 
-    open static var E: Double {
+    public static var E: Double {
         get {
             let __value = JNIField.GetStaticDoubleField( fieldName: "E", fieldType: "D", fieldCache: &E_FieldID, className: "java/lang/StrictMath", classCache: &StrictMathJNIClass )
             return __value
@@ -35,7 +35,7 @@ open class StrictMath: java_swift.JavaObject {
 
     private static var PI_FieldID: jfieldID?
 
-    open static var PI: Double {
+    public static var PI: Double {
         get {
             let __value = JNIField.GetStaticDoubleField( fieldName: "PI", fieldType: "D", fieldCache: &PI_FieldID, className: "java/lang/StrictMath", classCache: &StrictMathJNIClass )
             return __value

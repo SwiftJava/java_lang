@@ -20,7 +20,7 @@ open class Integer: Number, JavaComparable {
 
     private static var BYTES_FieldID: jfieldID?
 
-    open static var BYTES: Int {
+    public static var BYTES: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Integer", classCache: &IntegerJNIClass )
             return Int(__value)
@@ -39,7 +39,7 @@ open class Integer: Number, JavaComparable {
 
     private static var MAX_VALUE_FieldID: jfieldID?
 
-    open static var MAX_VALUE: Int {
+    public static var MAX_VALUE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MAX_VALUE", fieldType: "I", fieldCache: &MAX_VALUE_FieldID, className: "java/lang/Integer", classCache: &IntegerJNIClass )
             return Int(__value)
@@ -50,7 +50,7 @@ open class Integer: Number, JavaComparable {
 
     private static var MIN_VALUE_FieldID: jfieldID?
 
-    open static var MIN_VALUE: Int {
+    public static var MIN_VALUE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MIN_VALUE", fieldType: "I", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Integer", classCache: &IntegerJNIClass )
             return Int(__value)
@@ -61,7 +61,7 @@ open class Integer: Number, JavaComparable {
 
     private static var SIZE_FieldID: jfieldID?
 
-    open static var SIZE: Int {
+    public static var SIZE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SIZE", fieldType: "I", fieldCache: &SIZE_FieldID, className: "java/lang/Integer", classCache: &IntegerJNIClass )
             return Int(__value)
@@ -72,7 +72,7 @@ open class Integer: Number, JavaComparable {
 
     private static var TYPE_FieldID: jfieldID?
 
-    open static var TYPE: java_swift.JavaClass! {
+    public static var TYPE: java_swift.JavaClass! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/Class;", fieldCache: &TYPE_FieldID, className: "java/lang/Integer", classCache: &IntegerJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

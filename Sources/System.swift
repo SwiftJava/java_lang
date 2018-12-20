@@ -22,7 +22,7 @@ open class System: java_swift.JavaObject {
 
     private static var err_FieldID: jfieldID?
 
-    open static var err: /* class java.io.PrintStream */ UnavailableObject! {
+    public static var err: /* class java.io.PrintStream */ UnavailableObject! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "err", fieldType: "Ljava/io/PrintStream;", fieldCache: &err_FieldID, className: "java/lang/System", classCache: &SystemJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -34,7 +34,7 @@ open class System: java_swift.JavaObject {
 
     private static var _in_FieldID: jfieldID?
 
-    open static var _in: /* class java.io.InputStream */ UnavailableObject! {
+    public static var _in: /* class java.io.InputStream */ UnavailableObject! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "in", fieldType: "Ljava/io/InputStream;", fieldCache: &_in_FieldID, className: "java/lang/System", classCache: &SystemJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -48,7 +48,7 @@ open class System: java_swift.JavaObject {
 
     private static var out_FieldID: jfieldID?
 
-    open static var out: /* class java.io.PrintStream */ UnavailableObject! {
+    public static var out: /* class java.io.PrintStream */ UnavailableObject! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "out", fieldType: "Ljava/io/PrintStream;", fieldCache: &out_FieldID, className: "java/lang/System", classCache: &SystemJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

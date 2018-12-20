@@ -24,7 +24,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var BYTES_FieldID: jfieldID?
 
-    open static var BYTES: Int {
+    public static var BYTES: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "BYTES", fieldType: "I", fieldCache: &BYTES_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return Int(__value)
@@ -35,7 +35,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var COMBINING_SPACING_MARK_FieldID: jfieldID?
 
-    open static var COMBINING_SPACING_MARK: Int8 {
+    public static var COMBINING_SPACING_MARK: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "COMBINING_SPACING_MARK", fieldType: "B", fieldCache: &COMBINING_SPACING_MARK_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -46,7 +46,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var CONNECTOR_PUNCTUATION_FieldID: jfieldID?
 
-    open static var CONNECTOR_PUNCTUATION: Int8 {
+    public static var CONNECTOR_PUNCTUATION: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "CONNECTOR_PUNCTUATION", fieldType: "B", fieldCache: &CONNECTOR_PUNCTUATION_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -57,7 +57,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var CONTROL_FieldID: jfieldID?
 
-    open static var CONTROL: Int8 {
+    public static var CONTROL: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "CONTROL", fieldType: "B", fieldCache: &CONTROL_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -68,7 +68,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var CURRENCY_SYMBOL_FieldID: jfieldID?
 
-    open static var CURRENCY_SYMBOL: Int8 {
+    public static var CURRENCY_SYMBOL: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "CURRENCY_SYMBOL", fieldType: "B", fieldCache: &CURRENCY_SYMBOL_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -79,7 +79,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DASH_PUNCTUATION_FieldID: jfieldID?
 
-    open static var DASH_PUNCTUATION: Int8 {
+    public static var DASH_PUNCTUATION: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DASH_PUNCTUATION", fieldType: "B", fieldCache: &DASH_PUNCTUATION_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -90,7 +90,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DECIMAL_DIGIT_NUMBER_FieldID: jfieldID?
 
-    open static var DECIMAL_DIGIT_NUMBER: Int8 {
+    public static var DECIMAL_DIGIT_NUMBER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DECIMAL_DIGIT_NUMBER", fieldType: "B", fieldCache: &DECIMAL_DIGIT_NUMBER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -101,7 +101,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_ARABIC_NUMBER_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_ARABIC_NUMBER: Int8 {
+    public static var DIRECTIONALITY_ARABIC_NUMBER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_ARABIC_NUMBER", fieldType: "B", fieldCache: &DIRECTIONALITY_ARABIC_NUMBER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -112,7 +112,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_BOUNDARY_NEUTRAL_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_BOUNDARY_NEUTRAL: Int8 {
+    public static var DIRECTIONALITY_BOUNDARY_NEUTRAL: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_BOUNDARY_NEUTRAL", fieldType: "B", fieldCache: &DIRECTIONALITY_BOUNDARY_NEUTRAL_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -123,7 +123,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_COMMON_NUMBER_SEPARATOR_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_COMMON_NUMBER_SEPARATOR: Int8 {
+    public static var DIRECTIONALITY_COMMON_NUMBER_SEPARATOR: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_COMMON_NUMBER_SEPARATOR", fieldType: "B", fieldCache: &DIRECTIONALITY_COMMON_NUMBER_SEPARATOR_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -134,7 +134,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_EUROPEAN_NUMBER_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_EUROPEAN_NUMBER: Int8 {
+    public static var DIRECTIONALITY_EUROPEAN_NUMBER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_EUROPEAN_NUMBER", fieldType: "B", fieldCache: &DIRECTIONALITY_EUROPEAN_NUMBER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -145,7 +145,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR: Int8 {
+    public static var DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR", fieldType: "B", fieldCache: &DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -156,7 +156,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR: Int8 {
+    public static var DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR", fieldType: "B", fieldCache: &DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -167,7 +167,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_LEFT_TO_RIGHT_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_LEFT_TO_RIGHT: Int8 {
+    public static var DIRECTIONALITY_LEFT_TO_RIGHT: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_LEFT_TO_RIGHT", fieldType: "B", fieldCache: &DIRECTIONALITY_LEFT_TO_RIGHT_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -178,7 +178,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING: Int8 {
+    public static var DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING", fieldType: "B", fieldCache: &DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -189,7 +189,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE: Int8 {
+    public static var DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE", fieldType: "B", fieldCache: &DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -200,7 +200,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_NONSPACING_MARK_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_NONSPACING_MARK: Int8 {
+    public static var DIRECTIONALITY_NONSPACING_MARK: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_NONSPACING_MARK", fieldType: "B", fieldCache: &DIRECTIONALITY_NONSPACING_MARK_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -211,7 +211,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_OTHER_NEUTRALS_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_OTHER_NEUTRALS: Int8 {
+    public static var DIRECTIONALITY_OTHER_NEUTRALS: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_OTHER_NEUTRALS", fieldType: "B", fieldCache: &DIRECTIONALITY_OTHER_NEUTRALS_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -222,7 +222,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_PARAGRAPH_SEPARATOR_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_PARAGRAPH_SEPARATOR: Int8 {
+    public static var DIRECTIONALITY_PARAGRAPH_SEPARATOR: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_PARAGRAPH_SEPARATOR", fieldType: "B", fieldCache: &DIRECTIONALITY_PARAGRAPH_SEPARATOR_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -233,7 +233,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_POP_DIRECTIONAL_FORMAT_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_POP_DIRECTIONAL_FORMAT: Int8 {
+    public static var DIRECTIONALITY_POP_DIRECTIONAL_FORMAT: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_POP_DIRECTIONAL_FORMAT", fieldType: "B", fieldCache: &DIRECTIONALITY_POP_DIRECTIONAL_FORMAT_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -244,7 +244,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_RIGHT_TO_LEFT_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_RIGHT_TO_LEFT: Int8 {
+    public static var DIRECTIONALITY_RIGHT_TO_LEFT: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_RIGHT_TO_LEFT", fieldType: "B", fieldCache: &DIRECTIONALITY_RIGHT_TO_LEFT_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -255,7 +255,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC: Int8 {
+    public static var DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC", fieldType: "B", fieldCache: &DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -266,7 +266,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING: Int8 {
+    public static var DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING", fieldType: "B", fieldCache: &DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -277,7 +277,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE: Int8 {
+    public static var DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE", fieldType: "B", fieldCache: &DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -288,7 +288,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_SEGMENT_SEPARATOR_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_SEGMENT_SEPARATOR: Int8 {
+    public static var DIRECTIONALITY_SEGMENT_SEPARATOR: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_SEGMENT_SEPARATOR", fieldType: "B", fieldCache: &DIRECTIONALITY_SEGMENT_SEPARATOR_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -299,7 +299,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_UNDEFINED_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_UNDEFINED: Int8 {
+    public static var DIRECTIONALITY_UNDEFINED: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_UNDEFINED", fieldType: "B", fieldCache: &DIRECTIONALITY_UNDEFINED_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -310,7 +310,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var DIRECTIONALITY_WHITESPACE_FieldID: jfieldID?
 
-    open static var DIRECTIONALITY_WHITESPACE: Int8 {
+    public static var DIRECTIONALITY_WHITESPACE: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "DIRECTIONALITY_WHITESPACE", fieldType: "B", fieldCache: &DIRECTIONALITY_WHITESPACE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -321,7 +321,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var ENCLOSING_MARK_FieldID: jfieldID?
 
-    open static var ENCLOSING_MARK: Int8 {
+    public static var ENCLOSING_MARK: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "ENCLOSING_MARK", fieldType: "B", fieldCache: &ENCLOSING_MARK_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -332,7 +332,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var END_PUNCTUATION_FieldID: jfieldID?
 
-    open static var END_PUNCTUATION: Int8 {
+    public static var END_PUNCTUATION: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "END_PUNCTUATION", fieldType: "B", fieldCache: &END_PUNCTUATION_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -347,7 +347,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var FINAL_QUOTE_PUNCTUATION_FieldID: jfieldID?
 
-    open static var FINAL_QUOTE_PUNCTUATION: Int8 {
+    public static var FINAL_QUOTE_PUNCTUATION: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "FINAL_QUOTE_PUNCTUATION", fieldType: "B", fieldCache: &FINAL_QUOTE_PUNCTUATION_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -358,7 +358,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var FORMAT_FieldID: jfieldID?
 
-    open static var FORMAT: Int8 {
+    public static var FORMAT: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "FORMAT", fieldType: "B", fieldCache: &FORMAT_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -369,7 +369,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var INITIAL_QUOTE_PUNCTUATION_FieldID: jfieldID?
 
-    open static var INITIAL_QUOTE_PUNCTUATION: Int8 {
+    public static var INITIAL_QUOTE_PUNCTUATION: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "INITIAL_QUOTE_PUNCTUATION", fieldType: "B", fieldCache: &INITIAL_QUOTE_PUNCTUATION_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -380,7 +380,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var LETTER_NUMBER_FieldID: jfieldID?
 
-    open static var LETTER_NUMBER: Int8 {
+    public static var LETTER_NUMBER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "LETTER_NUMBER", fieldType: "B", fieldCache: &LETTER_NUMBER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -391,7 +391,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var LINE_SEPARATOR_FieldID: jfieldID?
 
-    open static var LINE_SEPARATOR: Int8 {
+    public static var LINE_SEPARATOR: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "LINE_SEPARATOR", fieldType: "B", fieldCache: &LINE_SEPARATOR_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -402,7 +402,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var LOWERCASE_LETTER_FieldID: jfieldID?
 
-    open static var LOWERCASE_LETTER: Int8 {
+    public static var LOWERCASE_LETTER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "LOWERCASE_LETTER", fieldType: "B", fieldCache: &LOWERCASE_LETTER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -413,7 +413,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MATH_SYMBOL_FieldID: jfieldID?
 
-    open static var MATH_SYMBOL: Int8 {
+    public static var MATH_SYMBOL: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "MATH_SYMBOL", fieldType: "B", fieldCache: &MATH_SYMBOL_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -424,7 +424,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MAX_CODE_POINT_FieldID: jfieldID?
 
-    open static var MAX_CODE_POINT: Int {
+    public static var MAX_CODE_POINT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MAX_CODE_POINT", fieldType: "I", fieldCache: &MAX_CODE_POINT_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return Int(__value)
@@ -435,7 +435,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MAX_HIGH_SURROGATE_FieldID: jfieldID?
 
-    open static var MAX_HIGH_SURROGATE: UInt16 {
+    public static var MAX_HIGH_SURROGATE: UInt16 {
         get {
             let __value = JNIField.GetStaticCharField( fieldName: "MAX_HIGH_SURROGATE", fieldType: "C", fieldCache: &MAX_HIGH_SURROGATE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -446,7 +446,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MAX_LOW_SURROGATE_FieldID: jfieldID?
 
-    open static var MAX_LOW_SURROGATE: UInt16 {
+    public static var MAX_LOW_SURROGATE: UInt16 {
         get {
             let __value = JNIField.GetStaticCharField( fieldName: "MAX_LOW_SURROGATE", fieldType: "C", fieldCache: &MAX_LOW_SURROGATE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -457,7 +457,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MAX_RADIX_FieldID: jfieldID?
 
-    open static var MAX_RADIX: Int {
+    public static var MAX_RADIX: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MAX_RADIX", fieldType: "I", fieldCache: &MAX_RADIX_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return Int(__value)
@@ -468,7 +468,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MAX_SURROGATE_FieldID: jfieldID?
 
-    open static var MAX_SURROGATE: UInt16 {
+    public static var MAX_SURROGATE: UInt16 {
         get {
             let __value = JNIField.GetStaticCharField( fieldName: "MAX_SURROGATE", fieldType: "C", fieldCache: &MAX_SURROGATE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -479,7 +479,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MAX_VALUE_FieldID: jfieldID?
 
-    open static var MAX_VALUE: UInt16 {
+    public static var MAX_VALUE: UInt16 {
         get {
             let __value = JNIField.GetStaticCharField( fieldName: "MAX_VALUE", fieldType: "C", fieldCache: &MAX_VALUE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -490,7 +490,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MIN_CODE_POINT_FieldID: jfieldID?
 
-    open static var MIN_CODE_POINT: Int {
+    public static var MIN_CODE_POINT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MIN_CODE_POINT", fieldType: "I", fieldCache: &MIN_CODE_POINT_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return Int(__value)
@@ -501,7 +501,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MIN_HIGH_SURROGATE_FieldID: jfieldID?
 
-    open static var MIN_HIGH_SURROGATE: UInt16 {
+    public static var MIN_HIGH_SURROGATE: UInt16 {
         get {
             let __value = JNIField.GetStaticCharField( fieldName: "MIN_HIGH_SURROGATE", fieldType: "C", fieldCache: &MIN_HIGH_SURROGATE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -512,7 +512,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MIN_LOW_SURROGATE_FieldID: jfieldID?
 
-    open static var MIN_LOW_SURROGATE: UInt16 {
+    public static var MIN_LOW_SURROGATE: UInt16 {
         get {
             let __value = JNIField.GetStaticCharField( fieldName: "MIN_LOW_SURROGATE", fieldType: "C", fieldCache: &MIN_LOW_SURROGATE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -523,7 +523,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MIN_RADIX_FieldID: jfieldID?
 
-    open static var MIN_RADIX: Int {
+    public static var MIN_RADIX: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MIN_RADIX", fieldType: "I", fieldCache: &MIN_RADIX_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return Int(__value)
@@ -534,7 +534,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MIN_SUPPLEMENTARY_CODE_POINT_FieldID: jfieldID?
 
-    open static var MIN_SUPPLEMENTARY_CODE_POINT: Int {
+    public static var MIN_SUPPLEMENTARY_CODE_POINT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "MIN_SUPPLEMENTARY_CODE_POINT", fieldType: "I", fieldCache: &MIN_SUPPLEMENTARY_CODE_POINT_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return Int(__value)
@@ -545,7 +545,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MIN_SURROGATE_FieldID: jfieldID?
 
-    open static var MIN_SURROGATE: UInt16 {
+    public static var MIN_SURROGATE: UInt16 {
         get {
             let __value = JNIField.GetStaticCharField( fieldName: "MIN_SURROGATE", fieldType: "C", fieldCache: &MIN_SURROGATE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -556,7 +556,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MIN_VALUE_FieldID: jfieldID?
 
-    open static var MIN_VALUE: UInt16 {
+    public static var MIN_VALUE: UInt16 {
         get {
             let __value = JNIField.GetStaticCharField( fieldName: "MIN_VALUE", fieldType: "C", fieldCache: &MIN_VALUE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -567,7 +567,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MODIFIER_LETTER_FieldID: jfieldID?
 
-    open static var MODIFIER_LETTER: Int8 {
+    public static var MODIFIER_LETTER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "MODIFIER_LETTER", fieldType: "B", fieldCache: &MODIFIER_LETTER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -578,7 +578,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var MODIFIER_SYMBOL_FieldID: jfieldID?
 
-    open static var MODIFIER_SYMBOL: Int8 {
+    public static var MODIFIER_SYMBOL: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "MODIFIER_SYMBOL", fieldType: "B", fieldCache: &MODIFIER_SYMBOL_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -589,7 +589,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var NON_SPACING_MARK_FieldID: jfieldID?
 
-    open static var NON_SPACING_MARK: Int8 {
+    public static var NON_SPACING_MARK: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "NON_SPACING_MARK", fieldType: "B", fieldCache: &NON_SPACING_MARK_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -600,7 +600,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var OTHER_LETTER_FieldID: jfieldID?
 
-    open static var OTHER_LETTER: Int8 {
+    public static var OTHER_LETTER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "OTHER_LETTER", fieldType: "B", fieldCache: &OTHER_LETTER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -611,7 +611,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var OTHER_NUMBER_FieldID: jfieldID?
 
-    open static var OTHER_NUMBER: Int8 {
+    public static var OTHER_NUMBER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "OTHER_NUMBER", fieldType: "B", fieldCache: &OTHER_NUMBER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -622,7 +622,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var OTHER_PUNCTUATION_FieldID: jfieldID?
 
-    open static var OTHER_PUNCTUATION: Int8 {
+    public static var OTHER_PUNCTUATION: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "OTHER_PUNCTUATION", fieldType: "B", fieldCache: &OTHER_PUNCTUATION_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -633,7 +633,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var OTHER_SYMBOL_FieldID: jfieldID?
 
-    open static var OTHER_SYMBOL: Int8 {
+    public static var OTHER_SYMBOL: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "OTHER_SYMBOL", fieldType: "B", fieldCache: &OTHER_SYMBOL_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -644,7 +644,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var PARAGRAPH_SEPARATOR_FieldID: jfieldID?
 
-    open static var PARAGRAPH_SEPARATOR: Int8 {
+    public static var PARAGRAPH_SEPARATOR: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "PARAGRAPH_SEPARATOR", fieldType: "B", fieldCache: &PARAGRAPH_SEPARATOR_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -655,7 +655,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var PRIVATE_USE_FieldID: jfieldID?
 
-    open static var PRIVATE_USE: Int8 {
+    public static var PRIVATE_USE: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "PRIVATE_USE", fieldType: "B", fieldCache: &PRIVATE_USE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -666,7 +666,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var SIZE_FieldID: jfieldID?
 
-    open static var SIZE: Int {
+    public static var SIZE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SIZE", fieldType: "I", fieldCache: &SIZE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return Int(__value)
@@ -677,7 +677,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var SPACE_SEPARATOR_FieldID: jfieldID?
 
-    open static var SPACE_SEPARATOR: Int8 {
+    public static var SPACE_SEPARATOR: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "SPACE_SEPARATOR", fieldType: "B", fieldCache: &SPACE_SEPARATOR_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -688,7 +688,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var START_PUNCTUATION_FieldID: jfieldID?
 
-    open static var START_PUNCTUATION: Int8 {
+    public static var START_PUNCTUATION: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "START_PUNCTUATION", fieldType: "B", fieldCache: &START_PUNCTUATION_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -699,7 +699,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var SURROGATE_FieldID: jfieldID?
 
-    open static var SURROGATE: Int8 {
+    public static var SURROGATE: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "SURROGATE", fieldType: "B", fieldCache: &SURROGATE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -710,7 +710,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var TITLECASE_LETTER_FieldID: jfieldID?
 
-    open static var TITLECASE_LETTER: Int8 {
+    public static var TITLECASE_LETTER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "TITLECASE_LETTER", fieldType: "B", fieldCache: &TITLECASE_LETTER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -721,7 +721,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var TYPE_FieldID: jfieldID?
 
-    open static var TYPE: java_swift.JavaClass! {
+    public static var TYPE: java_swift.JavaClass! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/Class;", fieldCache: &TYPE_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -733,7 +733,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var UNASSIGNED_FieldID: jfieldID?
 
-    open static var UNASSIGNED: Int8 {
+    public static var UNASSIGNED: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "UNASSIGNED", fieldType: "B", fieldCache: &UNASSIGNED_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value
@@ -744,7 +744,7 @@ open class Character: java_swift.JavaObject, /* interface java.io.Serializable *
 
     private static var UPPERCASE_LETTER_FieldID: jfieldID?
 
-    open static var UPPERCASE_LETTER: Int8 {
+    public static var UPPERCASE_LETTER: Int8 {
         get {
             let __value = JNIField.GetStaticByteField( fieldName: "UPPERCASE_LETTER", fieldType: "B", fieldCache: &UPPERCASE_LETTER_FieldID, className: "java/lang/Character", classCache: &CharacterJNIClass )
             return __value

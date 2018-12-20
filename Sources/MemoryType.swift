@@ -60,7 +60,7 @@ open class MemoryTypeForward: JNIObjectForward {
 
     private static var HEAP_FieldID: jfieldID?
 
-    open static var HEAP: MemoryType! {
+    public static var HEAP: MemoryType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "HEAP", fieldType: "Ljava/lang/management/MemoryType;", fieldCache: &HEAP_FieldID, className: "java/lang/management/MemoryType", classCache: &MemoryTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -72,7 +72,7 @@ open class MemoryTypeForward: JNIObjectForward {
 
     private static var NON_HEAP_FieldID: jfieldID?
 
-    open static var NON_HEAP: MemoryType! {
+    public static var NON_HEAP: MemoryType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NON_HEAP", fieldType: "Ljava/lang/management/MemoryType;", fieldCache: &NON_HEAP_FieldID, className: "java/lang/management/MemoryType", classCache: &MemoryTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

@@ -20,7 +20,7 @@ open class ManagementFactory: java_swift.JavaObject {
 
     private static var CLASS_LOADING_MXBEAN_NAME_FieldID: jfieldID?
 
-    open static var CLASS_LOADING_MXBEAN_NAME: String! {
+    public static var CLASS_LOADING_MXBEAN_NAME: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CLASS_LOADING_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &CLASS_LOADING_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -32,7 +32,7 @@ open class ManagementFactory: java_swift.JavaObject {
 
     private static var COMPILATION_MXBEAN_NAME_FieldID: jfieldID?
 
-    open static var COMPILATION_MXBEAN_NAME: String! {
+    public static var COMPILATION_MXBEAN_NAME: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "COMPILATION_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &COMPILATION_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -44,7 +44,7 @@ open class ManagementFactory: java_swift.JavaObject {
 
     private static var GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE_FieldID: jfieldID?
 
-    open static var GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE: String! {
+    public static var GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE", fieldType: "Ljava/lang/String;", fieldCache: &GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -56,7 +56,7 @@ open class ManagementFactory: java_swift.JavaObject {
 
     private static var MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE_FieldID: jfieldID?
 
-    open static var MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE: String! {
+    public static var MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE", fieldType: "Ljava/lang/String;", fieldCache: &MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -68,7 +68,7 @@ open class ManagementFactory: java_swift.JavaObject {
 
     private static var MEMORY_MXBEAN_NAME_FieldID: jfieldID?
 
-    open static var MEMORY_MXBEAN_NAME: String! {
+    public static var MEMORY_MXBEAN_NAME: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEMORY_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &MEMORY_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -80,7 +80,7 @@ open class ManagementFactory: java_swift.JavaObject {
 
     private static var MEMORY_POOL_MXBEAN_DOMAIN_TYPE_FieldID: jfieldID?
 
-    open static var MEMORY_POOL_MXBEAN_DOMAIN_TYPE: String! {
+    public static var MEMORY_POOL_MXBEAN_DOMAIN_TYPE: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "MEMORY_POOL_MXBEAN_DOMAIN_TYPE", fieldType: "Ljava/lang/String;", fieldCache: &MEMORY_POOL_MXBEAN_DOMAIN_TYPE_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -94,7 +94,7 @@ open class ManagementFactory: java_swift.JavaObject {
 
     private static var OPERATING_SYSTEM_MXBEAN_NAME_FieldID: jfieldID?
 
-    open static var OPERATING_SYSTEM_MXBEAN_NAME: String! {
+    public static var OPERATING_SYSTEM_MXBEAN_NAME: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OPERATING_SYSTEM_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &OPERATING_SYSTEM_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -106,7 +106,7 @@ open class ManagementFactory: java_swift.JavaObject {
 
     private static var RUNTIME_MXBEAN_NAME_FieldID: jfieldID?
 
-    open static var RUNTIME_MXBEAN_NAME: String! {
+    public static var RUNTIME_MXBEAN_NAME: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "RUNTIME_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &RUNTIME_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -118,7 +118,7 @@ open class ManagementFactory: java_swift.JavaObject {
 
     private static var THREAD_MXBEAN_NAME_FieldID: jfieldID?
 
-    open static var THREAD_MXBEAN_NAME: String! {
+    public static var THREAD_MXBEAN_NAME: String! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "THREAD_MXBEAN_NAME", fieldType: "Ljava/lang/String;", fieldCache: &THREAD_MXBEAN_NAME_FieldID, className: "java/lang/management/ManagementFactory", classCache: &ManagementFactoryJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

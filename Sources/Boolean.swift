@@ -20,7 +20,7 @@ open class Boolean: java_swift.JavaObject, /* interface java.io.Serializable */ 
 
     private static var FALSE_FieldID: jfieldID?
 
-    open static var FALSE: Boolean! {
+    public static var FALSE: Boolean! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "FALSE", fieldType: "Ljava/lang/Boolean;", fieldCache: &FALSE_FieldID, className: "java/lang/Boolean", classCache: &BooleanJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -32,7 +32,7 @@ open class Boolean: java_swift.JavaObject, /* interface java.io.Serializable */ 
 
     private static var TRUE_FieldID: jfieldID?
 
-    open static var TRUE: Boolean! {
+    public static var TRUE: Boolean! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TRUE", fieldType: "Ljava/lang/Boolean;", fieldCache: &TRUE_FieldID, className: "java/lang/Boolean", classCache: &BooleanJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -44,7 +44,7 @@ open class Boolean: java_swift.JavaObject, /* interface java.io.Serializable */ 
 
     private static var TYPE_FieldID: jfieldID?
 
-    open static var TYPE: java_swift.JavaClass! {
+    public static var TYPE: java_swift.JavaClass! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TYPE", fieldType: "Ljava/lang/Class;", fieldCache: &TYPE_FieldID, className: "java/lang/Boolean", classCache: &BooleanJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
