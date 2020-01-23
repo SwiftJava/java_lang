@@ -1,3 +1,4 @@
+// swift-tools-version:5.0
 //
 //  Package.swift
 //  SwiftJava
@@ -10,13 +11,13 @@ import PackageDescription
 
 let package = Package(
     name: "java_lang",
+    products: [
+        .library(name: "java_lang", targets: ["java_lang"]),
+    ],
     dependencies: [
-        .Package(url: "https://github.com/SwiftJava/java_swift.git", versions: Version(2,1,0)..<Version(3,0,0)),
-//        Package(url: "https://github.com/SwiftJava/java_util.git", versions: Version(1,0,0)..<Version(2,0,0)),
-//        Package(url: "https://github.com/SwiftJava/java_io.git", versions: Version(1,0,0)..<Version(2,0,0)),
-//        Package(url: "https://github.com/SwiftJava/java_net.git", versions: Version(1,0,0)..<Version(2,0,0)),
-//        Package(url: "https://github.com/SwiftJava/java_security.git", versions: Version(1,0,0)..<Version(2,0,0)),
-//        Package(url: "https://github.com/SwiftJava/javax_management.git", versions: Version(1,0,0)..<Version(2,0,0)),
-//        Package(url: "https://github.com/SwiftJava/java_nio.git", versions: Version(1,0,0)..<Version(2,0,0)),
-        ]
+        .package(url: "https://github.com/SwiftJava/java_swift.git", .branch("master")),
+        ],
+    targets: [
+        .target(name: "java_lang", dependencies: ["java_swift"], path: "Sources/"),
+    ]
 )
